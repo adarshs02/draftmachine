@@ -1,0 +1,32 @@
+name: Scheduled ADP Scraper
+
+on:
+  schedule:
+    # Run twice per day at 8 AM and 8 PM Phoenix time.  Phoenix is on
+    # America/Phoenix (UTC−7) all year, so convert to UTC by adding 7
+    # hours: 8 AM MST → 15:00 UTC and 8 PM MST → 03:00 UTC the next day.
+    - cron: '0 15 * * *'
+    - cron: '0 3 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run the fantasy basketball ADP scraper
+        run: |
+          python fantasy_adp_scraper.py --output adp_data.csv
+      - name: Commit and push the updated ADP data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update ADP data"
+          add_options: '--force'
