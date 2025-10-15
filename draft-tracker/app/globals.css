@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-border;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-card hover:bg-dark-border text-white font-semibold py-3 px-6 rounded-lg border border-dark-border transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors;
+  }
+
+  .card {
+    @apply bg-dark-card border border-dark-border rounded-lg p-6 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}

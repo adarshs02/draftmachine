@@ -1,0 +1,652 @@
+{
+  "picks": [
+    {
+      "playerName": "Derrick White",
+      "teamName": "Manual",
+      "pickNumber": 1,
+      "bidAmount": 23,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Victor Wembanyama",
+      "teamName": "Manual",
+      "pickNumber": 2,
+      "bidAmount": 87,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Luka Doncic",
+      "teamName": "Manual",
+      "pickNumber": 3,
+      "bidAmount": 87,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Giannis Antetokounmpo",
+      "teamName": "Manual",
+      "pickNumber": 4,
+      "bidAmount": 55,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "Shai Gilgeous-Alexander",
+      "teamName": "Manual",
+      "pickNumber": 5,
+      "bidAmount": 73,
+      "isMyPick": false,
+      "draftedByTeam": "Jim"
+    },
+    {
+      "playerName": "Trae Young",
+      "teamName": "Manual",
+      "pickNumber": 6,
+      "bidAmount": 47,
+      "isMyPick": false,
+      "draftedByTeam": "Rohan"
+    },
+    {
+      "playerName": "Anthony Davis",
+      "teamName": "Manual",
+      "pickNumber": 7,
+      "bidAmount": 44,
+      "isMyPick": false,
+      "draftedByTeam": "Rohan"
+    },
+    {
+      "playerName": "Amen Thompson",
+      "teamName": "Manual",
+      "pickNumber": 8,
+      "bidAmount": 38,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "Nikola Jokic",
+      "teamName": "Manual",
+      "pickNumber": 9,
+      "bidAmount": 83,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    },
+    {
+      "playerName": "Cade Cunningham",
+      "teamName": "Manual",
+      "pickNumber": 10,
+      "bidAmount": 57,
+      "isMyPick": false,
+      "draftedByTeam": "Jim"
+    },
+    {
+      "playerName": "Josh Giddey",
+      "teamName": "Manual",
+      "pickNumber": 11,
+      "bidAmount": 26,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "James Harden",
+      "teamName": "Manual",
+      "pickNumber": 12,
+      "bidAmount": 45,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Tyrese Maxey",
+      "teamName": "Manual",
+      "pickNumber": 13,
+      "bidAmount": 41,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "Anthony Edwards",
+      "teamName": "Manual",
+      "pickNumber": 14,
+      "bidAmount": 50,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    },
+    {
+      "playerName": "Kevin Durant",
+      "teamName": "Manual",
+      "pickNumber": 15,
+      "bidAmount": 39,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "LaMelo Ball",
+      "teamName": "Manual",
+      "pickNumber": 16,
+      "bidAmount": 33,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "LeBron James",
+      "teamName": "My Team",
+      "pickNumber": 17,
+      "bidAmount": 25,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Dyson Daniels",
+      "teamName": "Manual",
+      "pickNumber": 18,
+      "bidAmount": 28,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Karl-Anthony Towns",
+      "teamName": "Manual",
+      "pickNumber": 19,
+      "bidAmount": 43,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Jalen Williams",
+      "teamName": "Manual",
+      "pickNumber": 20,
+      "bidAmount": 34,
+      "isMyPick": false,
+      "draftedByTeam": "Jim"
+    },
+    {
+      "playerName": "Franz Wagner",
+      "teamName": "My Team",
+      "pickNumber": 21,
+      "bidAmount": 22,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Stephen Curry",
+      "teamName": "Manual",
+      "pickNumber": 22,
+      "bidAmount": 46,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Josh Hart",
+      "teamName": "Manual",
+      "pickNumber": 23,
+      "bidAmount": 11,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Chet Holmgren",
+      "teamName": "Manual",
+      "pickNumber": 24,
+      "bidAmount": 26,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "De'Aaron Fox",
+      "teamName": "Manual",
+      "pickNumber": 25,
+      "bidAmount": 29,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Devin Booker",
+      "teamName": "Manual",
+      "pickNumber": 26,
+      "bidAmount": 45,
+      "isMyPick": false,
+      "draftedByTeam": "Rohan"
+    },
+    {
+      "playerName": "Domantas Sabonis",
+      "teamName": "My Team",
+      "pickNumber": 27,
+      "bidAmount": 36,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Cooper Flagg",
+      "teamName": "My Team",
+      "pickNumber": 28,
+      "bidAmount": 19,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Jaylen Brown",
+      "teamName": "My Team",
+      "pickNumber": 29,
+      "bidAmount": 22,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Alperen Sengun",
+      "teamName": "Manual",
+      "pickNumber": 30,
+      "bidAmount": 27,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Alex Sarr",
+      "teamName": "Manual",
+      "pickNumber": 31,
+      "bidAmount": 7,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Myles Turner",
+      "teamName": "Manual",
+      "pickNumber": 32,
+      "bidAmount": 31,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "Jalen Johnson",
+      "teamName": "Manual",
+      "pickNumber": 33,
+      "bidAmount": 30,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Jordan Poole",
+      "teamName": "Manual",
+      "pickNumber": 34,
+      "bidAmount": 8,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Ja Morant",
+      "teamName": "Manual",
+      "pickNumber": 35,
+      "bidAmount": 27,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Scottie Barnes",
+      "teamName": "Manual",
+      "pickNumber": 36,
+      "bidAmount": 27,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Coby White",
+      "teamName": "Manual",
+      "pickNumber": 37,
+      "bidAmount": 15,
+      "isMyPick": false,
+      "draftedByTeam": "Rohan"
+    },
+    {
+      "playerName": "Joel Embiid",
+      "teamName": "Manual",
+      "pickNumber": 38,
+      "bidAmount": 10,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Evan Mobley",
+      "teamName": "Manual",
+      "pickNumber": 39,
+      "bidAmount": 25,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "Desmond Bane",
+      "teamName": "Manual",
+      "pickNumber": 40,
+      "bidAmount": 17,
+      "isMyPick": false,
+      "draftedByTeam": "Jim"
+    },
+    {
+      "playerName": "Michael Porter Jr.",
+      "teamName": "Manual",
+      "pickNumber": 41,
+      "bidAmount": 11,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "Donovan Mitchell",
+      "teamName": "Manual",
+      "pickNumber": 42,
+      "bidAmount": 37,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "Kevin Porter Jr.",
+      "teamName": "Manual",
+      "pickNumber": 43,
+      "bidAmount": 5,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Pascal Siakam",
+      "teamName": "Manual",
+      "pickNumber": 44,
+      "bidAmount": 20,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    },
+    {
+      "playerName": "Jaren Jackson Jr.",
+      "teamName": "Manual",
+      "pickNumber": 45,
+      "bidAmount": 22,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Paolo Banchero",
+      "teamName": "Manual",
+      "pickNumber": 46,
+      "bidAmount": 20,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Austin Reaves",
+      "teamName": "My Team",
+      "pickNumber": 47,
+      "bidAmount": 22,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Payton Pritchard",
+      "teamName": "Manual",
+      "pickNumber": 48,
+      "bidAmount": 9,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Jalen Green",
+      "teamName": "Manual",
+      "pickNumber": 49,
+      "bidAmount": 9,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    },
+    {
+      "playerName": "Deni Avdija",
+      "teamName": "Manual",
+      "pickNumber": 50,
+      "bidAmount": 10,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "DeMar DeRozan",
+      "teamName": "Manual",
+      "pickNumber": 51,
+      "bidAmount": 14,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "Jamal Murray",
+      "teamName": "Manual",
+      "pickNumber": 52,
+      "bidAmount": 16,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Andrew Nembhard",
+      "teamName": "Manual",
+      "pickNumber": 53,
+      "bidAmount": 3,
+      "isMyPick": false,
+      "draftedByTeam": "Arjun"
+    },
+    {
+      "playerName": "Zion Williamson",
+      "teamName": "My Team",
+      "pickNumber": 54,
+      "bidAmount": 18,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Walker Kessler",
+      "teamName": "Manual",
+      "pickNumber": 55,
+      "bidAmount": 13,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Tyler Herro",
+      "teamName": "Manual",
+      "pickNumber": 56,
+      "bidAmount": 12,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Trey Murphy III",
+      "teamName": "Manual",
+      "pickNumber": 57,
+      "bidAmount": 16,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Onyeka Okongwu",
+      "teamName": "Manual",
+      "pickNumber": 58,
+      "bidAmount": 4,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "Bam Adebayo",
+      "teamName": "My Team",
+      "pickNumber": 59,
+      "bidAmount": 22,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Jalen Duren",
+      "teamName": "Manual",
+      "pickNumber": 60,
+      "bidAmount": 6,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Jimmy Butler III",
+      "teamName": "Manual",
+      "pickNumber": 61,
+      "bidAmount": 19,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    },
+    {
+      "playerName": "Brandon Miller",
+      "teamName": "Manual",
+      "pickNumber": 62,
+      "bidAmount": 6,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Kristaps Porzingis",
+      "teamName": "Manual",
+      "pickNumber": 63,
+      "bidAmount": 11,
+      "isMyPick": false,
+      "draftedByTeam": "Aravind"
+    },
+    {
+      "playerName": "Darius Garland",
+      "teamName": "Manual",
+      "pickNumber": 64,
+      "bidAmount": 10,
+      "isMyPick": false,
+      "draftedByTeam": "Jake"
+    },
+    {
+      "playerName": "Nikola Vucevic",
+      "teamName": "Manual",
+      "pickNumber": 65,
+      "bidAmount": 14,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Jalen Brunson",
+      "teamName": "Manual",
+      "pickNumber": 66,
+      "bidAmount": 22,
+      "isMyPick": false,
+      "draftedByTeam": "Christian"
+    },
+    {
+      "playerName": "Miles Bridges",
+      "teamName": "Manual",
+      "pickNumber": 67,
+      "bidAmount": 8,
+      "isMyPick": false,
+      "draftedByTeam": "Jim"
+    },
+    {
+      "playerName": "Jakob Poeltl",
+      "teamName": "Manual",
+      "pickNumber": 68,
+      "bidAmount": 4,
+      "isMyPick": false,
+      "draftedByTeam": "Michael"
+    },
+    {
+      "playerName": "Zach LaVine",
+      "teamName": "My Team",
+      "pickNumber": 69,
+      "bidAmount": 8,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "Draymond Green",
+      "teamName": "Manual",
+      "pickNumber": 70,
+      "bidAmount": 1,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    },
+    {
+      "playerName": "Norman Powell",
+      "teamName": "Manual",
+      "pickNumber": 71,
+      "bidAmount": 8,
+      "isMyPick": false,
+      "draftedByTeam": "Rohan"
+    },
+    {
+      "playerName": "Devin Vassell",
+      "teamName": "My Team",
+      "pickNumber": 72,
+      "bidAmount": 1,
+      "isMyPick": true,
+      "draftedByTeam": "Adarsh"
+    },
+    {
+      "playerName": "OG Anunoby",
+      "teamName": "Manual",
+      "pickNumber": 73,
+      "bidAmount": 10,
+      "isMyPick": false,
+      "draftedByTeam": "Remy"
+    },
+    {
+      "playerName": "Paul George",
+      "teamName": "Manual",
+      "pickNumber": 74,
+      "bidAmount": 5,
+      "isMyPick": false,
+      "draftedByTeam": "Andres"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Jake",
+      "budget": 10,
+      "isMyTeam": false
+    },
+    {
+      "name": "Andres",
+      "budget": 13,
+      "isMyTeam": false
+    },
+    {
+      "name": "Arjun",
+      "budget": 14,
+      "isMyTeam": false
+    },
+    {
+      "name": "Rohan",
+      "budget": 41,
+      "isMyTeam": false
+    },
+    {
+      "name": "Michael",
+      "budget": 25,
+      "isMyTeam": false
+    },
+    {
+      "name": "Aravind",
+      "budget": 9,
+      "isMyTeam": false
+    },
+    {
+      "name": "Christian",
+      "budget": 5,
+      "isMyTeam": false
+    },
+    {
+      "name": "Adarsh",
+      "budget": 5,
+      "isMyTeam": true
+    },
+    {
+      "name": "Remy",
+      "budget": 13,
+      "isMyTeam": false
+    },
+    {
+      "name": "Jim",
+      "budget": 11,
+      "isMyTeam": false
+    }
+  ],
+  "syncedAt": "2025-10-14T01:53:55.749Z",
+  "totalPicks": 130,
+  "isComplete": false,
+  "myTeamBudget": 5
+}

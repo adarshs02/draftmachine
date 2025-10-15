@@ -1,0 +1,15 @@
+{
+  "name": "draftmachine",
+  "version": "1.0.0",
+  "description": "This tool scrapes auction dollar values for fantasy basketball players from multiple sources and provides a consolidated view across different platforms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^24.24.0"
+  }
+}

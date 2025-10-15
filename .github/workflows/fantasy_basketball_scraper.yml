@@ -1,13 +1,10 @@
-name: Scheduled ADP Scraper
+name: Scheduled Auction Value Scraper
 
 on:
-  schedule:
-    # Run twice per day at 8 AM and 8 PM Phoenix time.
-    # Phoenix is on America/Phoenix (UTC−7) all year, so convert to UTC:
-    # 8 AM MST → 15:00 UTC, 8 PM MST → 03:00 UTC the next day.
-    - cron: '0 15 * * *'
-    - cron: '0 3 * * *'
-  workflow_dispatch: {}
+  # schedule:
+  #   # Run every 2 hours
+  #   - cron: '0 */2 * * *'
+  workflow_dispatch: {}  # Keep manual trigger enabled
 
 # Needed for pushing commits and opening PRs
 permissions:
@@ -18,7 +15,7 @@ jobs:
   run-scraper:
     runs-on: ubuntu-latest
     concurrency:
-      group: adp-scraper
+      group: auction-scraper
       cancel-in-progress: true
 
     steps:
@@ -40,32 +37,33 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run the fantasy basketball ADP scraper
+      - name: Run the fantasy basketball auction value scraper
         env:
           TZ: America/Phoenix
         run: |
-          python fantasy_adp_scraper.py --output adp_data.csv
+          python fantasy_auction_scraper.py --output auction_data.csv
 
       # Commit changes to a dedicated bot branch (avoids non-fast-forward on main)
       - name: Commit changes to bot branch
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update ADP data"
-          file_pattern: adp_data.csv
-          branch: bot/adp-update
+          commit_message: "Update auction value data"
+          file_pattern: auction_data.csv
+          branch: bot/auction-update
           create_branch: true
 
-      # Open or update a PR from bot/adp-update -> main
+      # Open or update a PR from bot/auction-update -> main
       - name: Create or update pull request
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: bot/adp-update        # reuse the same branch so the PR gets updated
+          branch: bot/auction-update        # reuse the same branch so the PR gets updated
           base: main
-          title: "Update ADP data"
+          title: "Update auction value data"
           body: |
-            Automated ADP refresh from the scheduled workflow.
+            Automated auction value refresh from the scheduled workflow.
             - Timezone: America/Phoenix
-            - Changes: updates to `adp_data.csv`
+            - Changes: updates to `auction_data.csv`
+            - Sources: Yahoo, ESPN (from Hashtag Basketball)
           labels: |
             automated
             data-update

@@ -1,0 +1,308 @@
+{
+  "picks": [
+    {
+      "playerName": "Luka Doncic",
+      "teamName": "LAL",
+      "pickNumber": 1
+    },
+    {
+      "playerName": "OG Anunoby",
+      "teamName": "NY",
+      "pickNumber": 2
+    },
+    {
+      "playerName": "Evan Mobley",
+      "teamName": "Cle",
+      "pickNumber": 3
+    },
+    {
+      "playerName": "Myles Turner",
+      "teamName": "Mil",
+      "pickNumber": 4
+    },
+    {
+      "playerName": "Jalen Brunson",
+      "teamName": "NY",
+      "pickNumber": 5
+    },
+    {
+      "playerName": "Jalen Johnson",
+      "teamName": "Atl",
+      "pickNumber": 6
+    },
+    {
+      "playerName": "Ja Morant",
+      "teamName": "Mem",
+      "pickNumber": 7
+    },
+    {
+      "playerName": "Joel Embiid",
+      "teamName": "Phi",
+      "pickNumber": 8
+    },
+    {
+      "playerName": "Devin Booker",
+      "teamName": "Phx",
+      "pickNumber": 9
+    },
+    {
+      "playerName": "Derrick White",
+      "teamName": "Bos",
+      "pickNumber": 10
+    },
+    {
+      "playerName": "Pascal Siakam",
+      "teamName": "Ind",
+      "pickNumber": 11
+    },
+    {
+      "playerName": "Bam Adebayo",
+      "teamName": "Mia",
+      "pickNumber": 12
+    },
+    {
+      "playerName": "Donovan Mitchell",
+      "teamName": "Cle",
+      "pickNumber": 13
+    },
+    {
+      "playerName": "De'Aaron Fox",
+      "teamName": "SA",
+      "pickNumber": 14
+    },
+    {
+      "playerName": "Jordan Poole",
+      "teamName": "NO",
+      "pickNumber": 15
+    },
+    {
+      "playerName": "Desmond Bane",
+      "teamName": "Orl",
+      "pickNumber": 16
+    },
+    {
+      "playerName": "Franz Wagner",
+      "teamName": "Orl",
+      "pickNumber": 17
+    },
+    {
+      "playerName": "Andrew Wiggins",
+      "teamName": "Mia",
+      "pickNumber": 18
+    },
+    {
+      "playerName": "Kevin Porter Jr.",
+      "teamName": "Mil",
+      "pickNumber": 19
+    },
+    {
+      "playerName": "Jamal Murray",
+      "teamName": "Den",
+      "pickNumber": 20
+    },
+    {
+      "playerName": "Jalen Green",
+      "teamName": "Phx",
+      "pickNumber": 21
+    },
+    {
+      "playerName": "Josh Hart",
+      "teamName": "NY",
+      "pickNumber": 22
+    },
+    {
+      "playerName": "Paolo Banchero",
+      "teamName": "Orl",
+      "pickNumber": 23
+    },
+    {
+      "playerName": "Victor Wembanyama",
+      "teamName": "SA",
+      "pickNumber": 24
+    },
+    {
+      "playerName": "Austin Reaves",
+      "teamName": "LAL",
+      "pickNumber": 25
+    },
+    {
+      "playerName": "Jaren Jackson Jr.",
+      "teamName": "Mem",
+      "pickNumber": 26
+    },
+    {
+      "playerName": "Nikola Vucevic",
+      "teamName": "Chi",
+      "pickNumber": 27
+    },
+    {
+      "playerName": "Mikal Bridges",
+      "teamName": "NY",
+      "pickNumber": 28
+    },
+    {
+      "playerName": "Josh Giddey",
+      "teamName": "Chi",
+      "pickNumber": 29
+    },
+    {
+      "playerName": "Amen Thompson",
+      "teamName": "Hou",
+      "pickNumber": 30
+    },
+    {
+      "playerName": "Giannis Antetokounmpo",
+      "teamName": "Mil",
+      "pickNumber": 31
+    },
+    {
+      "playerName": "Chet Holmgren",
+      "teamName": "OKC",
+      "pickNumber": 32
+    },
+    {
+      "playerName": "Miles Bridges",
+      "teamName": "Cha",
+      "pickNumber": 33
+    },
+    {
+      "playerName": "Trae Young",
+      "teamName": "Atl",
+      "pickNumber": 34
+    },
+    {
+      "playerName": "Deni Avdija",
+      "teamName": "Por",
+      "pickNumber": 35
+    },
+    {
+      "playerName": "Kevin Durant",
+      "teamName": "Hou",
+      "pickNumber": 36
+    },
+    {
+      "playerName": "Stephen Curry",
+      "teamName": "GS",
+      "pickNumber": 37
+    },
+    {
+      "playerName": "LaMelo Ball",
+      "teamName": "Cha",
+      "pickNumber": 38
+    },
+    {
+      "playerName": "James Harden",
+      "teamName": "LAC",
+      "pickNumber": 39
+    },
+    {
+      "playerName": "Dyson Daniels",
+      "teamName": "Atl",
+      "pickNumber": 40
+    },
+    {
+      "playerName": "Jaylen Brown",
+      "teamName": "Bos",
+      "pickNumber": 41
+    },
+    {
+      "playerName": "Cooper Flagg",
+      "teamName": "Dal",
+      "pickNumber": 42
+    },
+    {
+      "playerName": "Anthony Davis",
+      "teamName": "Dal",
+      "pickNumber": 43
+    },
+    {
+      "playerName": "Coby White",
+      "teamName": "Chi",
+      "pickNumber": 44
+    },
+    {
+      "playerName": "Trey Murphy III",
+      "teamName": "NO",
+      "pickNumber": 45
+    },
+    {
+      "playerName": "LeBron James",
+      "teamName": "LAL",
+      "pickNumber": 46
+    },
+    {
+      "playerName": "Domantas Sabonis",
+      "teamName": "Sac",
+      "pickNumber": 47
+    },
+    {
+      "playerName": "Karl-Anthony Towns",
+      "teamName": "NY",
+      "pickNumber": 48
+    },
+    {
+      "playerName": "Michael Porter Jr.",
+      "teamName": "Bkn",
+      "pickNumber": 49
+    },
+    {
+      "playerName": "Alperen Sengun",
+      "teamName": "Hou",
+      "pickNumber": 50
+    },
+    {
+      "playerName": "Walker Kessler",
+      "teamName": "Utah",
+      "pickNumber": 51
+    },
+    {
+      "playerName": "Draymond Green",
+      "teamName": "GS",
+      "pickNumber": 52
+    },
+    {
+      "playerName": "Anthony Edwards",
+      "teamName": "Min",
+      "pickNumber": 53
+    },
+    {
+      "playerName": "Scottie Barnes",
+      "teamName": "Tor",
+      "pickNumber": 54
+    },
+    {
+      "playerName": "Jalen Williams",
+      "teamName": "OKC",
+      "pickNumber": 55
+    },
+    {
+      "playerName": "Nikola Jokic",
+      "teamName": "Den",
+      "pickNumber": 56
+    },
+    {
+      "playerName": "Shai Gilgeous-Alexander",
+      "teamName": "OKC",
+      "pickNumber": 57
+    },
+    {
+      "playerName": "Cade Cunningham",
+      "teamName": "Det",
+      "pickNumber": 58
+    },
+    {
+      "playerName": "Alex Sarr",
+      "teamName": "Wsh",
+      "pickNumber": 59
+    },
+    {
+      "playerName": "Tyrese Maxey",
+      "teamName": "Phi",
+      "pickNumber": 60
+    }
+  ],
+  "teams": [],
+  "syncedAt": "2025-10-12T20:38:07.291Z",
+  "totalPicks": 130,
+  "isComplete": false
+}

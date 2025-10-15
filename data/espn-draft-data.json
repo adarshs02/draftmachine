@@ -1,0 +1,1402 @@
+[
+  {
+    "name": "Nikola Jokic",
+    "team": "Den",
+    "position": "C",
+    "avgAuctionValue": 80.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Shai Gilgeous-Alexander",
+    "team": "OKC",
+    "position": "PG",
+    "avgAuctionValue": 71.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Victor Wembanyama",
+    "team": "SA",
+    "position": "C",
+    "avgAuctionValue": 73,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5104157.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Giannis Antetokounmpo",
+    "team": "Mil",
+    "position": "PF, C",
+    "avgAuctionValue": 67.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Luka Doncic",
+    "team": "LAL",
+    "position": "PG",
+    "avgAuctionValue": 69.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3945274.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Anthony Edwards",
+    "team": "Min",
+    "position": "SG, SF",
+    "avgAuctionValue": 60.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4594268.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Cade Cunningham",
+    "team": "Det",
+    "position": "PG, SG",
+    "avgAuctionValue": 53.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432166.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Anthony Davis",
+    "team": "Dal",
+    "position": "C, PF",
+    "avgAuctionValue": 53.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6583.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Domantas Sabonis",
+    "team": "Sac",
+    "position": "C, PF",
+    "avgAuctionValue": 50.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3155942.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Trae Young",
+    "team": "Atl",
+    "position": "PG",
+    "avgAuctionValue": 49,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277905.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Karl-Anthony Towns",
+    "team": "NY",
+    "position": "C, PF",
+    "avgAuctionValue": 47.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136195.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "LeBron James",
+    "team": "LAL",
+    "position": "SF, PF",
+    "avgAuctionValue": 45.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Devin Booker",
+    "team": "Phx",
+    "position": "PG, SG",
+    "avgAuctionValue": 43.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136193.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Stephen Curry",
+    "team": "GS",
+    "position": "PG",
+    "avgAuctionValue": 42.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "James Harden",
+    "team": "LAC",
+    "position": "PG, SG",
+    "avgAuctionValue": 41.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3992.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jalen Williams",
+    "team": "OKC",
+    "position": "PF, SF, C",
+    "avgAuctionValue": 36.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4593803.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tyrese Maxey",
+    "team": "Phi",
+    "position": "PG, SG",
+    "avgAuctionValue": 37.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431678.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Pascal Siakam",
+    "team": "Ind",
+    "position": "PF",
+    "avgAuctionValue": 33.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3149673.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jalen Brunson",
+    "team": "NY",
+    "position": "PG",
+    "avgAuctionValue": 33.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934672.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Donovan Mitchell",
+    "team": "Cle",
+    "position": "SG, PG",
+    "avgAuctionValue": 34.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3908809.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kevin Durant",
+    "team": "Hou",
+    "position": "PF",
+    "avgAuctionValue": 32.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3202.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Alperen Sengun",
+    "team": "Hou",
+    "position": "C",
+    "avgAuctionValue": 34.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4871144.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jaylen Brown",
+    "team": "Bos",
+    "position": "SF, SG",
+    "avgAuctionValue": 27.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3917376.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bam Adebayo",
+    "team": "Mia",
+    "position": "C, PF",
+    "avgAuctionValue": 26.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066261.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Paolo Banchero",
+    "team": "Orl",
+    "position": "PF, SF",
+    "avgAuctionValue": 26.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432573.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Ivica Zubac",
+    "team": "LAC",
+    "position": "C",
+    "avgAuctionValue": 28.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4017837.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Josh Giddey",
+    "team": "Chi",
+    "position": "SG, PG, SF",
+    "avgAuctionValue": 25.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4871145.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Ja Morant",
+    "team": "Mem",
+    "position": "PG",
+    "avgAuctionValue": 25.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279888.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Evan Mobley",
+    "team": "Cle",
+    "position": "PF, C",
+    "avgAuctionValue": 23.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432158.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Nikola Vucevic",
+    "team": "Chi",
+    "position": "C",
+    "avgAuctionValue": 25.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6478.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Cooper Flagg",
+    "team": "Dal",
+    "position": "SF, PF",
+    "avgAuctionValue": 22.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5041939.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Zion Williamson",
+    "team": "NO",
+    "position": "PF",
+    "avgAuctionValue": 21.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395628.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "LaMelo Ball",
+    "team": "Cha",
+    "position": "PG",
+    "avgAuctionValue": 24.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432816.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Amen Thompson",
+    "team": "Hou",
+    "position": "SF, SG, PF",
+    "avgAuctionValue": 25.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4684740.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Scottie Barnes",
+    "team": "Tor",
+    "position": "SF, SG, PF",
+    "avgAuctionValue": 25.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433134.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Franz Wagner",
+    "team": "Orl",
+    "position": "SF, PF",
+    "avgAuctionValue": 19.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4566434.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "De'Aaron Fox",
+    "team": "SA",
+    "position": "PG",
+    "avgAuctionValue": 23.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066259.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "DeMar DeRozan",
+    "team": "Sac",
+    "position": "SF, PF",
+    "avgAuctionValue": 14.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3978.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Chet Holmgren",
+    "team": "OKC",
+    "position": "C, PF",
+    "avgAuctionValue": 24,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433255.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Desmond Bane",
+    "team": "Orl",
+    "position": "SG, SF",
+    "avgAuctionValue": 16.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066320.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jamal Murray",
+    "team": "Den",
+    "position": "PG",
+    "avgAuctionValue": 15.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3936299.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jaren Jackson Jr.",
+    "team": "Mem",
+    "position": "C, PF",
+    "avgAuctionValue": 18.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277961.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Josh Hart",
+    "team": "NY",
+    "position": "SF, SG",
+    "avgAuctionValue": 12.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3062679.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Derrick White",
+    "team": "Bos",
+    "position": "SG, PG",
+    "avgAuctionValue": 15.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3078576.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jalen Johnson",
+    "team": "Atl",
+    "position": "PF",
+    "avgAuctionValue": 15.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4701230.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dyson Daniels",
+    "team": "Atl",
+    "position": "SG, PG",
+    "avgAuctionValue": 12.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4869342.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Myles Turner",
+    "team": "Mil",
+    "position": "C",
+    "avgAuctionValue": 13.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3133628.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Austin Reaves",
+    "team": "LAL",
+    "position": "SG, PG, SF",
+    "avgAuctionValue": 10.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066457.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jarrett Allen",
+    "team": "Cle",
+    "position": "C",
+    "avgAuctionValue": 9.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066328.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jimmy Butler III",
+    "team": "GS",
+    "position": "SF, SG, PF",
+    "avgAuctionValue": 9.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6430.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jalen Green",
+    "team": "Phx",
+    "position": "SG",
+    "avgAuctionValue": 9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4437244.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Joel Embiid",
+    "team": "Phi",
+    "position": "C",
+    "avgAuctionValue": 11.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059318.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Coby White",
+    "team": "Chi",
+    "position": "PG, SG",
+    "avgAuctionValue": 8.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395651.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Michael Porter Jr.",
+    "team": "Bkn",
+    "position": "SF, PF",
+    "avgAuctionValue": 7.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278104.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Miles Bridges",
+    "team": "Cha",
+    "position": "SF, PF",
+    "avgAuctionValue": 8.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066383.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Mikal Bridges",
+    "team": "NY",
+    "position": "SF, SG",
+    "avgAuctionValue": 7.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3147657.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kawhi Leonard",
+    "team": "LAC",
+    "position": "SF, PF",
+    "avgAuctionValue": 9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Zach LaVine",
+    "team": "Sac",
+    "position": "SG, SF",
+    "avgAuctionValue": 7.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064440.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jordan Poole",
+    "team": "NO",
+    "position": "SG, PG",
+    "avgAuctionValue": 6.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277956.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tyler Herro",
+    "team": "Mia",
+    "position": "SG, PG",
+    "avgAuctionValue": 6.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395725.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Trey Murphy III",
+    "team": "NO",
+    "position": "SF, SG",
+    "avgAuctionValue": 6.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397688.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Walker Kessler",
+    "team": "Utah",
+    "position": "C",
+    "avgAuctionValue": 7.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433136.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jalen Duren",
+    "team": "Det",
+    "position": "C",
+    "avgAuctionValue": 6.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433621.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Deni Avdija",
+    "team": "Por",
+    "position": "SF, PF",
+    "avgAuctionValue": 6.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683021.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "OG Anunoby",
+    "team": "NY",
+    "position": "SF, PF",
+    "avgAuctionValue": 5.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934719.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Julius Randle",
+    "team": "Min",
+    "position": "PF",
+    "avgAuctionValue": 5.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064514.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Darius Garland",
+    "team": "Cle",
+    "position": "PG",
+    "avgAuctionValue": 6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4396907.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kristaps Porzingis",
+    "team": "Atl",
+    "position": "C, PF",
+    "avgAuctionValue": 6.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102531.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jakob Poeltl",
+    "team": "Tor",
+    "position": "C",
+    "avgAuctionValue": 4.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3134908.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Brandon Ingram",
+    "team": "Tor",
+    "position": "SF",
+    "avgAuctionValue": 4.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3913176.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Rudy Gobert",
+    "team": "Min",
+    "position": "C",
+    "avgAuctionValue": 4.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032976.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kevin Porter Jr.",
+    "team": "Mil",
+    "position": "SG, PG",
+    "avgAuctionValue": 3.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397140.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Christian Braun",
+    "team": "Den",
+    "position": "SG, SF",
+    "avgAuctionValue": 3.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431767.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "RJ Barrett",
+    "team": "Tor",
+    "position": "SF, SG, PF",
+    "avgAuctionValue": 3.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Lauri Markkanen",
+    "team": "Utah",
+    "position": "PF, SF",
+    "avgAuctionValue": 5.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066336.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Andrew Wiggins",
+    "team": "Mia",
+    "position": "SF, PF",
+    "avgAuctionValue": 2.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059319.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Anfernee Simons",
+    "team": "Bos",
+    "position": "SG, PG",
+    "avgAuctionValue": 3.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4351851.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "CJ McCollum",
+    "team": "Wsh",
+    "position": "SG, PG",
+    "avgAuctionValue": 2.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2490149.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Norman Powell",
+    "team": "Mia",
+    "position": "SG, SF",
+    "avgAuctionValue": 3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2595516.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Onyeka Okongwu",
+    "team": "Atl",
+    "position": "C",
+    "avgAuctionValue": 2.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431680.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Naz Reid",
+    "team": "Min",
+    "position": "C, PF",
+    "avgAuctionValue": 2.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4396971.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Daniel Gafford",
+    "team": "Dal",
+    "position": "C",
+    "avgAuctionValue": 2.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278049.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Payton Pritchard",
+    "team": "Bos",
+    "position": "PG",
+    "avgAuctionValue": 2.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066354.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Alex Sarr",
+    "team": "Wsh",
+    "position": "C",
+    "avgAuctionValue": 2.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5160992.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Brandon Miller",
+    "team": "Cha",
+    "position": "SF, SG",
+    "avgAuctionValue": 6.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433287.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Nic Claxton",
+    "team": "Bkn",
+    "position": "C",
+    "avgAuctionValue": 2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278067.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Paul George",
+    "team": "Phi",
+    "position": "SF, PF",
+    "avgAuctionValue": 4.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4251.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Deandre Ayton",
+    "team": "LAL",
+    "position": "C",
+    "avgAuctionValue": 2.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278129.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Cam Thomas",
+    "team": "Bkn",
+    "position": "SG, SF",
+    "avgAuctionValue": 2.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432174.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "John Collins",
+    "team": "LAC",
+    "position": "PF, C",
+    "avgAuctionValue": 1.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3908845.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Malik Monk",
+    "team": "Sac",
+    "position": "SG, PG, SF",
+    "avgAuctionValue": 1.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066262.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jaden McDaniels",
+    "team": "Min",
+    "position": "SF",
+    "avgAuctionValue": 1.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431671.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Shaedon Sharpe",
+    "team": "Por",
+    "position": "SG, SF",
+    "avgAuctionValue": 1.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4914336.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Mark Williams",
+    "team": "Phx",
+    "position": "C",
+    "avgAuctionValue": 2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4701232.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Andrew Nembhard",
+    "team": "Ind",
+    "position": "PG, SG",
+    "avgAuctionValue": 2.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395712.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Ausar Thompson",
+    "team": "Det",
+    "position": "SF, PF",
+    "avgAuctionValue": 2.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4684742.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "T.J. McConnell",
+    "team": "Ind",
+    "position": "PG",
+    "avgAuctionValue": 1.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2530530.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Isaiah Hartenstein",
+    "team": "OKC",
+    "position": "C",
+    "avgAuctionValue": 1.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4222252.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "D'Angelo Russell",
+    "team": "Dal",
+    "position": "PG, SG",
+    "avgAuctionValue": 1.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136776.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Stephon Castle",
+    "team": "SA",
+    "position": "PG, SG",
+    "avgAuctionValue": 1.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4845367.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Devin Vassell",
+    "team": "SA",
+    "position": "SG, SF",
+    "avgAuctionValue": 1.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395630.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Immanuel Quickley",
+    "team": "Tor",
+    "position": "PG, SG",
+    "avgAuctionValue": 1.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395724.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tobias Harris",
+    "team": "Det",
+    "position": "PF, SF",
+    "avgAuctionValue": 1.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6440.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Draymond Green",
+    "team": "GS",
+    "position": "PF, C",
+    "avgAuctionValue": 1.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6589.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Scotty Pippen Jr.",
+    "team": "Mem",
+    "position": "PG, SG",
+    "avgAuctionValue": 0.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431785.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Aaron Gordon",
+    "team": "Den",
+    "position": "PF",
+    "avgAuctionValue": 1.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064290.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Keegan Murray",
+    "team": "Sac",
+    "position": "PF, SF",
+    "avgAuctionValue": 1.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4594327.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Cameron Johnson",
+    "team": "Den",
+    "position": "SF, PF",
+    "avgAuctionValue": 1.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3138196.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Collin Sexton",
+    "team": "Cha",
+    "position": "SG, PG",
+    "avgAuctionValue": 0.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277811.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bennedict Mathurin",
+    "team": "Ind",
+    "position": "SF, SG",
+    "avgAuctionValue": 1.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683634.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Santi Aldama",
+    "team": "Mem",
+    "position": "PF, SF, C",
+    "avgAuctionValue": 1.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4593125.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kyrie Irving",
+    "team": "Dal",
+    "position": "PG, SG",
+    "avgAuctionValue": 1.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6442.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Ace Bailey",
+    "team": "Utah",
+    "position": "SF, PF",
+    "avgAuctionValue": 1.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4873138.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jalen Suggs",
+    "team": "Orl",
+    "position": "PG, SG",
+    "avgAuctionValue": 1.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432165.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jrue Holiday",
+    "team": "Por",
+    "position": "PG, SG",
+    "avgAuctionValue": 0.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3995.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Klay Thompson",
+    "team": "Dal",
+    "position": "SG, SF",
+    "avgAuctionValue": 0.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6475.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kel'el Ware",
+    "team": "Mia",
+    "position": "C",
+    "avgAuctionValue": 1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5105623.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dereck Lively II",
+    "team": "Dal",
+    "position": "C",
+    "avgAuctionValue": 0.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683688.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Toumani Camara",
+    "team": "Por",
+    "position": "PF, SF",
+    "avgAuctionValue": 1.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431736.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Donovan Clingan",
+    "team": "Por",
+    "position": "C",
+    "avgAuctionValue": 1.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5105565.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bobby Portis",
+    "team": "Mil",
+    "position": "PF",
+    "avgAuctionValue": 0.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064482.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Egor Demin",
+    "team": "Bkn",
+    "position": "PG",
+    "avgAuctionValue": 0.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5243213.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Keyonte George",
+    "team": "Utah",
+    "position": "PG, SG",
+    "avgAuctionValue": 0.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433627.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Chris Paul",
+    "team": "LAC",
+    "position": "PG",
+    "avgAuctionValue": 0.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Ty Jerome",
+    "team": "Mem",
+    "position": "PG",
+    "avgAuctionValue": 0.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065733.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Zach Edey",
+    "team": "Mem",
+    "position": "C",
+    "avgAuctionValue": 0.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4600663.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Donte DiVincenzo",
+    "team": "Min",
+    "position": "SG, PG",
+    "avgAuctionValue": 1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934673.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tari Eason",
+    "team": "Hou",
+    "position": "SF, PF",
+    "avgAuctionValue": 1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433192.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Matas Buzelis",
+    "team": "Chi",
+    "position": "SF, PF",
+    "avgAuctionValue": 1.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4711294.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kelly Oubre Jr.",
+    "team": "Phi",
+    "position": "SF, SG",
+    "avgAuctionValue": 0.6,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3133603.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dejounte Murray",
+    "team": "NO",
+    "position": "SG, PG",
+    "avgAuctionValue": 2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907497.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dylan Harper",
+    "team": "SA",
+    "position": "PG, SG",
+    "avgAuctionValue": 0.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5037871.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Brook Lopez",
+    "team": "LAC",
+    "position": "C",
+    "avgAuctionValue": 1.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3448.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bradley Beal",
+    "team": "LAC",
+    "position": "SF, SG",
+    "avgAuctionValue": 0.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6580.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jaden Ivey",
+    "team": "Det",
+    "position": "SG, PG",
+    "avgAuctionValue": 0.8,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433218.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "P.J. Washington",
+    "team": "Dal",
+    "position": "PF",
+    "avgAuctionValue": 0.9,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278078.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "VJ Edgecombe",
+    "team": "Phi",
+    "position": "SG",
+    "avgAuctionValue": 0.7,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5124612.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jayson Tatum",
+    "team": "Bos",
+    "position": "PF, SF",
+    "avgAuctionValue": 1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065648.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Reed Sheppard",
+    "team": "Hou",
+    "position": "SG",
+    "avgAuctionValue": 0.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4711272.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kyle Kuzma",
+    "team": "Mil",
+    "position": "PF, SF",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3134907.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dennis Schroder",
+    "team": "Sac",
+    "position": "PG",
+    "avgAuctionValue": 0.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032979.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "De'Andre Hunter",
+    "team": "Cle",
+    "position": "SF, PF",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065732.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Obi Toppin",
+    "team": "Ind",
+    "position": "PF",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278355.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Cam Whitmore",
+    "team": "Wsh",
+    "position": "SF",
+    "avgAuctionValue": 0.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5105592.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Scoot Henderson",
+    "team": "Por",
+    "position": "PG",
+    "avgAuctionValue": 0.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683678.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jabari Smith Jr.",
+    "team": "Hou",
+    "position": "PF, C",
+    "avgAuctionValue": 0.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432639.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Russell Westbrook",
+    "team": "FA",
+    "position": "PG",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3468.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Buddy Hield",
+    "team": "GS",
+    "position": "SG, SF",
+    "avgAuctionValue": 0.4,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2990984.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jared McCain",
+    "team": "Phi",
+    "position": "SG",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683778.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Kon Knueppel",
+    "team": "Cha",
+    "position": "SG",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5061575.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tyrese Haliburton",
+    "team": "Ind",
+    "position": "PG, SG",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4396993.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bronny James",
+    "team": "LAL",
+    "position": "PG",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683774.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jonathan Kuminga",
+    "team": "GS",
+    "position": "PF",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4433247.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Alex Caruso",
+    "team": "OKC",
+    "position": "SG, PG",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991350.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Isaiah Collier",
+    "team": "Utah",
+    "position": "PG",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683766.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Herbert Jones",
+    "team": "NO",
+    "position": "SF, PF",
+    "avgAuctionValue": 0.5,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277813.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Brandin Podziemski",
+    "team": "GS",
+    "position": "SG, PG",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4709138.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Luguentz Dort",
+    "team": "OKC",
+    "position": "SG, SF",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397020.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Seth Curry",
+    "team": "GS",
+    "position": "SG, PG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2326307.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jerami Grant",
+    "team": "Por",
+    "position": "PF",
+    "avgAuctionValue": 0.3,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991070.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Aaron Wiggins",
+    "team": "OKC",
+    "position": "SG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397183.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Aaron Nesmith",
+    "team": "Ind",
+    "position": "SF",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4396909.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Al Horford",
+    "team": "GS",
+    "position": "C, PF",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3213.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Zaccharie Risacher",
+    "team": "Atl",
+    "position": "SF",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5211175.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bub Carrington",
+    "team": "Wsh",
+    "position": "PG, SG",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4845374.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Lonzo Ball",
+    "team": "Cle",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066421.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Damian Lillard",
+    "team": "Por",
+    "position": "PG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Khaman Maluach",
+    "team": "Phx",
+    "position": "C",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5203685.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Quentin Grimes",
+    "team": "Phi",
+    "position": "SG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397014.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tyus Jones",
+    "team": "Orl",
+    "position": "PG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3135046.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dillon Brooks",
+    "team": "Phx",
+    "position": "SF, SG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3155526.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Neemias Queta",
+    "team": "Bos",
+    "position": "C",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397424.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Thanasis Antetokounmpo",
+    "team": "Mil",
+    "position": "SF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102533.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Rob Dillingham",
+    "team": "Min",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4684275.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Walter Clayton Jr.",
+    "team": "Utah",
+    "position": "SG, PG",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4896372.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Sharife Cooper",
+    "team": "Wsh",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432173.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Rui Hachimura",
+    "team": "LAL",
+    "position": "PF, SF",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066648.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Yves Missi",
+    "team": "NO",
+    "position": "C",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5061589.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Steven Adams",
+    "team": "Hou",
+    "position": "C",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991235.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Bol Bol",
+    "team": "FA",
+    "position": "PF, C",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397102.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Ben Simmons",
+    "team": "FA",
+    "position": "PG, PF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907387.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Yuki Kawamura",
+    "team": "Chi",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5159895.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Gradey Dick",
+    "team": "Tor",
+    "position": "SG, SF",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5106258.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Paul Zipser",
+    "team": "Chi",
+    "position": "SF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3893023.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Quinten Post",
+    "team": "GS",
+    "position": "C",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4593016.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Thaddeus Young",
+    "team": "FA",
+    "position": "PF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3244.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Marcus Zegarowski",
+    "team": "Bkn",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4397036.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Rocco Zikarsky",
+    "team": "Min",
+    "position": "C",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5157587.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Yang Hansen",
+    "team": "Por",
+    "position": "C",
+    "avgAuctionValue": 0.1,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5217746.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Fred VanVleet",
+    "team": "Hou",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991230.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Moses Wright",
+    "team": "Dal",
+    "position": "PF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277871.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "McKinley Wright IV",
+    "team": "Dal",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278507.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Antonio Reeves",
+    "team": "Cha",
+    "position": "SG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4592686.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Dalton Knecht",
+    "team": "LAL",
+    "position": "SG, SF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4897943.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Isaiah Wong",
+    "team": "Cha",
+    "position": "PG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431727.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Tyrese Proctor",
+    "team": "Cle",
+    "position": "SG",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5023693.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Jaylin Williams",
+    "team": "OKC",
+    "position": "C",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432823.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Derrick Rose",
+    "team": "FA",
+    "position": "PG",
+    "avgAuctionValue": 0.2,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3456.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Leaky Black",
+    "team": "FA",
+    "position": "SF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395650.png&w=96&h=70&cb=1"
+  },
+  {
+    "name": "Isaiah Mobley",
+    "team": "Phi",
+    "position": "PF",
+    "avgAuctionValue": 0,
+    "headshotUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432815.png&w=96&h=70&cb=1"
+  }
+]
