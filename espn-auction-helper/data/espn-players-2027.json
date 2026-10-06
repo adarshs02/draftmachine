@@ -1,0 +1,5627 @@
+[
+ {
+  "id": 3112335,
+  "name": "Nikola Jokic",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 68,
+  "market": 80.8
+ },
+ {
+  "id": 4278073,
+  "name": "Shai Gilgeous-Alexander",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 64,
+  "market": 71.5
+ },
+ {
+  "id": 3945274,
+  "name": "Luka Doncic",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 63,
+  "market": 71.1
+ },
+ {
+  "id": 5104157,
+  "name": "Victor Wembanyama",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 65,
+  "market": 79.8
+ },
+ {
+  "id": 3032977,
+  "name": "Giannis Antetokounmpo",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 40,
+  "market": 61.8
+ },
+ {
+  "id": 4701230,
+  "name": "Jalen Johnson",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 56,
+  "market": 53.7
+ },
+ {
+  "id": 4432166,
+  "name": "Cade Cunningham",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 54,
+  "market": 56.3
+ },
+ {
+  "id": 4594268,
+  "name": "Anthony Edwards",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 60,
+  "market": 59.5
+ },
+ {
+  "id": 4065648,
+  "name": "Jayson Tatum",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 57,
+  "market": 54.1
+ },
+ {
+  "id": 3908809,
+  "name": "Donovan Mitchell",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 58,
+  "market": 49
+ },
+ {
+  "id": 3155942,
+  "name": "Domantas Sabonis",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 23,
+  "market": 39.3
+ },
+ {
+  "id": 4431678,
+  "name": "Tyrese Maxey",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 59,
+  "market": 47.9
+ },
+ {
+  "id": 3934672,
+  "name": "Jalen Brunson",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 25,
+  "market": 43
+ },
+ {
+  "id": 4277905,
+  "name": "Trae Young",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 12,
+  "market": 33.4
+ },
+ {
+  "id": 4433134,
+  "name": "Scottie Barnes",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 55,
+  "market": 43.6
+ },
+ {
+  "id": 4871145,
+  "name": "Josh Giddey",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 20,
+  "market": 34
+ },
+ {
+  "id": 4684740,
+  "name": "Amen Thompson",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 48,
+  "market": 36.8
+ },
+ {
+  "id": 3136193,
+  "name": "Devin Booker",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 16,
+  "market": 32.6
+ },
+ {
+  "id": 4396993,
+  "name": "Tyrese Haliburton",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 50,
+  "market": 39
+ },
+ {
+  "id": 4871144,
+  "name": "Alperen Sengun",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 26,
+  "market": 32.2
+ },
+ {
+  "id": 3202,
+  "name": "Kevin Durant",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 26,
+  "market": 33.9
+ },
+ {
+  "id": 3136195,
+  "name": "Karl-Anthony Towns",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 41,
+  "market": 34.2
+ },
+ {
+  "id": 3992,
+  "name": "James Harden",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 29,
+  "market": 27.7
+ },
+ {
+  "id": 5041939,
+  "name": "Cooper Flagg",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 44,
+  "market": 41.1
+ },
+ {
+  "id": 3149673,
+  "name": "Pascal Siakam",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 32,
+  "market": 25
+ },
+ {
+  "id": 4433621,
+  "name": "Jalen Duren",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 34,
+  "market": 24
+ },
+ {
+  "id": 4432816,
+  "name": "LaMelo Ball",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 36,
+  "market": 26.9
+ },
+ {
+  "id": 3936299,
+  "name": "Jamal Murray",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 37,
+  "market": 23.8
+ },
+ {
+  "id": 6583,
+  "name": "Anthony Davis",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 46,
+  "market": 24.4
+ },
+ {
+  "id": 4683021,
+  "name": "Deni Avdija",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 7,
+  "market": 19.8
+ },
+ {
+  "id": 4066261,
+  "name": "Bam Adebayo",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 45,
+  "market": 25.2
+ },
+ {
+  "id": 6450,
+  "name": "Kawhi Leonard",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 42,
+  "market": 25.7
+ },
+ {
+  "id": 4593803,
+  "name": "Jalen Williams",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 20,
+  "market": 18
+ },
+ {
+  "id": 4432158,
+  "name": "Evan Mobley",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 27,
+  "market": 19.8
+ },
+ {
+  "id": 3078576,
+  "name": "Derrick White",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 43,
+  "market": 18.6
+ },
+ {
+  "id": 3975,
+  "name": "Stephen Curry",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 22,
+  "market": 24.2
+ },
+ {
+  "id": 4396907,
+  "name": "Darius Garland",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 10,
+  "market": 12.8
+ },
+ {
+  "id": 5061575,
+  "name": "Kon Knueppel",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 17,
+  "market": 15
+ },
+ {
+  "id": 4066457,
+  "name": "Austin Reaves",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 11,
+  "market": 18.9
+ },
+ {
+  "id": 4066320,
+  "name": "Desmond Bane",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 15,
+  "market": 11.9
+ },
+ {
+  "id": 3917376,
+  "name": "Jaylen Brown",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 7,
+  "market": 18.7
+ },
+ {
+  "id": 1966,
+  "name": "LeBron James",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 5,
+  "market": 17.4
+ },
+ {
+  "id": 4066259,
+  "name": "De'Aaron Fox",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 10,
+  "market": 10.3
+ },
+ {
+  "id": 3147657,
+  "name": "Mikal Bridges",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 28,
+  "market": 11.4
+ },
+ {
+  "id": 4432573,
+  "name": "Paolo Banchero",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 5,
+  "market": 14.5
+ },
+ {
+  "id": 4278039,
+  "name": "Nickeil Alexander-Walker",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 24,
+  "market": 10.6
+ },
+ {
+  "id": 4278104,
+  "name": "Michael Porter Jr.",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 15,
+  "market": 10.3
+ },
+ {
+  "id": 4869342,
+  "name": "Dyson Daniels",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 19,
+  "market": 9.6
+ },
+ {
+  "id": 3064514,
+  "name": "Julius Randle",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 8.6
+ },
+ {
+  "id": 4066336,
+  "name": "Lauri Markkanen",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 21,
+  "market": 11.9
+ },
+ {
+  "id": 3907497,
+  "name": "Dejounte Murray",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 8,
+  "market": 7.1
+ },
+ {
+  "id": 4845367,
+  "name": "Stephon Castle",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 3,
+  "market": 10.3
+ },
+ {
+  "id": 4066328,
+  "name": "Jarrett Allen",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 11,
+  "market": 6.8
+ },
+ {
+  "id": 6442,
+  "name": "Kyrie Irving",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 12,
+  "market": 10
+ },
+ {
+  "id": 4395725,
+  "name": "Tyler Herro",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 7,
+  "market": 7.3
+ },
+ {
+  "id": 4396971,
+  "name": "Naz Reid",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 20,
+  "market": 7.6
+ },
+ {
+  "id": 3913176,
+  "name": "Brandon Ingram",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 4.4
+ },
+ {
+  "id": 4395628,
+  "name": "Zion Williamson",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 6.4
+ },
+ {
+  "id": 4566434,
+  "name": "Franz Wagner",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 7,
+  "market": 7.6
+ },
+ {
+  "id": 4433287,
+  "name": "Brandon Miller",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 9,
+  "market": 7.3
+ },
+ {
+  "id": 6606,
+  "name": "Damian Lillard",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 6,
+  "market": 5.5
+ },
+ {
+  "id": 4431680,
+  "name": "Onyeka Okongwu",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 14,
+  "market": 5.3
+ },
+ {
+  "id": 4433627,
+  "name": "Keyonte George",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 3,
+  "market": 5.9
+ },
+ {
+  "id": 4397688,
+  "name": "Trey Murphy III",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 13,
+  "market": 7.3
+ },
+ {
+  "id": 2595516,
+  "name": "Norman Powell",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 7,
+  "market": 4.2
+ },
+ {
+  "id": 5095151,
+  "name": "Caleb Wilson",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 8,
+  "market": 4.9
+ },
+ {
+  "id": 5041935,
+  "name": "Cameron Boozer",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 5.6
+ },
+ {
+  "id": 5105565,
+  "name": "Donovan Clingan",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 14,
+  "market": 5.8
+ },
+ {
+  "id": 4433136,
+  "name": "Walker Kessler",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 13,
+  "market": 8.2
+ },
+ {
+  "id": 3032976,
+  "name": "Rudy Gobert",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 9,
+  "market": 4.6
+ },
+ {
+  "id": 4433255,
+  "name": "Chet Holmgren",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 10,
+  "market": 9.9
+ },
+ {
+  "id": 4065733,
+  "name": "Ty Jerome",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 5,
+  "market": 2.6
+ },
+ {
+  "id": 3059318,
+  "name": "Joel Embiid",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 8.1
+ },
+ {
+  "id": 4709138,
+  "name": "Brandin Podziemski",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 7,
+  "market": 2.3
+ },
+ {
+  "id": 5160992,
+  "name": "Alex Sarr",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 7,
+  "market": 3.2
+ },
+ {
+  "id": 4711294,
+  "name": "Matas Buzelis",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 7,
+  "market": 4.2
+ },
+ {
+  "id": 4066383,
+  "name": "Miles Bridges",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 5,
+  "market": 2.6
+ },
+ {
+  "id": 4017837,
+  "name": "Ivica Zubac",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 3.4
+ },
+ {
+  "id": 5142718,
+  "name": "AJ Dybantsa",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 5.4
+ },
+ {
+  "id": 2490149,
+  "name": "CJ McCollum",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 4,
+  "market": 2
+ },
+ {
+  "id": 4395651,
+  "name": "Coby White",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 2.4
+ },
+ {
+  "id": 4277961,
+  "name": "Jaren Jackson Jr.",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 5,
+  "market": 4.9
+ },
+ {
+  "id": 4279888,
+  "name": "Ja Morant",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 4.2
+ },
+ {
+  "id": 5124612,
+  "name": "VJ Edgecombe",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 6,
+  "market": 3.2
+ },
+ {
+  "id": 5037871,
+  "name": "Dylan Harper",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 3.9
+ },
+ {
+  "id": 3978,
+  "name": "DeMar DeRozan",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 2
+ },
+ {
+  "id": 4869780,
+  "name": "Derik Queen",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 1.8
+ },
+ {
+  "id": 4711272,
+  "name": "Reed Sheppard",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 8,
+  "market": 1.9
+ },
+ {
+  "id": 2991230,
+  "name": "Fred VanVleet",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 5,
+  "market": 1.6
+ },
+ {
+  "id": 4066354,
+  "name": "Payton Pritchard",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 2.1
+ },
+ {
+  "id": 4395724,
+  "name": "Immanuel Quickley",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 3,
+  "market": 1.6
+ },
+ {
+  "id": 3934719,
+  "name": "OG Anunoby",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 6,
+  "market": 4
+ },
+ {
+  "id": 3062679,
+  "name": "Josh Hart",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 1.9
+ },
+ {
+  "id": 5142620,
+  "name": "Darius Acuff Jr.",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 1.2
+ },
+ {
+  "id": 5105623,
+  "name": "Kel'el Ware",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 6,
+  "market": 2.4
+ },
+ {
+  "id": 4431671,
+  "name": "Jaden McDaniels",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 2.3
+ },
+ {
+  "id": 4591725,
+  "name": "Ryan Rollins",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 1.6
+ },
+ {
+  "id": 4397002,
+  "name": "Ayo Dosunmu",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 1.1
+ },
+ {
+  "id": 3102531,
+  "name": "Kristaps Porzingis",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 1.1
+ },
+ {
+  "id": 4397140,
+  "name": "Kevin Porter Jr.",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 1.1
+ },
+ {
+  "id": 6478,
+  "name": "Nikola Vucevic",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 1.1
+ },
+ {
+  "id": 3908845,
+  "name": "John Collins",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 1.2
+ },
+ {
+  "id": 4684742,
+  "name": "Ausar Thompson",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 2.4
+ },
+ {
+  "id": 4395625,
+  "name": "RJ Barrett",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 1.4
+ },
+ {
+  "id": 3059319,
+  "name": "Andrew Wiggins",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 1.2
+ },
+ {
+  "id": 6440,
+  "name": "Tobias Harris",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 1
+ },
+ {
+  "id": 5041955,
+  "name": "Darryn Peterson",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 1,
+  "market": 1.8
+ },
+ {
+  "id": 4251,
+  "name": "Paul George",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 2.7
+ },
+ {
+  "id": 4278067,
+  "name": "Nic Claxton",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 1
+ },
+ {
+  "id": 3134908,
+  "name": "Jakob Poeltl",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.8
+ },
+ {
+  "id": 4432848,
+  "name": "Jaime Jaquez Jr.",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.9
+ },
+ {
+  "id": 4278585,
+  "name": "Collin Gillespie",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 0.8
+ },
+ {
+  "id": 4594327,
+  "name": "Keegan Murray",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 4,
+  "market": 1.2
+ },
+ {
+  "id": 4576087,
+  "name": "Peyton Watson",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.9
+ },
+ {
+  "id": 4437244,
+  "name": "Jalen Green",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 1,
+  "market": 1.3
+ },
+ {
+  "id": 4600663,
+  "name": "Zach Edey",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 1.4
+ },
+ {
+  "id": 4397014,
+  "name": "Quentin Grimes",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.8
+ },
+ {
+  "id": 4903027,
+  "name": "Cedric Coward",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 1,
+  "market": 1
+ },
+ {
+  "id": 5144091,
+  "name": "Jeremiah Fears",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 1,
+  "market": 0.7
+ },
+ {
+  "id": 4432639,
+  "name": "Jabari Smith Jr.",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 1.1
+ },
+ {
+  "id": 3133628,
+  "name": "Myles Turner",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 3,
+  "market": 1
+ },
+ {
+  "id": 4277811,
+  "name": "Collin Sexton",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.6
+ },
+ {
+  "id": 4395712,
+  "name": "Andrew Nembhard",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.8
+ },
+ {
+  "id": 4601023,
+  "name": "Oso Ighodaro",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 1,
+  "market": 0.5
+ },
+ {
+  "id": 4278049,
+  "name": "Daniel Gafford",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.5
+ },
+ {
+  "id": 5174563,
+  "name": "Kyshawn George",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 1,
+  "market": 0.6
+ },
+ {
+  "id": 5175643,
+  "name": "Egor Demin",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 1,
+  "market": 0.6
+ },
+ {
+  "id": 3995,
+  "name": "Jrue Holiday",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.6
+ },
+ {
+  "id": 4397424,
+  "name": "Neemias Queta",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.6
+ },
+ {
+  "id": 4222252,
+  "name": "Isaiah Hartenstein",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.6
+ },
+ {
+  "id": 3064440,
+  "name": "Zach LaVine",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.9
+ },
+ {
+  "id": 4712849,
+  "name": "Anthony Black",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 1,
+  "market": 0.4
+ },
+ {
+  "id": 4592479,
+  "name": "Julian Champagnie",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.4
+ },
+ {
+  "id": 3064290,
+  "name": "Aaron Gordon",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.5
+ },
+ {
+  "id": 3448,
+  "name": "Brook Lopez",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.2
+ },
+ {
+  "id": 4066262,
+  "name": "Malik Monk",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4432194,
+  "name": "Day'Ron Sharpe",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.3
+ },
+ {
+  "id": 4873138,
+  "name": "Ace Bailey",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 1,
+  "market": 0.4
+ },
+ {
+  "id": 3155526,
+  "name": "Dillon Brooks",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.4
+ },
+ {
+  "id": 4395630,
+  "name": "Devin Vassell",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 1,
+  "market": 0.4
+ },
+ {
+  "id": 4351852,
+  "name": "Mitchell Robinson",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.3
+ },
+ {
+  "id": 4395723,
+  "name": "Keldon Johnson",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4431785,
+  "name": "Scotty Pippen Jr.",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 4397136,
+  "name": "Saddiq Bey",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 2991070,
+  "name": "Jerami Grant",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 4683692,
+  "name": "Cason Wallace",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 2,
+  "market": 0.4
+ },
+ {
+  "id": 4592691,
+  "name": "Jake LaRavia",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 2,
+  "market": 0.2
+ },
+ {
+  "id": 6589,
+  "name": "Draymond Green",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.3
+ },
+ {
+  "id": 4684793,
+  "name": "Kyle Filipowski",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4278053,
+  "name": "Davion Mitchell",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4432165,
+  "name": "Jalen Suggs",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.4
+ },
+ {
+  "id": 4431736,
+  "name": "Toumani Camara",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 4683688,
+  "name": "Dereck Lively II",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 3138196,
+  "name": "Cameron Johnson",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 3102530,
+  "name": "Jusuf Nurkic",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 4433247,
+  "name": "Jonathan Kuminga",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.4
+ },
+ {
+  "id": 4395626,
+  "name": "Tre Jones",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432810,
+  "name": "Isaiah Stewart",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4278078,
+  "name": "P.J. Washington",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4431679,
+  "name": "Precious Achiuwa",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5101761,
+  "name": "Mikel Brown Jr.",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 2530530,
+  "name": "T.J. McConnell",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5254165,
+  "name": "Keaton Wagler",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4683634,
+  "name": "Bennedict Mathurin",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 3064482,
+  "name": "Bobby Portis",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4433249,
+  "name": "Moussa Diabate",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4432241,
+  "name": "Jamal Shead",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3135045,
+  "name": "Grayson Allen",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 2528210,
+  "name": "Tim Hardaway Jr.",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683678,
+  "name": "Scoot Henderson",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 5175737,
+  "name": "Yaxel Lendeborg",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.6
+ },
+ {
+  "id": 4873153,
+  "name": "Morez Johnson Jr.",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2991350,
+  "name": "Alex Caruso",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4277847,
+  "name": "Wendell Carter Jr.",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 3032979,
+  "name": "Dennis Schroder",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5061589,
+  "name": "Yves Missi",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4576060,
+  "name": "Ryan Kalkbrenner",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4593125,
+  "name": "Santi Aldama",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4845374,
+  "name": "Bub Carrington",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683766,
+  "name": "Isaiah Collier",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3157465,
+  "name": "Duncan Robinson",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278129,
+  "name": "Deandre Ayton",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2583632,
+  "name": "Royce O'Neale",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432582,
+  "name": "Max Christie",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5105550,
+  "name": "GG Jackson",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5093267,
+  "name": "Collin Murray-Boyles",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.3
+ },
+ {
+  "id": 6580,
+  "name": "Bradley Beal",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066211,
+  "name": "Robert Williams III",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683747,
+  "name": "Jaylon Tyson",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3134907,
+  "name": "Kyle Kuzma",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5149077,
+  "name": "Kingston Flemings",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11,
+   0
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5082206,
+  "name": "Brayden Burries",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5107173,
+  "name": "Danny Wolf",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066372,
+  "name": "Kevin Huerter",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4396909,
+  "name": "Aaron Nesmith",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278594,
+  "name": "Naji Marshall",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5104155,
+  "name": "Bilal Coulibaly",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066436,
+  "name": "De'Anthony Melton",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3133603,
+  "name": "Kelly Oubre Jr.",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4065732,
+  "name": "De'Andre Hunter",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4065804,
+  "name": "Sam Hauser",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4351851,
+  "name": "Anfernee Simons",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4433192,
+  "name": "Tari Eason",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4896372,
+  "name": "Walter Clayton Jr.",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397020,
+  "name": "Luguentz Dort",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066648,
+  "name": "Rui Hachimura",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 6430,
+  "name": "Jimmy Butler III",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.3
+ },
+ {
+  "id": 4431767,
+  "name": "Christian Braun",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4065778,
+  "name": "Max Strus",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2991139,
+  "name": "Kris Dunn",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4578893,
+  "name": "Vit Krejci",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5105839,
+  "name": "Brice Sensabaugh",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397189,
+  "name": "Jalen Smith",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4277956,
+  "name": "Jordan Poole",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4395702,
+  "name": "Isaiah Joe",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5203685,
+  "name": "Khaman Maluach",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 3936099,
+  "name": "Derrick Jones Jr.",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4702384,
+  "name": "Nique Clifford",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3913174,
+  "name": "Luke Kennard",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 3213,
+  "name": "Al Horford",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5106258,
+  "name": "Gradey Dick",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4683778,
+  "name": "Jared McCain",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 4277813,
+  "name": "Herbert Jones",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5279130,
+  "name": "Nolan Traore",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5238230,
+  "name": "Tre Johnson",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397183,
+  "name": "Aaron Wiggins",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4900671,
+  "name": "Ajay Mitchell",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 4593841,
+  "name": "Baylor Scheierman",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432170,
+  "name": "Isaiah Jackson",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5211175,
+  "name": "Zaccharie Risacher",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278355,
+  "name": "Obi Toppin",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5112087,
+  "name": "Jaylen Wells",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 6475,
+  "name": "Klay Thompson",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4888725,
+  "name": "Ryan Dunn",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4997528,
+  "name": "Nikola Jovic",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5214640,
+  "name": "Kasparas Jakucionis",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432823,
+  "name": "Jaylin Williams",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4277848,
+  "name": "Marvin Bagley III",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683689,
+  "name": "Jordan Walsh",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4702382,
+  "name": "Tristan da Silva",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4702177,
+  "name": "Keon Ellis",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4997536,
+  "name": "Gui Santos",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397475,
+  "name": "AJ Green",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278562,
+  "name": "Paul Reed",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4277869,
+  "name": "Jose Alvarado",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4610139,
+  "name": "Jeremy Sochan",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4431823,
+  "name": "Miles McBride",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433137,
+  "name": "Ziaire Williams",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683771,
+  "name": "Ronald Holland II",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2990992,
+  "name": "Marcus Smart",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 6578,
+  "name": "Harrison Barnes",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3907823,
+  "name": "Terance Mann",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 6585,
+  "name": "Andre Drummond",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5281370,
+  "name": "Hannes Steinbach",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066757,
+  "name": "Sam Merrill",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4684272,
+  "name": "Ja'Kobe Walter",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3064560,
+  "name": "Luke Kornet",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3102529,
+  "name": "Clint Capela",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2581018,
+  "name": "Kentavious Caldwell-Pope",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4431684,
+  "name": "Trayce Jackson-Davis",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2991043,
+  "name": "Caris LeVert",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5175647,
+  "name": "Hugo Gonzalez",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3907498,
+  "name": "Matisse Thybulle",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4684275,
+  "name": "Rob Dillingham",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4348700,
+  "name": "Goga Bitadze",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2993874,
+  "name": "Kyle Anderson",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 6609,
+  "name": "Khris Middleton",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3899664,
+  "name": "Simone Fontecchio",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4280151,
+  "name": "Corey Kispert",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4595400,
+  "name": "Olivier-Maxence Prosper",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278572,
+  "name": "Jamal Cain",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4712896,
+  "name": "Noah Clowney",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3037789,
+  "name": "Bogdan Bogdanovic",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4592492,
+  "name": "Bones Hyland",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5105637,
+  "name": "Adem Bona",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4397077,
+  "name": "Jaxson Hayes",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2580365,
+  "name": "Larry Nance Jr.",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2990984,
+  "name": "Buddy Hield",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5106060,
+  "name": "Jarace Walker",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432822,
+  "name": "Isaac Okoro",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4895758,
+  "name": "Cody Williams",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4431687,
+  "name": "Patrick Williams",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432847,
+  "name": "Terrence Shannon Jr.",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4997537,
+  "name": "Tristan Vukcevic",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066218,
+  "name": "Grant Williams",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3136196,
+  "name": "Trey Lyles",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3155535,
+  "name": "Kevon Looney",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3914044,
+  "name": "Landry Shamet",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4712863,
+  "name": "Mouhamed Gueye",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2528426,
+  "name": "Jordan Clarkson",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4594326,
+  "name": "Kris Murray",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4277843,
+  "name": "Gary Trent Jr.",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3135046,
+  "name": "Tyus Jones",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3912848,
+  "name": "Dean Wade",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 5164559,
+  "name": "Nate Ament",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3934723,
+  "name": "Thomas Bryant",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278077,
+  "name": "Jarred Vanderbilt",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3133626,
+  "name": "Kenrich Williams",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5239590,
+  "name": "Liam McNeeley",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4277922,
+  "name": "Jericho Sims",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066650,
+  "name": "Zach Collins",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3150844,
+  "name": "Moritz Wagner",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432819,
+  "name": "Tre Mann",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4873201,
+  "name": "Asa Newell",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432181,
+  "name": "Julian Strawther",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5044385,
+  "name": "Leonard Miller",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3136776,
+  "name": "D'Angelo Russell",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3138160,
+  "name": "Caleb Martin",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3195,
+  "name": "Mike Conley",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433076,
+  "name": "Ben Sheppard",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3907387,
+  "name": "Ben Simmons",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.2
+ },
+ {
+  "id": 2990962,
+  "name": "Taurean Prince",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5107897,
+  "name": "Jonathan Mogbo",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4701232,
+  "name": "Mark Williams",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432107,
+  "name": "Marcus Sasser",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4868423,
+  "name": "Jaden Hardy",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5157066,
+  "name": "Johnny Furphy",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4431714,
+  "name": "Jalen Wilson",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3133635,
+  "name": "Jevon Carter",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2578185,
+  "name": "Dorian Finney-Smith",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5099752,
+  "name": "Rayan Rupert",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432811,
+  "name": "Josh Green",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4914336,
+  "name": "Shaedon Sharpe",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2991235,
+  "name": "Steven Adams",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5081727,
+  "name": "Sidy Cissoko",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683750,
+  "name": "Jordan Hawkins",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432247,
+  "name": "Jaylen Clark",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5105806,
+  "name": "Jett Howard",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3134916,
+  "name": "Jordan McLaughlin",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4065654,
+  "name": "Jonathan Isaac",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4897943,
+  "name": "Dalton Knecht",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683774,
+  "name": "Bronny James",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0.1
+ },
+ {
+  "id": 4591259,
+  "name": "Koby Brea",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2578239,
+  "name": "Pat Connaughton",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4431752,
+  "name": "Kobe Brown",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5289900,
+  "name": "Mohamed Diawara",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3136777,
+  "name": "Jae'Sean Tate",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5239561,
+  "name": "Jase Richardson",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2999547,
+  "name": "Gary Harris",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4398390,
+  "name": "Jalen Pickett",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5217746,
+  "name": "Yang Hansen",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5105553,
+  "name": "Julian Phillips",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5211983,
+  "name": "Pacome Dadiet",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432171,
+  "name": "Moses Moody",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397886,
+  "name": "Charles Bassey",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433569,
+  "name": "Johni Broome",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3934673,
+  "name": "Donte DiVincenzo",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5242496,
+  "name": "Noa Essengue",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3948153,
+  "name": "Chris Boucher",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4396818,
+  "name": "Jordan Miller",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3137259,
+  "name": "Gabe Vincent",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4431828,
+  "name": "KJ Martin",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2531367,
+  "name": "Dwight Powell",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2580782,
+  "name": "Spencer Dinwiddie",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432174,
+  "name": "Cam Thomas",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432190,
+  "name": "Andre Jackson Jr.",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3064230,
+  "name": "Cameron Payne",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3064447,
+  "name": "Delon Wright",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432735,
+  "name": "Dariq Whitehead",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2990969,
+  "name": "Georges Niang",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432809,
+  "name": "Cole Anthony",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4432813,
+  "name": "Jeremiah Robinson-Earl",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433159,
+  "name": "Dalen Terry",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433083,
+  "name": "Cam Spencer",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433218,
+  "name": "Jaden Ivey",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4277964,
+  "name": "Xavier Tillman",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4433623,
+  "name": "Caleb Houstan",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278076,
+  "name": "Nick Richards",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3032978,
+  "name": "Dario Saric",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 5105592,
+  "name": "Cam Whitmore",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4565201,
+  "name": "Malaki Branham",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4278541,
+  "name": "Jaylen Nowell",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4065670,
+  "name": "Bruce Brown",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2566769,
+  "name": "Malcolm Brogdon",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2779,
+  "name": "Chris Paul",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2968436,
+  "name": "Joe Ingles",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2960236,
+  "name": "Maxi Kleber",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3012,
+  "name": "Kyle Lowry",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4066421,
+  "name": "Lonzo Ball",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3209,
+  "name": "Jeff Green",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2993370,
+  "name": "Richaun Holmes",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3416,
+  "name": "Nicolas Batum",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3431,
+  "name": "Eric Gordon",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3449,
+  "name": "Kevin Love",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4017844,
+  "name": "Guerschon Yabusele",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3059409,
+  "name": "Nigel Hayes-Davis",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4023,
+  "name": "Garrett Temple",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4395620,
+  "name": "Hunter Tyson",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4592829,
+  "name": "Quenton Jackson",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683024,
+  "name": "Killian Hayes",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3134903,
+  "name": "Gary Payton II",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 2528693,
+  "name": "Torrey Craig",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3134932,
+  "name": "John Konchar",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3913180,
+  "name": "Garrison Mathews",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3102532,
+  "name": "Vasilije Micic",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 3102528,
+  "name": "Dante Exum",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683736,
+  "name": "Kobe Bufkin",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397018,
+  "name": "Ochai Agbaji",
+  "slots": [
+   2,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4683686,
+  "name": "Nick Smith Jr.",
+  "slots": [
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ },
+ {
+  "id": 4397102,
+  "name": "Bol Bol",
+  "slots": [
+   3,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "roto": 0,
+  "market": 0
+ }
+]
