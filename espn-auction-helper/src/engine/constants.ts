@@ -1,0 +1,24 @@
+// Tunables. Values validated on the Josh Lloyd replay (spec §9).
+export const INFLATION_MIN = 0.8
+export const INFLATION_MAX = 1.2
+export const TEMP_WINDOW = 12
+export const TEMP_MIN_SALES = 4
+export const TEMP_MIN_VALUE = 5
+export const HOT = 1.05
+export const WARM = 1.02
+export const COLD = 0.95
+export const STAR_TIER_MAX = 2
+export const BARGAIN_RATIO = 0.95
+export const BID_GAP_MIN = 3
+export const BID_GAP_FRACTION = 0.25
+export const BID_UP_MARGIN = 2
+export const NEED_BOOST = 1.1
+export const THIN_FACTOR = 1.5
+export const NEED_MIN_VALUE = 5
+export const ONE_PLAYER_SHARE = 0.35
+export const TWO_PLAYER_SHARE = 0.7
+export const EARLY_MONEY = 0.6
+export const DOLLAR_MONEY = 0.15
+export const DECOY_MARKET_RATIO = 1.1
+export const TARGET_BAND = 0.5
+export const TARGET_LIMIT = 10
