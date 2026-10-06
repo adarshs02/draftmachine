@@ -21,6 +21,8 @@ export function reduce(s: DraftState, ev: DraftEvent): DraftState {
     case 'bid':
       if (!s.live || ev.amount <= s.live.price) return s
       return { ...s, live: { ...s.live, price: ev.amount, leaderId: ev.teamId } }
+    case 'clearLive':
+      return s.live ? { ...s, live: null } : s
     case 'sold':
       if (isSold(s, ev.playerKey)) return s
       return {

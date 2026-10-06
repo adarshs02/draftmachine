@@ -17,7 +17,9 @@ export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (e
     if (action === 'nominate' && f.playerKey && f.amount > 0) onEvent({ type: 'nominated', playerKey: f.playerKey, teamId: f.teamId, amount: f.amount })
     if (action === 'bid' && f.amount > 0) onEvent({ type: 'bid', teamId: f.teamId, amount: f.amount })
     if (action === 'sold') {
-      if (state.live) onEvent({ type: 'sold', playerKey: state.live.playerKey, teamId: state.live.leaderId, price: state.live.price })
+      // On the block: a typed amount (and its team) wins over what we last saw in the room.
+      if (state.live && f.amount > 0) onEvent({ type: 'sold', playerKey: state.live.playerKey, teamId: f.teamId, price: f.amount })
+      else if (state.live) onEvent({ type: 'sold', playerKey: state.live.playerKey, teamId: state.live.leaderId, price: state.live.price })
       else if (f.playerKey && f.amount > 0) onEvent({ type: 'sold', playerKey: f.playerKey, teamId: f.teamId, price: f.amount })
     }
     if (action === 'value' && f.playerKey && f.amount > 0) onEvent({ type: 'setValue', playerKey: f.playerKey, b: f.amount })
@@ -34,6 +36,7 @@ export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (e
         <button type="button" onClick=${act('bid')}>Bid</button>
         <button type="button" onClick=${act('sold')}>Sold</button>
         <button type="button" onClick=${act('value')}>Set value</button>
+        <button type="button" disabled=${!state.live} onClick=${() => onEvent({ type: 'clearLive' })}>Clear block</button>
       </div>
     </form>`
 }

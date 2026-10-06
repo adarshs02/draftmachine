@@ -56,6 +56,10 @@ describe('reduce', () => {
     expect(s.values.ghost).toMatchObject({ key: 'ghost', name: 'ghost', b: 7, tier: 5 })
   })
 
+  it('clearLive takes the player off the block', () => {
+    expect(build(settings(), V, [nominated('Alpha', 2, 1), { type: 'clearLive' }]).live).toBeNull()
+  })
+
   it('ignores events of unknown type', () => {
     const before = build(settings(), V, [sold('Alpha', 3, 12)])
     expect(reduce(before, { type: 'bogus' } as unknown as DraftEvent)).toBe(before)

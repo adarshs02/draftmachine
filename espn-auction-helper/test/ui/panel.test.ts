@@ -78,10 +78,23 @@ describe('ManualEntry', () => {
     expect(onEvent).toHaveBeenCalledWith({ type: 'bid', teamId: 3, amount: 9 })
   })
 
-  it('Sold closes the live auction at its price and leader', () => {
+  it('Sold with no amount typed closes the live auction at its price and leader', () => {
     const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
     button(el, 'Sold').click()
     expect(onEvent).toHaveBeenCalledWith({ type: 'sold', playerKey: 'alpha', teamId: 3, price: 7 })
+  })
+
+  it('Sold with an amount typed sells the live player to the typed team at that amount', () => {
+    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
+    fill(el, '', '2', '25')
+    button(el, 'Sold').click()
+    expect(onEvent).toHaveBeenCalledWith({ type: 'sold', playerKey: 'alpha', teamId: 2, price: 25 })
+  })
+
+  it('Clear block takes the player off the block', () => {
+    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
+    button(el, 'Clear block').click()
+    expect(onEvent).toHaveBeenCalledWith({ type: 'clearLive' })
   })
 
   it('Set value dispatches a value edit', () => {

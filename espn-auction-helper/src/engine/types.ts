@@ -41,6 +41,7 @@ export interface DraftState {
 export type DraftEvent =
   | { type: 'nominated'; playerKey: string; teamId: number; amount: number }
   | { type: 'bid'; teamId: number; amount: number }
+  | { type: 'clearLive' }
   | { type: 'sold'; playerKey: string; teamId: number; price: number }
   | { type: 'undo' }
   | { type: 'editSale'; seq: number; teamId: number; price: number }
