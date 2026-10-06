@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
-import { NS, startContentSide, startHookSide, type Bus } from '../../src/capture/bridge'
+import { describe, expect, it, vi } from 'vitest'
+import { NS, READY_RETRY_MS, startContentSide, startHookSide, type Bus } from '../../src/capture/bridge'
 import type { Frame } from '../../src/capture/frames'
 
 /** Like window.postMessage: every listener, including the poster's own, sees every message. */
@@ -50,5 +50,24 @@ describe('bridge', () => {
     bus.post({ ns: NS, type: 'ready' })
     bus.post({ ns: NS, type: 'ready' })
     expect(bus.sent.filter((m) => (m as { type?: string }).type === 'hello')).toHaveLength(1)
+  })
+
+  it('retries ready until a late hook answers, then stops retrying', () => {
+    vi.useFakeTimers()
+    try {
+      const bus = memoryBus()
+      const got: Frame[] = []
+      startContentSide(bus, (f) => got.push(f))
+      const hook = startHookSide(bus, () => 'late')
+      hook.emit(frame('LATE'))
+      vi.advanceTimersByTime(READY_RETRY_MS)
+      expect(got.map((f) => f.data)).toEqual(['LATE'])
+      const readies = () => bus.sent.filter((m) => (m as { type?: string }).type === 'ready').length
+      const before = readies()
+      vi.advanceTimersByTime(10_000)
+      expect(readies()).toBe(before)
+    } finally {
+      vi.useRealTimers()
+    }
   })
 })

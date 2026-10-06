@@ -42,13 +42,29 @@ export function startHookSide(bus: Bus, makeNonce: () => string = () => crypto.r
   }
 }
 
-/** Content script: trusts the first hello after its ready, then only frames with that nonce. */
+export const READY_RETRY_MS = 250
+export const READY_MAX_TRIES = 40
+
+/** Content script: trusts the first hello after its ready, then only frames with that nonce. Re-posts ready until a hello arrives. */
 export function startContentSide(bus: Bus, onFrame: (frame: Frame) => void): void {
   let nonce: string | null = null
+  let tries = 0
+  let timer: ReturnType<typeof setInterval> | null = null
+  const stop = () => {
+    if (timer !== null) clearInterval(timer)
+    timer = null
+  }
   bus.listen((m) => {
     if (!isMsg(m)) return
-    if (m.type === 'hello' && !nonce) nonce = m.nonce
-    else if (m.type === 'frame' && nonce !== null && m.nonce === nonce) onFrame(m.frame)
+    if (m.type === 'hello' && !nonce) {
+      nonce = m.nonce
+      stop()
+    } else if (m.type === 'frame' && nonce !== null && m.nonce === nonce) onFrame(m.frame)
   })
-  bus.post({ ns: NS, type: 'ready' })
+  const ping = () => {
+    if (nonce || ++tries > READY_MAX_TRIES) return stop()
+    bus.post({ ns: NS, type: 'ready' })
+  }
+  ping()
+  if (!nonce) timer = setInterval(ping, READY_RETRY_MS)
 }
