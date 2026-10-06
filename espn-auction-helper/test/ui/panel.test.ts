@@ -1,5 +1,6 @@
 // @vitest-environment jsdom
 import { render } from 'preact'
+import { act } from 'preact/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 import { advise } from '../../src/engine/advise'
 import type { DraftState } from '../../src/engine/types'
@@ -104,6 +105,27 @@ describe('ManualEntry', () => {
     fill(el, 'Alpha', '2', '5')
     button(el, 'Nominated').click()
     expect(onEvent).toHaveBeenCalledWith({ type: 'nominated', playerKey: 'alpha', teamId: 2, amount: 5 })
+  })
+
+  it('Nominated resolves a partial name to the real player', () => {
+    const { el, onEvent } = show(build(S, V, []))
+    fill(el, 'alp', '2', '5')
+    button(el, 'Nominated').click()
+    expect(onEvent).toHaveBeenCalledWith({ type: 'nominated', playerKey: 'alpha', teamId: 2, amount: 5 })
+  })
+
+  it('Nominated shows an error and sends nothing for an unknown name', async () => {
+    const { el, onEvent } = show(build(S, V, []))
+    fill(el, 'zzz', '2', '5')
+    await act(() => button(el, 'Nominated').click())
+    expect(onEvent).not.toHaveBeenCalled()
+    expect(el.querySelector('form.manual')!.textContent).toContain('No player matches "zzz"')
+  })
+
+  it('suggests every player value, with no cap', () => {
+    const many = Array.from({ length: 305 }, (_, i) => pv(`Player ${i}`, 1 + (i % 50)))
+    const { el } = show(build(S, many, [sold('Player 0', 2, 3)]))
+    expect(el.querySelectorAll('datalist option')).toHaveLength(305)
   })
 
   it('Bid dispatches a bid', () => {
