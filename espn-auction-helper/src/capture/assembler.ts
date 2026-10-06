@@ -29,6 +29,7 @@ export function createAssembler(idToKey: (espnId: number) => string, getLive: ()
           const price = raw.amount ?? (live?.playerKey === playerKey ? live.price : 1)
           return [{ type: 'sold', playerKey, teamId: raw.teamId, price }]
         }
+        case 'turn': // the controller judges a turn against the block; it is no draft event
         default:
           return []
       }

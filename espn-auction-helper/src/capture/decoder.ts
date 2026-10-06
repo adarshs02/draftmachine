@@ -13,6 +13,8 @@ export interface AuctionGrammar {
   nominate: VerbMap | null
   bid: VerbMap
   sold: VerbMap
+  /** A team is on the clock to nominate: the previous auction is over. */
+  turn: VerbMap
 }
 
 // From the recording in test/fixtures/espn-auction-recording.json (Task 16/17).
@@ -20,18 +22,20 @@ export const GRAMMAR: AuctionGrammar = {
   nominate: null,
   bid: { verb: 'BID', team: 1, player: 2, amount: 3 },
   sold: { verb: 'SOLD', team: 1, player: 2, amount: 4 },
+  turn: { verb: 'NOMINATION', team: 1, player: null, amount: null },
 }
 
 /** Socket verbs that carry nothing the engine needs. */
 export const NOISE_VERBS = new Set([
   'PING', 'PONG', 'CLOCK', 'TOKEN', 'INIT', 'JOINED', 'LEFT', 'STATE', 'SELECTING', 'AUTOSUGGEST', 'AUTODRAFT', 'DRAFT_LIST', 'ERROR',
-  'NOMINATION', 'BID_ACK', 'PROJECTED_STANDINGS',
+  'BID_ACK', 'PROJECTED_STANDINGS',
 ])
 
 export type RawEvent =
   | { kind: 'nominated'; teamId: number; playerId: number; amount: number }
   | { kind: 'bid'; teamId: number; playerId: number | null; amount: number }
   | { kind: 'sold'; teamId: number; playerId: number; amount: number | null }
+  | { kind: 'turn'; teamId: number }
   | { kind: 'unknown'; verb: string }
 
 const field = (tokens: string[], i: number | null): number | null => {
@@ -59,6 +63,10 @@ export function decodeLine(line: string, g: AuctionGrammar = GRAMMAR): RawEvent 
     const teamId = field(tokens, g.sold.team)
     const playerId = field(tokens, g.sold.player)
     return teamId !== null && playerId !== null ? { kind: 'sold', teamId, playerId, amount: field(tokens, g.sold.amount) } : null
+  }
+  if (verb === g.turn.verb) {
+    const teamId = field(tokens, g.turn.team)
+    return teamId !== null ? { kind: 'turn', teamId } : null
   }
   return NOISE_VERBS.has(verb) ? null : { kind: 'unknown', verb }
 }

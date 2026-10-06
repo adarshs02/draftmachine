@@ -12,15 +12,16 @@ import { build, nominated, pv, settings, sold } from '../helpers'
 const S = settings(4, { lineupSlotCounts: { 12: 13 } })
 const V = [pv('Alpha', 30), pv('Beta', 18)]
 
-function show(state: DraftState) {
+function show(state: DraftState, extra: Record<string, unknown> = {}) {
   const el = document.createElement('div')
   const onEvent = vi.fn()
   const onReset = vi.fn()
+  const onDismissAlert = vi.fn()
   render(
-    html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} onReset=${onReset} />`,
+    html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} alert=${null} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} onReset=${onReset} onDismissAlert=${onDismissAlert} ...${extra} />`,
     el,
   )
-  return { el, onEvent, onReset }
+  return { el, onEvent, onReset, onDismissAlert }
 }
 const button = (el: HTMLElement, text: string) => [...el.querySelectorAll('button')].find((b) => b.textContent === text)!
 const fill = (el: HTMLElement, player: string, team: string, amount: string) => {
@@ -71,7 +72,7 @@ describe('Panel', () => {
       const el = document.createElement('div')
       const targets = advice.targets.map((t, i) => (i === 0 ? { ...t, outbidBy: names } : t))
       render(
-        html`<${Panel} advice=${{ ...advice, targets }} state=${state} health="manual" banner=${null} frameCount=${0} onEvent=${() => {}} onDownloadRecording=${() => {}} onReset=${() => {}} />`,
+        html`<${Panel} advice=${{ ...advice, targets }} state=${state} health="manual" banner=${null} alert=${null} frameCount=${0} onEvent=${() => {}} onDownloadRecording=${() => {}} onReset=${() => {}} onDismissAlert=${() => {}} />`,
         el,
       )
       return el.querySelector('td.muted:last-child') as HTMLElement
@@ -138,6 +139,20 @@ describe('Panel', () => {
     expect(toggle().textContent).toBe('+')
     await act(() => toggle().click())
     expect(el.querySelector('.now')).not.toBeNull()
+  })
+
+  it('shows an alert with a × that dismisses it', () => {
+    const { el, onDismissAlert } = show(build(S, V, []), { alert: "Missed the end of Alpha's auction (last seen $25 by T3). If it sold, enter it with Sold." })
+    const box = el.querySelector('.alert') as HTMLElement
+    expect(box.textContent).toContain("Missed the end of Alpha's auction")
+    const close = box.querySelector('button') as HTMLButtonElement
+    expect(close.textContent).toBe('×')
+    close.click()
+    expect(onDismissAlert).toHaveBeenCalledTimes(1)
+  })
+
+  it('shows no alert box without an alert', () => {
+    expect(show(build(S, V, [])).el.querySelector('.alert')).toBeNull()
   })
 
   it('New draft resets only after confirming', () => {

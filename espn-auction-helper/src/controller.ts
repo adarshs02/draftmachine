@@ -1,10 +1,11 @@
 import type { Frame } from './capture/frames'
 import { createAssembler } from './capture/assembler'
-import { decodeFrame } from './capture/decoder'
+import { decodeFrame, type RawEvent } from './capture/decoder'
 import { buildRecording } from './capture/recording'
 import { advise, type Advice } from './engine/advise'
+import { teamSummary, valueOf } from './engine/metrics'
 import { initialState, reduce } from './engine/reducer'
-import type { DraftEvent, DraftState } from './engine/types'
+import type { DraftEvent, DraftState, Live } from './engine/types'
 import { fallbackSettings, findMyTeam, swidFromCookie, toSettings, type LeagueInfo } from './espn/league'
 import { clearEvents, loadEvents, saveEvents, type KeyValueStore } from './storage'
 import type { Health } from './ui/Panel'
@@ -16,6 +17,8 @@ export interface View {
   state: DraftState
   health: Health
   banner: string | null
+  /** Something the user must check by hand; kept until dismissed or replaced. */
+  alert: string | null
   frameCount: number
 }
 
@@ -33,6 +36,7 @@ export interface ControllerDeps {
 
 export interface Controller {
   dispatch(ev: DraftEvent): void
+  dismissAlert(): void
   getState(): DraftState
   onFrame(frame: Frame): void
   recordingJson(): string
@@ -85,8 +89,9 @@ export async function createController(deps: ControllerDeps): Promise<Controller
   const byEspnId = new Map(values.flatMap((v) => (v.espnId === null ? [] : [[v.espnId, v.key] as const])))
   const assembler = createAssembler((id) => byEspnId.get(id) ?? `espn:${id}`, () => state.live)
   let health: Health = 'manual'
+  let alert: string | null = null
   const banner = () => [leagueBanner, restoreBanner].filter(Boolean).join(' · ') || null
-  const publish = () => deps.render({ advice: advise(state), state, health, banner: banner(), frameCount: frames.length })
+  const publish = () => deps.render({ advice: advise(state), state, health, banner: banner(), alert, frameCount: frames.length })
   /** Returns whether the event changed anything; no-ops (repeat bids, stale bids) stay out of the log. */
   const apply = (ev: DraftEvent): boolean => {
     const next = reduce(state, ev)
@@ -96,6 +101,29 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     for (const store of stores) saveEvents(store, deps.leagueId, log)
     return true
   }
+  const missedSale = (live: Live) =>
+    `Missed the end of ${valueOf(state, live.playerKey).name}'s auction (last seen $${live.price} by ${teamSummary(state, live.leaderId).name}). If it sold, enter it with Sold.`
+  /**
+   * ESPN streams NOMINATION -> BID... -> SOLD -> NOMINATION. A turn, or a bid on someone else,
+   * while our block still holds an unsold player means its SOLD was lost (refresh, reconnect).
+   */
+  const onRaw = (raw: RawEvent) => {
+    if (raw.kind === 'turn') {
+      if (state.live) {
+        alert = missedSale(state.live)
+        apply({ type: 'clearLive' })
+      }
+      return
+    }
+    for (const ev of assembler.push(raw)) {
+      health = 'live'
+      const live = state.live
+      if (ev.type === 'nominated' && live && live.playerKey !== ev.playerKey && !state.sales.some((x) => x.playerKey === live.playerKey)) {
+        alert = missedSale(live)
+      }
+      apply(ev)
+    }
+  }
   publish()
 
   return {
@@ -103,17 +131,14 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       apply(ev)
       publish()
     },
+    dismissAlert() {
+      alert = null
+      publish()
+    },
     getState: () => state,
     onFrame(frame) {
       frames.push(frame)
-      if (frame.dir === 'in') {
-        for (const raw of decodeFrame(frame.data)) {
-          for (const ev of assembler.push(raw)) {
-            health = 'live'
-            apply(ev)
-          }
-        }
-      }
+      if (frame.dir === 'in') for (const raw of decodeFrame(frame.data)) onRaw(raw)
       publish()
     },
     recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),
@@ -122,6 +147,7 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       clearLog()
       state = fresh()
       restoreBanner = null
+      alert = null
       publish()
     },
   }

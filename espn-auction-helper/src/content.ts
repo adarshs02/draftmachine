@@ -40,7 +40,13 @@ async function start(container: HTMLElement): Promise<void> {
     loadLeague: () => fetchLeague(leagueId),
     render: (view) =>
       render(
-        html`<${Panel} ...${view} onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)} onDownloadRecording=${download} onReset=${() => controller?.reset()} />`,
+        html`<${Panel}
+          ...${view}
+          onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)}
+          onDownloadRecording=${download}
+          onReset=${() => controller?.reset()}
+          onDismissAlert=${() => controller?.dismissAlert()}
+        />`,
         container,
       ),
   })

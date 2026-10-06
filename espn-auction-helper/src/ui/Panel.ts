@@ -13,10 +13,12 @@ export interface PanelProps {
   state: DraftState
   health: Health
   banner: string | null
+  alert: string | null
   frameCount: number
   onEvent: (ev: DraftEvent) => void
   onDownloadRecording: () => void
   onReset: () => void
+  onDismissAlert: () => void
 }
 
 /** "3", "#3" or a unique, case-insensitive team-name prefix ("bub") -> team id. */
@@ -58,6 +60,7 @@ export function Panel(p: PanelProps) {
       </header>
       ${!collapsed && html`
         ${p.banner && html`<div class="banner">${p.banner}</div>`}
+        ${p.alert && html`<div class="alert"><span>${p.alert}</span><button title="dismiss" onClick=${p.onDismissAlert}>×</button></div>`}
         <label class=${mine === null ? 'picker' : 'picker compact'}>${mine === null ? 'Which team is yours?' : 'My team'}
           <select value=${mine === null ? '' : String(mine)} onChange=${(e: Event) => {
             const value = (e.target as HTMLSelectElement).value

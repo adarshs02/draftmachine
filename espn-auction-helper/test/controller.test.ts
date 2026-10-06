@@ -29,7 +29,7 @@ describe('createController', () => {
     expect(views).toHaveLength(1)
     expect(views[0].state.settings.teams).toHaveLength(10)
     expect(views[0].state.myTeamId).toBe(1)
-    expect(views[0]).toMatchObject({ health: 'manual', banner: null, frameCount: 0 })
+    expect(views[0]).toMatchObject({ health: 'manual', banner: null, alert: null, frameCount: 0 })
   })
 
   it('falls back to a default league with a banner when ESPN fails', async () => {
@@ -217,5 +217,52 @@ describe('live sequence against the panel state', () => {
     const { c, deps } = await make({ values: values() })
     c.dispatch({ type: 'clearLive' })
     expect(deps.storage.getItem(KEY)).toBeNull()
+  })
+})
+
+describe('missed end of an auction', () => {
+  const ALPHA = 3112335
+  const BRAVO = 42
+  const KEY = 'eah:7:events'
+  const values = () => [pv('Alpha', 30, { espnId: ALPHA }), pv('Bravo', 20, { espnId: BRAVO })]
+  const frame = (data: string) => ({ dir: 'in' as const, data, t: 1, url: 'wss://fantasydraft.espn.com/x' })
+  /** A reload whose saved log ends with Alpha still on the block at $25 by T3. */
+  const reloaded = () => make({ values: values(), storage: memoryStore({ [KEY]: JSON.stringify([nominated('Alpha', 2, 1), { type: 'bid', teamId: 3, amount: 25 }]) }) })
+  const MISSED_ALPHA = "Missed the end of Alpha's auction (last seen $25 by T3). If it sold, enter it with Sold."
+
+  it('a NOMINATION turn while a player is still on the block clears the block and raises an alert', async () => {
+    const { c, views, deps } = await reloaded()
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 25, leaderId: 3 })
+    c.onFrame(frame('NOMINATION 4 30000'))
+    expect(c.getState().live).toBeNull()
+    expect(views.at(-1)!.alert).toBe(MISSED_ALPHA)
+    expect(JSON.parse(deps.storage.getItem(KEY)!).at(-1)).toEqual({ type: 'clearLive' })
+  })
+
+  it('a BID on another player while one is still on the block raises the alert and nominates the new player', async () => {
+    const { c, views } = await reloaded()
+    c.onFrame(frame(lineFor(GRAMMAR.bid, { team: 5, player: BRAVO, amount: 1 })))
+    expect(c.getState().live).toEqual({ playerKey: 'bravo', price: 1, leaderId: 5 })
+    expect(views.at(-1)!.alert).toBe(MISSED_ALPHA)
+  })
+
+  it('the real order (BID, SOLD, NOMINATION, BID) raises no alert', async () => {
+    const { c, views } = await make({ values: values() })
+    c.onFrame(frame(lineFor(GRAMMAR.bid, { team: 2, player: ALPHA, amount: 1 })))
+    c.onFrame(frame(`${lineFor(GRAMMAR.sold, { team: 3, player: ALPHA, amount: 9 })}\nNOMINATION 4 30000`))
+    c.onFrame(frame(lineFor(GRAMMAR.bid, { team: 4, player: BRAVO, amount: 1 })))
+    expect(c.getState().sales).toEqual([{ seq: 1, playerKey: 'alpha', teamId: 3, price: 9 }])
+    expect(c.getState().live).toEqual({ playerKey: 'bravo', price: 1, leaderId: 4 })
+    expect(views.at(-1)!.alert).toBeNull()
+  })
+
+  it('keeps the alert until it is dismissed', async () => {
+    const { c, views } = await reloaded()
+    c.onFrame(frame('NOMINATION 4 30000'))
+    c.onFrame(frame('CLOCK 6 85495 1'))
+    c.dispatch(nominated('Bravo', 4, 1))
+    expect(views.at(-1)!.alert).toBe(MISSED_ALPHA)
+    c.dismissAlert()
+    expect(views.at(-1)!.alert).toBeNull()
   })
 })

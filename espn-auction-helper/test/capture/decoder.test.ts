@@ -28,8 +28,14 @@ describe('decodeLine', () => {
   })
 
   it('skips noise and flags unknown verbs', () => {
-    for (const l of ['CLOCK 6 85495 1', 'PONG PING%201', 'NOMINATION 7 30000', 'BID_ACK 1 3112335 5', 'PROJECTED_STANDINGS {"a":1}']) expect(decodeLine(l)).toBeNull()
+    for (const l of ['CLOCK 6 85495 1', 'PONG PING%201', 'BID_ACK 1 3112335 5', 'PROJECTED_STANDINGS {"a":1}']) expect(decodeLine(l)).toBeNull()
     expect(decodeLine('ZZZ_NOT_A_VERB 1 2')).toEqual({ kind: 'unknown', verb: 'ZZZ_NOT_A_VERB' })
+  })
+
+  it('decodes NOMINATION as the team whose turn it is to nominate', () => {
+    expect(decodeLine('NOMINATION 7 30000')).toEqual({ kind: 'turn', teamId: 7 })
+    expect(decodeLine(lineFor(g.turn, { team: 4 }))).toEqual({ kind: 'turn', teamId: 4 })
+    expect(decodeLine('NOMINATION x 30000')).toBeNull()
   })
 
   it('drops a known verb with garbage fields', () => {

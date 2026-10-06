@@ -67,4 +67,8 @@ describe('createAssembler', () => {
   it('drops unknown events', () => {
     expect(make().a.push({ kind: 'unknown', verb: 'X' })).toEqual([])
   })
+
+  it('a nominating turn makes no draft event, even with a player on the block', () => {
+    expect(make({ playerKey: 'p9', price: 5 }).a.push({ kind: 'turn', teamId: 4 })).toEqual([])
+  })
 })
