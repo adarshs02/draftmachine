@@ -14,6 +14,7 @@ export interface PanelProps {
   health: Health
   banner: string | null
   alert: string | null
+  unknownVerbs: Record<string, number>
   frameCount: number
   onEvent: (ev: DraftEvent) => void
   onDownloadRecording: () => void
@@ -46,6 +47,7 @@ export function Panel(p: PanelProps) {
     const teamId = teamFromText(state.settings.teams, team.join(' '))
     if (price > 0 && teamId !== null) p.onEvent({ type: 'editSale', seq: f.seq, teamId, price })
   }
+  const unknown = Object.entries(p.unknownVerbs).map(([verb, n]) => `${verb}×${n}`).join(', ')
   const [collapsed, setCollapsed] = useState(false)
   const newDraft = () => {
     if (window.confirm('Start a new draft? This clears all recorded sales.')) p.onReset()
@@ -126,6 +128,7 @@ export function Panel(p: PanelProps) {
         <footer class="row">
           <button onClick=${() => p.onEvent({ type: 'undo' })}>Undo last sale</button>
           <button onClick=${p.onDownloadRecording}>Download recording (${p.frameCount} frames)</button>
+          ${unknown && html`<span class="muted" title="socket verbs the decoder does not know">unknown: ${unknown}</span>`}
           <button onClick=${newDraft}>New draft</button>
         </footer>
       `}

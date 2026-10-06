@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { createController, type ControllerDeps, type View } from '../src/controller'
+import { createController, LIVE_WINDOW_MS, type ControllerDeps, type View } from '../src/controller'
 import { parseLeague } from '../src/espn/league'
 import { GRAMMAR } from '../src/capture/decoder'
 import { lineFor, memoryStore, nominated, pv, sold } from './helpers'
@@ -29,7 +29,7 @@ describe('createController', () => {
     expect(views).toHaveLength(1)
     expect(views[0].state.settings.teams).toHaveLength(10)
     expect(views[0].state.myTeamId).toBe(1)
-    expect(views[0]).toMatchObject({ health: 'manual', banner: null, alert: null, frameCount: 0 })
+    expect(views[0]).toMatchObject({ health: 'manual', banner: null, alert: null, unknownVerbs: {}, frameCount: 0 })
   })
 
   it('falls back to a default league with a banner when ESPN fails', async () => {
@@ -264,5 +264,67 @@ describe('missed end of an auction', () => {
     expect(views.at(-1)!.alert).toBe(MISSED_ALPHA)
     c.dismissAlert()
     expect(views.at(-1)!.alert).toBeNull()
+  })
+})
+
+describe('health', () => {
+  const frame = (data: string, dir: 'in' | 'out' = 'in') => ({ dir, data, t: 1, url: 'wss://fantasydraft.espn.com/x' })
+  /** A clock the test moves by hand. */
+  const clock = () => {
+    const box = { t: 1_000_000 }
+    return { box, now: () => box.t }
+  }
+
+  it('is live while recognized lines arrive and drops to manual once none came for 20 s', async () => {
+    const { box, now } = clock()
+    const { c, views } = await make({ now })
+    c.onFrame(frame('CLOCK 6 85495 1'))
+    expect(views.at(-1)!.health).toBe('live')
+    const shown = views.length
+    box.t += LIVE_WINDOW_MS - 1
+    c.tick()
+    expect(views).toHaveLength(shown) // nothing changed: no re-render
+    box.t += 1
+    c.tick()
+    expect(views).toHaveLength(shown + 1)
+    expect(views.at(-1)!.health).toBe('manual')
+    c.tick()
+    expect(views).toHaveLength(shown + 1)
+  })
+
+  it('a decoded BID, a NOMINATION turn and PONG each keep it live', async () => {
+    const { box, now } = clock()
+    const { c, views } = await make({ now, values: [pv('Alpha', 30, { espnId: 3112335 })] })
+    for (const data of [lineFor(GRAMMAR.bid, { team: 2, player: 3112335, amount: 1 }), 'NOMINATION 4 30000', 'PONG PING%201']) {
+      box.t += LIVE_WINDOW_MS - 1
+      c.tick()
+      c.onFrame(frame(data))
+      expect(views.at(-1)!.health).toBe('live')
+    }
+  })
+
+  it('outgoing frames and unknown verbs do not count as live', async () => {
+    const { now } = clock()
+    const { c, views } = await make({ now })
+    c.onFrame(frame('CLOCK 6 85495 1', 'out'))
+    c.onFrame(frame('ZZZ_NEW 1 2'))
+    expect(views.at(-1)!.health).toBe('manual')
+  })
+
+  it('counts unknown verbs per verb', async () => {
+    const { c, views } = await make()
+    c.onFrame(frame('ZZZ_NEW 1 2\nCLOCK 6 1 2\nZZZ_NEW 3'))
+    c.onFrame(frame('QQQ'))
+    expect(views.at(-1)!.unknownVerbs).toEqual({ ZZZ_NEW: 2, QQQ: 1 })
+  })
+
+  it('after a reload a CLOCK-only stream counts as live and keeps the restored block', async () => {
+    const first = await make()
+    first.c.dispatch(nominated('Alpha', 2, 20))
+    const { c, views } = await make({ storage: first.deps.storage, now: clock().now })
+    expect(views.at(-1)!.health).toBe('manual')
+    c.onFrame(frame('CLOCK 6 85495 1'))
+    expect(views.at(-1)!.health).toBe('live')
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 20, leaderId: 2 })
   })
 })

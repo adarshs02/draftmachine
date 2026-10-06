@@ -18,7 +18,7 @@ function show(state: DraftState, extra: Record<string, unknown> = {}) {
   const onReset = vi.fn()
   const onDismissAlert = vi.fn()
   render(
-    html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} alert=${null} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} onReset=${onReset} onDismissAlert=${onDismissAlert} ...${extra} />`,
+    html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} alert=${null} unknownVerbs=${{}} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} onReset=${onReset} onDismissAlert=${onDismissAlert} ...${extra} />`,
     el,
   )
   return { el, onEvent, onReset, onDismissAlert }
@@ -72,7 +72,7 @@ describe('Panel', () => {
       const el = document.createElement('div')
       const targets = advice.targets.map((t, i) => (i === 0 ? { ...t, outbidBy: names } : t))
       render(
-        html`<${Panel} advice=${{ ...advice, targets }} state=${state} health="manual" banner=${null} alert=${null} frameCount=${0} onEvent=${() => {}} onDownloadRecording=${() => {}} onReset=${() => {}} onDismissAlert=${() => {}} />`,
+        html`<${Panel} advice=${{ ...advice, targets }} state=${state} health="manual" banner=${null} alert=${null} unknownVerbs=${{}} frameCount=${0} onEvent=${() => {}} onDownloadRecording=${() => {}} onReset=${() => {}} onDismissAlert=${() => {}} />`,
         el,
       )
       return el.querySelector('td.muted:last-child') as HTMLElement
@@ -149,6 +149,12 @@ describe('Panel', () => {
     expect(close.textContent).toBe('×')
     close.click()
     expect(onDismissAlert).toHaveBeenCalledTimes(1)
+  })
+
+  it('shows unknown socket verbs with their counts next to the frame count', () => {
+    const footer = (unknownVerbs: Record<string, number>) => show(build(S, V, []), { unknownVerbs, frameCount: 7 }).el.querySelector('footer')!.textContent!
+    expect(footer({ ZZZ_NEW: 2, QQQ: 1 })).toContain('Download recording (7 frames)unknown: ZZZ_NEW×2, QQQ×1')
+    expect(footer({})).not.toContain('unknown')
   })
 
   it('shows no alert box without an alert', () => {

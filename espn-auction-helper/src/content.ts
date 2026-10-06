@@ -12,6 +12,8 @@ import { Panel } from './ui/Panel'
 import type { PlayerValue } from './values/types'
 
 const leagueId = Number(new URLSearchParams(location.search).get('leagueId'))
+/** Health goes stale with no frame arriving to re-render it: re-check it on a timer. */
+const HEALTH_TICK_MS = 5000
 
 // Listen from document_start so no socket frame is lost while the league loads.
 const pending: Frame[] = []
@@ -52,6 +54,7 @@ async function start(container: HTMLElement): Promise<void> {
   })
   controller = ready
   for (const frame of pending.splice(0)) ready.onFrame(frame)
+  setInterval(() => ready.tick(), HEALTH_TICK_MS)
 }
 
 whenReady(() => {

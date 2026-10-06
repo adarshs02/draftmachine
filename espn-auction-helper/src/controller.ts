@@ -1,6 +1,6 @@
-import type { Frame } from './capture/frames'
+import { splitLines, type Frame } from './capture/frames'
 import { createAssembler } from './capture/assembler'
-import { decodeFrame, type RawEvent } from './capture/decoder'
+import { decodeLine, NOISE_VERBS, type RawEvent } from './capture/decoder'
 import { buildRecording } from './capture/recording'
 import { advise, type Advice } from './engine/advise'
 import { teamSummary, valueOf } from './engine/metrics'
@@ -19,6 +19,8 @@ export interface View {
   banner: string | null
   /** Something the user must check by hand; kept until dismissed or replaced. */
   alert: string | null
+  /** incoming socket verbs the decoder does not know, with how often each arrived */
+  unknownVerbs: Record<string, number>
   frameCount: number
 }
 
@@ -32,6 +34,8 @@ export interface ControllerDeps {
   cookie: string
   loadLeague: () => Promise<LeagueInfo>
   render: (view: View) => void
+  /** clock for the health window (tests); default Date.now */
+  now?: () => number
 }
 
 export interface Controller {
@@ -40,11 +44,16 @@ export interface Controller {
   getState(): DraftState
   onFrame(frame: Frame): void
   recordingJson(): string
+  /** Re-renders only if health changed since the last render (decoding went quiet, or came back). */
+  tick(): void
   /** New draft: forget every recorded event, keep league settings, values and the detected team. */
   reset(): void
 }
 
 const errorMessage = (e: unknown) => (e instanceof Error ? e.message : String(e))
+
+/** ESPN sends CLOCK every 2-5 s and PONG every 15 s: this long without a line we understand means decoding has stopped. */
+export const LIVE_WINDOW_MS = 20000
 
 export async function createController(deps: ControllerDeps): Promise<Controller> {
   let leagueBanner: string | null = null
@@ -88,10 +97,17 @@ export async function createController(deps: ControllerDeps): Promise<Controller
   const frames: Frame[] = []
   const byEspnId = new Map(values.flatMap((v) => (v.espnId === null ? [] : [[v.espnId, v.key] as const])))
   const assembler = createAssembler((id) => byEspnId.get(id) ?? `espn:${id}`, () => state.live)
-  let health: Health = 'manual'
+  const now = deps.now ?? Date.now
+  let lastRecognizedAt: number | null = null
+  const unknownVerbs = new Map<string, number>()
+  const health = (): Health => (lastRecognizedAt !== null && now() - lastRecognizedAt < LIVE_WINDOW_MS ? 'live' : 'manual')
+  let shownHealth: Health = 'manual'
   let alert: string | null = null
   const banner = () => [leagueBanner, restoreBanner].filter(Boolean).join(' · ') || null
-  const publish = () => deps.render({ advice: advise(state), state, health, banner: banner(), alert, frameCount: frames.length })
+  const publish = () => {
+    shownHealth = health()
+    deps.render({ advice: advise(state), state, health: shownHealth, banner: banner(), alert, unknownVerbs: Object.fromEntries(unknownVerbs), frameCount: frames.length })
+  }
   /** Returns whether the event changed anything; no-ops (repeat bids, stale bids) stay out of the log. */
   const apply = (ev: DraftEvent): boolean => {
     const next = reduce(state, ev)
@@ -116,13 +132,22 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       return
     }
     for (const ev of assembler.push(raw)) {
-      health = 'live'
       const live = state.live
       if (ev.type === 'nominated' && live && live.playerKey !== ev.playerKey && !state.sales.some((x) => x.playerKey === live.playerKey)) {
         alert = missedSale(live)
       }
       apply(ev)
     }
+  }
+  /** A line counts toward health when it decodes, or is a verb we know to ignore; other verbs are counted for the panel. */
+  const onLine = (line: string) => {
+    const raw = decodeLine(line)
+    if (raw?.kind === 'unknown') {
+      unknownVerbs.set(raw.verb, (unknownVerbs.get(raw.verb) ?? 0) + 1)
+      return
+    }
+    if (raw || NOISE_VERBS.has(line.split(/\s+/)[0])) lastRecognizedAt = now()
+    if (raw) onRaw(raw)
   }
   publish()
 
@@ -138,10 +163,13 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     getState: () => state,
     onFrame(frame) {
       frames.push(frame)
-      if (frame.dir === 'in') for (const raw of decodeFrame(frame.data)) onRaw(raw)
+      if (frame.dir === 'in') for (const line of splitLines(frame.data)) onLine(line)
       publish()
     },
     recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),
+    tick() {
+      if (health() !== shownHealth) publish()
+    },
     reset() {
       log = []
       clearLog()
