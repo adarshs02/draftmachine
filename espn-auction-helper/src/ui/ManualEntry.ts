@@ -1,6 +1,7 @@
 import { available } from '../engine/metrics'
 import type { DraftEvent, DraftState } from '../engine/types'
 import { normalizeName } from '../values/names'
+import { teamLabel } from './format'
 import { html } from './html'
 
 type Action = 'nominate' | 'bid' | 'sold' | 'value'
@@ -29,7 +30,7 @@ export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (e
       <h4>Manual entry</h4>
       <input name="player" list="eah-players" placeholder="player" autocomplete="off" />
       <datalist id="eah-players">${available(state).slice(0, 300).map((v) => html`<option value=${v.name} />`)}</datalist>
-      <select name="team">${state.settings.teams.map((t) => html`<option value=${t.id}>${t.name}</option>`)}</select>
+      <select name="team">${state.settings.teams.map((t) => html`<option value=${t.id}>${teamLabel(t)}</option>`)}</select>
       <input name="amount" type="number" min="1" placeholder="$" />
       <div class="row">
         <button type="button" onClick=${act('nominate')}>Nominated</button>

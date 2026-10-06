@@ -71,6 +71,31 @@ describe('Panel', () => {
     ;(el.querySelector('button.fix') as HTMLButtonElement).click()
     expect(onEvent).toHaveBeenCalledWith({ type: 'editSale', seq: 1, teamId: 3, price: 14 })
   })
+
+  it('asks for the team number in the fix prompt and accepts a unique team-name prefix', () => {
+    const { el, onEvent } = show(build(S, V, [sold('Alpha', 2, 12)]))
+    const prompt = vi.spyOn(window, 'prompt').mockReturnValue('14 t3')
+    ;(el.querySelector('button.fix') as HTMLButtonElement).click()
+    expect(prompt).toHaveBeenCalledWith('Fix Alpha: price and team # (e.g. "14 3")', '12 2')
+    expect(onEvent).toHaveBeenCalledWith({ type: 'editSale', seq: 1, teamId: 3, price: 14 })
+  })
+
+  it('ignores a fix whose team is neither an id nor a unique name prefix', () => {
+    const { el, onEvent } = show(build(S, V, [sold('Alpha', 2, 12)]))
+    for (const answer of ['14 t', '14 zz', '14 9']) {
+      vi.spyOn(window, 'prompt').mockReturnValue(answer)
+      ;(el.querySelector('button.fix') as HTMLButtonElement).click()
+    }
+    expect(onEvent).not.toHaveBeenCalled()
+  })
+
+  it('labels teams with their id in the team pickers and the rivals table', () => {
+    const { el } = show(build(S, V, []))
+    const options = (sel: string) => [...el.querySelectorAll(`${sel} option`)].map((o) => o.textContent)
+    expect(options('.picker select')).toContain('#3 T3')
+    expect(options('select[name=team]')).toContain('#2 T2')
+    expect([...el.querySelectorAll('section')].find((x) => x.textContent!.includes('Rivals'))!.textContent).toContain('#4 T4')
+  })
 })
 
 describe('ManualEntry', () => {

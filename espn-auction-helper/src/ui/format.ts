@@ -1,6 +1,10 @@
+import type { Team } from '../engine/types'
 import type { Verdict } from '../engine/verdict'
 
 export const money = (n: number) => `$${Math.round(n)}`
+
+/** "#3 Bubble Boys": the id is what the ✎ fix prompt asks for. */
+export const teamLabel = (t: Team) => `#${t.id} ${t.name}`
 
 export function verdictText(v: Verdict): string {
   switch (v.kind) {

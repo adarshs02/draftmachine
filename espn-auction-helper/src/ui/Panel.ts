@@ -1,7 +1,7 @@
 import type { Advice, FeedRow } from '../engine/advise'
 import { teamSummary } from '../engine/metrics'
-import type { DraftEvent, DraftState } from '../engine/types'
-import { money, verdictText } from './format'
+import type { DraftEvent, DraftState, Team } from '../engine/types'
+import { money, teamLabel, verdictText } from './format'
 import { html } from './html'
 import { ManualEntry } from './ManualEntry'
 
@@ -17,6 +17,16 @@ export interface PanelProps {
   onDownloadRecording: () => void
 }
 
+/** "3", "#3" or a unique, case-insensitive team-name prefix ("bub") -> team id. */
+function teamFromText(teams: Team[], text: string): number | null {
+  const t = text.trim().replace(/^#/, '')
+  if (!t) return null
+  const byId = teams.find((x) => x.id === Number(t))
+  if (byId) return byId.id
+  const byName = teams.filter((x) => x.name.toLowerCase().startsWith(t.toLowerCase()))
+  return byName.length === 1 ? byName[0].id : null
+}
+
 export function Panel(p: PanelProps) {
   const { advice, state } = p
   const mine = state.myTeamId
@@ -24,9 +34,11 @@ export function Panel(p: PanelProps) {
   const teamName = (id: number) => teamSummary(state, id).name
   const temp = advice.temperature
   const fixSale = (f: FeedRow) => {
-    const answer = window.prompt(`Fix ${f.name}: price and team number`, `${f.price} ${f.teamId}`)
-    const [price, teamId] = (answer ?? '').trim().split(/\s+/).map(Number)
-    if (price > 0 && state.settings.teams.some((t) => t.id === teamId)) p.onEvent({ type: 'editSale', seq: f.seq, teamId, price })
+    const answer = window.prompt(`Fix ${f.name}: price and team # (e.g. "14 3")`, `${f.price} ${f.teamId}`)
+    const [priceText = '', ...team] = (answer ?? '').trim().split(/\s+/)
+    const price = Number(priceText)
+    const teamId = teamFromText(state.settings.teams, team.join(' '))
+    if (price > 0 && teamId !== null) p.onEvent({ type: 'editSale', seq: f.seq, teamId, price })
   }
   return html`
     <div class="panel">
@@ -42,7 +54,7 @@ export function Panel(p: PanelProps) {
           if (value !== '') p.onEvent({ type: 'setMyTeam', teamId: Number(value) })
         }}>
           ${mine === null && html`<option value="">choose…</option>`}
-          ${state.settings.teams.map((t) => html`<option value=${t.id}>${t.name}</option>`)}
+          ${state.settings.teams.map((t) => html`<option value=${t.id}>${teamLabel(t)}</option>`)}
         </select>
       </label>
       <section class="now">
@@ -85,7 +97,7 @@ export function Panel(p: PanelProps) {
         <table>
           ${advice.teams
             .filter((t) => t.id !== state.myTeamId)
-            .map((t) => html`<tr><td>${t.name}</td><td>${money(t.budgetLeft)}</td><td>${t.open} open</td><td>max ${money(t.maxBid)}</td></tr>`)}
+            .map((t) => html`<tr><td>${teamLabel(t)}</td><td>${money(t.budgetLeft)}</td><td>${t.open} open</td><td>max ${money(t.maxBid)}</td></tr>`)}
         </table>
       </section>
       <section>
