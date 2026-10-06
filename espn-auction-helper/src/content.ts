@@ -30,8 +30,7 @@ const download = () => {
   if (controller) downloadText(document, `espn-draft-${leagueId}-${Date.now()}.json`, controller.recordingJson())
 }
 
-whenReady(async () => {
-  const container = mountPanel(document)
+async function start(container: HTMLElement): Promise<void> {
   const ready = await createController({
     leagueId,
     storage: sessionStorage,
@@ -43,4 +42,13 @@ whenReady(async () => {
   })
   controller = ready
   for (const frame of pending.splice(0)) ready.onFrame(frame)
+}
+
+whenReady(() => {
+  const container = mountPanel(document)
+  // Never leave an empty host: say why the panel didn't start.
+  start(container).catch((e: unknown) => {
+    const message = e instanceof Error ? e.message : String(e)
+    render(html`<div class="panel"><div class="banner">Josh Mode failed to start: ${message}</div></div>`, container)
+  })
 })

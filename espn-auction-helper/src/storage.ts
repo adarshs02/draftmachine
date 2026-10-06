@@ -1,14 +1,15 @@
 import type { DraftEvent } from './engine/types'
 
 /** The page's sessionStorage in production: per tab, survives a refresh. */
-export type KeyValueStore = Pick<Storage, 'getItem' | 'setItem'>
+export type KeyValueStore = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
 
 const keyFor = (leagueId: number) => `eah:${leagueId}:events`
 
 export function loadEvents(store: KeyValueStore, leagueId: number): DraftEvent[] {
   try {
     const parsed: unknown = JSON.parse(store.getItem(keyFor(leagueId)) ?? '[]')
-    return Array.isArray(parsed) ? (parsed as DraftEvent[]) : []
+    if (!Array.isArray(parsed)) return []
+    return parsed.filter((ev): ev is DraftEvent => typeof ev === 'object' && ev !== null)
   } catch {
     return []
   }
@@ -19,5 +20,13 @@ export function saveEvents(store: KeyValueStore, leagueId: number, events: Draft
     store.setItem(keyFor(leagueId), JSON.stringify(events))
   } catch {
     // Storage full or blocked: keep drafting from memory.
+  }
+}
+
+export function clearEvents(store: KeyValueStore, leagueId: number): void {
+  try {
+    store.removeItem(keyFor(leagueId))
+  } catch {
+    // Storage blocked: nothing saved to clear.
   }
 }

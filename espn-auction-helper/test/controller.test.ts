@@ -55,6 +55,39 @@ describe('createController', () => {
     const { c } = await make({ storage: memoryStore({ 'eah:7:events': '{oops' }) })
     expect(c.getState().sales).toEqual([])
   })
+
+  it('skips null and unknown events in a stored log', async () => {
+    const { c, views } = await make({ storage: memoryStore({ 'eah:7:events': '[null, {"type":"bogus"}]' }) })
+    expect(c.getState().sales).toEqual([])
+    expect(c.getState().live).toBeNull()
+    expect(views[0].banner).toBeNull()
+  })
+
+  it('discards a stored log it cannot replay and says so', async () => {
+    // A value that cannot be turned into a number makes Math.max throw inside reduce.
+    const poison = '{"type":"setValue","playerKey":"alpha","b":{"valueOf":1,"toString":1}}'
+    const storage = memoryStore({ 'eah:7:events': `[${JSON.stringify(sold('Alpha', 2, 12))}, ${poison}]` })
+    const { c, views } = await make({ storage })
+    expect(c.getState().sales).toEqual([])
+    expect(views[0].banner).toBe('Saved draft could not be restored; starting fresh')
+    expect(storage.data['eah:7:events']).toBeUndefined()
+    c.dispatch(sold('Bravo', 3, 5))
+    expect(JSON.parse(storage.data['eah:7:events'])).toEqual([sold('Bravo', 3, 5)])
+  })
+
+  it('treats a league with fewer than 2 teams as unavailable', async () => {
+    const { views } = await make({ loadLeague: async () => ({ ...LEAGUE, teams: [] }) })
+    expect(views[0].banner).toContain('unavailable')
+    expect(views[0].state.settings.teams).toHaveLength(10)
+  })
+
+  it('falls back with a banner when the league has a shape it cannot read', async () => {
+    const odd = { ...LEAGUE, teams: LEAGUE.teams.map((t) => ({ ...t, owners: null as unknown as string[] })) }
+    const { views } = await make({ loadLeague: async () => odd })
+    expect(views[0].banner).toContain('unavailable')
+    expect(views[0].state.settings.teams).toHaveLength(10)
+    expect(views[0].state.myTeamId).toBeNull()
+  })
 })
 
 describe('socket frames', () => {

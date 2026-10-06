@@ -44,5 +44,7 @@ export function reduce(s: DraftState, ev: DraftEvent): DraftState {
       const current = s.values[ev.playerKey] ?? placeholderValue(ev.playerKey)
       return { ...s, values: { ...s.values, [ev.playerKey]: { ...current, b: Math.max(1, ev.b) } } }
     }
+    default:
+      return s // unknown event (e.g. from an older saved log): ignore
   }
 }

@@ -27,10 +27,19 @@ describe('my team', () => {
     expect(swidFromCookie('a=1')).toBeNull()
   })
 
+  it('keeps a SWID that is not valid URL encoding as it is', () => {
+    expect(swidFromCookie('SWID=%E0%A4%A')).toBe('%E0%A4%A')
+  })
+
   it('matches owners case-insensitively', () => {
     const l = parseLeague(RAW)
     expect(findMyTeam(l, SWID.toLowerCase())).toBe(1)
     expect(findMyTeam(l, '{BBBBBBBB-0000-0000-0000-000000000009}')).toBeNull()
+  })
+
+  it('skips owner entries that are not strings', () => {
+    const l = parseLeague({ teams: [{ id: 4, name: 'Odd', owners: [{ id: 'x' }, SWID] }] })
+    expect(findMyTeam(l, SWID)).toBe(4)
   })
 })
 

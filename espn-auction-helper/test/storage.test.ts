@@ -16,7 +16,7 @@ describe('event log storage', () => {
   })
 
   it('keeps going when storage refuses writes', () => {
-    const store = { getItem: () => null, setItem: () => { throw new Error('QuotaExceededError') } }
+    const store = { getItem: () => null, setItem: () => { throw new Error('QuotaExceededError') }, removeItem: () => {} }
     expect(() => saveEvents(store, 7, [])).not.toThrow()
   })
 })

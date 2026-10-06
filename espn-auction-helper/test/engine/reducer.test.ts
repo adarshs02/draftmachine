@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest'
+import { reduce } from '../../src/engine/reducer'
+import type { DraftEvent } from '../../src/engine/types'
 import { build, nominated, pv, settings, sold } from '../helpers'
 
 const V = [pv('Alpha', 30), pv('Bravo', 20)]
@@ -52,6 +54,11 @@ describe('reduce', () => {
     const s = build(settings(), V, [{ type: 'setValue', playerKey: 'alpha', b: 0 }, { type: 'setValue', playerKey: 'ghost', b: 7 }])
     expect(s.values.alpha.b).toBe(1)
     expect(s.values.ghost).toMatchObject({ key: 'ghost', name: 'ghost', b: 7, tier: 5 })
+  })
+
+  it('ignores events of unknown type', () => {
+    const before = build(settings(), V, [sold('Alpha', 3, 12)])
+    expect(reduce(before, { type: 'bogus' } as unknown as DraftEvent)).toBe(before)
   })
 
   it('setMyTeam', () => {

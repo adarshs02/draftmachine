@@ -29,5 +29,5 @@ export const nominated = (name: string, teamId: number, amount: number): DraftEv
 
 export function memoryStore(init: Record<string, string> = {}): KeyValueStore & { data: Record<string, string> } {
   const data = { ...init }
-  return { data, getItem: (k) => data[k] ?? null, setItem: (k, v) => void (data[k] = v) }
+  return { data, getItem: (k) => data[k] ?? null, setItem: (k, v) => void (data[k] = v), removeItem: (k) => void delete data[k] }
 }

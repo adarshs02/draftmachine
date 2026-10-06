@@ -62,12 +62,17 @@ export async function fetchLeague(leagueId: number, fetchFn: FetchLike = fetch):
 
 export function swidFromCookie(cookie: string): string | null {
   const m = cookie.match(/(?:^|;\s*)SWID=([^;]+)/)
-  return m ? decodeURIComponent(m[1]) : null
+  if (!m) return null
+  try {
+    return decodeURIComponent(m[1])
+  } catch {
+    return m[1] // malformed %-encoding: the raw value still compares
+  }
 }
 
 export function findMyTeam(league: LeagueInfo, swid: string): number | null {
   const want = swid.toUpperCase()
-  return league.teams.find((t) => t.owners.some((o) => o.toUpperCase() === want))?.id ?? null
+  return league.teams.find((t) => t.owners.some((o) => typeof o === 'string' && o.toUpperCase() === want))?.id ?? null
 }
 
 export function toSettings(league: LeagueInfo, flyerReserve = 2): Settings {
