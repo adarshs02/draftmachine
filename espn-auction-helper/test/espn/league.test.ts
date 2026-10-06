@@ -76,3 +76,17 @@ describe('fetchLeague', () => {
     await expect(fetchLeague(1, status(500))).rejects.toThrow(/HTTP 500/)
   })
 })
+
+describe('real league fixture', () => {
+  const REAL = JSON.parse(readFileSync('test/fixtures/league-real.json', 'utf8'))
+
+  it('parses a scrubbed real ESPN league', () => {
+    const l = parseLeague(REAL)
+    expect(l.draftType).toBe('AUCTION')
+    expect(l.budget).toBeGreaterThan(0)
+    expect(l.rosterSize).toBeGreaterThanOrEqual(10)
+    expect(l.teams.length).toBeGreaterThanOrEqual(4)
+    expect(l.budget).toBe(200)
+    expect(l.rosterSize).toBe(13)
+  })
+})
