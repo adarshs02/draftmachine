@@ -16,7 +16,13 @@ function read(form: HTMLFormElement) {
 export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (ev: DraftEvent) => void }) {
   const [error, setError] = useState<string | null>(null)
   const act = (action: Action) => (e: Event) => {
-    const f = read((e.currentTarget as HTMLButtonElement).form!)
+    const form = (e.currentTarget as HTMLButtonElement).form!
+    const f = read(form)
+    // A dispatched event consumes the typed amount; player and team stay for the next call.
+    const emit = (ev: DraftEvent) => {
+      onEvent(ev)
+      ;(form.elements.namedItem('amount') as HTMLInputElement).value = ''
+    }
     const typed = normalizeName(f.player) !== ''
     setError(null)
     // A typed name must be a real player: a partial name would otherwise become a phantom one.
@@ -28,23 +34,23 @@ export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (e
     }
     if (action === 'nominate' && typed && f.amount > 0) {
       const playerKey = resolve()
-      if (playerKey) onEvent({ type: 'nominated', playerKey, teamId: f.teamId, amount: f.amount })
+      if (playerKey) emit({ type: 'nominated', playerKey, teamId: f.teamId, amount: f.amount })
     }
-    if (action === 'bid' && f.amount > 0) onEvent({ type: 'bid', teamId: f.teamId, amount: f.amount })
+    if (action === 'bid' && f.amount > 0) emit({ type: 'bid', teamId: f.teamId, amount: f.amount })
     if (action === 'sold') {
       // On the block: a typed amount (and its team) wins over what we last saw in the room.
-      if (state.live && f.amount > 0) onEvent({ type: 'sold', playerKey: state.live.playerKey, teamId: f.teamId, price: f.amount })
-      else if (state.live) onEvent({ type: 'sold', playerKey: state.live.playerKey, teamId: state.live.leaderId, price: state.live.price })
+      if (state.live && f.amount > 0) emit({ type: 'sold', playerKey: state.live.playerKey, teamId: f.teamId, price: f.amount })
+      else if (state.live) emit({ type: 'sold', playerKey: state.live.playerKey, teamId: state.live.leaderId, price: state.live.price })
       else if (typed && f.amount > 0) {
         const playerKey = resolve()
-        if (playerKey) onEvent({ type: 'sold', playerKey, teamId: f.teamId, price: f.amount })
+        if (playerKey) emit({ type: 'sold', playerKey, teamId: f.teamId, price: f.amount })
       }
     }
     if (action === 'value' && typed && f.amount > 0) {
       const r = resolvePlayer(state, f.player)
       // No match at all: a call-up missing from the values gets an entry under the typed name.
-      if ('key' in r) onEvent({ type: 'setValue', playerKey: r.key, b: f.amount })
-      else if (r.matches === 0) onEvent({ type: 'setValue', playerKey: normalizeName(f.player), b: f.amount })
+      if ('key' in r) emit({ type: 'setValue', playerKey: r.key, b: f.amount })
+      else if (r.matches === 0) emit({ type: 'setValue', playerKey: normalizeName(f.player), b: f.amount })
       else setError(r.error)
     }
   }

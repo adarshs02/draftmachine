@@ -2,7 +2,8 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { createController, type ControllerDeps, type View } from '../src/controller'
 import { parseLeague } from '../src/espn/league'
-import { memoryStore, nominated, pv, sold } from './helpers'
+import { GRAMMAR } from '../src/capture/decoder'
+import { lineFor, memoryStore, nominated, pv, sold } from './helpers'
 
 const LEAGUE = parseLeague(JSON.parse(readFileSync('test/fixtures/league-settings.json', 'utf8')))
 const COOKIE = 'SWID={AAAAAAAA-0000-0000-0000-000000000001}'
@@ -139,5 +140,30 @@ describe('socket frames', () => {
     c.onFrame({ dir: 'in', data: 'CLOCK 6 85495 1', t: 1, url: 'wss://fantasydraft.espn.com/x' })
     expect(views.at(-1)!.frameCount).toBe(1)
     expect(JSON.parse(c.recordingJson())).toMatchObject({ leagueId: 7, frames: [{ data: 'CLOCK 6 85495 1' }] })
+  })
+})
+
+describe('live decoding', () => {
+  const bid = (dir: 'in' | 'out') => ({ dir, data: lineFor(GRAMMAR.bid, { team: 2, player: 3112335, amount: 1 }), t: 1, url: 'wss://fantasydraft.espn.com/x' })
+
+  it('decodes incoming frames into draft events and goes live', async () => {
+    const { c, views } = await make({ values: [pv('Alpha', 30, { espnId: 3112335 }), pv('Bravo', 20)] })
+    c.onFrame(bid('in'))
+    expect(views.at(-1)!.health).toBe('live')
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 1, leaderId: 2 })
+  })
+
+  it('records outgoing frames without decoding them', async () => {
+    const { c, views } = await make({ values: [pv('Alpha', 30, { espnId: 3112335 })] })
+    c.onFrame(bid('out'))
+    expect(views.at(-1)!.health).toBe('manual')
+    expect(c.getState().live).toBeNull()
+    expect(views.at(-1)!.frameCount).toBe(1)
+  })
+
+  it('live events persist to the same log', async () => {
+    const { c, deps } = await make({ values: [pv('Alpha', 30, { espnId: 3112335 })] })
+    c.onFrame(bid('in'))
+    expect(JSON.parse(deps.storage.getItem('eah:7:events')!)).toEqual([nominated('Alpha', 2, 1)])
   })
 })

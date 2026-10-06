@@ -1,4 +1,6 @@
 import type { Frame } from './capture/frames'
+import { createAssembler } from './capture/assembler'
+import { decodeFrame } from './capture/decoder'
 import { buildRecording } from './capture/recording'
 import { advise, type Advice } from './engine/advise'
 import { initialState, reduce } from './engine/reducer'
@@ -80,21 +82,34 @@ export async function createController(deps: ControllerDeps): Promise<Controller
 
   const startedAt = new Date()
   const frames: Frame[] = []
-  const health: Health = 'manual'
+  const byEspnId = new Map(values.flatMap((v) => (v.espnId === null ? [] : [[v.espnId, v.key] as const])))
+  const assembler = createAssembler((id) => byEspnId.get(id) ?? `espn:${id}`)
+  let health: Health = 'manual'
   const banner = () => [leagueBanner, restoreBanner].filter(Boolean).join(' · ') || null
   const publish = () => deps.render({ advice: advise(state), state, health, banner: banner(), frameCount: frames.length })
+  const apply = (ev: DraftEvent) => {
+    state = reduce(state, ev)
+    log.push(ev)
+    for (const store of stores) saveEvents(store, deps.leagueId, log)
+  }
   publish()
 
   return {
     dispatch(ev) {
-      state = reduce(state, ev)
-      log.push(ev)
-      for (const store of stores) saveEvents(store, deps.leagueId, log)
+      apply(ev)
       publish()
     },
     getState: () => state,
     onFrame(frame) {
       frames.push(frame)
+      if (frame.dir === 'in') {
+        for (const raw of decodeFrame(frame.data)) {
+          for (const ev of assembler.push(raw)) {
+            health = 'live'
+            apply(ev)
+          }
+        }
+      }
       publish()
     },
     recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),

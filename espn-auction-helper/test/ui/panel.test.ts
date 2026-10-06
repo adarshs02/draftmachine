@@ -181,6 +181,14 @@ describe('ManualEntry', () => {
     expect(onEvent).toHaveBeenCalledWith({ type: 'sold', playerKey: 'alpha', teamId: 2, price: 25 })
   })
 
+  it('clears the amount input after an action dispatches an event', () => {
+    const { el } = show(build(S, V, [nominated('Alpha', 3, 7)]))
+    fill(el, '', '2', '25')
+    button(el, 'Sold').click()
+    expect((el.querySelector('input[name=amount]') as HTMLInputElement).value).toBe('')
+    expect((el.querySelector('select[name=team]') as HTMLSelectElement).value).toBe('2')
+  })
+
   it('Clear block takes the player off the block', () => {
     const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
     button(el, 'Clear block').click()
