@@ -29,6 +29,8 @@ function teamFromText(teams: Team[], text: string): number | null {
   return byName.length === 1 ? byName[0].id : null
 }
 
+const outbidText = (names: string[]) => (names.length > 2 ? `outbid by ${names.length} teams` : names.length ? `outbid: ${names.join(', ')}` : '')
+
 export function Panel(p: PanelProps) {
   const { advice, state } = p
   const mine = state.myTeamId
@@ -95,7 +97,7 @@ export function Panel(p: PanelProps) {
                 <td>${t.name}</td>
                 <td>${money(t.adjusted)}</td>
                 <td>≤${money(t.ceiling)}</td>
-                <td class="muted">${t.outbidBy.length ? `outbid: ${t.outbidBy.join(', ')}` : ''}</td>
+                <td class="muted" title=${t.outbidBy.join(', ')}>${outbidText(t.outbidBy)}</td>
               </tr>`,
             )}
           </table>

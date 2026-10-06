@@ -64,6 +64,26 @@ describe('Panel', () => {
     expect(show(build(S, V, [nominated('Ghost', 2, 1)])).el.textContent).toContain('ghost has no value')
   })
 
+  it('shortens a long outbid list to a count, keeping the names in the tooltip', () => {
+    const state = build(S, V, [])
+    const advice = advise(state)
+    const cell = (names: string[]) => {
+      const el = document.createElement('div')
+      const targets = advice.targets.map((t, i) => (i === 0 ? { ...t, outbidBy: names } : t))
+      render(
+        html`<${Panel} advice=${{ ...advice, targets }} state=${state} health="manual" banner=${null} frameCount=${0} onEvent=${() => {}} onDownloadRecording=${() => {}} onReset=${() => {}} />`,
+        el,
+      )
+      return el.querySelector('td.muted:last-child') as HTMLElement
+    }
+    const many = cell(['T2', 'T3', 'T4'])
+    expect(many.textContent).toBe('outbid by 3 teams')
+    expect(many.title).toBe('T2, T3, T4')
+    expect(cell(['T2']).textContent).toBe('outbid: T2')
+    expect(cell(['T2', 'T3']).textContent).toBe('outbid: T2, T3')
+    expect(cell([]).textContent).toBe('')
+  })
+
   it('pins a target', () => {
     const { el, onEvent } = show(build(S, V, []))
     ;(el.querySelector('button.pin') as HTMLButtonElement).click()

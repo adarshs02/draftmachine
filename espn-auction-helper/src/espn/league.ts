@@ -15,12 +15,14 @@ export interface LeagueInfo {
   rosterSize: number
   lineupSlotCounts: Record<number, number>
   teams: LeagueTeam[]
+  /** team ids in ESPN's nomination order */
+  pickOrder: number[]
 }
 
 interface RawLeague {
   id?: number
   settings?: {
-    draftSettings?: { type?: string; auctionBudget?: number }
+    draftSettings?: { type?: string; auctionBudget?: number; pickOrder?: number[] }
     rosterSettings?: { lineupSlotCounts?: Record<string, number> }
   }
   teams?: Array<{ id: number; name?: string; location?: string; nickname?: string; owners?: string[] }>
@@ -47,6 +49,7 @@ export function parseLeague(json: unknown): LeagueInfo {
     rosterSize,
     lineupSlotCounts: counts,
     teams,
+    pickOrder: raw.settings?.draftSettings?.pickOrder ?? [],
   }
 }
 
@@ -76,8 +79,14 @@ export function findMyTeam(league: LeagueInfo, swid: string): number | null {
 }
 
 export function toSettings(league: LeagueInfo, flyerReserve = 2): Settings {
+  const rank = (id: number) => {
+    const i = league.pickOrder.indexOf(id)
+    return i === -1 ? Infinity : i
+  }
+  // Array.sort is stable: unlisted teams keep id order after the listed ones.
+  const ordered = [...league.teams].sort((a, b) => rank(a.id) - rank(b.id))
   return {
-    teams: league.teams.map(({ id, name }) => ({ id, name })),
+    teams: ordered.map(({ id, name }) => ({ id, name })),
     budget: league.budget,
     rosterSize: league.rosterSize,
     lineupSlotCounts: league.lineupSlotCounts,

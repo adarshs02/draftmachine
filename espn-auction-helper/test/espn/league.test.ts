@@ -43,10 +43,28 @@ describe('my team', () => {
   })
 })
 
+describe('draft order', () => {
+  it('parseLeague reads pickOrder, defaulting to empty', () => {
+    expect(parseLeague(RAW).pickOrder).toEqual([2, 1, 3, 4, 5, 6, 7, 8, 9, 10])
+    expect(parseLeague({ teams: [] }).pickOrder).toEqual([])
+  })
+
+  it('toSettings lists teams in pickOrder', () => {
+    expect(toSettings(parseLeague(RAW)).teams.map((t) => t.id)).toEqual([2, 1, 3, 4, 5, 6, 7, 8, 9, 10])
+  })
+
+  it('keeps id order without pickOrder and puts unlisted teams last', () => {
+    const teams = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
+    expect(toSettings(parseLeague({ teams })).teams.map((t) => t.id)).toEqual([1, 2, 3, 4])
+    const partial = { settings: { draftSettings: { pickOrder: [3, 1] } }, teams }
+    expect(toSettings(parseLeague(partial)).teams.map((t) => t.id)).toEqual([3, 1, 2, 4])
+  })
+})
+
 describe('settings', () => {
   it('toSettings keeps teams and roster shape, with a 2-slot flyer reserve', () => {
     const s = toSettings(parseLeague(RAW))
-    expect(s.teams[0]).toEqual({ id: 1, name: 'Adarsh Ballers' })
+    expect(s.teams[1]).toEqual({ id: 1, name: 'Adarsh Ballers' })
     expect(s).toMatchObject({ budget: 200, rosterSize: 13, flyerReserve: 2 })
   })
 
@@ -88,5 +106,10 @@ describe('real league fixture', () => {
     expect(l.teams.length).toBeGreaterThanOrEqual(4)
     expect(l.budget).toBe(200)
     expect(l.rosterSize).toBe(13)
+    expect(l.pickOrder).toEqual([7, 10, 5, 9, 1, 4, 8, 3, 6, 2])
+  })
+
+  it('orders teams in ESPN draft order', () => {
+    expect(toSettings(parseLeague(REAL)).teams.map((t) => t.id)).toEqual([7, 10, 5, 9, 1, 4, 8, 3, 6, 2])
   })
 })
