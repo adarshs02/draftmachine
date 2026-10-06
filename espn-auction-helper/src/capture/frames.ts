@@ -13,3 +13,6 @@ export const splitLines = (data: string): string[] =>
     .split('\n')
     .map((l) => l.trim())
     .filter(Boolean)
+
+/** TOKEN lines carry the SWID and the draft join code. */
+export const isTokenLine = (line: string): boolean => /^TOKEN\b/.test(line)

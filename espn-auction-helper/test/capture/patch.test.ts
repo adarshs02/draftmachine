@@ -63,6 +63,24 @@ describe('patchWebSocket', () => {
     expect(win.WebSocket.OPEN).toBe(1)
   })
 
+  it('never throws into the page when passing a frame on fails', () => {
+    const FakeWS = makeFakeWs()
+    const win = { WebSocket: FakeWS as unknown as typeof WebSocket }
+    patchWebSocket(win, () => { throw new Error('bridge down') }, () => 42)
+    const ws = new win.WebSocket(DRAFT_URL) as unknown as InstanceType<typeof FakeWS>
+    expect(() => ws.send('PING PING%201\n')).not.toThrow()
+    expect(ws.sent).toEqual(['PING PING%201\n'])
+    expect(() => ws.receive('CLOCK 6 1 2')).not.toThrow()
+  })
+
+  it('drops TOKEN lines from incoming frames, and frames left empty', () => {
+    const { frames, open } = setup()
+    const ws = open(DRAFT_URL)
+    ws.receive('TOKEN 1:1:2:{8398089B-19B2-4A9B-AD56-C97626BAD9B5}:123\nJOINED 2 x\n')
+    ws.receive('TOKEN 1:1:2:{8398089B-19B2-4A9B-AD56-C97626BAD9B5}:123\n')
+    expect(frames.map((f) => f.data)).toEqual(['JOINED 2 x'])
+  })
+
   it('catches a socket opened before the patch on its next send', () => {
     const { frames, early } = setup()
     early.send('PING PING%201\n')

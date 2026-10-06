@@ -102,6 +102,24 @@ describe('Panel', () => {
     expect([...el.querySelectorAll('section')].find((x) => x.textContent!.includes('Rivals'))!.textContent).toContain('#4 T4')
   })
 
+  it('asks me to pick my team before giving a call', () => {
+    const { el } = show(build(S, V, [nominated('Alpha', 2, 1)], null))
+    expect(el.querySelector('.now')!.textContent).toContain('Pick your team to see the call')
+  })
+
+  it('collapses everything below the header and expands again', async () => {
+    const { el } = show(build(S, V, []))
+    const toggle = () => el.querySelector('header button.collapse') as HTMLButtonElement
+    expect(toggle().textContent).toBe('–')
+    await act(() => toggle().click())
+    expect(el.querySelector('.now')).toBeNull()
+    expect(el.querySelector('form.manual')).toBeNull()
+    expect(el.querySelector('header')).not.toBeNull()
+    expect(toggle().textContent).toBe('+')
+    await act(() => toggle().click())
+    expect(el.querySelector('.now')).not.toBeNull()
+  })
+
   it('New draft resets only after confirming', () => {
     const { el, onReset } = show(build(S, V, [sold('Alpha', 2, 12)]))
     const confirm = vi.spyOn(window, 'confirm').mockReturnValue(false)

@@ -1,4 +1,4 @@
-import { splitLines, type Frame } from './frames'
+import { isTokenLine, splitLines, type Frame } from './frames'
 
 export interface Recording {
   leagueId: number
@@ -36,14 +36,14 @@ export function scrubFrame(f: Frame, redact: string[] = []): Frame | null {
 
   // Filter out TOKEN lines and rejoin
   let data = lines
-    .filter((l) => !/^TOKEN\b/.test(l))
+    .filter((l) => !isTokenLine(l))
     .join('\n')
 
   // Zero GUIDs
   data = data.replace(GUID, ZERO_GUID)
 
-  // Redact names (case-insensitive, regex-escaped)
-  for (const name of redact) {
+  // Redact names (case-insensitive, regex-escaped), longest first so "Squad" can't leave "Secret" of "Secret Squad"
+  for (const name of [...redact].sort((a, b) => b.length - a.length)) {
     if (name.trim()) {
       const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
       const regex = new RegExp(escaped, 'gi')
@@ -53,7 +53,7 @@ export function scrubFrame(f: Frame, redact: string[] = []): Frame | null {
 
   // Replace league id in URL path and strip query
   let url = f.url.split('?')[0]
-  url = url.replace(/\/league-\d+\//, '/league-0/')
+  url = url.replace(/league-\d+(?=\/|$)/, 'league-0')
 
   return data ? { ...f, data, url } : null
 }

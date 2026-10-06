@@ -38,6 +38,16 @@ describe('scrubbing', () => {
     expect(scrubFrame(f)).toEqual({ dir: 'in', data: 'JOINED 2', t: 1, url: 'wss://fantasydraft.espn.com/game-1/league-0/JOIN' })
   })
 
+  it('replaces a league id at the end of the URL path', () => {
+    const f = { dir: 'in' as const, data: 'JOINED 2', t: 1, url: 'wss://fantasydraft.espn.com/game-1/league-123456?4=x' }
+    expect(scrubFrame(f)!.url).toBe('wss://fantasydraft.espn.com/game-1/league-0')
+  })
+
+  it('redacts longer names first so a shorter name cannot leave part of one', () => {
+    const f = { dir: 'in' as const, data: 'NOMINATE 3 123 1 Secret Squad', t: 1, url: '' }
+    expect(scrubFrame(f, ['Squad', 'Secret Squad'])!.data).toBe('NOMINATE 3 123 1 REDACTED')
+  })
+
   it('zeroes two GUIDs on same line', () => {
     const f = { dir: 'in' as const, data: `JOINED ${GUID} ${GUID}`, t: 1, url: '' }
     const result = scrubFrame(f)
