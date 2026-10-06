@@ -1,6 +1,7 @@
 import { initialState, reduce } from '../src/engine/reducer'
 import type { DraftEvent, DraftState, Settings } from '../src/engine/types'
 import { ESPN_DEFAULT_COUNTS } from '../src/espn/slots'
+import type { KeyValueStore } from '../src/storage'
 import { normalizeName } from '../src/values/names'
 import type { PlayerValue } from '../src/values/types'
 
@@ -25,3 +26,8 @@ export function build(s: Settings, values: PlayerValue[], events: DraftEvent[], 
 
 export const sold = (name: string, teamId: number, price: number): DraftEvent => ({ type: 'sold', playerKey: normalizeName(name), teamId, price })
 export const nominated = (name: string, teamId: number, amount: number): DraftEvent => ({ type: 'nominated', playerKey: normalizeName(name), teamId, amount })
+
+export function memoryStore(init: Record<string, string> = {}): KeyValueStore & { data: Record<string, string> } {
+  const data = { ...init }
+  return { data, getItem: (k) => data[k] ?? null, setItem: (k, v) => void (data[k] = v) }
+}
