@@ -19,6 +19,7 @@ export interface PanelProps {
 
 export function Panel(p: PanelProps) {
   const { advice, state } = p
+  const mine = state.myTeamId
   const v = advice.verdict
   const teamName = (id: number) => teamSummary(state, id).name
   const temp = advice.temperature
@@ -35,16 +36,15 @@ export function Panel(p: PanelProps) {
         <span class="temp">${temp.label}${temp.T !== null ? ` ${temp.T.toFixed(2)}` : ''} · infl ${advice.inflation.toFixed(2)}</span>
       </header>
       ${p.banner && html`<div class="banner">${p.banner}</div>`}
-      ${state.myTeamId === null &&
-      html`<label class="picker">Which team is yours?
-        <select onChange=${(e: Event) => {
+      <label class=${mine === null ? 'picker' : 'picker compact'}>${mine === null ? 'Which team is yours?' : 'My team'}
+        <select value=${mine === null ? '' : String(mine)} onChange=${(e: Event) => {
           const value = (e.target as HTMLSelectElement).value
           if (value !== '') p.onEvent({ type: 'setMyTeam', teamId: Number(value) })
         }}>
-          <option value="">choose…</option>
+          ${mine === null && html`<option value="">choose…</option>`}
           ${state.settings.teams.map((t) => html`<option value=${t.id}>${t.name}</option>`)}
         </select>
-      </label>`}
+      </label>
       <section class="now">
         ${v
           ? html`

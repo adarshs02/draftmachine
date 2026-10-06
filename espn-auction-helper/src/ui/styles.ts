@@ -7,6 +7,8 @@ header { display: flex; gap: 8px; align-items: center; padding: 8px 10px; backgr
 .temp { margin-left: auto; color: #fbbf24; }
 section, .picker, .banner, form, footer { display: block; padding: 6px 10px; border-top: 1px solid #374151; }
 .banner { background: #7c2d12; }
+.picker.compact { display: flex; align-items: center; gap: 6px; }
+.picker.compact select { width: auto; flex: 1; }
 .call { font-size: 18px; font-weight: 700; }
 .call.BID { color: #34d399; }
 .call.BID_UP { color: #a3e635; }
