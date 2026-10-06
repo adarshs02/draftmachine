@@ -16,7 +16,8 @@ export interface PanelProps {
   alert: string | null
   unknownVerbs: Record<string, number>
   frameCount: number
-  onEvent: (ev: DraftEvent) => void
+  /** true when the event changed the draft, false when it was ignored */
+  onEvent: (ev: DraftEvent) => boolean | void
   onDownloadRecording: () => void
   onReset: () => void
   onDismissAlert: () => void

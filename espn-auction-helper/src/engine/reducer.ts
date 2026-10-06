@@ -4,7 +4,9 @@ import type { DraftEvent, DraftState, Settings } from './types'
 
 /** Stand-in for a player missing from values.json (rookie call-up, unknown ESPN id). */
 export function placeholderValue(key: string, b = 1): PlayerValue {
-  return { key, espnId: null, name: key, slots: [UTIL_SLOT], b, consensus: 0, market: 0, josh: null, avoid: false, tier: 5 }
+  const espnId = /^espn:(\d+)$/.exec(key)?.[1]
+  const name = espnId ? `ESPN #${espnId}` : key
+  return { key, espnId: null, name, slots: [UTIL_SLOT], b, consensus: 0, market: 0, josh: null, avoid: false, tier: 5 }
 }
 
 export function initialState(settings: Settings, values: PlayerValue[], myTeamId: number | null = null): DraftState {

@@ -22,7 +22,7 @@ export interface LeagueInfo {
 interface RawLeague {
   id?: number
   settings?: {
-    draftSettings?: { type?: string; auctionBudget?: number; pickOrder?: number[] }
+    draftSettings?: { type?: string; auctionBudget?: number; pickOrder?: unknown }
     rosterSettings?: { lineupSlotCounts?: Record<string, number> }
   }
   teams?: Array<{ id: number; name?: string; location?: string; nickname?: string; owners?: string[] }>
@@ -37,6 +37,7 @@ export function parseLeague(json: unknown): LeagueInfo {
   const rosterSize = Object.entries(counts)
     .filter(([slot]) => Number(slot) !== IR_SLOT)
     .reduce((sum, [, n]) => sum + n, 0)
+  const pickOrder = raw.settings?.draftSettings?.pickOrder
   const teams = (raw.teams ?? []).map((t) => ({
     id: t.id,
     name: t.name?.trim() || `${t.location ?? ''} ${t.nickname ?? ''}`.trim() || `Team ${t.id}`,
@@ -49,7 +50,7 @@ export function parseLeague(json: unknown): LeagueInfo {
     rosterSize,
     lineupSlotCounts: counts,
     teams,
-    pickOrder: raw.settings?.draftSettings?.pickOrder ?? [],
+    pickOrder: Array.isArray(pickOrder) ? pickOrder.filter(Number.isInteger) : [],
   }
 }
 

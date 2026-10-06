@@ -3,7 +3,7 @@ import { render } from 'preact'
 import { act } from 'preact/test-utils'
 import { describe, expect, it, vi } from 'vitest'
 import { advise } from '../../src/engine/advise'
-import type { DraftState } from '../../src/engine/types'
+import type { DraftEvent, DraftState } from '../../src/engine/types'
 import { html } from '../../src/ui/html'
 import { mountPanel } from '../../src/ui/mount'
 import { Panel } from '../../src/ui/Panel'
@@ -14,7 +14,8 @@ const V = [pv('Alpha', 30), pv('Beta', 18)]
 
 function show(state: DraftState, extra: Record<string, unknown> = {}) {
   const el = document.createElement('div')
-  const onEvent = vi.fn()
+  // Like the controller: every event applies unless a test says otherwise.
+  const onEvent = vi.fn<(ev: DraftEvent) => boolean>(() => true)
   const onReset = vi.fn()
   const onDismissAlert = vi.fn()
   render(
@@ -63,6 +64,11 @@ describe('Panel', () => {
 
   it('flags a player on the block who has no value', () => {
     expect(show(build(S, V, [nominated('Ghost', 2, 1)])).el.textContent).toContain('ghost has no value')
+  })
+
+  it('names an unmapped ESPN id on the block "ESPN #<id>"', () => {
+    const state = build(S, V, [{ type: 'nominated', playerKey: 'espn:4396993', teamId: 2, amount: 1 }])
+    expect(show(state).el.querySelector('.now')!.textContent).toContain('ESPN #4396993 has no value')
   })
 
   it('shortens a long outbid list to a count, keeping the names in the tooltip', () => {
@@ -230,6 +236,25 @@ describe('ManualEntry', () => {
     expect((el.querySelector('select[name=team]') as HTMLSelectElement).value).toBe('2')
   })
 
+  it('keeps the amount and says so when the event changed nothing', async () => {
+    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
+    onEvent.mockReturnValue(false)
+    fill(el, '', '2', '5')
+    await act(() => button(el, 'Bid').click())
+    expect(onEvent).toHaveBeenCalledWith({ type: 'bid', teamId: 2, amount: 5 })
+    expect((el.querySelector('input[name=amount]') as HTMLInputElement).value).toBe('5')
+    expect(el.querySelector('form.manual .warn')!.textContent).toBe('Not applied — nothing changed (e.g. a bid must beat the current price).')
+  })
+
+  it('clears the amount and shows no message when a bid applies', async () => {
+    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
+    fill(el, '', '2', '9')
+    await act(() => button(el, 'Bid').click())
+    expect(onEvent).toHaveBeenCalledWith({ type: 'bid', teamId: 2, amount: 9 })
+    expect((el.querySelector('input[name=amount]') as HTMLInputElement).value).toBe('')
+    expect(el.querySelector('form.manual .warn')).toBeNull()
+  })
+
   it('Clear block takes the player off the block', () => {
     const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
     button(el, 'Clear block').click()
@@ -241,6 +266,20 @@ describe('ManualEntry', () => {
     fill(el, 'Ghost', '1', '4')
     button(el, 'Set value').click()
     expect(onEvent).toHaveBeenCalledWith({ type: 'setValue', playerKey: 'ghost', b: 4 })
+  })
+
+  it('Set value with no player typed sets the value of the player on the block', () => {
+    const { el, onEvent } = show(build(S, V, [{ type: 'nominated', playerKey: 'espn:4396993', teamId: 2, amount: 1 }]))
+    fill(el, '', '1', '12')
+    button(el, 'Set value').click()
+    expect(onEvent).toHaveBeenCalledWith({ type: 'setValue', playerKey: 'espn:4396993', b: 12 })
+  })
+
+  it('Set value with no player typed and nothing on the block sends nothing', () => {
+    const { el, onEvent } = show(build(S, V, []))
+    fill(el, '', '1', '12')
+    button(el, 'Set value').click()
+    expect(onEvent).not.toHaveBeenCalled()
   })
 })
 

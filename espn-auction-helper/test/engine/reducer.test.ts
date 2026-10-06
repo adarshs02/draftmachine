@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { reduce } from '../../src/engine/reducer'
+import { placeholderValue, reduce } from '../../src/engine/reducer'
 import type { DraftEvent } from '../../src/engine/types'
 import { build, nominated, pv, settings, sold } from '../helpers'
 
@@ -59,6 +59,13 @@ describe('reduce', () => {
     const s = build(settings(), V, [{ type: 'setValue', playerKey: 'alpha', b: 0 }, { type: 'setValue', playerKey: 'ghost', b: 7 }])
     expect(s.values.alpha.b).toBe(1)
     expect(s.values.ghost).toMatchObject({ key: 'ghost', name: 'ghost', b: 7, tier: 5 })
+  })
+
+  it('names a placeholder for an unmapped ESPN id "ESPN #<id>", any other key by itself', () => {
+    expect(placeholderValue('espn:4396993').name).toBe('ESPN #4396993')
+    expect(build(settings(), V, [{ type: 'setValue', playerKey: 'espn:42', b: 5 }]).values['espn:42']).toMatchObject({ name: 'ESPN #42', b: 5 })
+    expect(placeholderValue('ghost').name).toBe('ghost')
+    expect(placeholderValue('espn:12x').name).toBe('espn:12x')
   })
 
   it('clearLive takes the player off the block', () => {

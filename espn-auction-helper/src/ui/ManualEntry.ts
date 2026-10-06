@@ -12,16 +12,19 @@ function read(form: HTMLFormElement) {
   return { player: field('player'), teamId: Number(field('team')), amount: Number(field('amount')) }
 }
 
+const NOT_APPLIED = 'Not applied — nothing changed (e.g. a bid must beat the current price).'
+
 /** Fallback when the socket isn't decoding: type what happens in the room. */
-export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (ev: DraftEvent) => void }) {
+export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (ev: DraftEvent) => boolean | void }) {
   const [error, setError] = useState<string | null>(null)
   const act = (action: Action) => (e: Event) => {
     const form = (e.currentTarget as HTMLButtonElement).form!
     const f = read(form)
-    // A dispatched event consumes the typed amount; player and team stay for the next call.
+    // An applied event consumes the typed amount; player and team stay for the next call.
     const emit = (ev: DraftEvent) => {
-      onEvent(ev)
-      ;(form.elements.namedItem('amount') as HTMLInputElement).value = ''
+      const applied = onEvent(ev)
+      if (applied === true) (form.elements.namedItem('amount') as HTMLInputElement).value = ''
+      else if (applied === false) setError(NOT_APPLIED)
     }
     const typed = normalizeName(f.player) !== ''
     setError(null)
@@ -46,6 +49,8 @@ export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (e
         if (playerKey) emit({ type: 'sold', playerKey, teamId: f.teamId, price: f.amount })
       }
     }
+    // No player typed: the value is for whoever is on the block (e.g. an unmapped ESPN id).
+    if (action === 'value' && !typed && state.live && f.amount > 0) emit({ type: 'setValue', playerKey: state.live.playerKey, b: f.amount })
     if (action === 'value' && typed && f.amount > 0) {
       const r = resolvePlayer(state, f.player)
       // No match at all: a call-up missing from the values gets an entry under the typed name.

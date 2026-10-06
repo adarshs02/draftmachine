@@ -49,6 +49,14 @@ describe('draft order', () => {
     expect(parseLeague({ teams: [] }).pickOrder).toEqual([])
   })
 
+  it('keeps only integer team ids from pickOrder, and ignores a pickOrder that is not a list', () => {
+    const order = (pickOrder: unknown) => parseLeague({ settings: { draftSettings: { pickOrder } }, teams: [] }).pickOrder
+    expect(order('2,1,3')).toEqual([])
+    expect(order({ 0: 2 })).toEqual([])
+    expect(order(null)).toEqual([])
+    expect(order([3, '1', null, 2.5, 1, { id: 4 }])).toEqual([3, 1])
+  })
+
   it('toSettings lists teams in pickOrder', () => {
     expect(toSettings(parseLeague(RAW)).teams.map((t) => t.id)).toEqual([2, 1, 3, 4, 5, 6, 7, 8, 9, 10])
   })

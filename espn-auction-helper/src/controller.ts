@@ -39,7 +39,8 @@ export interface ControllerDeps {
 }
 
 export interface Controller {
-  dispatch(ev: DraftEvent): void
+  /** Applies a manual event; false when it changed nothing (e.g. a bid that does not beat the price). */
+  dispatch(ev: DraftEvent): boolean
   dismissAlert(): void
   getState(): DraftState
   onFrame(frame: Frame): void
@@ -117,8 +118,26 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     for (const store of stores) saveEvents(store, deps.leagueId, log)
     return true
   }
+  const playerName = (key: string) => valueOf(state, key).name
+  const teamName = (id: number) => teamSummary(state, id).name
   const missedSale = (live: Live) =>
-    `Missed the end of ${valueOf(state, live.playerKey).name}'s auction (last seen $${live.price} by ${teamSummary(state, live.leaderId).name}). If it sold, enter it with Sold.`
+    `Missed the end of ${playerName(live.playerKey)}'s auction (last seen $${live.price} by ${teamName(live.leaderId)}). If it sold, enter it with Sold.`
+  /** Judges a live event against the panel's state: raises an alert where they disagree; returns what to apply. */
+  const reconcile = (ev: DraftEvent): DraftEvent => {
+    const live = state.live
+    if (ev.type === 'nominated' && live && live.playerKey !== ev.playerKey && !state.sales.some((x) => x.playerKey === live.playerKey)) {
+      alert = missedSale(live)
+    }
+    if (ev.type === 'sold') {
+      // A manual sale ESPN disagrees with: ESPN's SOLD is the truth.
+      const prior = state.sales.find((x) => x.playerKey === ev.playerKey)
+      if (prior && (prior.teamId !== ev.teamId || prior.price !== ev.price)) {
+        alert = `Corrected ${playerName(ev.playerKey)}: ESPN says ${teamName(ev.teamId)} $${ev.price}`
+        return { type: 'editSale', seq: prior.seq, teamId: ev.teamId, price: ev.price }
+      }
+    }
+    return ev
+  }
   /**
    * ESPN streams NOMINATION -> BID... -> SOLD -> NOMINATION. A turn, or a bid on someone else,
    * while our block still holds an unsold player means its SOLD was lost (refresh, reconnect).
@@ -131,13 +150,7 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       }
       return
     }
-    for (const ev of assembler.push(raw)) {
-      const live = state.live
-      if (ev.type === 'nominated' && live && live.playerKey !== ev.playerKey && !state.sales.some((x) => x.playerKey === live.playerKey)) {
-        alert = missedSale(live)
-      }
-      apply(ev)
-    }
+    for (const ev of assembler.push(raw)) apply(reconcile(ev))
   }
   /** A line counts toward health when it decodes, or is a verb we know to ignore; other verbs are counted for the panel. */
   const onLine = (line: string) => {
@@ -153,8 +166,9 @@ export async function createController(deps: ControllerDeps): Promise<Controller
 
   return {
     dispatch(ev) {
-      apply(ev)
+      const changed = apply(ev)
       publish()
+      return changed
     },
     dismissAlert() {
       alert = null

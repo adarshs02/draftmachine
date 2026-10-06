@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { createController, LIVE_WINDOW_MS, type ControllerDeps, type View } from '../src/controller'
 import { parseLeague } from '../src/espn/league'
 import { GRAMMAR } from '../src/capture/decoder'
+import type { Recording } from '../src/capture/recording'
 import { lineFor, memoryStore, nominated, pv, sold } from './helpers'
 
 const LEAGUE = parseLeague(JSON.parse(readFileSync('test/fixtures/league-settings.json', 'utf8')))
@@ -218,6 +219,31 @@ describe('live sequence against the panel state', () => {
     c.dispatch({ type: 'clearLive' })
     expect(deps.storage.getItem(KEY)).toBeNull()
   })
+
+  it('dispatch says whether the event changed anything', async () => {
+    const { c } = await make({ values: values() })
+    expect(c.dispatch(nominated('Alpha', 2, 5))).toBe(true)
+    expect(c.dispatch({ type: 'bid', teamId: 3, amount: 4 })).toBe(false)
+    expect(c.dispatch({ type: 'bid', teamId: 3, amount: 6 })).toBe(true)
+  })
+
+  it("ESPN's SOLD corrects a manual sale with a different team or price, and says so", async () => {
+    const { c, views, deps } = await make({ values: values() })
+    c.dispatch(sold('Alpha', 3, 20))
+    c.onFrame(soldLine(4, 24))
+    expect(c.getState().sales).toEqual([{ seq: 1, playerKey: 'alpha', teamId: 4, price: 24 }])
+    expect(views.at(-1)!.alert).toBe('Corrected Alpha: ESPN says T4 $24')
+    expect(JSON.parse(deps.storage.getItem(KEY)!).at(-1)).toEqual({ type: 'editSale', seq: 1, teamId: 4, price: 24 })
+  })
+
+  it("ESPN's SOLD matching a manual sale changes nothing", async () => {
+    const { c, views, deps } = await make({ values: values() })
+    c.dispatch(sold('Alpha', 4, 24))
+    c.onFrame(soldLine(4, 24))
+    expect(c.getState().sales).toEqual([{ seq: 1, playerKey: 'alpha', teamId: 4, price: 24 }])
+    expect(views.at(-1)!.alert).toBeNull()
+    expect(JSON.parse(deps.storage.getItem(KEY)!)).toHaveLength(1)
+  })
 })
 
 describe('missed end of an auction', () => {
@@ -326,5 +352,26 @@ describe('health', () => {
     c.onFrame(frame('CLOCK 6 85495 1'))
     expect(views.at(-1)!.health).toBe('live')
     expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 20, leaderId: 2 })
+  })
+})
+
+describe('recorded ESPN draft through the controller', () => {
+  const rec = JSON.parse(readFileSync('test/fixtures/espn-auction-recording.json', 'utf8')) as Recording
+  const notes = JSON.parse(readFileSync('test/fixtures/espn-auction-notes.json', 'utf8')) as { sales: [number, number, number][] }
+  const [jokic, second, third] = notes.sales.map(([espnId]) => espnId)
+  const values = () => [pv('Nikola Jokic', 60, { espnId: jokic }), pv('Second Pick', 50, { espnId: second }), pv('Third Pick', 45, { espnId: third })]
+
+  it('survives dedupe and a reload, and its sales match the Draft Recap', async () => {
+    const first = await make({ values: values() })
+    for (const frame of rec.frames.filter((f) => f.dir === 'in')) first.c.onFrame(frame)
+    const sales = first.c.getState().sales
+    expect(sales.map((x) => [x.teamId, x.price])).toEqual(notes.sales.map(([, teamId, price]) => [teamId, price]))
+    expect(sales.map((x) => x.playerKey)).toEqual(['nikola jokic', 'second pick', 'third pick', ...notes.sales.slice(3).map(([id]) => `espn:${id}`)])
+    expect(first.c.getState().live).not.toBeNull() // the recording ends mid-auction
+    expect(first.views.at(-1)!.alert).toBeNull() // the real stream order never looks like a missed sale
+
+    const second = await make({ values: values(), storage: first.deps.storage, backup: first.deps.backup })
+    expect(second.c.getState().sales).toEqual(sales)
+    expect(second.c.getState().live).toEqual(first.c.getState().live)
   })
 })
