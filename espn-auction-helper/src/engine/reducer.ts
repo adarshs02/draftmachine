@@ -16,7 +16,7 @@ const isSold = (s: DraftState, key: string) => s.sales.some((x) => x.playerKey =
 export function reduce(s: DraftState, ev: DraftEvent): DraftState {
   switch (ev.type) {
     case 'nominated':
-      if (isSold(s, ev.playerKey)) return s
+      if (isSold(s, ev.playerKey) || s.live?.playerKey === ev.playerKey) return s
       return { ...s, live: { playerKey: ev.playerKey, price: ev.amount, leaderId: ev.teamId } }
     case 'bid':
       if (!s.live || ev.amount <= s.live.price) return s

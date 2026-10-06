@@ -167,3 +167,55 @@ describe('live decoding', () => {
     expect(JSON.parse(deps.storage.getItem('eah:7:events')!)).toEqual([nominated('Alpha', 2, 1)])
   })
 })
+
+describe('live sequence against the panel state', () => {
+  const ALPHA = 3112335
+  const values = () => [pv('Alpha', 30, { espnId: ALPHA }), pv('Bravo', 20, { espnId: 42 })]
+  const line = (team: number, amount: number, player = ALPHA) => ({ dir: 'in' as const, data: lineFor(GRAMMAR.bid, { team, player, amount }), t: 1, url: 'wss://fantasydraft.espn.com/x' })
+  const soldLine = (team: number, amount: number) => ({ dir: 'in' as const, data: lineFor(GRAMMAR.sold, { team, player: ALPHA, amount }), t: 1, url: 'wss://fantasydraft.espn.com/x' })
+  const KEY = 'eah:7:events'
+
+  it('after a reload mid-auction a live bid raises the price and a stale lower bid is ignored', async () => {
+    const first = await make({ values: values() })
+    first.c.dispatch(nominated('Alpha', 2, 20))
+    const { c, deps } = await make({ values: values(), storage: first.deps.storage })
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 20, leaderId: 2 })
+    c.onFrame(line(3, 25))
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 25, leaderId: 3 })
+    expect(JSON.parse(deps.storage.getItem(KEY)!).at(-1)).toEqual({ type: 'bid', teamId: 3, amount: 25 })
+    c.onFrame(line(4, 15))
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 25, leaderId: 3 })
+  })
+
+  it('after a manual clearLive a live bid on the same player nominates it again', async () => {
+    const { c } = await make({ values: values() })
+    c.dispatch(nominated('Alpha', 2, 5))
+    c.dispatch({ type: 'clearLive' })
+    c.onFrame(line(3, 7))
+    expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 7, leaderId: 3 })
+  })
+
+  it('BID(new) then BID then SOLD makes one sale with the SOLD price and the mapped key', async () => {
+    const { c } = await make({ values: values() })
+    c.onFrame(line(2, 1))
+    c.onFrame(line(3, 9))
+    c.onFrame(soldLine(3, 11))
+    expect(c.getState().sales).toEqual([{ seq: 1, playerKey: 'alpha', teamId: 3, price: 11 }])
+    expect(c.getState().live).toBeNull()
+  })
+
+  it('a repeated identical BID frame does not grow the persisted log', async () => {
+    const { c, deps } = await make({ values: values() })
+    c.onFrame(line(2, 1))
+    c.onFrame(line(3, 9))
+    c.onFrame(line(3, 9))
+    expect(JSON.parse(deps.storage.getItem(KEY)!)).toHaveLength(2)
+    expect(JSON.parse(deps.backup.getItem(KEY)!)).toHaveLength(2)
+  })
+
+  it('manual dispatch of a no-op event is not logged either', async () => {
+    const { c, deps } = await make({ values: values() })
+    c.dispatch({ type: 'clearLive' })
+    expect(deps.storage.getItem(KEY)).toBeNull()
+  })
+})

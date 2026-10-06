@@ -83,14 +83,18 @@ export async function createController(deps: ControllerDeps): Promise<Controller
   const startedAt = new Date()
   const frames: Frame[] = []
   const byEspnId = new Map(values.flatMap((v) => (v.espnId === null ? [] : [[v.espnId, v.key] as const])))
-  const assembler = createAssembler((id) => byEspnId.get(id) ?? `espn:${id}`)
+  const assembler = createAssembler((id) => byEspnId.get(id) ?? `espn:${id}`, () => state.live)
   let health: Health = 'manual'
   const banner = () => [leagueBanner, restoreBanner].filter(Boolean).join(' · ') || null
   const publish = () => deps.render({ advice: advise(state), state, health, banner: banner(), frameCount: frames.length })
-  const apply = (ev: DraftEvent) => {
-    state = reduce(state, ev)
+  /** Returns whether the event changed anything; no-ops (repeat bids, stale bids) stay out of the log. */
+  const apply = (ev: DraftEvent): boolean => {
+    const next = reduce(state, ev)
+    if (next === state) return false
+    state = next
     log.push(ev)
     for (const store of stores) saveEvents(store, deps.leagueId, log)
+    return true
   }
   publish()
 

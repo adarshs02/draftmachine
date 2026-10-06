@@ -3,14 +3,23 @@ import { describe, expect, it } from 'vitest'
 import { createAssembler } from '../../src/capture/assembler'
 import { decodeFrame } from '../../src/capture/decoder'
 import type { Recording } from '../../src/capture/recording'
+import { initialState, reduce } from '../../src/engine/reducer'
 import type { DraftEvent } from '../../src/engine/types'
+import { settings } from '../helpers'
 
 const rec = JSON.parse(readFileSync('test/fixtures/espn-auction-recording.json', 'utf8')) as Recording
 const notes = JSON.parse(readFileSync('test/fixtures/espn-auction-notes.json', 'utf8'))
 const incoming = rec.frames.filter((f) => f.dir === 'in')
 const raws = incoming.flatMap((f) => decodeFrame(f.data))
-const assembler = createAssembler((id) => `espn:${id}`)
-const events: DraftEvent[] = raws.flatMap((r) => assembler.push(r))
+// The assembler reads the block from the draft state, as the controller does.
+let state = initialState(settings(10), [])
+const assembler = createAssembler((id) => `espn:${id}`, () => state.live)
+const events: DraftEvent[] = raws.flatMap((r) =>
+  assembler.push(r).map((ev) => {
+    state = reduce(state, ev)
+    return ev
+  }),
+)
 
 describe('recorded ESPN salary-cap draft', () => {
   it('every incoming verb is either decoded or known noise', () => {

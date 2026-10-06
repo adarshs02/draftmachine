@@ -26,6 +26,11 @@ describe('reduce', () => {
     expect(s.nextSeq).toBe(2)
   })
 
+  it('re-nominating the player already on the block is ignored (no price drop)', () => {
+    const s = build(settings(), V, [nominated('Alpha', 2, 1), { type: 'bid', teamId: 3, amount: 9 }])
+    expect(reduce(s, nominated('Alpha', 4, 2))).toBe(s)
+  })
+
   it('nominating an already-sold player is ignored', () => {
     expect(build(settings(), V, [sold('Alpha', 3, 12), nominated('Alpha', 2, 1)]).live).toBeNull()
   })
