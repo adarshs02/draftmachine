@@ -11,7 +11,11 @@ Chrome extension for ESPN fantasy basketball **salary-cap (auction)** drafts. It
 
 Design: `docs/superpowers/specs/2026-10-05-espn-auction-helper-design.md`.
 
+> **Status:** live socket decoding isn't built yet. Until it is, the panel runs in manual mode: you type what happens in the room under *Manual entry*. Ignore "● live".
+
 ## Setup
+
+Needs Node 20 or newer.
 
 ```bash
 cd espn-auction-helper
@@ -21,15 +25,24 @@ npm run values       # blend with Josh Lloyd's decoded values -> data/values.jso
 npm run build
 ```
 
+`npm run fetch-espn` overwrites the committed `data/espn-players-2027.json`. Always run `npm run values` after it. Tests that read the real data, such as the value blend, may shift after a fetch.
+
 Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `espn-auction-helper/dist`.
 
 ## Draft day
 
 1. Run `npm run fetch-espn && npm run values && npm run build` the morning of the draft, then hit reload on the extension.
 2. Open your league's draft room (`https://fantasy.espn.com/basketball/draft?leagueId=...`) while logged in.
-3. The panel shows **● live** once socket events decode. If it stays **○ manual**, type events into *Manual entry* (Nominated / Bid / Sold). Every card still works.
-4. Pin targets with ☆. Fix a wrong sale with ✎ ("price team#"), or **Undo last sale**.
-5. Refreshing the page keeps your draft: it's saved in this tab's session.
+3. Check **My team** at the top of the panel. It is detected from your ESPN login. If it's wrong or blank, pick your team there. You can change it at any time.
+4. Type events into *Manual entry*:
+   - **Nominated**, **Bid**: player, team and $.
+   - **Sold**: with no $ typed, sells the player on the block at the last price to the leading team. With a $ typed, sells to the team and amount you entered.
+   - **Clear block**: takes a mistaken nomination off the block.
+   - **Set value**: sets a player's value. A name that matches no one is added as a new player, for a late call-up missing from the values.
+
+   Partial names work when they match exactly one player (`jok`, or a last name like `Jokic`). Otherwise the panel says what matched and records nothing. Every card still works in manual mode.
+5. Teams are labelled `#id name`. Pin targets with ☆. To fix a wrong sale, press ✎ and type the price and team number (`14 3`) or the start of the team name (`14 bub`). **Undo last sale** removes the most recent sale. The **–** button in the header collapses the panel.
+6. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **New draft** (after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
 
 ## Recording a draft (for debugging the live decoder)
 
