@@ -1,3 +1,5 @@
+import type { Frame } from './capture/frames'
+import { buildRecording } from './capture/recording'
 import { advise, type Advice } from './engine/advise'
 import { initialState, reduce } from './engine/reducer'
 import type { DraftEvent, DraftState } from './engine/types'
@@ -27,6 +29,8 @@ export interface ControllerDeps {
 export interface Controller {
   dispatch(ev: DraftEvent): void
   getState(): DraftState
+  onFrame(frame: Frame): void
+  recordingJson(): string
 }
 
 export async function createController(deps: ControllerDeps): Promise<Controller> {
@@ -46,8 +50,10 @@ export async function createController(deps: ControllerDeps): Promise<Controller
   const log = loadEvents(deps.storage, deps.leagueId)
   for (const ev of log) state = reduce(state, ev)
 
+  const startedAt = new Date()
+  const frames: Frame[] = []
   const health: Health = 'manual'
-  const publish = () => deps.render({ advice: advise(state), state, health, banner, frameCount: 0 })
+  const publish = () => deps.render({ advice: advise(state), state, health, banner, frameCount: frames.length })
   publish()
 
   return {
@@ -58,5 +64,10 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       publish()
     },
     getState: () => state,
+    onFrame(frame) {
+      frames.push(frame)
+      publish()
+    },
+    recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),
   }
 }

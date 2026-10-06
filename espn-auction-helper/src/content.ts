@@ -1,5 +1,8 @@
 import { render } from 'preact'
 import valuesJson from '../data/values.json'
+import { startContentSide, windowBus } from './capture/bridge'
+import type { Frame } from './capture/frames'
+import { downloadText } from './capture/recording'
 import { createController, type Controller } from './controller'
 import type { DraftEvent } from './engine/types'
 import { fetchLeague } from './espn/league'
@@ -10,21 +13,34 @@ import type { PlayerValue } from './values/types'
 
 const leagueId = Number(new URLSearchParams(location.search).get('leagueId'))
 
+// Listen from document_start so no socket frame is lost while the league loads.
+const pending: Frame[] = []
+let controller: Controller | null = null
+startContentSide(windowBus(window), (frame) => {
+  if (controller) controller.onFrame(frame)
+  else pending.push(frame)
+})
+
 function whenReady(fn: () => void): void {
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn, { once: true })
   else fn()
 }
 
+const download = () => {
+  if (controller) downloadText(document, `espn-draft-${leagueId}-${Date.now()}.json`, controller.recordingJson())
+}
+
 whenReady(async () => {
   const container = mountPanel(document)
-  let controller: Controller | null = null
-  controller = await createController({
+  const ready = await createController({
     leagueId,
     storage: sessionStorage,
     values: valuesJson as unknown as PlayerValue[],
     cookie: document.cookie,
     loadLeague: () => fetchLeague(leagueId),
     render: (view) =>
-      render(html`<${Panel} ...${view} onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)} onDownloadRecording=${() => {}} />`, container),
+      render(html`<${Panel} ...${view} onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)} onDownloadRecording=${download} />`, container),
   })
+  controller = ready
+  for (const frame of pending.splice(0)) ready.onFrame(frame)
 })

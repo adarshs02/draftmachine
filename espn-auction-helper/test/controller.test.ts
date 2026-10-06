@@ -56,3 +56,12 @@ describe('createController', () => {
     expect(c.getState().sales).toEqual([])
   })
 })
+
+describe('socket frames', () => {
+  it('records frames and offers them as a recording', async () => {
+    const { c, views } = await make()
+    c.onFrame({ dir: 'in', data: 'CLOCK 6 85495 1', t: 1, url: 'wss://fantasydraft.espn.com/x' })
+    expect(views.at(-1)!.frameCount).toBe(1)
+    expect(JSON.parse(c.recordingJson())).toMatchObject({ leagueId: 7, frames: [{ data: 'CLOCK 6 85495 1' }] })
+  })
+})
