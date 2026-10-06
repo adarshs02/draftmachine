@@ -36,10 +36,15 @@ export interface DraftState {
   live: Live | null
   targets: string[]
   nextSeq: number
+  /** team ESPN says is on the clock to nominate; null when unknown */
+  turnTeamId: number | null
+  /** who nominated the most recent player */
+  lastNominatorId: number | null
 }
 
 export type DraftEvent =
   | { type: 'nominated'; playerKey: string; teamId: number; amount: number }
+  | { type: 'turn'; teamId: number }
   | { type: 'bid'; teamId: number; amount: number }
   | { type: 'clearLive' }
   | { type: 'sold'; playerKey: string; teamId: number; price: number }

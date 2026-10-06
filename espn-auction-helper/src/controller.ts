@@ -148,6 +148,7 @@ export async function createController(deps: ControllerDeps): Promise<Controller
         alert = missedSale(state.live)
         apply({ type: 'clearLive' })
       }
+      apply({ type: 'turn', teamId: raw.teamId })
       return
     }
     for (const ev of assembler.push(raw)) apply(reconcile(ev))

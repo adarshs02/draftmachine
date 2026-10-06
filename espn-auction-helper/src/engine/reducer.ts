@@ -10,7 +10,7 @@ export function placeholderValue(key: string, b = 1): PlayerValue {
 }
 
 export function initialState(settings: Settings, values: PlayerValue[], myTeamId: number | null = null): DraftState {
-  return { settings, myTeamId, values: Object.fromEntries(values.map((v) => [v.key, v])), sales: [], live: null, targets: [], nextSeq: 1 }
+  return { settings, myTeamId, values: Object.fromEntries(values.map((v) => [v.key, v])), sales: [], live: null, targets: [], nextSeq: 1, turnTeamId: null, lastNominatorId: null }
 }
 
 const isSold = (s: DraftState, key: string) => s.sales.some((x) => x.playerKey === key)
@@ -19,7 +19,9 @@ export function reduce(s: DraftState, ev: DraftEvent): DraftState {
   switch (ev.type) {
     case 'nominated':
       if (isSold(s, ev.playerKey) || s.live?.playerKey === ev.playerKey) return s
-      return { ...s, live: { playerKey: ev.playerKey, price: ev.amount, leaderId: ev.teamId } }
+      return { ...s, live: { playerKey: ev.playerKey, price: ev.amount, leaderId: ev.teamId }, lastNominatorId: ev.teamId, turnTeamId: null }
+    case 'turn':
+      return s.turnTeamId === ev.teamId ? s : { ...s, turnTeamId: ev.teamId }
     case 'bid':
       if (!s.live || ev.amount <= s.live.price) return s
       return { ...s, live: { ...s.live, price: ev.amount, leaderId: ev.teamId } }

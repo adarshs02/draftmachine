@@ -1,5 +1,6 @@
 import { allTeams, inflation, myBudget, saleFlags, teamSummary, temperature, valueOf, type MyBudget, type TeamSummary, type Temperature } from './metrics'
 import { suggestNomination, type Nomination } from './nominate'
+import { nominationTurn, type NominationTurn } from './turn'
 import { targetList, type TargetRow } from './targets'
 import type { DraftState } from './types'
 import { verdict, type Verdict } from './verdict'
@@ -20,6 +21,7 @@ export interface Advice {
   temperature: Temperature
   inflation: number
   verdict: Verdict | null
+  turn: NominationTurn
   nomination: Nomination | null
   targets: TargetRow[]
   teams: TeamSummary[]
@@ -33,6 +35,7 @@ export function advise(s: DraftState): Advice {
     temperature: temperature(s),
     inflation: inflation(s),
     verdict: verdict(s),
+    turn: nominationTurn(s),
     nomination: suggestNomination(s),
     targets: targetList(s),
     teams: allTeams(s),

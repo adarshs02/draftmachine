@@ -48,6 +48,18 @@ export function Panel(p: PanelProps) {
     const teamId = teamFromText(state.settings.teams, team.join(' '))
     if (price > 0 && teamId !== null) p.onEvent({ type: 'editSale', seq: f.seq, teamId, price })
   }
+  const turn = advice.turn
+  const turns = (n: number | null, next: boolean) =>
+    n === null ? '' : n === 0 ? (next ? ' · you nominate next' : '') : ` · you nominate in ${n} ${n === 1 ? 'turn' : 'turns'}`
+  const teamTag = (id: number) => teamLabel(state.settings.teams.find((t) => t.id === id) ?? { id, name: teamName(id) })
+  const turnLine =
+    turn.onClock !== null && turn.onClock === mine
+      ? html`<span class="call BID">Your turn to nominate</span>`
+      : turn.onClock !== null
+        ? `Nominating now: ${teamTag(turn.onClock)}${turns(turn.turnsUntilMe, false)}`
+        : turn.upNext !== null
+          ? `Up next: ${teamTag(turn.upNext)}${turns(turn.turnsUntilMe, true)}`
+          : null
   const unknown = Object.entries(p.unknownVerbs).map(([verb, n]) => `${verb}×${n}`).join(', ')
   const [collapsed, setCollapsed] = useState(false)
   const newDraft = () => {
@@ -89,6 +101,7 @@ export function Panel(p: PanelProps) {
         html`<section class="budget">
           ${money(advice.budget.budgetLeft)} left · ${advice.budget.open} spots · ${money(advice.budget.perSlot)}/slot · safe max ${money(advice.budget.safeMax)}
         </section>`}
+        ${turnLine && html`<section class="turn">${turnLine}</section>`}
         ${advice.nomination &&
         html`<section class="nominate">
           <b>Nominate:</b> ${advice.nomination.name} <span class="muted">(${advice.nomination.phase})</span>

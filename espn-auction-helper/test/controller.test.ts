@@ -262,7 +262,25 @@ describe('missed end of an auction', () => {
     c.onFrame(frame('NOMINATION 4 30000'))
     expect(c.getState().live).toBeNull()
     expect(views.at(-1)!.alert).toBe(MISSED_ALPHA)
-    expect(JSON.parse(deps.storage.getItem(KEY)!).at(-1)).toEqual({ type: 'clearLive' })
+    expect(JSON.parse(deps.storage.getItem(KEY)!).slice(-2)).toEqual([{ type: 'clearLive' }, { type: 'turn', teamId: 4 }])
+  })
+
+  it('a NOMINATION turn is applied, logged and survives a reload', async () => {
+    const { c, deps } = await make({ values: values() })
+    c.onFrame(frame('NOMINATION 3 30000'))
+    expect(c.getState().turnTeamId).toBe(3)
+    expect(JSON.parse(deps.storage.getItem(KEY)!)).toEqual([{ type: 'turn', teamId: 3 }])
+    c.onFrame(frame('NOMINATION 3 25000'))
+    expect(JSON.parse(deps.storage.getItem(KEY)!)).toHaveLength(1)
+    const again = await make({ values: values(), storage: deps.storage })
+    expect(again.c.getState().turnTeamId).toBe(3)
+  })
+
+  it('a NOMINATION turn that clears a missed sale still applies the turn', async () => {
+    const { c } = await reloaded()
+    c.onFrame(frame('NOMINATION 4 30000'))
+    expect(c.getState().live).toBeNull()
+    expect(c.getState().turnTeamId).toBe(4)
   })
 
   it('a BID on another player while one is still on the block raises the alert and nominates the new player', async () => {

@@ -43,8 +43,9 @@ Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `e
 
      Partial names work when they match exactly one player (`jok`, or a last name like `Jokic`). Otherwise the panel says what matched and records nothing. Every card still works in manual mode.
 5. If a refresh or reconnect breaks the live connection mid-sale, an alert says "Missed the end of …". Check **Budgets** on ESPN to see if the player sold, and enter that sale with **Sold** if needed. If ESPN's sale differs from one you typed, ESPN wins, and the panel tells you what it corrected. Teams are labelled `#id name`. Pin targets with ☆. To fix a wrong sale, press ✎ and type the price and team number (`14 3`) or the start of the team name (`14 bub`). **Undo last sale** removes the most recent sale. The **–** button in the header collapses the panel.
-6. Watch the footer's unknown-verb counter. If that count grows during your draft, it's worth recording and reporting.
-7. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **New draft** (after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
+6. Above **Nominate:**, a line shows whose turn it is to nominate: **Your turn to nominate**, **Nominating now: #id name · you nominate in N turns**, or, while a player is on the block, **Up next: …**. In live mode it comes from ESPN; in manual mode it is inferred from the draft order, skipping teams with full rosters.
+7. Watch the footer's unknown-verb counter. If that count grows during your draft, it's worth recording and reporting.
+8. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **New draft** (after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
 
 ## Dry run before your draft
 

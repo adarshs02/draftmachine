@@ -36,6 +36,39 @@ describe('Panel', () => {
     expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.textContent).toContain('BID up to $35')
   })
 
+  describe('nomination turn line', () => {
+    const line = (state: DraftState) => show(state).el.querySelector('.turn')?.textContent ?? null
+
+    it('says so when it is my turn', () => {
+      const el = show(build(S, V, [], 1)).el
+      expect(el.querySelector('.turn')!.textContent).toBe('Your turn to nominate')
+      expect(el.querySelector('.turn .call')).not.toBeNull()
+    })
+
+    it('says who is nominating now and how many turns until mine', () => {
+      expect(line(build(S, V, [], 3))).toBe('Nominating now: #1 T1 · you nominate in 2 turns')
+      expect(line(build(S, V, [{ type: 'turn', teamId: 2 }], 3))).toBe('Nominating now: #2 T2 · you nominate in 1 turn')
+    })
+
+    it('omits the "you nominate" part when my team is unknown', () => {
+      expect(line(build(S, V, [], null))).toBe('Nominating now: #1 T1')
+    })
+
+    it('shows who is up next while a player is on the block', () => {
+      expect(line(build(S, V, [nominated('Alpha', 1, 1)], 4))).toBe('Up next: #2 T2 · you nominate in 2 turns')
+      expect(line(build(S, V, [nominated('Alpha', 1, 1)], 2))).toBe('Up next: #2 T2 · you nominate next')
+    })
+
+    it('is hidden when nobody has room to nominate', () => {
+      expect(line(build(settings(2, { rosterSize: 1, lineupSlotCounts: { 12: 1 } }), V, [sold('Alpha', 1, 5), sold('Beta', 2, 5)], 1))).toBeNull()
+    })
+
+    it('sits directly above the Nominate section', () => {
+      const el = show(build(S, V, [], 1)).el
+      expect(el.querySelector('.turn')!.nextElementSibling?.classList.contains('nominate')).toBe(true)
+    })
+  })
+
   it('asks which team is mine when it is unknown', () => {
     const { el, onEvent } = show(build(S, V, [], null))
     const select = el.querySelector('.picker select') as HTMLSelectElement

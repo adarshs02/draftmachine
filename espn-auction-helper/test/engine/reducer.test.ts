@@ -81,3 +81,47 @@ describe('reduce', () => {
     expect(build(settings(), V, [{ type: 'setMyTeam', teamId: 3 }], null).myTeamId).toBe(3)
   })
 })
+
+describe('nomination turn state', () => {
+  const turn = (teamId: number): DraftEvent => ({ type: 'turn', teamId })
+
+  it('starts unknown', () => {
+    const s = build(settings(), V, [])
+    expect([s.turnTeamId, s.lastNominatorId]).toEqual([null, null])
+  })
+
+  it('a turn event sets turnTeamId, and repeating it changes nothing', () => {
+    const s = build(settings(), V, [turn(3)])
+    expect(s.turnTeamId).toBe(3)
+    expect(reduce(s, turn(3))).toBe(s)
+    expect(reduce(s, turn(2)).turnTeamId).toBe(2)
+  })
+
+  it('a nomination records the nominator and clears the turn', () => {
+    const s = build(settings(), V, [turn(3), nominated('Alpha', 3, 1)])
+    expect([s.turnTeamId, s.lastNominatorId]).toEqual([null, 3])
+  })
+
+  it('a refused nomination leaves both fields alone', () => {
+    const s = build(settings(), V, [nominated('Alpha', 2, 1), sold('Alpha', 2, 5), turn(4)])
+    expect(reduce(s, nominated('Alpha', 1, 1))).toBe(s)
+  })
+
+  it('sold, undo, clearLive and editSale leave both fields alone', () => {
+    let s = build(settings(), V, [nominated('Alpha', 2, 1), turn(4)])
+    const keep = (x: typeof s) => [x.turnTeamId, x.lastNominatorId]
+    s = reduce(s, nominated('Bravo', 3, 1))
+    s = reduce(s, turn(4))
+    for (const ev of [sold('Bravo', 3, 5), { type: 'editSale', seq: 1, teamId: 1, price: 6 }, { type: 'clearLive' }, { type: 'undo' }] as DraftEvent[]) {
+      expect(keep(reduce(s, ev))).toEqual([4, 3])
+    }
+  })
+
+  it('a saved log from before turns existed still replays, fields null', () => {
+    const old: DraftEvent[] = [nominated('Alpha', 2, 1), { type: 'bid', teamId: 3, amount: 5 }, sold('Alpha', 3, 5)]
+    const s = build(settings(), V, old)
+    expect(s.sales).toHaveLength(1)
+    expect(s.turnTeamId).toBeNull()
+    expect(s.lastNominatorId).toBe(2)
+  })
+})
