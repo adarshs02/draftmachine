@@ -37,7 +37,10 @@ export function Panel(p: PanelProps) {
       ${p.banner && html`<div class="banner">${p.banner}</div>`}
       ${state.myTeamId === null &&
       html`<label class="picker">Which team is yours?
-        <select onChange=${(e: Event) => p.onEvent({ type: 'setMyTeam', teamId: Number((e.target as HTMLSelectElement).value) })}>
+        <select onChange=${(e: Event) => {
+          const value = (e.target as HTMLSelectElement).value
+          if (value !== '') p.onEvent({ type: 'setMyTeam', teamId: Number(value) })
+        }}>
           <option value="">choose…</option>
           ${state.settings.teams.map((t) => html`<option value=${t.id}>${t.name}</option>`)}
         </select>

@@ -37,6 +37,14 @@ describe('Panel', () => {
     expect(onEvent).toHaveBeenCalledWith({ type: 'setMyTeam', teamId: 3 })
   })
 
+  it('ignores the blank option in the team picker', () => {
+    const { el, onEvent } = show(build(S, V, [], null))
+    const select = el.querySelector('.picker select') as HTMLSelectElement
+    select.value = ''
+    select.dispatchEvent(new Event('change'))
+    expect(onEvent).not.toHaveBeenCalled()
+  })
+
   it('flags a player on the block who has no value', () => {
     expect(show(build(S, V, [nominated('Ghost', 2, 1)])).el.textContent).toContain('ghost has no value')
   })
