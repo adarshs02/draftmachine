@@ -1,0 +1,19 @@
+export interface PlayerValue {
+  /** normalizeName(name): join key across ESPN, Josh's CSV, live events and manual entry */
+  key: string
+  espnId: number | null
+  name: string
+  /** ESPN eligible lineup slots 0-11 */
+  slots: number[]
+  /** base auction value in league dollars */
+  b: number
+  /** ESPN ROTO auction value, 0 when ESPN has none */
+  consensus: number
+  /** ESPN average price paid, 0 when unknown */
+  market: number
+  /** Josh Lloyd's midpoint (12-team dollars), null when he gave none */
+  josh: number | null
+  avoid: boolean
+  /** 1 = top 12 by b, 2 = 13-36, 3 = 37-72, 4 = 73-120, 5 = rest */
+  tier: number
+}
