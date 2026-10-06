@@ -41,4 +41,11 @@ describe('needBoost', () => {
   it('no boost without my team', () => {
     expect(needBoost(build(S, [C('C1', 20)], [], null), 'c1')).toBe(1)
   })
+
+  it('boosts a player who fills a thin hole by moving a flexible rostered player', () => {
+    const S2 = settings(2, { lineupSlotCounts: { 1: 1, 4: 1, 12: 1 }, rosterSize: 3 })
+    const guards = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'].map((n) => pv(n, 10, { slots: [1] }))
+    const values = [pv('X', 10, { slots: [1, 4] }), pv('S1', 20, { slots: [1] }), pv('C2', 10, { slots: [4] }), ...guards]
+    expect(needBoost(build(S2, values, [sold('X', 1, 5)]), 's1')).toBe(1.1)
+  })
 })

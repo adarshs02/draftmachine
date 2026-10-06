@@ -41,9 +41,16 @@ export function needBoost(s: DraftState, playerKey: string): number {
   const mine = rosterSlots(s, s.myTeamId)
   const before = maxMatching(mine, slots)
   const candidate = valueOf(s, playerKey).slots
-  if (maxMatching([...mine, candidate], slots).size <= before.size) return 1
+  const after = maxMatching([...mine, candidate], slots)
+  if (after.size <= before.size) return 1
 
-  const needed = [...new Set(before.unfilled.filter((slot) => candidate.includes(slot)))]
+  // Slots that get filled once the candidate joins, including holes filled by re-routing a rostered player.
+  const filled = [...before.unfilled]
+  for (const slot of after.unfilled) {
+    const i = filled.indexOf(slot)
+    if (i >= 0) filled.splice(i, 1)
+  }
+  const needed = [...new Set(filled)]
   const supplyPool = available(s).filter((v) => v.key !== playerKey && v.b >= NEED_MIN_VALUE)
   const demand = new Map<number, number>()
   for (const t of s.settings.teams) {
