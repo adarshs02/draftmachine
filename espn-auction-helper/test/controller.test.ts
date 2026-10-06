@@ -12,6 +12,7 @@ async function make(over: Partial<ControllerDeps> = {}) {
   const deps: ControllerDeps = {
     leagueId: 7,
     storage: memoryStore(),
+    backup: memoryStore(),
     values: [pv('Alpha', 30), pv('Bravo', 20)],
     cookie: COOKIE,
     loadLeague: async () => LEAGUE,
@@ -87,6 +88,48 @@ describe('createController', () => {
     expect(views[0].banner).toContain('unavailable')
     expect(views[0].state.settings.teams).toHaveLength(10)
     expect(views[0].state.myTeamId).toBeNull()
+  })
+})
+
+describe('saved draft', () => {
+  const KEY = 'eah:7:events'
+
+  it('writes the log to both the tab session and the browser backup', async () => {
+    const { c, deps } = await make()
+    c.dispatch(sold('Alpha', 2, 12))
+    expect(JSON.parse(deps.storage.getItem(KEY)!)).toEqual([sold('Alpha', 2, 12)])
+    expect(JSON.parse(deps.backup.getItem(KEY)!)).toEqual([sold('Alpha', 2, 12)])
+  })
+
+  it('restores from the browser backup when the tab session is empty, with a banner', async () => {
+    const backup = memoryStore({ [KEY]: JSON.stringify([nominated('Alpha', 2, 1), sold('Alpha', 2, 12), sold('Bravo', 3, 8)]) })
+    const { c, views } = await make({ backup })
+    expect(c.getState().sales.map((x) => x.playerKey)).toEqual(['alpha', 'bravo'])
+    expect(views[0].banner).toBe('Restored 2 saved sales from this browser — use New draft to start over')
+  })
+
+  it('prefers the tab session over the backup', async () => {
+    const storage = memoryStore({ [KEY]: JSON.stringify([sold('Alpha', 2, 12)]) })
+    const backup = memoryStore({ [KEY]: JSON.stringify([sold('Bravo', 3, 8)]) })
+    const { c, views } = await make({ storage, backup })
+    expect(c.getState().sales.map((x) => x.playerKey)).toEqual(['alpha'])
+    expect(views[0].banner).toBeNull()
+  })
+
+  it('reset clears both stores and the draft, keeping the league and my team', async () => {
+    const backup = memoryStore({ [KEY]: JSON.stringify([sold('Alpha', 2, 12)]) })
+    const { c, views, deps } = await make({ backup })
+    c.dispatch(sold('Bravo', 3, 8))
+    c.reset()
+    expect(c.getState().sales).toEqual([])
+    expect(c.getState()).toMatchObject({ myTeamId: 1, live: null })
+    expect(c.getState().settings.teams).toHaveLength(10)
+    expect(deps.storage.getItem(KEY)).toBeNull()
+    expect(deps.backup.getItem(KEY)).toBeNull()
+    expect(views.at(-1)!.state.sales).toEqual([])
+    expect(views.at(-1)!.banner).toBeNull()
+    c.dispatch(sold('Alpha', 4, 20))
+    expect(JSON.parse(deps.backup.getItem(KEY)!)).toEqual([sold('Alpha', 4, 20)])
   })
 })
 

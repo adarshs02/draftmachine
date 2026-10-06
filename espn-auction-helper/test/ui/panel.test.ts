@@ -15,8 +15,12 @@ const V = [pv('Alpha', 30), pv('Beta', 18)]
 function show(state: DraftState) {
   const el = document.createElement('div')
   const onEvent = vi.fn()
-  render(html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} />`, el)
-  return { el, onEvent }
+  const onReset = vi.fn()
+  render(
+    html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} onReset=${onReset} />`,
+    el,
+  )
+  return { el, onEvent, onReset }
 }
 const button = (el: HTMLElement, text: string) => [...el.querySelectorAll('button')].find((b) => b.textContent === text)!
 const fill = (el: HTMLElement, player: string, team: string, amount: string) => {
@@ -96,6 +100,17 @@ describe('Panel', () => {
     expect(options('.picker select')).toContain('#3 T3')
     expect(options('select[name=team]')).toContain('#2 T2')
     expect([...el.querySelectorAll('section')].find((x) => x.textContent!.includes('Rivals'))!.textContent).toContain('#4 T4')
+  })
+
+  it('New draft resets only after confirming', () => {
+    const { el, onReset } = show(build(S, V, [sold('Alpha', 2, 12)]))
+    const confirm = vi.spyOn(window, 'confirm').mockReturnValue(false)
+    button(el, 'New draft').click()
+    expect(confirm).toHaveBeenCalledWith('Start a new draft? This clears all recorded sales.')
+    expect(onReset).not.toHaveBeenCalled()
+    confirm.mockReturnValue(true)
+    button(el, 'New draft').click()
+    expect(onReset).toHaveBeenCalledTimes(1)
   })
 })
 

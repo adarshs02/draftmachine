@@ -15,6 +15,7 @@ export interface PanelProps {
   frameCount: number
   onEvent: (ev: DraftEvent) => void
   onDownloadRecording: () => void
+  onReset: () => void
 }
 
 /** "3", "#3" or a unique, case-insensitive team-name prefix ("bub") -> team id. */
@@ -39,6 +40,9 @@ export function Panel(p: PanelProps) {
     const price = Number(priceText)
     const teamId = teamFromText(state.settings.teams, team.join(' '))
     if (price > 0 && teamId !== null) p.onEvent({ type: 'editSale', seq: f.seq, teamId, price })
+  }
+  const newDraft = () => {
+    if (window.confirm('Start a new draft? This clears all recorded sales.')) p.onReset()
   }
   return html`
     <div class="panel">
@@ -113,6 +117,7 @@ export function Panel(p: PanelProps) {
       <footer class="row">
         <button onClick=${() => p.onEvent({ type: 'undo' })}>Undo last sale</button>
         <button onClick=${p.onDownloadRecording}>Download recording (${p.frameCount} frames)</button>
+        <button onClick=${newDraft}>New draft</button>
       </footer>
     </div>`
 }

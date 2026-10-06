@@ -19,7 +19,10 @@ export interface View {
 
 export interface ControllerDeps {
   leagueId: number
+  /** sessionStorage: this tab's draft, survives a refresh */
   storage: KeyValueStore
+  /** localStorage: the same log, so a closed tab doesn't lose a manual draft */
+  backup: KeyValueStore
   values: PlayerValue[]
   cookie: string
   loadLeague: () => Promise<LeagueInfo>
@@ -31,6 +34,8 @@ export interface Controller {
   getState(): DraftState
   onFrame(frame: Frame): void
   recordingJson(): string
+  /** New draft: forget every recorded event, keep league settings, values and the detected team. */
+  reset(): void
 }
 
 const errorMessage = (e: unknown) => (e instanceof Error ? e.message : String(e))
@@ -56,14 +61,20 @@ export async function createController(deps: ControllerDeps): Promise<Controller
   const values = rescaleToLeague(deps.values, { teams: settings.teams.length, budget: settings.budget, rosterSize: settings.rosterSize })
   const fresh = () => initialState(settings, values, myTeamId)
   let state = fresh()
-  let log = loadEvents(deps.storage, deps.leagueId)
+  const stores = [deps.storage, deps.backup]
+  const clearLog = () => stores.forEach((store) => clearEvents(store, deps.leagueId))
+  const sessionLog = loadEvents(deps.storage, deps.leagueId)
+  // New tab or restarted browser: fall back to the browser-wide copy.
+  const backupLog = sessionLog.length ? [] : loadEvents(deps.backup, deps.leagueId)
+  let log = backupLog.length ? backupLog : sessionLog
   try {
     for (const ev of log) state = reduce(state, ev)
+    if (backupLog.length) restoreBanner = `Restored ${state.sales.length} saved sales from this browser — use New draft to start over`
   } catch {
     // A log this build can't replay would crash every refresh: drop it.
     log = []
     state = fresh()
-    clearEvents(deps.storage, deps.leagueId)
+    clearLog()
     restoreBanner = 'Saved draft could not be restored; starting fresh'
   }
 
@@ -78,7 +89,7 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     dispatch(ev) {
       state = reduce(state, ev)
       log.push(ev)
-      saveEvents(deps.storage, deps.leagueId, log)
+      for (const store of stores) saveEvents(store, deps.leagueId, log)
       publish()
     },
     getState: () => state,
@@ -87,5 +98,12 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       publish()
     },
     recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),
+    reset() {
+      log = []
+      clearLog()
+      state = fresh()
+      restoreBanner = null
+      publish()
+    },
   }
 }

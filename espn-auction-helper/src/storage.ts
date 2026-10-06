@@ -1,6 +1,6 @@
 import type { DraftEvent } from './engine/types'
 
-/** The page's sessionStorage in production: per tab, survives a refresh. */
+/** sessionStorage (per tab, survives a refresh) or localStorage (the browser-wide backup) in production. */
 export type KeyValueStore = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
 
 const keyFor = (leagueId: number) => `eah:${leagueId}:events`

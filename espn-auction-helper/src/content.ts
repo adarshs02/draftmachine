@@ -34,11 +34,15 @@ async function start(container: HTMLElement): Promise<void> {
   const ready = await createController({
     leagueId,
     storage: sessionStorage,
+    backup: localStorage,
     values: valuesJson as unknown as PlayerValue[],
     cookie: document.cookie,
     loadLeague: () => fetchLeague(leagueId),
     render: (view) =>
-      render(html`<${Panel} ...${view} onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)} onDownloadRecording=${download} />`, container),
+      render(
+        html`<${Panel} ...${view} onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)} onDownloadRecording=${download} onReset=${() => controller?.reset()} />`,
+        container,
+      ),
   })
   controller = ready
   for (const frame of pending.splice(0)) ready.onFrame(frame)
