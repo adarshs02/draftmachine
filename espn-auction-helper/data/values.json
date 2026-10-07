@@ -11,7 +11,7 @@
   ],
   "b": 70.8,
   "consensus": 68,
-  "market": 80.8,
+  "market": 80.9,
   "josh": 73.5,
   "avoid": false,
   "tier": 1
@@ -28,7 +28,7 @@
   ],
   "b": 67.6,
   "consensus": 65,
-  "market": 79.8,
+  "market": 78.9,
   "josh": 70,
   "avoid": false,
   "tier": 1
@@ -45,7 +45,7 @@
   ],
   "b": 63.6,
   "consensus": 63,
-  "market": 71.1,
+  "market": 71.4,
   "josh": 64,
   "avoid": false,
   "tier": 1
@@ -62,7 +62,7 @@
   ],
   "b": 62.1,
   "consensus": 64,
-  "market": 71.5,
+  "market": 71.3,
   "josh": 60,
   "avoid": false,
   "tier": 1
@@ -83,7 +83,7 @@
   ],
   "b": 51.3,
   "consensus": 60,
-  "market": 59.5,
+  "market": 59.4,
   "josh": 42.5,
   "avoid": false,
   "tier": 1
@@ -104,7 +104,7 @@
   ],
   "b": 49.8,
   "consensus": 57,
-  "market": 54.1,
+  "market": 54.3,
   "josh": 42.5,
   "avoid": false,
   "tier": 1
@@ -124,7 +124,7 @@
   ],
   "b": 49.6,
   "consensus": 40,
-  "market": 61.8,
+  "market": 62.7,
   "josh": 59,
   "avoid": false,
   "tier": 1
@@ -141,7 +141,7 @@
   ],
   "b": 49.6,
   "consensus": 54,
-  "market": 56.3,
+  "market": 56,
   "josh": 45,
   "avoid": false,
   "tier": 1
@@ -160,7 +160,7 @@
   ],
   "b": 49.6,
   "consensus": 59,
-  "market": 47.9,
+  "market": 47,
   "josh": 40,
   "avoid": false,
   "tier": 1
@@ -219,7 +219,7 @@
   ],
   "b": 44,
   "consensus": 58,
-  "market": 49,
+  "market": 48.8,
   "josh": 30,
   "avoid": false,
   "tier": 1
@@ -240,7 +240,7 @@
   ],
   "b": 43.8,
   "consensus": 55,
-  "market": 43.6,
+  "market": 43.2,
   "josh": 32.5,
   "avoid": false,
   "tier": 2
@@ -259,7 +259,7 @@
   ],
   "b": 42.5,
   "consensus": 50,
-  "market": 39,
+  "market": 38.6,
   "josh": 35,
   "avoid": false,
   "tier": 2
@@ -280,7 +280,7 @@
   ],
   "b": 42.1,
   "consensus": 44,
-  "market": 41.1,
+  "market": 41,
   "josh": 40,
   "avoid": false,
   "tier": 2
@@ -300,7 +300,7 @@
   ],
   "b": 37,
   "consensus": 46,
-  "market": 24.4,
+  "market": 24.2,
   "josh": 28,
   "avoid": false,
   "tier": 2
@@ -317,7 +317,7 @@
   ],
   "b": 36.3,
   "consensus": 41,
-  "market": 34.2,
+  "market": 33.8,
   "josh": 31.5,
   "avoid": false,
   "tier": 2
@@ -334,7 +334,7 @@
   ],
   "b": 35.3,
   "consensus": 36,
-  "market": 26.9,
+  "market": 26.5,
   "josh": 34.5,
   "avoid": false,
   "tier": 2
@@ -354,7 +354,7 @@
   ],
   "b": 35,
   "consensus": 45,
-  "market": 25.2,
+  "market": 25,
   "josh": 25,
   "avoid": false,
   "tier": 2
@@ -371,7 +371,7 @@
   ],
   "b": 34.5,
   "consensus": 37,
-  "market": 23.8,
+  "market": 23.4,
   "josh": 32,
   "avoid": false,
   "tier": 2
@@ -390,7 +390,7 @@
   ],
   "b": 34,
   "consensus": 43,
-  "market": 18.6,
+  "market": 18,
   "josh": 25,
   "avoid": false,
   "tier": 2
@@ -411,7 +411,7 @@
   ],
   "b": 33,
   "consensus": 42,
-  "market": 25.7,
+  "market": 25.3,
   "josh": 24,
   "avoid": false,
   "tier": 2
@@ -449,7 +449,7 @@
   ],
   "b": 28,
   "consensus": 26,
-  "market": 32.2,
+  "market": 32.3,
   "josh": 30,
   "avoid": false,
   "tier": 2
@@ -466,7 +466,7 @@
   ],
   "b": 27,
   "consensus": 34,
-  "market": 24,
+  "market": 23.8,
   "josh": 20,
   "avoid": false,
   "tier": 2
@@ -486,7 +486,7 @@
   ],
   "b": 26,
   "consensus": 27,
-  "market": 19.8,
+  "market": 19.6,
   "josh": 25,
   "avoid": false,
   "tier": 2
@@ -505,7 +505,7 @@
   ],
   "b": 25.8,
   "consensus": 29,
-  "market": 27.7,
+  "market": 27.8,
   "josh": 22.5,
   "avoid": false,
   "tier": 2
@@ -524,7 +524,7 @@
   ],
   "b": 24.5,
   "consensus": 24,
-  "market": 10.6,
+  "market": 10.4,
   "josh": 25,
   "avoid": false,
   "tier": 2
@@ -563,7 +563,7 @@
   ],
   "b": 23.5,
   "consensus": 20,
-  "market": 34,
+  "market": 34.1,
   "josh": 27,
   "avoid": false,
   "tier": 2
@@ -618,7 +618,7 @@
   ],
   "b": 22.3,
   "consensus": 32,
-  "market": 25,
+  "market": 24.7,
   "josh": 12.5,
   "avoid": false,
   "tier": 2
@@ -635,7 +635,7 @@
   ],
   "b": 21.8,
   "consensus": 25,
-  "market": 43,
+  "market": 42.8,
   "josh": 18.5,
   "avoid": false,
   "tier": 2
@@ -654,7 +654,7 @@
   ],
   "b": 21.5,
   "consensus": 19,
-  "market": 9.6,
+  "market": 9.4,
   "josh": 24,
   "avoid": false,
   "tier": 2
@@ -675,7 +675,7 @@
   ],
   "b": 21.3,
   "consensus": 21,
-  "market": 11.9,
+  "market": 11.7,
   "josh": 21.5,
   "avoid": false,
   "tier": 2
@@ -692,7 +692,7 @@
   ],
   "b": 21,
   "consensus": 14,
-  "market": 5.8,
+  "market": 5.7,
   "josh": null,
   "avoid": true,
   "tier": 3
@@ -713,7 +713,7 @@
   ],
   "b": 19,
   "consensus": 13,
-  "market": 7.3,
+  "market": 7.5,
   "josh": 25,
   "avoid": false,
   "tier": 3
@@ -732,7 +732,7 @@
   ],
   "b": 18.8,
   "consensus": 16,
-  "market": 32.6,
+  "market": 32.9,
   "josh": 21.5,
   "avoid": false,
   "tier": 3
@@ -753,7 +753,7 @@
   ],
   "b": 18.8,
   "consensus": 20,
-  "market": 18,
+  "market": 17.9,
   "josh": 17.5,
   "avoid": false,
   "tier": 3
@@ -770,7 +770,7 @@
   ],
   "b": 18.8,
   "consensus": 10,
-  "market": 12.8,
+  "market": 12.9,
   "josh": 27.5,
   "avoid": false,
   "tier": 3
@@ -787,7 +787,7 @@
   ],
   "b": 18.5,
   "consensus": 12,
-  "market": 33.4,
+  "market": 33.8,
   "josh": 25,
   "avoid": false,
   "tier": 3
@@ -804,7 +804,7 @@
   ],
   "b": 18.5,
   "consensus": 12,
-  "market": 10,
+  "market": 9.8,
   "josh": 25,
   "avoid": false,
   "tier": 3
@@ -825,7 +825,7 @@
   ],
   "b": 17.5,
   "consensus": 15,
-  "market": 11.9,
+  "market": 11.7,
   "josh": 20,
   "avoid": false,
   "tier": 3
@@ -846,7 +846,7 @@
   ],
   "b": 17,
   "consensus": 9,
-  "market": 7.3,
+  "market": 7.2,
   "josh": 25,
   "avoid": false,
   "tier": 3
@@ -866,7 +866,7 @@
   ],
   "b": 16.3,
   "consensus": 20,
-  "market": 7.6,
+  "market": 7.5,
   "josh": 12.5,
   "avoid": false,
   "tier": 3
@@ -907,7 +907,7 @@
   ],
   "b": 15,
   "consensus": 5,
-  "market": 17.4,
+  "market": 17.2,
   "josh": 25,
   "avoid": false,
   "tier": 3
@@ -928,7 +928,7 @@
   ],
   "b": 15,
   "consensus": 28,
-  "market": 11.4,
+  "market": 11.1,
   "josh": 2,
   "avoid": false,
   "tier": 3
@@ -949,7 +949,7 @@
   ],
   "b": 14.8,
   "consensus": 7,
-  "market": 18.7,
+  "market": 18.9,
   "josh": 22.5,
   "avoid": false,
   "tier": 3
@@ -966,7 +966,7 @@
   ],
   "b": 14.8,
   "consensus": 14,
-  "market": 5.3,
+  "market": 5.2,
   "josh": 15.5,
   "avoid": false,
   "tier": 3
@@ -987,7 +987,7 @@
   ],
   "b": 14.3,
   "consensus": 7,
-  "market": 19.8,
+  "market": 20.1,
   "josh": 21.5,
   "avoid": false,
   "tier": 3
@@ -1004,7 +1004,7 @@
   ],
   "b": 14,
   "consensus": 13,
-  "market": 8.2,
+  "market": 8,
   "josh": 15,
   "avoid": false,
   "tier": 3
@@ -1023,7 +1023,7 @@
   ],
   "b": 13.5,
   "consensus": 8,
-  "market": 7.1,
+  "market": 7.2,
   "josh": 19,
   "avoid": false,
   "tier": 3
@@ -1044,7 +1044,7 @@
   ],
   "b": 13.5,
   "consensus": 7,
-  "market": 4.2,
+  "market": 4.1,
   "josh": 20,
   "avoid": false,
   "tier": 3
@@ -1103,7 +1103,7 @@
   ],
   "b": 13,
   "consensus": 6,
-  "market": 4,
+  "market": 3.9,
   "josh": 20,
   "avoid": false,
   "tier": 3
@@ -1124,7 +1124,7 @@
   ],
   "b": 12.5,
   "consensus": 17,
-  "market": 15,
+  "market": 14.8,
   "josh": 8,
   "avoid": false,
   "tier": 3
@@ -1263,7 +1263,7 @@
   ],
   "b": 10,
   "consensus": 7,
-  "market": 7.6,
+  "market": 7.5,
   "josh": 13,
   "avoid": false,
   "tier": 3
@@ -1319,7 +1319,7 @@
   ],
   "b": 9.5,
   "consensus": 10,
-  "market": 10.3,
+  "market": 10.1,
   "josh": 9,
   "avoid": false,
   "tier": 3
@@ -1336,7 +1336,7 @@
   ],
   "b": 9,
   "consensus": 6,
-  "market": 2.4,
+  "market": 2.5,
   "josh": null,
   "avoid": false,
   "tier": 3
@@ -1355,7 +1355,7 @@
   ],
   "b": 8.8,
   "consensus": 8,
-  "market": 4.9,
+  "market": 4.8,
   "josh": 9.5,
   "avoid": false,
   "tier": 3
@@ -1374,7 +1374,7 @@
   ],
   "b": 8.3,
   "consensus": 4,
-  "market": 5.6,
+  "market": 5.5,
   "josh": 12.5,
   "avoid": false,
   "tier": 3
@@ -1391,7 +1391,7 @@
   ],
   "b": 8.3,
   "consensus": 4,
-  "market": 3.4,
+  "market": 3.5,
   "josh": 12.5,
   "avoid": false,
   "tier": 4
@@ -1430,7 +1430,7 @@
   ],
   "b": 8,
   "consensus": 4,
-  "market": 2.3,
+  "market": 2.1,
   "josh": 12,
   "avoid": false,
   "tier": 4
@@ -1449,7 +1449,7 @@
   ],
   "b": 7.8,
   "consensus": 3,
-  "market": 10.3,
+  "market": 10.1,
   "josh": 12.5,
   "avoid": false,
   "tier": 4
@@ -1489,7 +1489,7 @@
   ],
   "b": 7.5,
   "consensus": 5,
-  "market": 2.6,
+  "market": 2.5,
   "josh": null,
   "avoid": false,
   "tier": 4
@@ -1508,7 +1508,7 @@
   ],
   "b": 7.5,
   "consensus": 5,
-  "market": 1.6,
+  "market": 1.7,
   "josh": null,
   "avoid": false,
   "tier": 4
@@ -1529,7 +1529,7 @@
   ],
   "b": 6.8,
   "consensus": 7,
-  "market": 4.2,
+  "market": 4.1,
   "josh": 6.5,
   "avoid": false,
   "tier": 4
@@ -1548,7 +1548,7 @@
   ],
   "b": 6.5,
   "consensus": 3,
-  "market": 8.6,
+  "market": 8.7,
   "josh": 10,
   "avoid": false,
   "tier": 4
@@ -1565,7 +1565,7 @@
   ],
   "b": 6.5,
   "consensus": 2,
-  "market": 1.4,
+  "market": 1.5,
   "josh": 11,
   "avoid": false,
   "tier": 4
@@ -1582,7 +1582,7 @@
   ],
   "b": 6.3,
   "consensus": 9,
-  "market": 4.6,
+  "market": 4.5,
   "josh": 3.5,
   "avoid": false,
   "tier": 4
@@ -1680,7 +1680,7 @@
   ],
   "b": 6,
   "consensus": 2,
-  "market": 3.9,
+  "market": 3.7,
   "josh": 10,
   "avoid": false,
   "tier": 4
@@ -1774,7 +1774,7 @@
   ],
   "b": 4.5,
   "consensus": 3,
-  "market": 8.1,
+  "market": 7.9,
   "josh": null,
   "avoid": true,
   "tier": 4
@@ -1813,7 +1813,7 @@
   ],
   "b": 4.5,
   "consensus": 8,
-  "market": 1.9,
+  "market": 1.8,
   "josh": 1,
   "avoid": false,
   "tier": 4
@@ -1874,7 +1874,7 @@
   ],
   "b": 4.5,
   "consensus": 3,
-  "market": 1,
+  "market": 0.9,
   "josh": null,
   "avoid": false,
   "tier": 4
@@ -1908,7 +1908,7 @@
   ],
   "b": 3.8,
   "consensus": 0,
-  "market": 4.2,
+  "market": 4.1,
   "josh": 7.5,
   "avoid": false,
   "tier": 4
@@ -1986,7 +1986,7 @@
   ],
   "b": 3,
   "consensus": 2,
-  "market": 2.1,
+  "market": 2,
   "josh": 4,
   "avoid": false,
   "tier": 4
@@ -2024,7 +2024,7 @@
   ],
   "b": 3,
   "consensus": 2,
-  "market": 1.1,
+  "market": 1,
   "josh": null,
   "avoid": false,
   "tier": 4
@@ -2269,7 +2269,7 @@
   ],
   "b": 2.5,
   "consensus": 2,
-  "market": 0.8,
+  "market": 0.9,
   "josh": 3,
   "avoid": false,
   "tier": 4
@@ -2346,7 +2346,7 @@
   ],
   "b": 2.3,
   "consensus": 2,
-  "market": 1,
+  "market": 1.1,
   "josh": 2.5,
   "avoid": false,
   "tier": 5
@@ -2367,7 +2367,7 @@
   ],
   "b": 2,
   "consensus": 1,
-  "market": 1.3,
+  "market": 1.4,
   "josh": 3,
   "avoid": false,
   "tier": 5
@@ -2502,7 +2502,7 @@
   ],
   "b": 1.5,
   "consensus": 1,
-  "market": 0.4,
+  "market": 0.3,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -2544,7 +2544,7 @@
   ],
   "b": 1.5,
   "consensus": 1,
-  "market": 0.4,
+  "market": 0.3,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -2600,7 +2600,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 1.2,
+  "market": 1.3,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -2621,7 +2621,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 1.4,
+  "market": 1.3,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -2640,7 +2640,7 @@
   ],
   "b": 1,
   "consensus": 1,
-  "market": 1.8,
+  "market": 1.9,
   "josh": 1,
   "avoid": false,
   "tier": 5
@@ -2815,7 +2815,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.4,
+  "market": 0.5,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -3032,7 +3032,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.4,
+  "market": 0.3,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -3069,7 +3069,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.1,
+  "market": 0,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -3204,7 +3204,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.1,
+  "market": 0,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -3300,7 +3300,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.1,
+  "market": 0,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -3321,7 +3321,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.6,
+  "market": 0.5,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -4491,7 +4491,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.1,
+  "market": 0.2,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -4991,7 +4991,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0,
+  "market": 0.1,
   "josh": null,
   "avoid": false,
   "tier": 5
@@ -6359,7 +6359,7 @@
   ],
   "b": 1,
   "consensus": 0,
-  "market": 0.1,
+  "market": 0.2,
   "josh": null,
   "avoid": false,
   "tier": 5
