@@ -1,7 +1,7 @@
 # Draft Simulator — Design Spec
 
 Date: 2026-10-11
-Status: Draft for review
+Status: Approved; §4–5 updated 2026-10-11 for the Hashtag projections
 Builds on: `docs/superpowers/specs/2026-10-05-espn-auction-helper-design.md` (the ESPN auction helper, merged to `main`).
 
 ## 1. Goal
@@ -60,7 +60,7 @@ Data flow (batch): auction core → events → `reduce` (no DOM, no controller) 
 
 ## 4. Bots and rooms
 
-- **Market price** per player: ESPN `market` (average paid) if > 0, else `max(1, roto)`.
+- **Market price** per player: ESPN `market` (average paid) if > 0, else `max(1, consensus)` (projected value).
 - **Private value** per bot per player (drawn once per draft): `market × lognormal(σ = 0.15) × room × personality`.
 - **Room temperature** knob (`--room cold|neutral|hot` or a number): cold ×0.92, neutral ×1.0, hot ×1.10.
 - **Personalities** (default mix for 9 bots: 3 stars-and-scrubs, 4 balanced, 2 value hunters; configurable):
@@ -77,14 +77,16 @@ Data flow (batch): auction core → events → `reduce` (no DOM, no controller) 
 - **interactive**: the user via page buttons (+$1, +$5, custom, Pass; Nominate with player search).
 - **autopilot** (follows the helper): on my turn nominate `suggestNomination(state)` at $1; when another team leads: BID → raise $1 if ≤ `ceiling`; BID_UP → raise $1 if ≤ `pushTo`; LEADING → hold; PASS/LET_THEM → drop. Reaction delay 1.0 s.
 - **market** baseline: raise while price < my private value = market price (no noise).
-- **espn-value** baseline: raise while price < ESPN ROTO value.
+- **consensus** baseline: raise while price < projected value (`PlayerValue.consensus`, from `data/auction-values.csv` once the projections work lands).
 Baselines and autopilot see the same seeds/bots (paired comparison).
 
 ### Scoring (projected 9-cat roto)
-- `npm run fetch-espn` additionally stores each player's ESPN **2026-27 season projection** (stat source 1, split 0): totals for PTS(0), REB(6), AST(3), STL(2), BLK(1), 3PM(17), TO(11), FGM(13), FGA(14), FTM(15), FTA(16), and games (stat id verified on Jokic during implementation). Players without a projection contribute 0.
+- Projections come from the user's Hashtag Basketball export, committed as `data/hashtag-projections.csv`. It has per-game PTS, TREB, AST, STL, BLK, 3PM and TO, FG and FT made/attempted, plus GP and MPG for 200 players. The user changed this on 2026-10-11 because ESPN projections and ranks are distrusted.
+  - Season totals = per-game × GP. When `data/auction-values.csv` (the projections sheet's export) lists the player, its GP and MPG override the export's, and per-game stats scale by the ratio of edited to original MPG.
+  - Players join to ESPN ids by normalized name. Players without a projection contribute 0 and are counted.
 - Team totals = sum over all 13 rostered players; FG% = ΣFGM/ΣFGA, FT% = ΣFTM/ΣFTA; TO lower is better.
 - Roto: per category rank teams 10…1 points (ties share the average); total /90; overall rank by total.
-- Reported per draft: my rank, total, per-category ranks, $ left unspent, value captured = Σ(ESPN ROTO value − price) over my roster.
+- Reported per draft: my rank, total, per-category ranks, $ left unspent, value captured = Σ(projected value − price) over my roster.
 
 ## 6. Tuning
 

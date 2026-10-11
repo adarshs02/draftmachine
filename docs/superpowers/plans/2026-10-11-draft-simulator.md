@@ -13,14 +13,20 @@
 ## Global Constraints
 
 - **Work only in the worktree** `/Users/adarsh/myProjects/draftmachine-sim` (branch `feat/draft-simulator-impl`). All commands run from `/Users/adarsh/myProjects/draftmachine-sim/espn-auction-helper` unless a step says otherwise. **Never read from or write to `/Users/adarsh/myProjects/draftmachine`** — another session is working there.
-- **Projections are owned by other work.** Do not fetch, generate or change player projections or `data/espn-players-2027.json` / `data/values.json`. The simulator only *reads* the optional file `data/projections-2027.json` with this contract: a JSON array of `{ "espnId": number, "pts", "reb", "ast", "stl", "blk", "tpm", "to", "fgm", "fga", "ftm", "fta": number }` season totals. Missing file ⇒ no standings (value captured + money left still reported).
+- **Projections are owned by other work** (the user's parallel session, uncommitted on the main checkout). Don't fetch, generate or change projections, and don't touch `data/auction-values.csv`, `data/espn-players-2027.json`, `data/values.json` or `src/values/*`.
+  - **Scoring source:** the user decided on 2026-10-11 to score from their Hashtag Basketball export. Task 6 copies it to `data/hashtag-projections.csv`. GP and MPG from `data/auction-values.csv` (the projections sheet's export) override it when that file exists. ESPN projections and ranks are not used.
+  - **Missing stats file:** no standings. Value captured and money left are still reported.
+- **Compatibility with the projections work.** When it lands, `PlayerValue` gains a `rank` field, and `consensus` becomes the projected auction value from `data/auction-values.csv` instead of ESPN's ROTO value. So:
+  - Never write `PlayerValue` object literals in `src/`; spread `placeholderValue()` instead.
+  - Call `consensus` "projected value" in UI and docs.
+  - This branch builds on the current base and merges after that work is committed.
 - Defaults: 10 teams, $200, 13 roster spots (ESPN default lineup), draft order `[7, 10, 5, 9, 1, 4, 8, 3, 6, 2]`, my team id 1, 9 bots `stars, balanced, value, balanced, stars, balanced, value, balanced, stars`.
 - ESPN line formats (from the real recording): `NOMINATION <team> 25000`; `BID <team> <espnId> <amount> 25000 <remainingMs>` (first BID on a player = nomination); `SOLD <team> <espnId> 0 <price> 0`; `CLOCK 6 <remainingMs> <team>`; `STATE 1` / `STATE 2`.
 - Clock: 25 000 ms at nomination; after each bid remaining = max(remaining, 10 000 ms); expiry sells to the leader. My nomination times out after 25 000 ms (auto-nominates the top available player at $1).
 - ESPN budget rule: max bid = budget − (open slots − 1); teams with full rosters never bid and are skipped for nominations.
 - Bots: private value = market × lognormal(σ 0.15, mean 1) × room × personality (stars ×1.15 on market top-15 else ×0.85; balanced ×1; value ×0.9); rooms cold 0.92 / neutral 1 / hot 1.10; pacing: never more than 60% of budget while ≥ 4 slots open; reaction 300–3000 ms; jump bid +2…+5 with probability 0.3 when price < 60% of value; nominate top market 80% else a random player with market < $5; nominations open at $1 after 1000–4000 ms.
 - Market price of a player = `market` if > 0 else `max(1, consensus)`.
-- Policy names: `autopilot`, `market`, `consensus`. `consensus` is the spec's "espn-value" baseline: ESPN's ROTO value is `PlayerValue.consensus`.
+- Policy names: `autopilot`, `market`, `consensus`. The `consensus` baseline bids up to `PlayerValue.consensus`, the projected value.
 - Batch smoke test: the spec asks for a snapshot of summary numbers. This plan asserts determinism instead (the same seeds give identical summaries), because `data/values.json` is being changed by the parallel projections work and a stored snapshot would break on merge.
 - Tunable defaults are exactly today's values; `npm test` (incl. `test/replay.test.ts`) must stay green.
 - Bounded commands (machine is often heavily loaded): `npx vitest run <file> --testTimeout=30000 --hookTimeout=30000`, Bash timeout ≤ 300000 ms; full suite + `npm run typecheck` once per task before committing.
@@ -1233,30 +1239,55 @@ git commit -m "feat(sim): autopilot mirrors the panel's calls; market and consen
 
 ---
 
-### Task 6: Projected 9-category roto scoring
+### Task 6: Season projections from the Hashtag export, and 9-category roto scoring
 
 **Files:**
-- Create: `src/sim/score.ts`
-- Test: `test/sim/score.test.ts`
+- Create: `data/hashtag-projections.csv` (copied from the user's export), `src/sim/score.ts`, `src/sim/seasonStats.ts`
+- Test: `test/sim/score.test.ts`, `test/sim/seasonStats.test.ts`
 
 **Interfaces:**
-- Consumes: nothing from earlier tasks (pure).
+- Consumes: `normalizeName` (`src/values/names.ts`), `PlayerValue`; `pv` (`test/helpers.ts`, tests only).
 - Produces:
-  - `interface SeasonLine { pts; reb; ast; stl; blk; tpm; to; fgm; fga; ftm; fta: number }`
-  - `type ProjectionSource = (espnId: number) => SeasonLine | null`
-  - `CATEGORIES` (`'pts' | 'reb' | 'ast' | 'stl' | 'blk' | 'tpm' | 'fgPct' | 'ftPct' | 'to'`), `type Category`, `CATEGORY_LABELS: Record<Category, string>`
-  - `interface TeamScore { teamId; totals: Record<Category, number>; points: Record<Category, number>; total; rank; missingProjections }`
-  - `teamTotals(espnIds, proj): { totals: Record<Category, number>; missing: number }`
-  - `scoreTeams(rosters: ReadonlyMap<number, readonly number[]>, proj): TeamScore[]` (sorted by rank, then team id)
-  - `PROJECTIONS_PATH = 'data/projections-2027.json'`, `parseProjectionFile(json: unknown): Map<number, SeasonLine>`, `projectionsFrom(rows): ProjectionSource`
+  - `score.ts`:
+    - `interface SeasonLine { pts; reb; ast; stl; blk; tpm; to; fgm; fga; ftm; fta: number }`, `LINE_FIELDS`
+    - `type ProjectionSource = (espnId: number) => SeasonLine | null`
+    - `CATEGORIES` (`'pts' | 'reb' | 'ast' | 'stl' | 'blk' | 'tpm' | 'fgPct' | 'ftPct' | 'to'`), `type Category`, `CATEGORY_LABELS: Record<Category, string>`
+    - `interface TeamScore { teamId; totals: Record<Category, number>; points: Record<Category, number>; total; rank; missingProjections }`
+    - `teamTotals(espnIds, proj): { totals: Record<Category, number>; missing: number }`
+    - `scoreTeams(rosters: ReadonlyMap<number, readonly number[]>, proj): TeamScore[]`, sorted by rank, then team id
+    - `projectionsFrom(rows: ReadonlyMap<number, SeasonLine>): ProjectionSource`
+  - `seasonStats.ts`:
+    - `STATS_PATH = 'data/hashtag-projections.csv'`, `PLAYTIME_PATH = 'data/auction-values.csv'`
+    - `interface PerGameRow { key; name; gp; mpg; perGame: SeasonLine }`, `interface Playtime { gp; mpg }`
+    - `parseCsvRecords(text): Array<Record<string, string>>`, `parseHashtagStats(text): PerGameRow[]`, `parsePlaytime(text): Map<string, Playtime>`
+    - `seasonProjections(stats, playtime, values): ProjectionSource`
+    - `projectionsFromCsv(statsCsv: string | null, playtimeCsv: string | null, values): ProjectionSource | null`
 
-- [ ] **Step 1: Write the failing tests**
+How projections work:
+- **Source:** scoring uses the user's Hashtag Basketball export, with per-game stats for 200 players. Its columns are `R#, PLAYER, ADP, POS, TEAM, GP, MPG, FG%, FT%, 3PM, PTS, TREB, AST, STL, BLK, TO, TOTAL`.
+  - Counting cells read `"28.4 2.22"`: per-game average, then z-score.
+  - Percentage cells read `"0.573 (10.5/18.3) 3.91"`: percentage, then (made/attempted per game), then z-score.
+- **Season totals** are per-game × games.
+- **The user's sheet edits count:** when `data/auction-values.csv` has the player, its GP and MPG win. That file is the projections sheet's export, which comes with the parallel projections work and may not exist yet. Per-game stats scale by the edited MPG divided by the export's MPG; percentages are unchanged.
+- **Join:** players match to ESPN ids by `normalizeName` through `data/values.json`. Players with no projection count as missing and add nothing to their team.
+
+- [ ] **Step 1: Add the export to the repo**
+
+```bash
+cp "$HOME/Downloads/fantasy_basketball_auction_values (1).csv" data/hashtag-projections.csv
+head -1 data/hashtag-projections.csv
+grep -c '^"[0-9]' data/hashtag-projections.csv
+```
+
+Expected header: `"R#","PLAYER","ADP","POS","TEAM","GP","MPG","FG%","FT%","3PM","PTS","TREB","AST","STL","BLK","TO","TOTAL"`. The `grep -c` count is `200`. If the file is missing or the header differs, stop and report BLOCKED. Don't guess a layout.
+
+- [ ] **Step 2: Write the failing tests**
 
 `test/sim/score.test.ts`:
 
 ```ts
 import { describe, expect, it } from 'vitest'
-import { parseProjectionFile, projectionsFrom, scoreTeams, teamTotals, type SeasonLine } from '../../src/sim/score'
+import { projectionsFrom, scoreTeams, teamTotals, type SeasonLine } from '../../src/sim/score'
 
 const line = (pts: number, reb: number, ast: number, stl: number, blk: number, tpm: number, to: number, fgm: number, fga: number, ftm: number, fta: number): SeasonLine => ({
   pts, reb, ast, stl, blk, tpm, to, fgm, fga, ftm, fta,
@@ -1290,23 +1321,85 @@ describe('scoreTeams', () => {
     expect(teamTotals([], PROJ).totals.fgPct).toBe(0)
   })
 })
+```
 
-describe('projections file', () => {
-  it('reads the contract, ignores extra fields, rejects malformed rows', () => {
-    const rows = parseProjectionFile([{ espnId: 7, name: 'Extra fields are fine', ...line(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) }])
-    expect(rows.get(7)).toEqual(line(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))
-    expect(() => parseProjectionFile({})).toThrow('projections file must be a JSON array')
-    expect(() => parseProjectionFile([{ espnId: 1, pts: 'x' }])).toThrow('projections row 0: pts must be a number')
+`test/sim/seasonStats.test.ts`:
+
+```ts
+import { existsSync, readFileSync } from 'node:fs'
+import { describe, expect, it } from 'vitest'
+import { parseCsvRecords, parseHashtagStats, parsePlaytime, PLAYTIME_PATH, projectionsFromCsv, seasonProjections, STATS_PATH } from '../../src/sim/seasonStats'
+import type { PlayerValue } from '../../src/values/types'
+import { pv } from '../helpers'
+
+const HEADER = '"R#","PLAYER","ADP","POS","TEAM","GP","MPG","FG%","FT%","3PM","PTS","TREB","AST","STL","BLK","TO","TOTAL"'
+const JOKIC = '"1","Nikola Jokic","1.5","C","DEN","72","35.1","0.573 (10.5/18.3) 3.91","0.816 (5.6/6.8) 0.98","1.8 0.22","28.4 2.22","12.7 3.10","10.4 3.88","1.6 1.72","0.7 0.42","3.5 -2.27","15.89"'
+const DANIELS = '"2","Dyson Daniels","40.0","SG,SF","ATL","70","30.0","0.480 (6.0/12.5) 0.10","0.750 (2.0/2.7) -0.20","1.0 0.10","15.0 0.50","8.0 1.00","2.0 0.10","3.0 4.50","0.5 0.20","2.0 -0.50","3.00"'
+const CSV = [HEADER, JOKIC, HEADER, DANIELS].join('\n')
+const VALUES = [pv('Nikola Jokic', 70, { espnId: 3112335 }), pv('Dyson Daniels', 20, { espnId: 4869342 }), pv('No Projection', 5, { espnId: 1 })]
+
+describe('Hashtag export', () => {
+  it('reads per-game stats, skipping the repeated header rows', () => {
+    const rows = parseHashtagStats(CSV)
+    expect(rows.map((r) => r.key)).toEqual(['nikola jokic', 'dyson daniels'])
+    expect(rows[0]).toEqual({
+      key: 'nikola jokic', name: 'Nikola Jokic', gp: 72, mpg: 35.1,
+      perGame: { pts: 28.4, reb: 12.7, ast: 10.4, stl: 1.6, blk: 0.7, tpm: 1.8, to: 3.5, fgm: 10.5, fga: 18.3, ftm: 5.6, fta: 6.8 },
+    })
+  })
+
+  it('rejects a missing column or a percentage cell without made/attempts', () => {
+    expect(() => parseHashtagStats(CSV.replaceAll('"TREB"', '"REB"'))).toThrow('projections CSV is missing columns: TREB')
+    expect(() => parseHashtagStats([HEADER, JOKIC.replace('"0.573 (10.5/18.3) 3.91"', '"0.573"')].join('\n'))).toThrow('projections row 1: FG% "0.573" has no (made/attempts)')
+  })
+
+  it('parses quoted fields with commas', () => {
+    expect(parseCsvRecords('"A","B"\n"x, y","2"')).toEqual([{ A: 'x, y', B: '2' }])
+  })
+})
+
+describe('season projections', () => {
+  it('season totals = per game x games, by ESPN id', () => {
+    const proj = seasonProjections(parseHashtagStats(CSV), new Map(), VALUES)
+    expect(proj(3112335)!.pts).toBeCloseTo(28.4 * 72, 6)
+    expect(proj(3112335)!.fga).toBeCloseTo(18.3 * 72, 6)
+    expect(proj(4869342)!.stl).toBeCloseTo(3.0 * 70, 6)
+    expect(proj(1)).toBeNull()
+    expect(proj(999)).toBeNull()
+  })
+
+  it('games and minutes edited in the sheet win: stats scale with minutes, percentages stay', () => {
+    const playtime = parsePlaytime('"R#","PLAYER","POS","TEAM","GP","MPG","TOTAL","VALUED AT"\n"1","Nikola Jokic","C","DEN","36","17.55","15.89","$74.8"')
+    expect(playtime.get('nikola jokic')).toEqual({ gp: 36, mpg: 17.55 })
+    const proj = seasonProjections(parseHashtagStats(CSV), playtime, VALUES)
+    expect(proj(3112335)!.pts).toBeCloseTo(28.4 * 36 * 0.5, 6)
+    expect(proj(3112335)!.fgm / proj(3112335)!.fga).toBeCloseTo(10.5 / 18.3, 9)
+    expect(proj(4869342)!.pts).toBeCloseTo(15.0 * 70, 6)
+  })
+
+  it('no stats file: no projections', () => {
+    expect(projectionsFromCsv(null, null, VALUES)).toBeNull()
+  })
+
+  it('the committed export covers the draftable pool', () => {
+    const values = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
+    const stats = parseHashtagStats(readFileSync(STATS_PATH, 'utf8'))
+    expect(stats).toHaveLength(200)
+    expect(stats[0]).toMatchObject({ name: 'Nikola Jokic', perGame: { pts: 28.4 } })
+    const playtime = existsSync(PLAYTIME_PATH) ? readFileSync(PLAYTIME_PATH, 'utf8') : null
+    const proj = projectionsFromCsv(readFileSync(STATS_PATH, 'utf8'), playtime, values)!
+    const covered = values.filter((v) => v.espnId !== null && proj(v.espnId) !== null)
+    expect(covered.length).toBeGreaterThanOrEqual(190)
   })
 })
 ```
 
-- [ ] **Step 2: Run to verify failure** — `npx vitest run test/sim/score.test.ts --testTimeout=30000` → FAIL (module missing).
+- [ ] **Step 3: Run to verify failure** — `npx vitest run test/sim/score.test.ts test/sim/seasonStats.test.ts --testTimeout=30000` → FAIL (modules missing).
 
-- [ ] **Step 3: Implement `src/sim/score.ts`**
+- [ ] **Step 4: Implement `src/sim/score.ts`**
 
 ```ts
-/** Season totals for one player (ESPN 2026-27 projection), from data/projections-2027.json. */
+/** Projected season totals for one player. */
 export interface SeasonLine {
   pts: number
   reb: number
@@ -1321,6 +1414,8 @@ export interface SeasonLine {
   fta: number
 }
 
+export const LINE_FIELDS = ['pts', 'reb', 'ast', 'stl', 'blk', 'tpm', 'to', 'fgm', 'fga', 'ftm', 'fta'] as const
+
 export type ProjectionSource = (espnId: number) => SeasonLine | null
 
 export const CATEGORIES = ['pts', 'reb', 'ast', 'stl', 'blk', 'tpm', 'fgPct', 'ftPct', 'to'] as const
@@ -1328,10 +1423,6 @@ export type Category = (typeof CATEGORIES)[number]
 export const CATEGORY_LABELS: Record<Category, string> = {
   pts: 'PTS', reb: 'REB', ast: 'AST', stl: 'STL', blk: 'BLK', tpm: '3PM', fgPct: 'FG%', ftPct: 'FT%', to: 'TO',
 }
-
-/** Written by the projections work (not the simulator). */
-export const PROJECTIONS_PATH = 'data/projections-2027.json'
-const LINE_FIELDS = ['pts', 'reb', 'ast', 'stl', 'blk', 'tpm', 'to', 'fgm', 'fga', 'ftm', 'fta'] as const
 
 export interface TeamScore {
   teamId: number
@@ -1390,28 +1481,157 @@ export function scoreTeams(rosters: ReadonlyMap<number, readonly number[]>, proj
     .sort((a, b) => a.rank - b.rank || a.teamId - b.teamId)
 }
 
-export function parseProjectionFile(json: unknown): Map<number, SeasonLine> {
-  if (!Array.isArray(json)) throw new Error('projections file must be a JSON array')
-  const rows = new Map<number, SeasonLine>()
-  json.forEach((row: unknown, i) => {
-    const r = (row ?? {}) as Record<string, unknown>
-    const bad = ['espnId', ...LINE_FIELDS].find((f) => typeof r[f] !== 'number' || !Number.isFinite(r[f]))
-    if (bad) throw new Error(`projections row ${i}: ${bad} must be a number`)
-    rows.set(r.espnId as number, Object.fromEntries(LINE_FIELDS.map((f) => [f, r[f] as number])) as unknown as SeasonLine)
-  })
-  return rows
-}
-
 export const projectionsFrom = (rows: ReadonlyMap<number, SeasonLine>): ProjectionSource => (id) => rows.get(id) ?? null
 ```
 
-- [ ] **Step 4: Run tests** — file passes; full suite + typecheck clean.
+- [ ] **Step 5: Implement `src/sim/seasonStats.ts`**
 
-- [ ] **Step 5: Commit**
+```ts
+import { normalizeName } from '../values/names'
+import type { PlayerValue } from '../values/types'
+import { LINE_FIELDS, projectionsFrom, type ProjectionSource, type SeasonLine } from './score'
+
+/** The user's Hashtag Basketball projections export: per-game stats (committed with the simulator). */
+export const STATS_PATH = 'data/hashtag-projections.csv'
+/** The projections sheet's export: its GP and MPG carry the user's edits (owned by the projections work; may be absent). */
+export const PLAYTIME_PATH = 'data/auction-values.csv'
+
+export interface PerGameRow {
+  key: string
+  name: string
+  gp: number
+  mpg: number
+  perGame: SeasonLine
+}
+
+export interface Playtime {
+  gp: number
+  mpg: number
+}
+
+/** One CSV line into fields: double-quoted or bare, `""` inside quotes is a quote. */
+function splitCsvLine(line: string): string[] {
+  const out: string[] = []
+  let field = ''
+  let quoted = false
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i]
+    if (quoted) {
+      if (c === '"' && line[i + 1] === '"') field += line[++i]
+      else if (c === '"') quoted = false
+      else field += c
+    } else if (c === '"') quoted = true
+    else if (c === ',') {
+      out.push(field)
+      field = ''
+    } else field += c
+  }
+  out.push(field)
+  return out
+}
+
+/** Rows keyed by the header's column names; the header rows the export repeats are skipped. */
+export function parseCsvRecords(text: string): Array<Record<string, string>> {
+  const lines = text.split(/\r?\n/).filter((l) => l.trim() !== '')
+  if (!lines.length) return []
+  const header = splitCsvLine(lines[0])
+  return lines
+    .slice(1)
+    .map(splitCsvLine)
+    .filter((f) => f[0] !== header[0])
+    .map((f) => Object.fromEntries(header.map((h, i) => [h, f[i] ?? ''])))
+}
+
+const STAT_COLUMNS = ['PLAYER', 'GP', 'MPG', 'FG%', 'FT%', '3PM', 'PTS', 'TREB', 'AST', 'STL', 'BLK', 'TO'] as const
+
+function num(column: string, text: string, row: number): number {
+  const n = Number(text)
+  if (text.trim() === '' || !Number.isFinite(n)) throw new Error(`projections row ${row}: ${column} "${text}" is not a number`)
+  return n
+}
+
+/** "28.4 2.22" (per game, z-score) -> 28.4 */
+const perGame = (column: string, cell: string, row: number) => num(column, cell.trim().split(/\s+/)[0] ?? '', row)
+
+/** "0.573 (10.5/18.3) 3.91" -> [10.5, 18.3] made and attempted per game */
+function madeAttempted(column: string, cell: string, row: number): [number, number] {
+  const m = /\(([^/)]+)\/([^)]+)\)/.exec(cell)
+  if (!m) throw new Error(`projections row ${row}: ${column} "${cell}" has no (made/attempts)`)
+  return [num(column, m[1], row), num(column, m[2], row)]
+}
+
+export function parseHashtagStats(text: string): PerGameRow[] {
+  const records = parseCsvRecords(text)
+  const missing = records.length ? STAT_COLUMNS.filter((c) => !(c in records[0])) : []
+  if (missing.length) throw new Error(`projections CSV is missing columns: ${missing.join(', ')}`)
+  return records.map((r, i) => {
+    const row = i + 1
+    const [fgm, fga] = madeAttempted('FG%', r['FG%'], row)
+    const [ftm, fta] = madeAttempted('FT%', r['FT%'], row)
+    return {
+      key: normalizeName(r.PLAYER),
+      name: r.PLAYER,
+      gp: num('GP', r.GP, row),
+      mpg: num('MPG', r.MPG, row),
+      perGame: {
+        pts: perGame('PTS', r.PTS, row),
+        reb: perGame('TREB', r.TREB, row),
+        ast: perGame('AST', r.AST, row),
+        stl: perGame('STL', r.STL, row),
+        blk: perGame('BLK', r.BLK, row),
+        tpm: perGame('3PM', r['3PM'], row),
+        to: perGame('TO', r.TO, row),
+        fgm,
+        fga,
+        ftm,
+        fta,
+      },
+    }
+  })
+}
+
+/** GP and MPG by player from any CSV with PLAYER, GP and MPG columns (the projections sheet's export). */
+export function parsePlaytime(text: string): Map<string, Playtime> {
+  const out = new Map<string, Playtime>()
+  parseCsvRecords(text).forEach((r, i) => {
+    if (!('PLAYER' in r && 'GP' in r && 'MPG' in r)) throw new Error('playtime CSV needs PLAYER, GP and MPG columns')
+    out.set(normalizeName(r.PLAYER), { gp: num('GP', r.GP, i + 1), mpg: num('MPG', r.MPG, i + 1) })
+  })
+  return out
+}
+
+/**
+ * Season totals by ESPN id: per-game stats x games. Games and minutes from the sheet win over the
+ * export's; per-game stats scale with the minutes, percentages stay.
+ */
+export function seasonProjections(stats: readonly PerGameRow[], playtime: ReadonlyMap<string, Playtime>, values: readonly PlayerValue[]): ProjectionSource {
+  const byKey = new Map(stats.map((r) => [r.key, r]))
+  const rows = new Map<number, SeasonLine>()
+  for (const v of values) {
+    if (v.espnId === null) continue
+    const r = byKey.get(v.key)
+    if (!r) continue
+    const edit = playtime.get(r.key)
+    const scale = (edit?.gp ?? r.gp) * (edit && r.mpg > 0 ? edit.mpg / r.mpg : 1)
+    rows.set(v.espnId, Object.fromEntries(LINE_FIELDS.map((f) => [f, r.perGame[f] * scale])) as unknown as SeasonLine)
+  }
+  return projectionsFrom(rows)
+}
+
+/** From the two files' text (the sheet's is optional); null without the stats file. */
+export function projectionsFromCsv(statsCsv: string | null, playtimeCsv: string | null, values: readonly PlayerValue[]): ProjectionSource | null {
+  if (statsCsv === null) return null
+  return seasonProjections(parseHashtagStats(statsCsv), playtimeCsv === null ? new Map() : parsePlaytime(playtimeCsv), values)
+}
+```
+
+- [ ] **Step 6: Run tests** — both files pass; full suite + typecheck clean.
+
+- [ ] **Step 7: Commit**
 
 ```bash
-git add src/sim/score.ts test/sim/score.test.ts
-git commit -m "feat(sim): projected 9-category roto scoring and the projections contract" -m "<your Co-Authored-By line>"
+git add data/hashtag-projections.csv src/sim/score.ts src/sim/seasonStats.ts test/sim/score.test.ts test/sim/seasonStats.test.ts
+git commit -m "feat(sim): season projections from the Hashtag export and 9-category roto scoring" -m "<your Co-Authored-By line>"
 ```
 
 ---
@@ -1424,7 +1644,7 @@ git commit -m "feat(sim): projected 9-category roto scoring and the projections 
 - Test: `test/sim/run.test.ts`, `test/sim/batch.test.ts`
 
 **Interfaces:**
-- Consumes: Tasks 1-6 (`TUNABLES`, `DEFAULT_TUNABLES`, `setTunables`, `resetTunables`, `Tunables`, `TunableName`; `AuctionSim`, `runToEnd`; `createTracker`; `createAgent`, `POLICIES`, `PolicyName`; `scoreTeams`, `ProjectionSource`, `TeamScore`, `Category`, `parseProjectionFile`, `projectionsFrom`, `PROJECTIONS_PATH`; `ROOMS`; `defaultOptions`, `simLeague`, `simPlayers`, `simTeams`), `toSettings`.
+- Consumes: Tasks 1-6 (`TUNABLES`, `DEFAULT_TUNABLES`, `setTunables`, `resetTunables`, `Tunables`, `TunableName`; `AuctionSim`, `runToEnd`; `createTracker`; `createAgent`, `POLICIES`, `PolicyName`; `scoreTeams`, `ProjectionSource`, `TeamScore`, `Category`; `projectionsFromCsv`, `STATS_PATH`, `PLAYTIME_PATH`; `ROOMS`; `defaultOptions`, `simLeague`, `simPlayers`, `simTeams`), `toSettings`.
 - Produces:
   - `interface DraftResult { policy; seed; sales: SimSale[]; moneyLeft; valueCaptured; myRank: number | null; myPoints: number | null; myCategoryPoints: Record<Category, number> | null; missingProjections; standings: TeamScore[] | null }`
   - `interface DraftInput { seed; policy: PolicyName; values: PlayerValue[]; projections: ProjectionSource | null; options?: Partial<SimOptions> }`, `runDraft(input): DraftResult`
@@ -1445,7 +1665,7 @@ import type { ProjectionSource } from '../../src/sim/score'
 import type { PlayerValue } from '../../src/values/types'
 
 const VALUES = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
-/** Stand-in projections until data/projections-2027.json exists: better players project proportionally more. */
+/** Synthetic projections, so these tests don't depend on the projections data: better players project proportionally more. */
 const STRENGTH = new Map(VALUES.flatMap((v) => (v.espnId === null ? [] : [[v.espnId, Math.max(1, v.consensus)] as const])))
 const FAKE: ProjectionSource = (id) => {
   const c = STRENGTH.get(id)
@@ -1592,7 +1812,7 @@ export interface DraftResult {
   seed: number
   sales: SimSale[]
   moneyLeft: number
-  /** sum over my roster of ESPN ROTO value minus price paid */
+  /** sum over my roster of projected value (PlayerValue.consensus) minus price paid */
   valueCaptured: number
   myRank: number | null
   myPoints: number | null
@@ -1841,7 +2061,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { runBatch } from '../src/sim/batch'
 import { BATCH_USAGE, parseBatchArgs, type BatchArgs } from '../src/sim/batchArgs'
 import { formatTable } from '../src/sim/run'
-import { parseProjectionFile, PROJECTIONS_PATH, projectionsFrom } from '../src/sim/score'
+import { PLAYTIME_PATH, projectionsFromCsv, STATS_PATH } from '../src/sim/seasonStats'
 import type { PlayerValue } from '../src/values/types'
 
 function argsOrExit(): BatchArgs {
@@ -1856,8 +2076,9 @@ function argsOrExit(): BatchArgs {
 
 const args = argsOrExit()
 const values = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
-const projections = existsSync(PROJECTIONS_PATH) ? projectionsFrom(parseProjectionFile(JSON.parse(readFileSync(PROJECTIONS_PATH, 'utf8')))) : null
-if (!projections) console.warn(`No ${PROJECTIONS_PATH} yet: skipping projected standings (value captured and money left only).`)
+const read = (path: string) => (existsSync(path) ? readFileSync(path, 'utf8') : null)
+const projections = projectionsFromCsv(read(STATS_PATH), read(PLAYTIME_PATH), values)
+if (!projections) console.warn(`No ${STATS_PATH}: skipping projected standings (value captured and money left only).`)
 
 const started = performance.now()
 let drafts = 0
@@ -1907,7 +2128,7 @@ git commit -m "feat(sim): headless batch runner with policies, roto standings an
 - Test: `test/controller.test.ts` (2 new tests), `test/sim/replay.test.ts`
 
 **Interfaces:**
-- Consumes: `Recording` (`src/capture/recording.ts`), `splitLines` (`src/capture/frames.ts`), `LeagueInfo`, `ESPN_DEFAULT_COUNTS`, `normalizeName`, `PlayerValue`; Task 3 `USER_PICK_ORDER`, `USER_TEAM_ID`, `ROSTER_SIZE`, `SIM_SWID`.
+- Consumes: `Recording` (`src/capture/recording.ts`), `splitLines` (`src/capture/frames.ts`), `placeholderValue` (`src/engine/reducer.ts`), `LeagueInfo`, `ESPN_DEFAULT_COUNTS`, `normalizeName`, `PlayerValue`; Task 3 `USER_PICK_ORDER`, `USER_TEAM_ID`, `ROSTER_SIZE`, `SIM_SWID`.
 - Produces:
   - `ControllerDeps.persist?: boolean` — `false` keeps the event log in memory only
   - `Controller.onFrame(frame: Frame, options?: { quiet?: boolean }): void` — `quiet` applies without rendering
@@ -2047,6 +2268,7 @@ In the returned object, replace `onFrame` and add `refresh`:
 ```ts
 import { splitLines } from '../capture/frames'
 import type { Recording } from '../capture/recording'
+import { placeholderValue } from '../engine/reducer'
 import type { LeagueInfo } from '../espn/league'
 import { ESPN_DEFAULT_COUNTS } from '../espn/slots'
 import { normalizeName } from '../values/names'
@@ -2118,7 +2340,7 @@ export function joshReplay(f: JoshFixture, values: readonly PlayerValue[]): Repl
     if (v) {
       v.espnId = id
     } else {
-      const placeholder: PlayerValue = { key, espnId: id, name: sale.player, slots: [11], b: 1, consensus: 0, market: 0, josh: null, avoid: false, tier: 5 }
+      const placeholder: PlayerValue = { ...placeholderValue(key), espnId: id, name: sale.player }
       out.push(placeholder)
       byKey.set(key, placeholder)
     }
@@ -2333,7 +2555,7 @@ export interface SessionData {
 
 export interface MyResult {
   moneyLeft: number
-  /** sum over my roster of ESPN ROTO value minus price paid */
+  /** sum over my roster of projected value (PlayerValue.consensus) minus price paid */
   valueCaptured: number
 }
 
@@ -2619,7 +2841,7 @@ git commit -m "feat(sim): session drives the real controller from the auction or
   - Task 9: `Session`, `SessionConfig`, `SessionData`, `createSession`, `defaultConfig`, `SPEEDS`, `MODES`, `Mode`.
   - Task 1: `TUNABLES`, `DEFAULT_TUNABLES`, `setTunables`, `resetTunables`, `Tunables`, `TunableName`.
   - Task 2: `ROOMS`, `marketPrice`, `BotKind`.
-  - Task 6: `CATEGORIES`, `CATEGORY_LABELS`, `parseProjectionFile`, `projectionsFrom`.
+  - Task 6: `CATEGORIES`, `CATEGORY_LABELS`, `projectionsFromCsv`.
   - Also: `teamSummary`, `valueOf`; `Panel`, `mountPanel`, `html`, `downloadText`.
 - Produces:
   - `App`, `Room`, `Controls`, `TunablesDrawer`
@@ -2849,7 +3071,7 @@ export function Room({ session }: { session: Session }) {
     const canBid = simulate && live.leaderId !== me && passedOn !== live.playerKey
     return html`<div class="block">
       <div class="player">${v.name} <span class="muted">${positions(v.slots)}</span></div>
-      <div class="muted">ESPN $${Math.round(v.consensus)} · market $${Math.round(v.market)}</div>
+      <div class="muted">projected $${Math.round(v.consensus)} · ESPN avg $${Math.round(v.market)}</div>
       <div class="price">
         $${live.price} <span class="muted">${teamName(live.leaderId)}</span>
         ${block ? html`<span class="countdown">${seconds(block.endsAt - session.time)}</span>` : null}
@@ -2903,7 +3125,7 @@ export function Room({ session }: { session: Session }) {
     const mine = me === null ? [] : state.sales.filter((x) => x.teamId === me)
     return html`<div class="results">
       <h3>Results</h3>
-      <div>Value captured <b>$${Math.round(r.valueCaptured)}</b> (ESPN value − price) · <b>$${r.moneyLeft}</b> left unspent</div>
+      <div>Value captured <b>$${Math.round(r.valueCaptured)}</b> (projected value − price) · <b>$${r.moneyLeft}</b> left unspent</div>
       ${standings
         ? html`<table class="standings">
             <thead><tr><th>#</th><th>Team</th><th>Pts</th>${CATEGORIES.map((c) => html`<th>${CATEGORY_LABELS[c]}</th>`)}<th>No proj.</th></tr></thead>
@@ -2917,7 +3139,7 @@ export function Room({ session }: { session: Session }) {
               )}
             </tbody>
           </table>`
-        : html`<div class="muted">Projected standings need data/projections-2027.json; restart npm run sim once it exists.</div>`}
+        : html`<div class="muted">Projected standings need data/hashtag-projections.csv; restart npm run sim once it exists.</div>`}
       <h3>My roster</h3>
       ${mine.map((x) => html`<div>${nameOf(x.playerKey)} $${x.price}</div>`)}
     </div>`
@@ -3118,7 +3340,8 @@ import { mountPanel } from '../ui/mount'
 import { Panel } from '../ui/Panel'
 import type { PlayerValue } from '../values/types'
 import type { JoshFixture } from './replay'
-import { parseProjectionFile, projectionsFrom, type ProjectionSource } from './score'
+import type { ProjectionSource } from './score'
+import { projectionsFromCsv } from './seasonStats'
 import { createSession, defaultConfig, type Session, type SessionConfig, type SessionData } from './session'
 import { App } from './ui/App'
 import { SIM_CSS } from './ui/styles'
@@ -3126,11 +3349,19 @@ import { SIM_CSS } from './ui/styles'
 /** A background tab or a breakpoint must not fast-forward the draft. */
 const MAX_FRAME_MS = 250
 
-async function loadProjections(): Promise<ProjectionSource | null> {
+async function fetchText(path: string): Promise<string | null> {
   try {
-    const res = await fetch('dist/projections-2027.json')
-    if (!res.ok) return null
-    return projectionsFrom(parseProjectionFile(await res.json()))
+    const res = await fetch(path)
+    return res.ok ? await res.text() : null
+  } catch {
+    return null
+  }
+}
+
+/** sim.mjs copies the projection CSVs into dist/ when it starts. */
+async function loadProjections(values: PlayerValue[]): Promise<ProjectionSource | null> {
+  try {
+    return projectionsFromCsv(await fetchText('dist/hashtag-projections.csv'), await fetchText('dist/auction-values.csv'), values)
   } catch (e) {
     console.warn('Projections unavailable:', e)
     return null
@@ -3143,9 +3374,10 @@ async function main(): Promise<void> {
   document.head.append(style)
   const app = document.getElementById('app')!
   const panel = mountPanel(document)
+  const values = valuesJson as unknown as PlayerValue[]
   const data: SessionData = {
-    values: valuesJson as unknown as PlayerValue[],
-    projections: await loadProjections(),
+    values,
+    projections: await loadProjections(values),
     recording: recordingJson as unknown as Recording,
     josh: joshJson as unknown as JoshFixture,
   }
@@ -3221,15 +3453,19 @@ main().catch((e: unknown) => {
 ```js
 import { spawn } from 'node:child_process'
 import { copyFileSync, existsSync, mkdirSync } from 'node:fs'
+import { basename } from 'node:path'
 import * as esbuild from 'esbuild'
 
 // Dev server for the simulator page: rebuilds on save and reloads the page.
 const PORT = Number(process.env.SIM_PORT ?? 5173)
-const PROJECTIONS = 'data/projections-2027.json'
+// Projections the page scores with: the Hashtag export, plus the sheet's GP/MPG edits when present.
+// Copied at start: restart after editing them.
+const STATS = 'data/hashtag-projections.csv'
+const PLAYTIME = 'data/auction-values.csv'
 
 mkdirSync('sim/dist', { recursive: true })
-if (existsSync(PROJECTIONS)) copyFileSync(PROJECTIONS, 'sim/dist/projections-2027.json')
-else console.warn(`No ${PROJECTIONS} yet: the page will skip projected standings.`)
+for (const file of [STATS, PLAYTIME]) if (existsSync(file)) copyFileSync(file, `sim/dist/${basename(file)}`)
+if (!existsSync(STATS)) console.warn(`No ${STATS}: the page will skip projected standings.`)
 
 const ctx = await esbuild.context({
   entryPoints: ['src/sim/page.ts'],
@@ -3288,7 +3524,7 @@ Serves the simulator at http://127.0.0.1:5173 (`npm run sim -- --open` also open
 
 Runs seeded drafts with your team on autopilot and two baselines on the same seeds and bots:
 - `market` bids up to the average price paid.
-- `consensus` bids up to ESPN's value.
+- `consensus` bids up to the projected value.
 
 ```
 npm run sim:batch -- --drafts 200
@@ -3309,12 +3545,12 @@ Columns:
 - avg rank: average projected roto rank, 1 = best, with the 95% interval.
 - roto pts: projected roto points.
 - 1st %: share of drafts won.
-- value captured: ESPN value minus price, summed over your roster.
+- value captured: projected value minus price, summed over your roster.
 - $ left: money left unspent.
 
 ### Projections
 
-Standings need `data/projections-2027.json`, which is built separately. It is an array of `{ "espnId", "pts", "reb", "ast", "stl", "blk", "tpm", "to", "fgm", "fga", "ftm", "fta" }` season totals. Without it the simulator still runs and reports value captured and money left.
+Standings are projected 9-category roto from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. Restart `npm run sim` after changing either file. Players without a projection add nothing and are counted in the "No proj." column. Without the stats file the simulator still runs and reports value captured and money left.
 
 ### Bots
 
