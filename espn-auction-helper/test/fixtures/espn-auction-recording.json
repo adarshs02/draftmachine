@@ -1,0 +1,5485 @@
+{
+ "leagueId": 0,
+ "startedAt": "2026-10-06T20:17:04.959Z",
+ "savedAt": "2026-10-06T20:35:59.934Z",
+ "frames": [
+  {
+   "dir": "in",
+   "data": "CLOCK 0 774355",
+   "t": 1791317825847,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 3112335",
+   "t": 1791317825848,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":2},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":1},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":7},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.5,\"1\":5.5,\"17\":5.5,\"2\":5.5,\"3\":5.5,\"19\":5.5,\"20\":5.5,\"6\":5.5},\"totalRotoPoints\":44.0,\"teamId\":8}]}",
+   "t": 1791317825848,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "JOINED 1 {00000000-0000-0000-0000-000000000000}",
+   "t": 1791317825859,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 773420",
+   "t": 1791317826585,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317826647",
+   "t": 1791317826647,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317826647",
+   "t": 1791317826680,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 768418",
+   "t": 1791317831571,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 763415",
+   "t": 1791317836597,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317840648",
+   "t": 1791317840648,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317840648",
+   "t": 1791317840691,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 758411",
+   "t": 1791317841578,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 753408",
+   "t": 1791317846577,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 748406",
+   "t": 1791317851582,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317855647",
+   "t": 1791317855647,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317855647",
+   "t": 1791317855699,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 743404",
+   "t": 1791317856584,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 738399",
+   "t": 1791317861588,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 733397",
+   "t": 1791317866685,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317871127",
+   "t": 1791317871128,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317871127",
+   "t": 1791317871162,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 728395",
+   "t": 1791317871596,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 723392",
+   "t": 1791317876641,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 718390",
+   "t": 1791317881598,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317886126",
+   "t": 1791317886126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317886126",
+   "t": 1791317886163,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 713388",
+   "t": 1791317886603,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 708386",
+   "t": 1791317891606,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 703383",
+   "t": 1791317896609,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317901129",
+   "t": 1791317901131,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317901129",
+   "t": 1791317901170,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 698381",
+   "t": 1791317901610,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 693380",
+   "t": 1791317906609,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 688377",
+   "t": 1791317911613,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317916126",
+   "t": 1791317916127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317916126",
+   "t": 1791317916168,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 683375",
+   "t": 1791317916617,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 678372",
+   "t": 1791317921614,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 673369",
+   "t": 1791317926641,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317930649",
+   "t": 1791317930649,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317930649",
+   "t": 1791317930685,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 668367",
+   "t": 1791317931691,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 663365",
+   "t": 1791317936626,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 658363",
+   "t": 1791317941649,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317946126",
+   "t": 1791317946127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317946126",
+   "t": 1791317946170,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 653361",
+   "t": 1791317946625,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 648359",
+   "t": 1791317951630,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 643356",
+   "t": 1791317956644,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317961125",
+   "t": 1791317961125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317961125",
+   "t": 1791317961158,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 638354",
+   "t": 1791317961631,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 633351",
+   "t": 1791317966637,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 628348",
+   "t": 1791317971640,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317976129",
+   "t": 1791317976130,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317976129",
+   "t": 1791317976250,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 623345",
+   "t": 1791317976640,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 618342",
+   "t": 1791317981645,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 613339",
+   "t": 1791317986741,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791317991129",
+   "t": 1791317991129,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791317991129",
+   "t": 1791317991168,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 608336",
+   "t": 1791317991651,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 603334",
+   "t": 1791317996719,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 598331",
+   "t": 1791318001657,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 593327",
+   "t": 1791318006728,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 588325",
+   "t": 1791318011723,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 583323",
+   "t": 1791318016666,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 578321",
+   "t": 1791318021668,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 573319",
+   "t": 1791318026668,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 568314",
+   "t": 1791318031672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 563311",
+   "t": 1791318036676,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318041132",
+   "t": 1791318041133,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318041132",
+   "t": 1791318041259,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 558306",
+   "t": 1791318041681,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 553302",
+   "t": 1791318046683,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 548299",
+   "t": 1791318051775,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 543296",
+   "t": 1791318056754,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 538290",
+   "t": 1791318061708,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 533286",
+   "t": 1791318066700,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 528532",
+   "t": 1791318071453,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 523528",
+   "t": 1791318076457,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 518524",
+   "t": 1791318081462,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 513521",
+   "t": 1791318086466,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 508514",
+   "t": 1791318091475,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318092608",
+   "t": 1791318092608,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318092608",
+   "t": 1791318092662,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318095648",
+   "t": 1791318095648,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318095648",
+   "t": 1791318095682,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 503509",
+   "t": 1791318096477,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 498503",
+   "t": 1791318101553,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 493499",
+   "t": 1791318106487,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318110649",
+   "t": 1791318110649,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318110649",
+   "t": 1791318110692,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 488494",
+   "t": 1791318111512,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 483491",
+   "t": 1791318116494,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 478486",
+   "t": 1791318121503,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318126126",
+   "t": 1791318126127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318126126",
+   "t": 1791318126222,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 473482",
+   "t": 1791318126502,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 468478",
+   "t": 1791318131512,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 463474",
+   "t": 1791318136514,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318140647",
+   "t": 1791318140648,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318140647",
+   "t": 1791318140683,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 458469",
+   "t": 1791318141517,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 453466",
+   "t": 1791318146700,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 448461",
+   "t": 1791318151527,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318156131",
+   "t": 1791318156132,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318156131",
+   "t": 1791318156166,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 443457",
+   "t": 1791318156606,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 438454",
+   "t": 1791318161548,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 433450",
+   "t": 1791318166561,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318171127",
+   "t": 1791318171128,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318171127",
+   "t": 1791318171162,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 428445",
+   "t": 1791318171540,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 423441",
+   "t": 1791318176545,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 418436",
+   "t": 1791318181549,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318186125",
+   "t": 1791318186126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318186125",
+   "t": 1791318186166,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 413433",
+   "t": 1791318186556,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 408429",
+   "t": 1791318191555,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 403425",
+   "t": 1791318196561,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318201125",
+   "t": 1791318201125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318201125",
+   "t": 1791318201190,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 398420",
+   "t": 1791318201565,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 393415",
+   "t": 1791318206619,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 388410",
+   "t": 1791318211645,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 383405",
+   "t": 1791318216582,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318221125",
+   "t": 1791318221126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318221125",
+   "t": 1791318221159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 378401",
+   "t": 1791318221601,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 373398",
+   "t": 1791318226589,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 368395",
+   "t": 1791318231590,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 363391",
+   "t": 1791318236594,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 358386",
+   "t": 1791318241599,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 353382",
+   "t": 1791318246642,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 348377",
+   "t": 1791318251660,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 343373",
+   "t": 1791318256622,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318256778",
+   "t": 1791318256778,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318256778",
+   "t": 1791318256838,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318260648",
+   "t": 1791318260648,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318260648",
+   "t": 1791318260686,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 338369",
+   "t": 1791318261616,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 333366",
+   "t": 1791318266694,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 328363",
+   "t": 1791318271731,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PRENOMINATE 3112335 1",
+   "t": 1791318274756,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "DRAFT_LIST 3112335",
+   "t": 1791318274790,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 3112335",
+   "t": 1791318274821,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318275649",
+   "t": 1791318275649,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PRENOMINATE 3112335 1 5104157 1",
+   "t": 1791318275661,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318275649",
+   "t": 1791318275689,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "DRAFT_LIST 3112335 5104157",
+   "t": 1791318275702,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 3112335",
+   "t": 1791318275711,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 323361",
+   "t": 1791318276656,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 318357",
+   "t": 1791318281634,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 313354",
+   "t": 1791318286632,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318291126",
+   "t": 1791318291126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318291126",
+   "t": 1791318291160,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 308350",
+   "t": 1791318291637,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 303346",
+   "t": 1791318296644,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 298342",
+   "t": 1791318301645,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318306129",
+   "t": 1791318306129,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318306129",
+   "t": 1791318306166,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 293338",
+   "t": 1791318306649,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 288334",
+   "t": 1791318311667,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 283331",
+   "t": 1791318316653,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318321125",
+   "t": 1791318321125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318321125",
+   "t": 1791318321251,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 278327",
+   "t": 1791318321744,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 273324",
+   "t": 1791318326663,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 268320",
+   "t": 1791318331704,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318336124",
+   "t": 1791318336125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318336124",
+   "t": 1791318336159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 263315",
+   "t": 1791318336669,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 258310",
+   "t": 1791318341674,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 253305",
+   "t": 1791318346680,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318351125",
+   "t": 1791318351125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318351125",
+   "t": 1791318351159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 248301",
+   "t": 1791318351683,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 243296",
+   "t": 1791318356724,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 238293",
+   "t": 1791318361694,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318366124",
+   "t": 1791318366125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318366124",
+   "t": 1791318366159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 233289",
+   "t": 1791318366698,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 228285",
+   "t": 1791318371701,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 223531",
+   "t": 1791318376453,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318381126",
+   "t": 1791318381126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318381126",
+   "t": 1791318381164,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 218529",
+   "t": 1791318381509,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 213524",
+   "t": 1791318386521,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 208521",
+   "t": 1791318391469,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318396126",
+   "t": 1791318396129,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318396126",
+   "t": 1791318396219,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 203518",
+   "t": 1791318396467,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 198515",
+   "t": 1791318401470,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 193512",
+   "t": 1791318406473,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318411126",
+   "t": 1791318411126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318411126",
+   "t": 1791318411175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 188508",
+   "t": 1791318411480,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 183505",
+   "t": 1791318416479,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 178501",
+   "t": 1791318421484,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318426127",
+   "t": 1791318426127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318426127",
+   "t": 1791318426167,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 173499",
+   "t": 1791318426487,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 168495",
+   "t": 1791318431580,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 163492",
+   "t": 1791318436556,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318441126",
+   "t": 1791318441137,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318441126",
+   "t": 1791318441172,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 158487",
+   "t": 1791318441498,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 153482",
+   "t": 1791318446517,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 148479",
+   "t": 1791318451505,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 143475",
+   "t": 1791318456525,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318461133",
+   "t": 1791318461134,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318461133",
+   "t": 1791318461227,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 138470",
+   "t": 1791318461516,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 133466",
+   "t": 1791318466519,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 128462",
+   "t": 1791318471523,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 123458",
+   "t": 1791318476532,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 118456",
+   "t": 1791318481528,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 113454",
+   "t": 1791318486533,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 108452",
+   "t": 1791318491604,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 103450",
+   "t": 1791318496535,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 98447",
+   "t": 1791318501570,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 93445",
+   "t": 1791318506540,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 88443",
+   "t": 1791318511542,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 83441",
+   "t": 1791318516545,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318521127",
+   "t": 1791318521128,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318521127",
+   "t": 1791318521167,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 78439",
+   "t": 1791318521545,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 73436",
+   "t": 1791318526563,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 68433",
+   "t": 1791318531561,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 63431",
+   "t": 1791318536699,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 58429",
+   "t": 1791318541561,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 53427",
+   "t": 1791318546557,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 48425",
+   "t": 1791318551560,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 43421",
+   "t": 1791318556613,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 38417",
+   "t": 1791318561568,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 33412",
+   "t": 1791318566573,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 28407",
+   "t": 1791318571583,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 23404",
+   "t": 1791318576582,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318581133",
+   "t": 1791318581133,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318581133",
+   "t": 1791318581168,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 18400",
+   "t": 1791318581600,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 13395",
+   "t": 1791318586600,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318591141",
+   "t": 1791318591142,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318591141",
+   "t": 1791318591261,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 8393",
+   "t": 1791318591604,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 0 3391",
+   "t": 1791318596608,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "STATE 1",
+   "t": 1791318600144,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 7 25000",
+   "t": 1791318600360,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3112335 1 25000 25000",
+   "t": 1791318600760,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24499 7 3112335 1",
+   "t": 1791318601192,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23499 7 3112335 1",
+   "t": 1791318602111,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22498 7 3112335 1",
+   "t": 1791318603112,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3112335 12 25000 21498",
+   "t": 1791318604119,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21498 2 3112335 12",
+   "t": 1791318604126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3112335 15 25000 21248",
+   "t": 1791318604363,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20498 7 3112335 15",
+   "t": 1791318605113,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3112335 29 25000 19997",
+   "t": 1791318605616,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3112335 38 25000 19497",
+   "t": 1791318606113,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19497 9 3112335 38",
+   "t": 1791318606119,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318606162",
+   "t": 1791318606162,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318606162",
+   "t": 1791318606195,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18496 9 3112335 38",
+   "t": 1791318607117,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 3112335 40 25000 17746",
+   "t": 1791318607867,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 3112335 46 25000 17495",
+   "t": 1791318608139,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17495 5 3112335 46",
+   "t": 1791318608147,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3112335 47 25000 16995",
+   "t": 1791318608620,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 3112335 49 25000 16745",
+   "t": 1791318608867,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3112335 55 25000 16495",
+   "t": 1791318609118,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16495 7 3112335 55",
+   "t": 1791318609123,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 3112335 56 25000 16245",
+   "t": 1791318609366,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3112335 59 25000 15495",
+   "t": 1791318610119,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15495 9 3112335 59",
+   "t": 1791318610127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14494 9 3112335 59",
+   "t": 1791318611155,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13494 9 3112335 59",
+   "t": 1791318612206,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3112335 60 25000 12743",
+   "t": 1791318612868,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12493 7 3112335 60",
+   "t": 1791318613125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11492 7 3112335 60",
+   "t": 1791318614123,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10491 7 3112335 60",
+   "t": 1791318615124,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "BID 3112335 61",
+   "t": 1791318615511,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID_ACK 1 3112335 61",
+   "t": 1791318615548,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 3112335 61 25000 10000",
+   "t": 1791318615622,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3112335 63 25000 10000",
+   "t": 1791318615874,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9750 9 3112335 63",
+   "t": 1791318616121,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3112335 64 25000 10000",
+   "t": 1791318616397,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9250 7 3112335 64",
+   "t": 1791318617145,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8250 7 3112335 64",
+   "t": 1791318618176,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3112335 65 25000 10000",
+   "t": 1791318618623,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9500 9 3112335 65",
+   "t": 1791318619124,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8499 9 3112335 65",
+   "t": 1791318620127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318620668",
+   "t": 1791318620668,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318620668",
+   "t": 1791318620706,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7499 9 3112335 65",
+   "t": 1791318621125,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6499 9 3112335 65",
+   "t": 1791318622164,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5498 9 3112335 65",
+   "t": 1791318623216,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4497 9 3112335 65",
+   "t": 1791318624126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3497 9 3112335 65",
+   "t": 1791318625141,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2496 9 3112335 65",
+   "t": 1791318626157,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1496 9 3112335 65",
+   "t": 1791318627131,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "BID 3112335 66",
+   "t": 1791318627706,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID_ACK 1 3112335 66",
+   "t": 1791318627742,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 3112335 66 25000 10000",
+   "t": 1791318627933,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9750 1 3112335 66",
+   "t": 1791318628131,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8749 1 3112335 66",
+   "t": 1791318629131,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7748 1 3112335 66",
+   "t": 1791318630132,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6748 1 3112335 66",
+   "t": 1791318631175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5747 1 3112335 66",
+   "t": 1791318632153,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4746 1 3112335 66",
+   "t": 1791318633177,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3745 1 3112335 66",
+   "t": 1791318634226,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2744 1 3112335 66",
+   "t": 1791318635136,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318635669",
+   "t": 1791318635669,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318635669",
+   "t": 1791318635702,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1743 1 3112335 66",
+   "t": 1791318636136,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 743 1 3112335 66",
+   "t": 1791318637143,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 1 3112335 5 66 0",
+   "t": 1791318637890,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1749",
+   "t": 1791318638138,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 748",
+   "t": 1791318639140,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 5104157",
+   "t": 1791318640086,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":2034.0,\"1\":58.0,\"17\":122.0,\"2\":115.0,\"3\":727.0,\"19\":0.57509434,\"20\":0.81684211,\"6\":914.0},\"statRotoPoints\":{\"0\":10.0,\"1\":10.0,\"17\":10.0,\"2\":10.0,\"3\":10.0,\"19\":10.0,\"20\":10.0,\"6\":10.0},\"totalRotoPoints\":80.0,\"teamId\":1},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":2},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":7},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":8}]}",
+   "t": 1791318640098,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 10 25000",
+   "t": 1791318640126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 5104157 1 25000 25000",
+   "t": 1791318640172,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 25000 10 5104157 1",
+   "t": 1791318640185,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23999 10 5104157 1",
+   "t": 1791318641143,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22999 10 5104157 1",
+   "t": 1791318642150,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21998 10 5104157 1",
+   "t": 1791318643155,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20997 10 5104157 1",
+   "t": 1791318644184,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19995 10 5104157 1",
+   "t": 1791318645147,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 5104157 13 25000 19495",
+   "t": 1791318645824,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 5104157 30 25000 18995",
+   "t": 1791318646293,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18995 8 5104157 30",
+   "t": 1791318646299,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 5104157 34 25000 18744",
+   "t": 1791318646396,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 5104157 40 25000 17994",
+   "t": 1791318647154,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17994 8 5104157 40",
+   "t": 1791318647160,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 5104157 44 25000 17744",
+   "t": 1791318647399,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 5104157 46 25000 17244",
+   "t": 1791318647902,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16994 6 5104157 46",
+   "t": 1791318648178,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 5104157 47 25000 16744",
+   "t": 1791318648396,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 5104157 51 25000 16493",
+   "t": 1791318648647,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15993 2 5104157 51",
+   "t": 1791318649147,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 5104157 52 25000 15743",
+   "t": 1791318649430,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14992 3 5104157 52",
+   "t": 1791318650157,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 5104157 54 25000 14742",
+   "t": 1791318650479,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 5104157 55 25000 14492",
+   "t": 1791318650648,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318650669",
+   "t": 1791318650669,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318650669",
+   "t": 1791318650705,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 5104157 56 25000 13991",
+   "t": 1791318651161,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13991 8 5104157 56",
+   "t": 1791318651163,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12991 8 5104157 56",
+   "t": 1791318652152,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 5104157 57 25000 12240",
+   "t": 1791318652900,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11990 2 5104157 57",
+   "t": 1791318653150,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10990 2 5104157 57",
+   "t": 1791318654153,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9989 2 5104157 57",
+   "t": 1791318655194,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8989 2 5104157 57",
+   "t": 1791318656264,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7989 2 5104157 57",
+   "t": 1791318657154,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6988 2 5104157 57",
+   "t": 1791318658153,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5988 2 5104157 57",
+   "t": 1791318659152,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4987 2 5104157 57",
+   "t": 1791318660156,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3987 2 5104157 57",
+   "t": 1791318661157,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2987 2 5104157 57",
+   "t": 1791318662157,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "BID 5104157 58",
+   "t": 1791318663000,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID_ACK 1 5104157 58",
+   "t": 1791318663095,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 5104157 58 25000 10000",
+   "t": 1791318663171,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10000 1 5104157 58",
+   "t": 1791318663181,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 5104157 59 25000 10000",
+   "t": 1791318663412,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9249 2 5104157 59",
+   "t": 1791318664159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8249 2 5104157 59",
+   "t": 1791318665158,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "BID 5104157 60",
+   "t": 1791318665327,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID_ACK 1 5104157 60",
+   "t": 1791318665361,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 5104157 60 25000 10000",
+   "t": 1791318665407,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318665669",
+   "t": 1791318665669,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318665669",
+   "t": 1791318665714,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9250 1 5104157 60",
+   "t": 1791318666206,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8250 1 5104157 60",
+   "t": 1791318667158,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7249 1 5104157 60",
+   "t": 1791318668158,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6249 1 5104157 60",
+   "t": 1791318669157,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5248 1 5104157 60",
+   "t": 1791318670159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4248 1 5104157 60",
+   "t": 1791318671160,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3248 1 5104157 60",
+   "t": 1791318672160,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2247 1 5104157 60",
+   "t": 1791318673159,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1247 1 5104157 60",
+   "t": 1791318674160,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 246 1 5104157 60",
+   "t": 1791318675162,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 1 5104157 8 60 0",
+   "t": 1791318675412,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1250",
+   "t": 1791318676200,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 249",
+   "t": 1791318677215,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4278073",
+   "t": 1791318677412,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":10.0,\"1\":10.0,\"17\":10.0,\"2\":10.0,\"3\":10.0,\"19\":10.0,\"20\":10.0,\"6\":10.0},\"totalRotoPoints\":80.0,\"teamId\":1},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":2},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":7},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.0,\"3\":5.0,\"19\":5.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":40.0,\"teamId\":8}]}",
+   "t": 1791318677418,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 5 25000",
+   "t": 1791318677420,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 4278073 1 25000 25000",
+   "t": 1791318677736,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24500 5 4278073 1",
+   "t": 1791318678163,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23499 5 4278073 1",
+   "t": 1791318679171,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22499 5 4278073 1",
+   "t": 1791318680177,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318680669",
+   "t": 1791318680669,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318680669",
+   "t": 1791318680707,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21498 5 4278073 1",
+   "t": 1791318681164,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20498 5 4278073 1",
+   "t": 1791318682165,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4278073 6 25000 19998",
+   "t": 1791318682668,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19498 7 4278073 6",
+   "t": 1791318683179,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4278073 20 25000 18497",
+   "t": 1791318684168,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18497 2 4278073 20",
+   "t": 1791318684170,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4278073 30 25000 18247",
+   "t": 1791318684418,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4278073 41 25000 17747",
+   "t": 1791318684919,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4278073 47 25000 17497",
+   "t": 1791318685175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17497 3 4278073 47",
+   "t": 1791318685180,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4278073 48 25000 17247",
+   "t": 1791318685417,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4278073 49 25000 16747",
+   "t": 1791318685922,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16496 8 4278073 49",
+   "t": 1791318686167,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4278073 54 25000 16246",
+   "t": 1791318686416,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4278073 55 25000 15746",
+   "t": 1791318686921,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15496 3 4278073 55",
+   "t": 1791318687177,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14495 3 4278073 55",
+   "t": 1791318688223,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4278073 57 25000 13995",
+   "t": 1791318688756,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4278073 60 25000 13745",
+   "t": 1791318688918,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13495 2 4278073 60",
+   "t": 1791318689182,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4278073 61 25000 12494",
+   "t": 1791318690169,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12494 9 4278073 61",
+   "t": 1791318690177,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4278073 62 25000 12244",
+   "t": 1791318690419,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11494 2 4278073 62",
+   "t": 1791318691168,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4278073 63 25000 10994",
+   "t": 1791318691673,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10494 9 4278073 63",
+   "t": 1791318692170,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4278073 64 25000 10000",
+   "t": 1791318692941,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9750 2 4278073 64",
+   "t": 1791318693171,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4278073 65 25000 10000",
+   "t": 1791318694171,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10000 9 4278073 65",
+   "t": 1791318694186,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8999 9 4278073 65",
+   "t": 1791318695202,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318695670",
+   "t": 1791318695670,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318695670",
+   "t": 1791318695706,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7998 9 4278073 65",
+   "t": 1791318696174,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4278073 66 25000 10000",
+   "t": 1791318696673,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9500 2 4278073 66",
+   "t": 1791318697173,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8499 2 4278073 66",
+   "t": 1791318698188,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7498 2 4278073 66",
+   "t": 1791318699264,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6498 2 4278073 66",
+   "t": 1791318700178,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5497 2 4278073 66",
+   "t": 1791318701175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4497 2 4278073 66",
+   "t": 1791318702175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3497 2 4278073 66",
+   "t": 1791318703175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2496 2 4278073 66",
+   "t": 1791318704176,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1495 2 4278073 66",
+   "t": 1791318705181,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 495 2 4278073 66",
+   "t": 1791318706178,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 2 4278073 1 66 0",
+   "t": 1791318706680,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1499",
+   "t": 1791318707178,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 498",
+   "t": 1791318708180,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 3945274",
+   "t": 1791318708694,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":10.0,\"1\":10.0,\"17\":10.0,\"2\":10.0,\"3\":10.0,\"19\":10.0,\"20\":9.0,\"6\":10.0},\"totalRotoPoints\":79.0,\"teamId\":1},{\"statValues\":{\"0\":2375.0,\"1\":68.0,\"17\":130.0,\"2\":129.0,\"3\":486.0,\"19\":0.53596889,\"20\":0.88340807,\"6\":372.0},\"statRotoPoints\":{\"0\":9.0,\"1\":9.0,\"17\":9.0,\"2\":9.0,\"3\":9.0,\"19\":9.0,\"20\":10.0,\"6\":9.0},\"totalRotoPoints\":73.0,\"teamId\":2},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":7},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":8}]}",
+   "t": 1791318708701,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 9 25000",
+   "t": 1791318708702,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3945274 1 25000 25000",
+   "t": 1791318708930,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24750 9 3945274 1",
+   "t": 1791318709191,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23749 9 3945274 1",
+   "t": 1791318710243,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318710670",
+   "t": 1791318710670,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318710670",
+   "t": 1791318710770,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22749 9 3945274 1",
+   "t": 1791318711183,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21748 9 3945274 1",
+   "t": 1791318712181,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20748 9 3945274 1",
+   "t": 1791318713183,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19747 9 3945274 1",
+   "t": 1791318714701,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3945274 23 25000 18746",
+   "t": 1791318715186,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18746 2 3945274 23",
+   "t": 1791318715189,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 3945274 29 25000 18496",
+   "t": 1791318715487,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 3945274 30 25000 18246",
+   "t": 1791318715689,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 3945274 31 25000 17746",
+   "t": 1791318716183,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17746 3 3945274 31",
+   "t": 1791318716189,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 3945274 35 25000 17246",
+   "t": 1791318716685,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16746 5 3945274 35",
+   "t": 1791318717196,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15744 5 3945274 35",
+   "t": 1791318718185,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 3945274 38 25000 15494",
+   "t": 1791318718437,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 3945274 39 25000 15244",
+   "t": 1791318718694,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 3945274 42 25000 14994",
+   "t": 1791318718940,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3945274 44 25000 14744",
+   "t": 1791318719188,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14744 7 3945274 44",
+   "t": 1791318719192,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3945274 45 25000 14494",
+   "t": 1791318719439,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 3945274 46 25000 14244",
+   "t": 1791318719686,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3945274 49 25000 13743",
+   "t": 1791318720210,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13743 2 3945274 49",
+   "t": 1791318720213,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 3945274 50 25000 13493",
+   "t": 1791318720440,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12742 5 3945274 50",
+   "t": 1791318721266,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3945274 53 25000 12492",
+   "t": 1791318721439,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 3945274 54 25000 11992",
+   "t": 1791318721937,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11742 8 3945274 54",
+   "t": 1791318722189,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10741 8 3945274 54",
+   "t": 1791318723241,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 3945274 56 25000 10491",
+   "t": 1791318723440,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9740 2 3945274 56",
+   "t": 1791318724199,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8740 2 3945274 56",
+   "t": 1791318725189,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318725669",
+   "t": 1791318725670,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318725669",
+   "t": 1791318725704,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7739 2 3945274 56",
+   "t": 1791318726192,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6739 2 3945274 56",
+   "t": 1791318727191,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5738 2 3945274 56",
+   "t": 1791318728191,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4737 2 3945274 56",
+   "t": 1791318729195,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3736 2 3945274 56",
+   "t": 1791318730196,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2735 2 3945274 56",
+   "t": 1791318731214,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1734 2 3945274 56",
+   "t": 1791318732263,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 733 2 3945274 56",
+   "t": 1791318733197,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 2 3945274 6 56 0",
+   "t": 1791318733948,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1749",
+   "t": 1791318734197,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 748",
+   "t": 1791318735203,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4594268",
+   "t": 1791318735949,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":10.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":10.0,\"6\":9.0},\"totalRotoPoints\":77.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":9.0,\"2\":9.0,\"3\":9.0,\"19\":10.0,\"20\":9.0,\"6\":10.0},\"totalRotoPoints\":75.0,\"teamId\":1},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":7},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.5,\"1\":4.5,\"17\":4.5,\"2\":4.5,\"3\":4.5,\"19\":4.5,\"20\":4.5,\"6\":4.5},\"totalRotoPoints\":36.0,\"teamId\":8}]}",
+   "t": 1791318735982,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 1 25000",
+   "t": 1791318735988,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 1 24750 1",
+   "t": 1791318736200,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 1 23750 1",
+   "t": 1791318737200,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "AUTO_NOMINATION 4594268",
+   "t": 1791318737425,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 1 22749 1",
+   "t": 1791318738200,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "NOMINATE 4594268 1",
+   "t": 1791318739036,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4594268 1 25000 25000",
+   "t": 1791318739201,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 25000 1 4594268 1",
+   "t": 1791318739220,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23999 1 4594268 1",
+   "t": 1791318740204,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318740670",
+   "t": 1791318740672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318740670",
+   "t": 1791318740714,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22998 1 4594268 1",
+   "t": 1791318741205,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21998 1 4594268 1",
+   "t": 1791318742224,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 7 25000 21248",
+   "t": 1791318742956,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20997 7 4594268 7",
+   "t": 1791318743273,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19997 7 4594268 7",
+   "t": 1791318744206,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4594268 21 25000 19247",
+   "t": 1791318744954,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18996 4 4594268 21",
+   "t": 1791318745251,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 35 25000 18246",
+   "t": 1791318745966,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4594268 37 25000 17996",
+   "t": 1791318746205,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17996 9 4594268 37",
+   "t": 1791318746207,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 42 25000 17246",
+   "t": 1791318746957,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16996 7 4594268 42",
+   "t": 1791318747205,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15995 7 4594268 42",
+   "t": 1791318748206,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4594268 51 25000 14995",
+   "t": 1791318749206,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14995 3 4594268 51",
+   "t": 1791318749218,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13994 3 4594268 51",
+   "t": 1791318750209,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 52 25000 13744",
+   "t": 1791318750457,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12994 7 4594268 52",
+   "t": 1791318751207,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4594268 53 25000 12744",
+   "t": 1791318751457,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11993 10 4594268 53",
+   "t": 1791318752208,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 54 25000 11492",
+   "t": 1791318752729,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10992 7 4594268 54",
+   "t": 1791318753233,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9991 7 4594268 54",
+   "t": 1791318754284,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4594268 58 25000 10000",
+   "t": 1791318754961,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9750 3 4594268 58",
+   "t": 1791318755387,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318755669",
+   "t": 1791318755671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318755669",
+   "t": 1791318755706,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 60 25000 10000",
+   "t": 1791318755712,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9500 7 4594268 60",
+   "t": 1791318756210,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4594268 61 25000 10000",
+   "t": 1791318756965,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 62 25000 10000",
+   "t": 1791318757213,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10000 7 4594268 62",
+   "t": 1791318757226,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9000 7 4594268 62",
+   "t": 1791318758212,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7999 7 4594268 62",
+   "t": 1791318759220,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4594268 63 25000 10000",
+   "t": 1791318759713,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4594268 64 25000 10000",
+   "t": 1791318760303,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10000 7 4594268 64",
+   "t": 1791318760305,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8999 7 4594268 64",
+   "t": 1791318761214,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4594268 65 25000 10000",
+   "t": 1791318761964,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9750 3 4594268 65",
+   "t": 1791318762216,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8750 3 4594268 65",
+   "t": 1791318763215,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7749 3 4594268 65",
+   "t": 1791318764244,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6749 3 4594268 65",
+   "t": 1791318765293,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5748 3 4594268 65",
+   "t": 1791318766217,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4748 3 4594268 65",
+   "t": 1791318767216,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3747 3 4594268 65",
+   "t": 1791318768217,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2747 3 4594268 65",
+   "t": 1791318769315,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1746 3 4594268 65",
+   "t": 1791318770225,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318770671",
+   "t": 1791318770671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318770671",
+   "t": 1791318770708,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 746 3 4594268 65",
+   "t": 1791318771217,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 3 4594268 2 65 0",
+   "t": 1791318771970,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1749",
+   "t": 1791318772219,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 749",
+   "t": 1791318773311,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4431678",
+   "t": 1791318773974,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":10.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":10.0,\"6\":9.0},\"totalRotoPoints\":77.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":9.0,\"2\":9.0,\"3\":9.0,\"19\":10.0,\"20\":9.0,\"6\":10.0},\"totalRotoPoints\":75.0,\"teamId\":1},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":8.0,\"1\":8.0,\"17\":8.0,\"2\":8.0,\"3\":8.0,\"19\":8.0,\"20\":8.0,\"6\":8.0},\"totalRotoPoints\":64.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":7},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.0,\"3\":4.0,\"19\":4.0,\"20\":4.0,\"6\":4.0},\"totalRotoPoints\":32.0,\"teamId\":8}]}",
+   "t": 1791318773976,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 4 25000",
+   "t": 1791318773995,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4431678 1 25000 25000",
+   "t": 1791318774220,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 25000 4 4431678 1",
+   "t": 1791318774235,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24000 4 4431678 1",
+   "t": 1791318775255,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22999 4 4431678 1",
+   "t": 1791318776301,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21998 4 4431678 1",
+   "t": 1791318777393,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4431678 22 25000 21497",
+   "t": 1791318777723,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4431678 32 25000 20997",
+   "t": 1791318778224,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20997 4 4431678 32",
+   "t": 1791318778230,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4431678 35 25000 20747",
+   "t": 1791318778474,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4431678 44 25000 20247",
+   "t": 1791318778976,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19996 8 4431678 44",
+   "t": 1791318779227,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18995 8 4431678 44",
+   "t": 1791318780226,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4431678 45 25000 17994",
+   "t": 1791318781226,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17994 7 4431678 45",
+   "t": 1791318781228,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16994 7 4431678 45",
+   "t": 1791318782227,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4431678 46 25000 16744",
+   "t": 1791318782595,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15993 3 4431678 46",
+   "t": 1791318783227,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4431678 47 25000 15493",
+   "t": 1791318783732,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4431678 51 25000 15243",
+   "t": 1791318783977,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14993 8 4431678 51",
+   "t": 1791318784227,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4431678 52 25000 13992",
+   "t": 1791318785261,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13992 10 4431678 52",
+   "t": 1791318785262,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318785671",
+   "t": 1791318785671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318785671",
+   "t": 1791318785768,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4431678 54 25000 13242",
+   "t": 1791318785983,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12992 4 4431678 54",
+   "t": 1791318786264,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4431678 56 25000 12491",
+   "t": 1791318786789,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4431678 57 25000 11991",
+   "t": 1791318787314,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11991 4 4431678 57",
+   "t": 1791318787316,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4431678 59 25000 11240",
+   "t": 1791318788055,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4431678 60 25000 10990",
+   "t": 1791318788235,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10990 4 4431678 60",
+   "t": 1791318788239,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4431678 61 25000 10490",
+   "t": 1791318788731,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9989 8 4431678 61",
+   "t": 1791318789231,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4431678 62 25000 10000",
+   "t": 1791318790233,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10000 7 4431678 62",
+   "t": 1791318790240,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8999 7 4431678 62",
+   "t": 1791318791235,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7998 7 4431678 62",
+   "t": 1791318792237,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6997 7 4431678 62",
+   "t": 1791318793236,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5996 7 4431678 62",
+   "t": 1791318794237,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4995 7 4431678 62",
+   "t": 1791318795255,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3994 7 4431678 62",
+   "t": 1791318796244,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2993 7 4431678 62",
+   "t": 1791318797333,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1993 7 4431678 62",
+   "t": 1791318798326,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 992 7 4431678 62",
+   "t": 1791318799245,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 7 4431678 1 62 0",
+   "t": 1791318800243,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 2000",
+   "t": 1791318800297,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318800671",
+   "t": 1791318800671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318800671",
+   "t": 1791318800707,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 999",
+   "t": 1791318801245,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 3908809",
+   "t": 1791318802246,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":10.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":9.0,\"6\":9.0},\"totalRotoPoints\":76.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":9.0,\"2\":9.0,\"3\":9.0,\"19\":10.0,\"20\":8.0,\"6\":10.0},\"totalRotoPoints\":74.0,\"teamId\":1},{\"statValues\":{\"0\":1763.0,\"1\":43.0,\"17\":200.0,\"2\":114.0,\"3\":412.0,\"19\":0.45575221,\"20\":0.88617886,\"6\":249.0},\"statRotoPoints\":{\"0\":7.0,\"1\":7.0,\"17\":7.0,\"2\":8.0,\"3\":8.0,\"19\":7.0,\"20\":10.0,\"6\":7.0},\"totalRotoPoints\":61.0,\"teamId\":7},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":8.0,\"1\":8.0,\"17\":8.0,\"2\":7.0,\"3\":7.0,\"19\":8.0,\"20\":7.0,\"6\":8.0},\"totalRotoPoints\":61.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":8}]}",
+   "t": 1791318802249,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 8 25000",
+   "t": 1791318802256,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 1 25000 8",
+   "t": 1791318802258,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 3908809 1 25000 25000",
+   "t": 1791318802515,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24249 8 3908809 1",
+   "t": 1791318803245,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23249 8 3908809 1",
+   "t": 1791318804275,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22248 8 3908809 1",
+   "t": 1791318805248,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21248 8 3908809 1",
+   "t": 1791318806250,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 3908809 16 25000 20998",
+   "t": 1791318806497,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 3908809 30 25000 20247",
+   "t": 1791318807248,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20247 8 3908809 30",
+   "t": 1791318807249,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19247 8 3908809 30",
+   "t": 1791318808282,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 3908809 35 25000 18997",
+   "t": 1791318808502,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 3908809 36 25000 18747",
+   "t": 1791318808810,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18246 8 3908809 36",
+   "t": 1791318809331,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 3908809 39 25000 17246",
+   "t": 1791318810254,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17246 9 3908809 39",
+   "t": 1791318810267,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 3908809 41 25000 16496",
+   "t": 1791318810999,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16245 10 3908809 41",
+   "t": 1791318811249,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 3908809 44 25000 15995",
+   "t": 1791318811499,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 3908809 46 25000 15745",
+   "t": 1791318811750,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 3908809 47 25000 15245",
+   "t": 1791318812256,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15245 10 3908809 47",
+   "t": 1791318812264,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3908809 49 25000 14494",
+   "t": 1791318813001,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 3908809 50 25000 14244",
+   "t": 1791318813251,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14244 6 3908809 50",
+   "t": 1791318813253,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3908809 51 25000 13494",
+   "t": 1791318814050,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13244 7 3908809 51",
+   "t": 1791318814255,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 3908809 52 25000 12493",
+   "t": 1791318815192,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12242 6 3908809 52",
+   "t": 1791318815253,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 3908809 53 25000 11992",
+   "t": 1791318815503,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318815671",
+   "t": 1791318815671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318815671",
+   "t": 1791318815710,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 3908809 54 25000 11491",
+   "t": 1791318816003,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11241 6 3908809 54",
+   "t": 1791318816254,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 3908809 55 25000 10491",
+   "t": 1791318817004,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10241 7 3908809 55",
+   "t": 1791318817254,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9240 7 3908809 55",
+   "t": 1791318818365,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8239 7 3908809 55",
+   "t": 1791318819289,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7238 7 3908809 55",
+   "t": 1791318820339,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6237 7 3908809 55",
+   "t": 1791318821261,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5237 7 3908809 55",
+   "t": 1791318822258,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4236 7 3908809 55",
+   "t": 1791318823284,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3234 7 3908809 55",
+   "t": 1791318824262,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2233 7 3908809 55",
+   "t": 1791318825270,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1232 7 3908809 55",
+   "t": 1791318826263,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 231 7 3908809 55",
+   "t": 1791318827264,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 7 3908809 2 55 0",
+   "t": 1791318827515,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1249",
+   "t": 1791318828265,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 248",
+   "t": 1791318829268,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4065648",
+   "t": 1791318829518,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":9.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":9.0,\"6\":9.0},\"totalRotoPoints\":75.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":8.0,\"2\":8.0,\"3\":9.0,\"19\":10.0,\"20\":8.0,\"6\":10.0},\"totalRotoPoints\":72.0,\"teamId\":1},{\"statValues\":{\"0\":3665.0,\"1\":64.0,\"17\":436.0,\"2\":228.0,\"3\":817.0,\"19\":0.46045504,\"20\":0.86939821,\"6\":590.0},\"statRotoPoints\":{\"0\":8.0,\"1\":8.0,\"17\":10.0,\"2\":9.0,\"3\":8.0,\"19\":7.0,\"20\":10.0,\"6\":8.0},\"totalRotoPoints\":68.0,\"teamId\":7},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":7.0,\"1\":7.0,\"17\":7.0,\"2\":7.0,\"3\":7.0,\"19\":8.0,\"20\":7.0,\"6\":7.0},\"totalRotoPoints\":57.0,\"teamId\":3},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.5,\"1\":3.5,\"17\":3.5,\"2\":3.5,\"3\":3.5,\"19\":3.5,\"20\":3.5,\"6\":3.5},\"totalRotoPoints\":28.0,\"teamId\":8}]}",
+   "t": 1791318829521,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 3 25000",
+   "t": 1791318829521,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4065648 1 25000 25000",
+   "t": 1791318829777,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24500 3 4065648 1",
+   "t": 1791318830301,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318830670",
+   "t": 1791318830671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318830670",
+   "t": 1791318830707,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23499 3 4065648 1",
+   "t": 1791318831349,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22498 3 4065648 1",
+   "t": 1791318832269,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21498 3 4065648 1",
+   "t": 1791318833269,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4065648 16 25000 20997",
+   "t": 1791318833770,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4065648 21 25000 20497",
+   "t": 1791318834271,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20497 3 4065648 21",
+   "t": 1791318834273,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4065648 30 25000 20247",
+   "t": 1791318834523,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4065648 42 25000 19997",
+   "t": 1791318834852,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19496 10 4065648 42",
+   "t": 1791318835272,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4065648 43 25000 18995",
+   "t": 1791318835876,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4065648 44 25000 18745",
+   "t": 1791318836068,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18495 4 4065648 44",
+   "t": 1791318836276,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4065648 48 25000 17745",
+   "t": 1791318837114,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17495 10 4065648 48",
+   "t": 1791318837272,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4065648 51 25000 16744",
+   "t": 1791318838028,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16494 8 4065648 51",
+   "t": 1791318838273,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4065648 54 25000 15494",
+   "t": 1791318839274,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15494 10 4065648 54",
+   "t": 1791318839282,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14493 10 4065648 54",
+   "t": 1791318840284,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4065648 55 25000 13993",
+   "t": 1791318840787,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13492 4 4065648 55",
+   "t": 1791318841408,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4065648 56 25000 13241",
+   "t": 1791318841525,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12491 10 4065648 56",
+   "t": 1791318842354,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4065648 57 25000 11990",
+   "t": 1791318842776,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4065648 58 25000 11740",
+   "t": 1791318843045,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11490 10 4065648 58",
+   "t": 1791318843277,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10490 10 4065648 58",
+   "t": 1791318844294,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "AUTODRAFT true",
+   "t": 1791318844629,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTODRAFT 1 true",
+   "t": 1791318844666,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9489 10 4065648 58",
+   "t": 1791318845282,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318845672",
+   "t": 1791318845672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318845672",
+   "t": 1791318845710,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8488 10 4065648 58",
+   "t": 1791318846281,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7487 10 4065648 58",
+   "t": 1791318847286,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6487 10 4065648 58",
+   "t": 1791318848280,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5486 10 4065648 58",
+   "t": 1791318849282,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4485 10 4065648 58",
+   "t": 1791318850285,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3484 10 4065648 58",
+   "t": 1791318851283,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2484 10 4065648 58",
+   "t": 1791318852321,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1483 10 4065648 58",
+   "t": 1791318853373,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 482 10 4065648 58",
+   "t": 1791318854286,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 10 4065648 4 58 0",
+   "t": 1791318854790,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1499",
+   "t": 1791318855286,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 498",
+   "t": 1791318856288,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4701230",
+   "t": 1791318856788,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":9.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":9.0,\"6\":9.0},\"totalRotoPoints\":75.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":8.0,\"2\":8.0,\"3\":9.0,\"19\":10.0,\"20\":8.0,\"6\":10.0},\"totalRotoPoints\":72.0,\"teamId\":1},{\"statValues\":{\"0\":3665.0,\"1\":64.0,\"17\":436.0,\"2\":228.0,\"3\":817.0,\"19\":0.46045504,\"20\":0.86939821,\"6\":590.0},\"statRotoPoints\":{\"0\":8.0,\"1\":8.0,\"17\":10.0,\"2\":9.0,\"3\":8.0,\"19\":7.0,\"20\":10.0,\"6\":7.0},\"totalRotoPoints\":67.0,\"teamId\":7},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":7.0,\"1\":7.0,\"17\":7.0,\"2\":7.0,\"3\":6.0,\"19\":8.0,\"20\":6.0,\"6\":6.0},\"totalRotoPoints\":54.0,\"teamId\":3},{\"statValues\":{\"0\":1869.0,\"1\":35.0,\"17\":236.0,\"2\":77.0,\"3\":406.0,\"19\":0.45415778,\"20\":0.81797235,\"6\":602.0},\"statRotoPoints\":{\"0\":6.0,\"1\":6.0,\"17\":6.0,\"2\":6.0,\"3\":7.0,\"19\":6.0,\"20\":7.0,\"6\":8.0},\"totalRotoPoints\":52.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.0,\"1\":3.0,\"17\":3.0,\"2\":3.0,\"3\":3.0,\"19\":3.0,\"20\":3.0,\"6\":3.0},\"totalRotoPoints\":24.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.0,\"1\":3.0,\"17\":3.0,\"2\":3.0,\"3\":3.0,\"19\":3.0,\"20\":3.0,\"6\":3.0},\"totalRotoPoints\":24.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.0,\"1\":3.0,\"17\":3.0,\"2\":3.0,\"3\":3.0,\"19\":3.0,\"20\":3.0,\"6\":3.0},\"totalRotoPoints\":24.0,\"teamId\":4},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.0,\"1\":3.0,\"17\":3.0,\"2\":3.0,\"3\":3.0,\"19\":3.0,\"20\":3.0,\"6\":3.0},\"totalRotoPoints\":24.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":3.0,\"1\":3.0,\"17\":3.0,\"2\":3.0,\"3\":3.0,\"19\":3.0,\"20\":3.0,\"6\":3.0},\"totalRotoPoints\":24.0,\"teamId\":8}]}",
+   "t": 1791318856795,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 6 25000",
+   "t": 1791318856799,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4701230 1 25000 25000",
+   "t": 1791318857041,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24749 6 4701230 1",
+   "t": 1791318857289,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23748 6 4701230 1",
+   "t": 1791318858302,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22747 6 4701230 1",
+   "t": 1791318859293,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21746 6 4701230 1",
+   "t": 1791318860292,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4701230 5 25000 21496",
+   "t": 1791318860543,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318860671",
+   "t": 1791318860672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318860671",
+   "t": 1791318860739,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 4701230 7 25000 20746",
+   "t": 1791318861292,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20746 5 4701230 7",
+   "t": 1791318861293,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19745 5 4701230 7",
+   "t": 1791318862301,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4701230 18 25000 18994",
+   "t": 1791318863045,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18743 7 4701230 18",
+   "t": 1791318863331,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17742 7 4701230 18",
+   "t": 1791318864378,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4701230 27 25000 17492",
+   "t": 1791318864547,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4701230 32 25000 17241",
+   "t": 1791318864797,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4701230 39 25000 16991",
+   "t": 1791318865049,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16741 9 4701230 39",
+   "t": 1791318865297,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4701230 40 25000 16241",
+   "t": 1791318865797,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15739 6 4701230 40",
+   "t": 1791318866337,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4701230 43 25000 14988",
+   "t": 1791318867050,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4701230 45 25000 14738",
+   "t": 1791318867301,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14738 7 4701230 45",
+   "t": 1791318867303,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4701230 46 25000 14236",
+   "t": 1791318867803,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4701230 48 25000 13986",
+   "t": 1791318868059,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13736 9 4701230 48",
+   "t": 1791318868305,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4701230 49 25000 13236",
+   "t": 1791318868802,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12736 7 4701230 49",
+   "t": 1791318869303,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4701230 53 25000 11735",
+   "t": 1791318870303,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11735 4 4701230 53",
+   "t": 1791318870304,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4701230 54 25000 10734",
+   "t": 1791318871306,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10734 9 4701230 54",
+   "t": 1791318871315,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9733 9 4701230 54",
+   "t": 1791318872308,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4701230 56 25000 10000",
+   "t": 1791318872810,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9500 4 4701230 56",
+   "t": 1791318873305,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8498 4 4701230 56",
+   "t": 1791318874340,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7498 4 4701230 56",
+   "t": 1791318875390,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318875671",
+   "t": 1791318875672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318875671",
+   "t": 1791318875709,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6497 4 4701230 56",
+   "t": 1791318876318,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5496 4 4701230 56",
+   "t": 1791318877311,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4496 4 4701230 56",
+   "t": 1791318878309,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3495 4 4701230 56",
+   "t": 1791318879312,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2494 4 4701230 56",
+   "t": 1791318880311,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1493 4 4701230 56",
+   "t": 1791318881313,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 493 4 4701230 56",
+   "t": 1791318882312,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 4 4701230 4 56 0",
+   "t": 1791318882816,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1500",
+   "t": 1791318883316,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 498",
+   "t": 1791318884315,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4433134",
+   "t": 1791318884826,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":9.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":9.0,\"6\":9.0},\"totalRotoPoints\":75.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":8.0,\"2\":8.0,\"3\":9.0,\"19\":10.0,\"20\":8.0,\"6\":10.0},\"totalRotoPoints\":72.0,\"teamId\":1},{\"statValues\":{\"0\":3665.0,\"1\":64.0,\"17\":436.0,\"2\":228.0,\"3\":817.0,\"19\":0.46045504,\"20\":0.86939821,\"6\":590.0},\"statRotoPoints\":{\"0\":8.0,\"1\":8.0,\"17\":10.0,\"2\":9.0,\"3\":8.0,\"19\":6.0,\"20\":10.0,\"6\":6.0},\"totalRotoPoints\":65.0,\"teamId\":7},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":7.0,\"1\":7.0,\"17\":7.0,\"2\":6.5,\"3\":5.0,\"19\":7.0,\"20\":6.0,\"6\":5.0},\"totalRotoPoints\":50.5,\"teamId\":3},{\"statValues\":{\"0\":1655.0,\"1\":36.0,\"17\":121.0,\"2\":94.0,\"3\":569.0,\"19\":0.48968254,\"20\":0.78534031,\"6\":763.0},\"statRotoPoints\":{\"0\":5.0,\"1\":6.0,\"17\":5.0,\"2\":6.5,\"3\":7.0,\"19\":8.0,\"20\":5.0,\"6\":8.0},\"totalRotoPoints\":50.5,\"teamId\":4},{\"statValues\":{\"0\":1869.0,\"1\":35.0,\"17\":236.0,\"2\":77.0,\"3\":406.0,\"19\":0.45415778,\"20\":0.81797235,\"6\":602.0},\"statRotoPoints\":{\"0\":6.0,\"1\":5.0,\"17\":6.0,\"2\":5.0,\"3\":6.0,\"19\":5.0,\"20\":7.0,\"6\":7.0},\"totalRotoPoints\":47.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.5,\"1\":2.5,\"17\":2.5,\"2\":2.5,\"3\":2.5,\"19\":2.5,\"20\":2.5,\"6\":2.5},\"totalRotoPoints\":20.0,\"teamId\":5},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.5,\"1\":2.5,\"17\":2.5,\"2\":2.5,\"3\":2.5,\"19\":2.5,\"20\":2.5,\"6\":2.5},\"totalRotoPoints\":20.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.5,\"1\":2.5,\"17\":2.5,\"2\":2.5,\"3\":2.5,\"19\":2.5,\"20\":2.5,\"6\":2.5},\"totalRotoPoints\":20.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.5,\"1\":2.5,\"17\":2.5,\"2\":2.5,\"3\":2.5,\"19\":2.5,\"20\":2.5,\"6\":2.5},\"totalRotoPoints\":20.0,\"teamId\":8}]}",
+   "t": 1791318884831,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 2 25000",
+   "t": 1791318884845,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4433134 1 25000 25000",
+   "t": 1791318885069,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24750 2 4433134 1",
+   "t": 1791318885349,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23749 2 4433134 1",
+   "t": 1791318886403,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22748 2 4433134 1",
+   "t": 1791318887320,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21748 2 4433134 1",
+   "t": 1791318888318,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4433134 13 25000 20747",
+   "t": 1791318889330,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20747 3 4433134 13",
+   "t": 1791318889337,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19745 3 4433134 13",
+   "t": 1791318890321,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318890672",
+   "t": 1791318890672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318890672",
+   "t": 1791318890709,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4433134 15 25000 19245",
+   "t": 1791318890820,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18745 10 4433134 15",
+   "t": 1791318891322,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 4433134 29 25000 18494",
+   "t": 1791318891640,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4433134 36 25000 18244",
+   "t": 1791318891823,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4433134 37 25000 17994",
+   "t": 1791318892075,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17744 9 4433134 37",
+   "t": 1791318892324,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16743 9 4433134 37",
+   "t": 1791318893324,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4433134 38 25000 16242",
+   "t": 1791318893823,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15742 1 4433134 38",
+   "t": 1791318894332,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 4433134 47 25000 15492",
+   "t": 1791318894573,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14742 5 4433134 47",
+   "t": 1791318895325,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4433134 49 25000 14492",
+   "t": 1791318895575,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4433134 51 25000 14242",
+   "t": 1791318895835,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13741 2 4433134 51",
+   "t": 1791318896361,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4433134 52 25000 13491",
+   "t": 1791318896585,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4433134 53 25000 13241",
+   "t": 1791318896878,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4433134 55 25000 12740",
+   "t": 1791318897412,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12740 6 4433134 55",
+   "t": 1791318897415,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4433134 56 25000 11990",
+   "t": 1791318898080,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11740 1 4433134 56",
+   "t": 1791318898325,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4433134 57 25000 10989",
+   "t": 1791318899085,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 4433134 58 25000 10738",
+   "t": 1791318899329,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10738 5 4433134 58",
+   "t": 1791318899330,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9736 5 4433134 58",
+   "t": 1791318900329,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4433134 59 25000 10000",
+   "t": 1791318901084,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9750 6 4433134 59",
+   "t": 1791318901392,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 5 4433134 60 25000 10000",
+   "t": 1791318901603,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9250 5 4433134 60",
+   "t": 1791318902333,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8248 5 4433134 60",
+   "t": 1791318903336,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7247 5 4433134 60",
+   "t": 1791318904333,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6246 5 4433134 60",
+   "t": 1791318905337,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318905672",
+   "t": 1791318905673,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318905672",
+   "t": 1791318905796,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5246 5 4433134 60",
+   "t": 1791318906335,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4245 5 4433134 60",
+   "t": 1791318907372,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3244 5 4433134 60",
+   "t": 1791318908418,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2243 5 4433134 60",
+   "t": 1791318909338,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1243 5 4433134 60",
+   "t": 1791318910426,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 241 5 4433134 60",
+   "t": 1791318911339,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 5 4433134 3 60 0",
+   "t": 1791318911592,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1249",
+   "t": 1791318912341,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 249",
+   "t": 1791318913341,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4432166",
+   "t": 1791318913660,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":9.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":9.0,\"6\":9.0},\"totalRotoPoints\":75.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":8.0,\"2\":8.0,\"3\":9.0,\"19\":10.0,\"20\":8.0,\"6\":10.0},\"totalRotoPoints\":72.0,\"teamId\":1},{\"statValues\":{\"0\":3665.0,\"1\":64.0,\"17\":436.0,\"2\":228.0,\"3\":817.0,\"19\":0.46045504,\"20\":0.86939821,\"6\":590.0},\"statRotoPoints\":{\"0\":8.0,\"1\":7.0,\"17\":10.0,\"2\":9.0,\"3\":8.0,\"19\":5.0,\"20\":10.0,\"6\":6.0},\"totalRotoPoints\":63.0,\"teamId\":7},{\"statValues\":{\"0\":1655.0,\"1\":36.0,\"17\":121.0,\"2\":94.0,\"3\":569.0,\"19\":0.48968254,\"20\":0.78534031,\"6\":763.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":5.5,\"3\":7.0,\"19\":8.0,\"20\":4.0,\"6\":8.0},\"totalRotoPoints\":47.5,\"teamId\":4},{\"statValues\":{\"0\":1355.0,\"1\":94.0,\"17\":75.0,\"2\":101.0,\"3\":432.0,\"19\":0.48425926,\"20\":0.79322034,\"6\":554.0},\"statRotoPoints\":{\"0\":4.0,\"1\":8.0,\"17\":4.0,\"2\":7.0,\"3\":6.0,\"19\":7.0,\"20\":5.0,\"6\":5.0},\"totalRotoPoints\":46.0,\"teamId\":5},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":7.0,\"1\":6.0,\"17\":7.0,\"2\":5.5,\"3\":4.0,\"19\":6.0,\"20\":6.0,\"6\":4.0},\"totalRotoPoints\":45.5,\"teamId\":3},{\"statValues\":{\"0\":1869.0,\"1\":35.0,\"17\":236.0,\"2\":77.0,\"3\":406.0,\"19\":0.45415778,\"20\":0.81797235,\"6\":602.0},\"statRotoPoints\":{\"0\":6.0,\"1\":4.0,\"17\":6.0,\"2\":4.0,\"3\":5.0,\"19\":4.0,\"20\":7.0,\"6\":7.0},\"totalRotoPoints\":43.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.0,\"1\":2.0,\"17\":2.0,\"2\":2.0,\"3\":2.0,\"19\":2.0,\"20\":2.0,\"6\":2.0},\"totalRotoPoints\":16.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.0,\"1\":2.0,\"17\":2.0,\"2\":2.0,\"3\":2.0,\"19\":2.0,\"20\":2.0,\"6\":2.0},\"totalRotoPoints\":16.0,\"teamId\":9},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":2.0,\"1\":2.0,\"17\":2.0,\"2\":2.0,\"3\":2.0,\"19\":2.0,\"20\":2.0,\"6\":2.0},\"totalRotoPoints\":16.0,\"teamId\":8}]}",
+   "t": 1791318913665,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 7 25000",
+   "t": 1791318913670,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4432166 1 25000 25000",
+   "t": 1791318913847,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24500 7 4432166 1",
+   "t": 1791318914344,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23500 7 4432166 1",
+   "t": 1791318915341,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22499 7 4432166 1",
+   "t": 1791318916349,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21498 7 4432166 1",
+   "t": 1791318917343,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20498 7 4432166 1",
+   "t": 1791318918381,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4432166 12 25000 19497",
+   "t": 1791318919429,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19497 4 4432166 12",
+   "t": 1791318919435,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4432166 16 25000 18747",
+   "t": 1791318920095,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18497 3 4432166 16",
+   "t": 1791318920352,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318920672",
+   "t": 1791318920672,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318920672",
+   "t": 1791318920711,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4432166 20 25000 17997",
+   "t": 1791318920848,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4432166 25 25000 17746",
+   "t": 1791318921095,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4432166 33 25000 17496",
+   "t": 1791318921346,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17496 3 4432166 33",
+   "t": 1791318921350,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4432166 39 25000 16996",
+   "t": 1791318921844,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4432166 43 25000 16746",
+   "t": 1791318922097,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16496 3 4432166 43",
+   "t": 1791318922345,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4432166 47 25000 15746",
+   "t": 1791318923105,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15495 10 4432166 47",
+   "t": 1791318923345,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4432166 48 25000 14995",
+   "t": 1791318923940,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4432166 50 25000 14495",
+   "t": 1791318924351,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14495 8 4432166 50",
+   "t": 1791318924360,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13494 8 4432166 50",
+   "t": 1791318925350,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4432166 51 25000 12994",
+   "t": 1791318925847,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4432166 52 25000 12744",
+   "t": 1791318926150,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4432166 53 25000 12494",
+   "t": 1791318926347,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12494 1 4432166 53",
+   "t": 1791318926350,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4432166 54 25000 12244",
+   "t": 1791318926778,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4432166 55 25000 11993",
+   "t": 1791318926848,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11492 8 4432166 55",
+   "t": 1791318927349,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10492 8 4432166 55",
+   "t": 1791318928350,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9491 8 4432166 55",
+   "t": 1791318929382,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8490 8 4432166 55",
+   "t": 1791318930436,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7490 8 4432166 55",
+   "t": 1791318931354,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6489 8 4432166 55",
+   "t": 1791318932352,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 5488 8 4432166 55",
+   "t": 1791318933418,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 4487 8 4432166 55",
+   "t": 1791318934387,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 3486 8 4432166 55",
+   "t": 1791318935358,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318935672",
+   "t": 1791318935673,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318935672",
+   "t": 1791318935709,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 2485 8 4432166 55",
+   "t": 1791318936435,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 1485 8 4432166 55",
+   "t": 1791318937358,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 484 8 4432166 55",
+   "t": 1791318938366,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "SOLD 8 4432166 1 55 0",
+   "t": 1791318938859,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 1499",
+   "t": 1791318939358,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 3 499",
+   "t": 1791318940397,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "AUTOSUGGEST 4396993",
+   "t": 1791318940926,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PROJECTED_STANDINGS {\"projectedTeams\":[{\"statValues\":{\"0\":4620.0,\"1\":102.0,\"17\":399.0,\"2\":238.0,\"3\":1091.0,\"19\":0.50645161,\"20\":0.83474903,\"6\":950.0},\"statRotoPoints\":{\"0\":10.0,\"1\":9.0,\"17\":9.0,\"2\":10.0,\"3\":10.0,\"19\":9.0,\"20\":9.0,\"6\":9.0},\"totalRotoPoints\":75.0,\"teamId\":2},{\"statValues\":{\"0\":3798.0,\"1\":293.0,\"17\":268.0,\"2\":189.0,\"3\":962.0,\"19\":0.54018032,\"20\":0.81991525,\"6\":1731.0},\"statRotoPoints\":{\"0\":9.0,\"1\":10.0,\"17\":8.0,\"2\":8.0,\"3\":9.0,\"19\":10.0,\"20\":8.0,\"6\":10.0},\"totalRotoPoints\":72.0,\"teamId\":1},{\"statValues\":{\"0\":3665.0,\"1\":64.0,\"17\":436.0,\"2\":228.0,\"3\":817.0,\"19\":0.46045504,\"20\":0.86939821,\"6\":590.0},\"statRotoPoints\":{\"0\":8.0,\"1\":7.0,\"17\":10.0,\"2\":9.0,\"3\":8.0,\"19\":4.0,\"20\":10.0,\"6\":6.0},\"totalRotoPoints\":62.0,\"teamId\":7},{\"statValues\":{\"0\":1699.0,\"1\":55.0,\"17\":138.0,\"2\":97.0,\"3\":676.0,\"19\":0.46096096,\"20\":0.81818182,\"6\":386.0},\"statRotoPoints\":{\"0\":5.0,\"1\":5.0,\"17\":5.0,\"2\":6.0,\"3\":7.0,\"19\":5.0,\"20\":7.0,\"6\":4.0},\"totalRotoPoints\":44.0,\"teamId\":8},{\"statValues\":{\"0\":1355.0,\"1\":94.0,\"17\":75.0,\"2\":101.0,\"3\":432.0,\"19\":0.48425926,\"20\":0.79322034,\"6\":554.0},\"statRotoPoints\":{\"0\":3.0,\"1\":8.0,\"17\":3.0,\"2\":7.0,\"3\":5.0,\"19\":7.0,\"20\":4.0,\"6\":5.0},\"totalRotoPoints\":42.0,\"teamId\":5},{\"statValues\":{\"0\":2182.0,\"1\":58.0,\"17\":262.0,\"2\":94.0,\"3\":288.0,\"19\":0.48020766,\"20\":0.80438757,\"6\":374.0},\"statRotoPoints\":{\"0\":7.0,\"1\":6.0,\"17\":7.0,\"2\":4.5,\"3\":3.0,\"19\":6.0,\"20\":5.0,\"6\":3.0},\"totalRotoPoints\":41.5,\"teamId\":3},{\"statValues\":{\"0\":1655.0,\"1\":36.0,\"17\":121.0,\"2\":94.0,\"3\":569.0,\"19\":0.48968254,\"20\":0.78534031,\"6\":763.0},\"statRotoPoints\":{\"0\":4.0,\"1\":4.0,\"17\":4.0,\"2\":4.5,\"3\":6.0,\"19\":8.0,\"20\":3.0,\"6\":8.0},\"totalRotoPoints\":41.5,\"teamId\":4},{\"statValues\":{\"0\":1869.0,\"1\":35.0,\"17\":236.0,\"2\":77.0,\"3\":406.0,\"19\":0.45415778,\"20\":0.81797235,\"6\":602.0},\"statRotoPoints\":{\"0\":6.0,\"1\":3.0,\"17\":6.0,\"2\":3.0,\"3\":4.0,\"19\":3.0,\"20\":6.0,\"6\":7.0},\"totalRotoPoints\":38.0,\"teamId\":10},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":1.5,\"1\":1.5,\"17\":1.5,\"2\":1.5,\"3\":1.5,\"19\":1.5,\"20\":1.5,\"6\":1.5},\"totalRotoPoints\":12.0,\"teamId\":6},{\"statValues\":{\"0\":0.0,\"1\":0.0,\"17\":0.0,\"2\":0.0,\"3\":0.0,\"19\":0.0,\"20\":0.0,\"6\":0.0},\"statRotoPoints\":{\"0\":1.5,\"1\":1.5,\"17\":1.5,\"2\":1.5,\"3\":1.5,\"19\":1.5,\"20\":1.5,\"6\":1.5},\"totalRotoPoints\":12.0,\"teamId\":9}]}",
+   "t": 1791318940931,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "NOMINATION 10 25000",
+   "t": 1791318940938,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4396993 1 25000 25000",
+   "t": 1791318941111,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 24750 10 4396993 1",
+   "t": 1791318941453,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 23749 10 4396993 1",
+   "t": 1791318942361,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 22749 10 4396993 1",
+   "t": 1791318943364,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 21747 10 4396993 1",
+   "t": 1791318944421,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 9 4396993 6 25000 20747",
+   "t": 1791318945363,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 20747 9 4396993 6",
+   "t": 1791318945382,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 19746 9 4396993 6",
+   "t": 1791318946365,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 18746 9 4396993 6",
+   "t": 1791318947370,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 6 4396993 11 25000 18495",
+   "t": 1791318947614,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 17745 6 4396993 11",
+   "t": 1791318948365,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 3 4396993 20 25000 16744",
+   "t": 1791318949366,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 16744 3 4396993 20",
+   "t": 1791318949366,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4396993 29 25000 16493",
+   "t": 1791318949617,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4396993 31 25000 16243",
+   "t": 1791318949866,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 7 4396993 32 25000 15993",
+   "t": 1791318950117,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 15993 7 4396993 32",
+   "t": 1791318950131,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4396993 36 25000 15743",
+   "t": 1791318950388,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 10 4396993 37 25000 15493",
+   "t": 1791318950617,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "out",
+   "data": "PING PING%201791318950671",
+   "t": 1791318950671,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "PONG PING%201791318950671",
+   "t": 1791318950708,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 14993 10 4396993 37",
+   "t": 1791318951123,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 1 4396993 39 25000 14493",
+   "t": 1791318951619,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4396993 41 25000 13992",
+   "t": 1791318952129,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 13992 2 4396993 41",
+   "t": 1791318952132,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 4 4396993 42 25000 13742",
+   "t": 1791318952456,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4396993 43 25000 13491",
+   "t": 1791318952618,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4396993 44 25000 12991",
+   "t": 1791318953119,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 12991 2 4396993 44",
+   "t": 1791318953123,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 8 4396993 45 25000 12740",
+   "t": 1791318953373,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 11990 8 4396993 45",
+   "t": 1791318954126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "BID 2 4396993 46 25000 11489",
+   "t": 1791318954621,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 10988 2 4396993 46",
+   "t": 1791318955122,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 9987 2 4396993 46",
+   "t": 1791318956126,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 8985 2 4396993 46",
+   "t": 1791318957175,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 7984 2 4396993 46",
+   "t": 1791318958127,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  },
+  {
+   "dir": "in",
+   "data": "CLOCK 2 6983 2 4396993 46",
+   "t": 1791318959132,
+   "url": "wss://fantasydraft.espn.com/game-3/league-0/JOIN"
+  }
+ ]
+}

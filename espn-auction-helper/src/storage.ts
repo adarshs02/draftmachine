@@ -1,0 +1,32 @@
+import type { DraftEvent } from './engine/types'
+
+/** sessionStorage (per tab, survives a refresh) or localStorage (the browser-wide backup) in production. */
+export type KeyValueStore = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>
+
+const keyFor = (leagueId: number) => `eah:${leagueId}:events`
+
+export function loadEvents(store: KeyValueStore, leagueId: number): DraftEvent[] {
+  try {
+    const parsed: unknown = JSON.parse(store.getItem(keyFor(leagueId)) ?? '[]')
+    if (!Array.isArray(parsed)) return []
+    return parsed.filter((ev): ev is DraftEvent => typeof ev === 'object' && ev !== null)
+  } catch {
+    return []
+  }
+}
+
+export function saveEvents(store: KeyValueStore, leagueId: number, events: DraftEvent[]): void {
+  try {
+    store.setItem(keyFor(leagueId), JSON.stringify(events))
+  } catch {
+    // Storage full or blocked: keep drafting from memory.
+  }
+}
+
+export function clearEvents(store: KeyValueStore, leagueId: number): void {
+  try {
+    store.removeItem(keyFor(leagueId))
+  } catch {
+    // Storage blocked: nothing saved to clear.
+  }
+}
