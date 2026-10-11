@@ -8,6 +8,11 @@ export function tierForRank(rank: number): number {
   return i === -1 ? TIER_COUNT : i + 1
 }
 
+const rankOrLast = (v: PlayerValue) => v.rank ?? Number.MAX_SAFE_INTEGER
+
+/** Highest b first; ties (mostly the $1 crowd) by projection rank, unranked last. */
+export const byValue = (a: PlayerValue, b: PlayerValue): number => b.b - a.b || rankOrLast(a) - rankOrLast(b)
+
 export function assignTiers(values: PlayerValue[]): PlayerValue[] {
-  return [...values].sort((a, b) => b.b - a.b).map((v, i) => ({ ...v, tier: tierForRank(i + 1) }))
+  return [...values].sort(byValue).map((v, i) => ({ ...v, tier: tierForRank(i + 1) }))
 }

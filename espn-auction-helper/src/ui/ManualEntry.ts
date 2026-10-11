@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import type { DraftEvent, DraftState } from '../engine/types'
 import { normalizeName } from '../values/names'
+import { byValue } from '../values/tiers'
 import { teamLabel } from './format'
 import { html } from './html'
 import { resolvePlayer } from './resolve'
@@ -59,7 +60,7 @@ export function ManualEntry({ state, onEvent }: { state: DraftState; onEvent: (e
       else setError(r.error)
     }
   }
-  const suggestions = Object.values(state.values).sort((a, b) => b.b - a.b)
+  const suggestions = Object.values(state.values).sort(byValue)
   return html`
     <form class="manual" onSubmit=${(e: Event) => e.preventDefault()}>
       <h4>Manual entry</h4>

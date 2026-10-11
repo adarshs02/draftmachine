@@ -1,3 +1,4 @@
+import { byValue } from '../values/tiers'
 import type { PlayerValue } from '../values/types'
 import {
   BARGAIN_RATIO, COLD, HOT, INFLATION_MAX, INFLATION_MIN, STAR_TIER_MAX, TEMP_MIN_SALES, TEMP_MIN_VALUE, TEMP_WINDOW, WARM,
@@ -42,7 +43,7 @@ export const soldKeys = (s: DraftState): Set<string> => new Set(s.sales.map((x) 
 
 export function available(s: DraftState): PlayerValue[] {
   const sold = soldKeys(s)
-  return Object.values(s.values).filter((v) => !sold.has(v.key)).sort((a, b) => b.b - a.b)
+  return Object.values(s.values).filter((v) => !sold.has(v.key)).sort(byValue)
 }
 
 export function inflation(s: DraftState): number {

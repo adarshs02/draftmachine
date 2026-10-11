@@ -15,6 +15,13 @@ describe('normalizeName', () => {
     expect(normalizeName(input)).toBe(expected)
   })
 
+  it.each([
+    ['Alexandre Sarr', 'Alex Sarr'],
+    ['Nicolas Claxton', 'Nic Claxton'],
+  ])('maps the long form %s to %s', (long, short) => {
+    expect(normalizeName(long)).toBe(normalizeName(short))
+  })
+
   it('treats P.J. and PJ the same', () => {
     expect(normalizeName('P.J. Washington')).toBe(normalizeName('PJ Washington'))
   })

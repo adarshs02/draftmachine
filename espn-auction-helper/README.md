@@ -19,12 +19,14 @@ Needs Node 20 or newer.
 ```bash
 cd espn-auction-helper
 npm install
-npm run fetch-espn   # today's ESPN 2026-27 auction values
-npm run values       # blend with Josh Lloyd's decoded values -> data/values.json
+npm run fetch-espn   # today's ESPN 2026-27 player pool: ids, positions, ESPN average price
+npm run values       # blend data/auction-values.csv with Josh Lloyd's decoded values -> data/values.json
 npm run build
 ```
 
-`npm run fetch-espn` overwrites the committed `data/espn-players-2027.json`. Always run `npm run values` after it. Tests that read the real data, such as the value blend, may shift after a fetch.
+Values come from `data/auction-values.csv`, a projections export in Hashtag Basketball's auction-values layout (`R#, PLAYER, POS, TEAM, GP, MPG, TOTAL, VALUED AT, …`), blended with Josh's numbers. Players tied on value, mostly the $1 crowd, are ordered by the CSV's rank. To use edited projections, export the CSV from the projections sheet and save it over `data/auction-values.csv`. ESPN's own values and ranks are not used; ESPN supplies only player ids, positions and its average price, which the helper uses as the room's market price.
+
+`npm run fetch-espn` overwrites the committed `data/espn-players-2027.json`. Always run `npm run values` after it, and after replacing `data/auction-values.csv`. Tests that read the real data, such as the value blend, may shift after a fetch.
 
 Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `espn-auction-helper/dist`.
 

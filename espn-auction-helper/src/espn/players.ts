@@ -12,8 +12,9 @@ export interface EspnPlayer {
 }
 
 export const PLAYERS_URL = `${API_BASE}/${SEASON}/segments/0/leaguedefaults/1?view=kona_player_info`
+// The whole pool (~1100). A top-N cut would follow ESPN's own draft rank, which buries useful players far down.
 export const PLAYERS_FILTER = JSON.stringify({
-  players: { limit: 400, sortDraftRanks: { sortPriority: 100, sortAsc: true, value: 'STANDARD' } },
+  players: { limit: 1500, sortDraftRanks: { sortPriority: 100, sortAsc: true, value: 'STANDARD' } },
 })
 
 interface RawPlayer {

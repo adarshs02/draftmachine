@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { rescaleToLeague } from '../../src/values/rescale'
 import type { PlayerValue } from '../../src/values/types'
 
-const v = (key: string, b: number): PlayerValue => ({ key, espnId: null, name: key, slots: [11], b, consensus: 0, market: 0, josh: null, avoid: false, tier: 0 })
+const v = (key: string, b: number): PlayerValue => ({ key, espnId: null, name: key, slots: [11], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 0 })
 const sumTop = (xs: PlayerValue[], k: number) => xs.slice(0, k).reduce((s, x) => s + x.b, 0)
 
 describe('rescaleToLeague', () => {
@@ -21,6 +21,12 @@ describe('rescaleToLeague', () => {
     const out = rescaleToLeague(thirty, { teams: 2, budget: 100, rosterSize: 5 })
     expect(out[11].tier).toBe(1)
     expect(out[12].tier).toBe(2)
+  })
+
+  it('keeps $1 players in projection rank order', () => {
+    const tail = [{ ...v('c', 1), rank: 30 }, { ...v('a', 1), rank: 10 }, { ...v('b', 1), rank: 20 }]
+    const out = rescaleToLeague([...thirty, ...tail], { teams: 2, budget: 100, rosterSize: 5 })
+    expect(out.slice(-3).map((x) => x.key)).toEqual(['a', 'b', 'c'])
   })
 
   it('degenerates to $1 everywhere when nobody has surplus', () => {

@@ -1,5 +1,6 @@
 import type { DraftState } from '../engine/types'
 import { normalizeName } from '../values/names'
+import { byValue } from '../values/tiers'
 import type { PlayerValue } from '../values/types'
 
 export type Resolved = { key: string } | { error: string; matches: number }
@@ -20,7 +21,7 @@ export function resolvePlayer(state: DraftState, text: string): Resolved {
   const byLast = all.filter((v) => lastName(v.key) === typed)
   if (byLast.length === 1) return { key: byLast[0].key }
 
-  const matches: PlayerValue[] = [...new Set([...byPrefix, ...byLast])].sort((a, b) => b.b - a.b)
+  const matches: PlayerValue[] = [...new Set([...byPrefix, ...byLast])].sort(byValue)
   if (!matches.length) return { error: `No player matches "${shown}"`, matches: 0 }
   const names = matches.slice(0, 3).map((v) => v.name).join(', ')
   return { error: `"${shown}" matches ${matches.length} players: ${names}${matches.length > 3 ? '…' : ''}`, matches: matches.length }

@@ -1,6 +1,7 @@
 import type { EspnPlayer } from '../espn/players'
 import { joshMid, type JoshRow } from './josh'
 import { normalizeName } from './names'
+import type { ProjectionRow } from './projections'
 import { assignTiers, TIER_COUNT, tierForRank } from './tiers'
 import type { PlayerValue } from './types'
 
@@ -18,7 +19,7 @@ export function median(xs: number[]): number {
   return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
 }
 
-/** Converts Josh's 12-team dollars to ESPN's 10-team basis. */
+/** Converts Josh's 12-team dollars to the consensus (projected value) basis. */
 export function basisFactor(pairs: Array<{ josh: number; consensus: number }>): number {
   const both = pairs.filter((p) => p.josh >= 5 && p.consensus >= 5)
   if (!both.length) return 1
@@ -44,12 +45,27 @@ export function tierRatios(samples: Map<number, number[]>, min = RATIO_MIN, max 
 export interface BlendResult {
   values: PlayerValue[]
   unmatchedJosh: string[]
+  /** Projected players with a value but no ESPN entry: their value never reaches the draft room */
+  unmatchedProjections: string[]
   basis: number
   ratios: Record<number, number>
 }
 
-export function blendValues(espn: EspnPlayer[], josh: JoshRow[], weight = BLEND_WEIGHT): BlendResult {
-  const consTier = new Map([...espn].sort((a, b) => b.roto - a.roto).map((p, i) => [normalizeName(p.name), tierForRank(i + 1)]))
+/**
+ * Base values: Josh's midpoint blended with the projections' dollar value (the consensus).
+ * ESPN supplies only ids, slots and its own market price; its roto values and ranks are not used.
+ */
+export function blendValues(espn: EspnPlayer[], josh: JoshRow[], projections: ProjectionRow[], weight = BLEND_WEIGHT): BlendResult {
+  const projByKey = new Map(projections.map((r) => [normalizeName(r.name), r]))
+  const consensusOf = (key: string) => projByKey.get(key)?.value ?? 0
+  const rankOf = (key: string) => projByKey.get(key)?.rank ?? null
+  const rankOrLast = (key: string) => rankOf(key) ?? Number.MAX_SAFE_INTEGER
+  const consTier = new Map(
+    espn
+      .map((p) => normalizeName(p.name))
+      .sort((a, b) => consensusOf(b) - consensusOf(a) || rankOrLast(a) - rankOrLast(b))
+      .map((key, i) => [key, tierForRank(i + 1)]),
+  )
   const joshByKey = new Map(josh.map((r) => [normalizeName(r.player), r]))
   const midFor = (key: string) => {
     const r = joshByKey.get(key)
@@ -59,7 +75,7 @@ export function blendValues(espn: EspnPlayer[], josh: JoshRow[], weight = BLEND_
   const pairs = espn.flatMap((p) => {
     const key = normalizeName(p.name)
     const mid = midFor(key)
-    return mid === null ? [] : [{ key, josh: mid, consensus: p.roto }]
+    return mid === null ? [] : [{ key, josh: mid, consensus: consensusOf(key) }]
   })
   const basis = basisFactor(pairs)
   const samples = new Map<number, number[]>()
@@ -73,8 +89,9 @@ export function blendValues(espn: EspnPlayer[], josh: JoshRow[], weight = BLEND_
   const values: PlayerValue[] = espn.map((p) => {
     const key = normalizeName(p.name)
     const mid = midFor(key)
-    const raw = mid !== null ? weight * mid * basis + (1 - weight) * p.roto : p.roto * ratios[consTier.get(key)!]
-    return { key, espnId: p.id, name: p.name, slots: p.slots, b: Math.max(1, round1(raw)), consensus: p.roto, market: p.market, josh: mid, avoid: joshByKey.get(key)?.kind === 'avoid', tier: 0 }
+    const consensus = consensusOf(key)
+    const raw = mid !== null ? weight * mid * basis + (1 - weight) * consensus : consensus * ratios[consTier.get(key)!]
+    return { key, espnId: p.id, name: p.name, slots: p.slots, b: Math.max(1, round1(raw)), consensus, market: p.market, josh: mid, avoid: joshByKey.get(key)?.kind === 'avoid', rank: rankOf(key), tier: 0 }
   })
 
   const espnKeys = new Set(espn.map((p) => normalizeName(p.name)))
@@ -84,8 +101,9 @@ export function blendValues(espn: EspnPlayer[], josh: JoshRow[], weight = BLEND_
     if (espnKeys.has(key)) continue
     unmatchedJosh.push(r.player)
     const mid = joshMid(r)
-    values.push({ key, espnId: null, name: r.player, slots: [], b: Math.max(1, round1((mid ?? 1) * basis)), consensus: 0, market: 0, josh: mid, avoid: r.kind === 'avoid', tier: 0 })
+    values.push({ key, espnId: null, name: r.player, slots: [], b: Math.max(1, round1((mid ?? 1) * basis)), consensus: 0, market: 0, josh: mid, avoid: r.kind === 'avoid', rank: rankOf(key), tier: 0 })
   }
+  const unmatchedProjections = projections.filter((r) => r.value > 0 && !espnKeys.has(normalizeName(r.name))).map((r) => r.name)
 
-  return { values: assignTiers(values), unmatchedJosh, basis, ratios }
+  return { values: assignTiers(values), unmatchedJosh, unmatchedProjections, basis, ratios }
 }

@@ -44,7 +44,7 @@ describe('fetchPlayers', () => {
     expect(calls[0].url).toBe(PLAYERS_URL)
     expect(calls[0].url).toContain('/games/fba/seasons/2027/')
     const filter = JSON.parse((calls[0].init?.headers as Record<string, string>)['X-Fantasy-Filter'])
-    expect(filter.players.limit).toBe(400)
+    expect(filter.players.limit).toBe(1500)
   })
 
   it('throws on HTTP errors', async () => {

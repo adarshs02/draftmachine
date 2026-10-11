@@ -1,4 +1,4 @@
-import { tierForRank } from './tiers'
+import { byValue, tierForRank } from './tiers'
 import type { PlayerValue } from './types'
 
 export interface LeagueShape {
@@ -13,7 +13,7 @@ export interface LeagueShape {
  * left out (the replacement level); everyone else is a $1 player.
  */
 export function rescaleToLeague(values: PlayerValue[], shape: LeagueShape): PlayerValue[] {
-  const sorted = [...values].sort((a, b) => b.b - a.b)
+  const sorted = [...values].sort(byValue)
   const rostered = shape.teams * shape.rosterSize
   const pool = shape.teams * shape.budget - rostered
   const replacement = sorted.length > rostered ? sorted[rostered].b - 1 : 0

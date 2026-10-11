@@ -7,7 +7,7 @@ import { normalizeName } from '../src/values/names'
 import type { PlayerValue } from '../src/values/types'
 
 export function pv(name: string, b: number, extra: Partial<PlayerValue> = {}): PlayerValue {
-  return { key: normalizeName(name), espnId: null, name, slots: [11], b, consensus: b, market: b, josh: null, avoid: false, tier: 3, ...extra }
+  return { key: normalizeName(name), espnId: null, name, slots: [11], b, consensus: b, market: b, josh: null, avoid: false, rank: null, tier: 3, ...extra }
 }
 
 export function settings(teamCount = 4, extra: Partial<Settings> = {}): Settings {

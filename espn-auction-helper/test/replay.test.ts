@@ -20,7 +20,7 @@ const josh = parseJoshCsv(readFileSync('data/josh-lloyd-2026-auction-mock.csv', 
 /** Josh's own numbers (12-team dollars); ESPN ROTO for players he never priced; $1 for caption-garbled names. */
 function replayValues(): PlayerValue[] {
   const byKey = new Map<string, PlayerValue>()
-  const blank = (key: string, name: string): PlayerValue => ({ key, espnId: null, name, slots: [11], b: 1, consensus: 0, market: 0, josh: null, avoid: false, tier: 0 })
+  const blank = (key: string, name: string): PlayerValue => ({ key, espnId: null, name, slots: [11], b: 1, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 0 })
   for (const p of espn) {
     const key = normalizeName(p.name)
     byKey.set(key, { ...blank(key, p.name), espnId: p.id, slots: p.slots, b: Math.max(1, p.roto), consensus: p.roto, market: p.market })

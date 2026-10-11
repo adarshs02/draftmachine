@@ -7,13 +7,15 @@ export interface PlayerValue {
   slots: number[]
   /** base auction value in league dollars */
   b: number
-  /** ESPN ROTO auction value, 0 when ESPN has none */
+  /** projected auction value from data/auction-values.csv, 0 when unprojected or below replacement */
   consensus: number
   /** ESPN average price paid, 0 when unknown */
   market: number
   /** Josh Lloyd's midpoint (12-team dollars), null when he gave none */
   josh: number | null
   avoid: boolean
+  /** projection rank, null when unprojected; orders players tied on b */
+  rank: number | null
   /** 1 = top 12 by b, 2 = 13-36, 3 = 37-72, 4 = 73-120, 5 = rest */
   tier: number
 }
