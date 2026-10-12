@@ -1,35 +1,81 @@
 import { describe, expect, it } from 'vitest'
-import { projectionsFrom, scoreTeams, teamTotals, type SeasonLine } from '../../src/sim/score'
+import { CATEGORIES, categoryWinChance, GAME_DISPERSION, GAMES_CV2, H2H, NBA_WEEKS, projectionsFrom, scoreTeams, weeklyLine, type SeasonLine } from '../../src/sim/score'
 
 const line = (pts: number, reb: number, ast: number, stl: number, blk: number, tpm: number, to: number, fgm: number, fga: number, ftm: number, fta: number): SeasonLine => ({
   pts, reb, ast, stl, blk, tpm, to, fgm, fga, ftm, fta,
 })
-// A: FG 40/80 = .500, FT 18/20 = .900; B: 45/100 = .450, 16/20 = .800; C: 30/50 = .600, 9/10 = .900
-const PROJ = projectionsFrom(
-  new Map([
-    [1, line(100, 50, 30, 10, 5, 20, 15, 40, 80, 18, 20)],
-    [2, line(90, 60, 30, 8, 7, 25, 10, 45, 100, 16, 20)],
-    [3, line(80, 40, 20, 12, 7, 10, 20, 30, 50, 9, 10)],
-  ]),
-)
+const scale = (l: SeasonLine, k: number): SeasonLine => Object.fromEntries(Object.entries(l).map(([f, x]) => [f, x * k])) as unknown as SeasonLine
+/** A typical rotation player's season. */
+const BASE = line(1300, 520, 300, 80, 50, 130, 150, 480, 1000, 210, 270)
+const team = (id: number) => Array.from({ length: 13 }, () => id)
 
-describe('scoreTeams', () => {
-  it('hand-computed 3-team roto: ties share points, TO is reversed, percentages from totals', () => {
-    const s = scoreTeams(new Map([[1, [1]], [2, [2]], [3, [3]]]), PROJ)
-    const by = (id: number) => s.find((t) => t.teamId === id)!
-    expect(by(1).points).toEqual({ pts: 3, reb: 2, ast: 2.5, stl: 2, blk: 1, tpm: 2, fgPct: 2, ftPct: 2.5, to: 2 })
-    expect(by(2).points).toEqual({ pts: 2, reb: 3, ast: 2.5, stl: 1, blk: 2.5, tpm: 3, fgPct: 1, ftPct: 1, to: 3 })
-    expect(by(3).points).toEqual({ pts: 1, reb: 1, ast: 1, stl: 3, blk: 2.5, tpm: 1, fgPct: 3, ftPct: 2.5, to: 1 })
-    expect(s.map((t) => [t.teamId, t.total, t.rank])).toEqual([[1, 19, 1], [2, 19, 1], [3, 16, 3]])
+describe('weeklyLine', () => {
+  it('weekly means are season totals over the NBA season in weeks; variance adds game-to-game and games-per-week swings', () => {
+    const { week } = weeklyLine([1], projectionsFrom(new Map([[1, line(10 * NBA_WEEKS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]])))
+    expect(week.mean.pts).toBeCloseTo(10, 9)
+    expect(week.variance.pts).toBeCloseTo(GAME_DISPERSION.pts * 10 + GAMES_CV2 * 100, 9)
   })
 
   it('FG% and FT% come from summed makes and attempts, not averaged percentages', () => {
     const p = projectionsFrom(new Map([[1, line(0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 0)], [2, line(0, 0, 0, 0, 0, 0, 0, 0, 30, 1, 4)]]))
-    expect(teamTotals([1, 2], p).totals).toMatchObject({ fgPct: 0.25, ftPct: 0.25 })
+    expect(weeklyLine([1, 2], p).week.mean).toMatchObject({ fgPct: 0.25, ftPct: 0.25 })
   })
 
   it('players without a projection count as missing and add nothing', () => {
-    expect(teamTotals([1, 99], PROJ)).toEqual({ totals: teamTotals([1], PROJ).totals, missing: 1 })
-    expect(teamTotals([], PROJ).totals.fgPct).toBe(0)
+    const p = projectionsFrom(new Map([[1, BASE]]))
+    expect(weeklyLine([1, 99], p)).toEqual({ week: weeklyLine([1], p).week, missing: 1 })
+    expect(weeklyLine([], p).week.mean.fgPct).toBe(0)
+  })
+})
+
+describe('categoryWinChance', () => {
+  const p = projectionsFrom(new Map([[1, BASE], [2, scale(BASE, 1.1)]]))
+  const a = weeklyLine(team(1), p).week
+  const b = weeklyLine(team(2), p).week
+
+  it('is 50% between equal teams in every category', () => {
+    for (const c of CATEGORIES) expect(categoryWinChance(a, a, c)).toBeCloseTo(0.5, 9)
+  })
+
+  it('favors more of a counting stat and fewer turnovers, and a 2-week matchup sharpens the edge', () => {
+    expect(categoryWinChance(b, a, 'pts')).toBeGreaterThan(0.5)
+    expect(categoryWinChance(b, a, 'to')).toBeLessThan(0.5)
+    expect(categoryWinChance(b, a, 'pts') + categoryWinChance(a, b, 'pts')).toBeCloseTo(1, 9)
+    expect(categoryWinChance(b, a, 'pts', 2)).toBeGreaterThan(categoryWinChance(b, a, 'pts'))
+  })
+})
+
+describe('scoreTeams', () => {
+  // Ten teams, team 1 far stronger: more of every counting stat, better shooting, fewer turnovers.
+  const strong = { ...scale(BASE, 1.5), to: 0.8 * BASE.to, fgm: 1.5 * 560, ftm: 1.5 * 250 }
+  const proj = projectionsFrom(new Map([[1, strong], ...Array.from({ length: 9 }, (_, i) => [i + 2, scale(BASE, 1 + i * 0.01)] as [number, SeasonLine])]))
+  const rosters = new Map(Array.from({ length: 10 }, (_, i) => [i + 1, team(i + 1)]))
+
+  it('a much stronger team wins nearly every weekly category, makes the playoffs and usually the title', () => {
+    const t = scoreTeams(rosters, proj).find((x) => x.teamId === 1)!
+    expect(t.winPct).toBeGreaterThan(0.95)
+    expect(t).toMatchObject({ rank: 1, playoffPct: 1, missingProjections: 0 })
+    expect(t.titlePct).toBeGreaterThan(0.9)
+    expect(t.avgSeed).toBeLessThan(1.1)
+  })
+
+  it(`every simulated season has ${H2H.playoffTeams} playoff teams, one champion and seeds 1 to 10`, () => {
+    const s = scoreTeams(rosters, proj)
+    const total = (f: (t: (typeof s)[number]) => number) => s.reduce((sum, t) => sum + f(t), 0)
+    expect(total((t) => t.playoffPct)).toBeCloseTo(H2H.playoffTeams, 9)
+    expect(total((t) => t.titlePct)).toBeCloseTo(1, 9)
+    expect(total((t) => t.avgSeed)).toBeCloseTo(55, 9)
+  })
+
+  it('is sorted by expected record and deterministic for a seed', () => {
+    const s = scoreTeams(rosters, proj, 7)
+    expect(s.map((t) => t.winPct)).toEqual([...s.map((t) => t.winPct)].sort((x, y) => y - x))
+    expect(scoreTeams(rosters, proj, 7)).toEqual(s)
+  })
+
+  it('equal teams share rank 1 with a 50% record', () => {
+    const flat = projectionsFrom(new Map([[1, BASE]]))
+    const s = scoreTeams(new Map(Array.from({ length: 4 }, (_, i) => [i + 1, team(1)])), flat)
+    expect(s.every((t) => t.rank === 1 && Math.abs(t.winPct - 0.5) < 1e-9)).toBe(true)
   })
 })

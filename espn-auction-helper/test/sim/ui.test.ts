@@ -64,6 +64,20 @@ describe('simulator page', () => {
     expect(container.textContent).toMatch(/BID|PASS|LET THEM|You lead/)
   })
 
+  it('after the draft, shows projected H2H standings: win %, playoff and title odds, weekly category odds', async () => {
+    const flat = { pts: 1000, reb: 400, ast: 200, stl: 60, blk: 40, tpm: 100, to: 120, fgm: 400, fga: 850, ftm: 150, fta: 190 }
+    const session = await createSession({ ...defaultConfig(), autopilot: true }, { ...DATA, projections: () => flat })
+    session.finish()
+    const root = document.createElement('div')
+    render(html`<${App} session=${session} onRestart=${() => {}} />`, root)
+    const heads = [...root.querySelectorAll('.standings th')].map((th) => th.textContent)
+    expect(heads).toEqual(['#', 'Team', 'Win %', 'Playoffs', 'Title', 'PTS', 'REB', 'AST', 'STL', 'BLK', '3PM', 'FG%', 'FT%', 'TO', 'No proj.'])
+    const rows = [...root.querySelectorAll('.standings tbody tr')]
+    expect(rows).toHaveLength(10)
+    // Identical projections: every team wins half its weekly categories.
+    expect(rows.every((r) => r.children[2].textContent === '50%' && r.children[5].textContent === '50%')).toBe(true)
+  }, 120_000)
+
   it('restart form: valid config, or a message', () => {
     const base = defaultConfig()
     const bots = base.options.botKinds.join(',')

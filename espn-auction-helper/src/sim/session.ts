@@ -69,7 +69,7 @@ export interface Session {
   refresh(): void
   recordingJson(): string
   subscribe(fn: () => void): () => void
-  /** projected roto standings, or null without projections */
+  /** projected H2H each-category standings, or null without projections */
   standings(): TeamScore[] | null
   myResult(): MyResult
 }
@@ -116,6 +116,8 @@ export async function createSession(config: SessionConfig, data: SessionData): P
   let paused = false
   let speed = config.speed
   let autopilot = !replay && config.autopilot
+  /** standings for the sales they were computed from: 400 simulated seasons is too slow for every render */
+  let scored: { sales: readonly unknown[]; standings: TeamScore[] } | null = null
   const listeners = new Set<() => void>()
 
   const controller = await createController({
@@ -278,8 +280,10 @@ export async function createSession(config: SessionConfig, data: SessionData): P
       const state = controller.getState()
       const rosters = new Map(state.settings.teams.map((t) => [t.id, [] as number[]]))
       // -1: a player with no ESPN id counts as missing a projection.
+      if (scored?.sales === state.sales) return scored.standings
       for (const x of state.sales) rosters.get(x.teamId)?.push(keyToEspn.get(x.playerKey) ?? -1)
-      return scoreTeams(rosters, data.projections)
+      scored = { sales: state.sales, standings: scoreTeams(rosters, data.projections, options.seed) }
+      return scored.standings
     },
     myResult() {
       const state = controller.getState()

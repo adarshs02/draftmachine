@@ -39,7 +39,7 @@ src/sim/rng.ts       seeded PRNG (mulberry32) + helpers (uniform, normal, pick)
 src/sim/bots.ts      bot personalities, private values, raise/stop decision, budget rules
 src/sim/auction.ts   event-driven auction state machine → ESPN-format frames + own ledger
 src/sim/policies.ts  my-team policies: autopilot (panel advice), market, espn-value; interactive = user
-src/sim/score.ts     projections → team totals → 9-cat roto points → ranks
+src/sim/score.ts     projections → weekly team lines → H2H each-category season sim → record, playoff and title odds
 src/sim/page.ts      interactive page (Preact + htm), mounts the real Panel via the real controller
 sim/index.html       page shell
 sim.mjs              esbuild serve + watch + live reload (`npm run sim`)
@@ -82,13 +82,15 @@ Data flow (batch): auction core → events → `reduce` (no DOM, no controller) 
 - **consensus** baseline: raise while price < projected value (`PlayerValue.consensus`, from `data/auction-values.csv` once the projections work lands).
 Baselines and autopilot see the same seeds/bots (paired comparison).
 
-### Scoring (projected 9-cat roto)
+### Scoring (projected H2H each category, 9 cats)
 - Projections come from the user's Hashtag Basketball export, committed as `data/hashtag-projections.csv`. It has per-game PTS, TREB, AST, STL, BLK, 3PM and TO, FG and FT made/attempted, plus GP and MPG for 200 players. The user changed this on 2026-10-11 because ESPN projections and ranks are distrusted.
   - Season totals = per-game × GP. When `data/auction-values.csv` (the projections sheet's export) lists the player, its GP and MPG override the export's, and per-game stats scale by the ratio of edited to original MPG.
   - Players join to ESPN ids by normalized name. Players without a projection contribute 0 and are counted.
-- Team totals = sum over all 13 rostered players; FG% = ΣFGM/ΣFGA, FT% = ΣFTM/ΣFTA; TO lower is better.
-- Roto: per category rank teams 10…1 points (ties share the average); total /90; overall rank by total.
-- Reported per draft: my rank, total, per-category ranks, $ left unspent, value captured = Σ(projected value − price) over my roster.
+- The user's league is H2H each category (ESPN `H2H_CATEGORY`): 19 one-week matchups, top 4 to the playoffs (2-week rounds). Changed from roto on 2026-10-12 at the user's request ("i only care about h2h 9 cat"). Ranking season totals against every team would order teams exactly like roto, so the score models weekly swings.
+- Weekly team line = sum over all 13 rostered players of season total / 23.4 (NBA weeks). Variance per counting stat = Σ (dispersion × weekly mean + 0.037 × weekly mean²): game-to-game swings (dispersion PTS 2.5, REB 1.2, AST 1.1, STL 1.0, BLK 1.2, 3PM 1.1, TO 1.0) plus 2–4 games a week. FG%/FT% = Σmakes/Σattempts with binomial shot luck (× 1.2) and shooter-mix variance. These are assumptions, not fitted. TO lower is better.
+- Weekly category win chance = normal approximation of the gap; 2-week playoff rounds use √2 × the gap over the sd.
+- Each draft: 400 seasons (seeded by the draft seed). Random double round robin; every category of every matchup drawn; top 4 by categories won (random tiebreak); semis 1 v 4, 2 v 3, final; more categories wins, ties to the higher seed.
+- Reported per draft: my win % (expected weekly categories won), playoff %, title %, average seed, per-category weekly win chance vs an average opponent, $ left unspent, value captured = Σ(projected value − price) over my roster. Batch averages title % (with 95% interval), playoff %, seed and win %.
 
 ## 6. Tuning
 

@@ -2,7 +2,7 @@ import { toSettings } from '../espn/league'
 import type { PlayerValue } from '../values/types'
 import { AuctionSim, runToEnd } from './auction'
 import { createAgent, type PolicyName } from './policies'
-import { scoreTeams, type Category, type ProjectionSource, type TeamScore } from './score'
+import { scoreTeams, type ProjectionSource, type TeamScore } from './score'
 import { defaultOptions, simLeague, simPlayers, simTeams, type SimOptions } from './setup'
 import { createTracker } from './tracker'
 import type { SimSale } from './types'
@@ -14,9 +14,8 @@ export interface DraftResult {
   moneyLeft: number
   /** sum over my roster of projected value (PlayerValue.consensus) minus price paid */
   valueCaptured: number
-  myRank: number | null
-  myPoints: number | null
-  myCategoryPoints: Record<Category, number> | null
+  /** my team's projected H2H season, or null without projections */
+  mine: TeamScore | null
   missingProjections: number
   standings: TeamScore[] | null
 }
@@ -39,7 +38,7 @@ export function runDraft(input: DraftInput): DraftResult {
   const me = sim.teams.find((t) => t.id === o.myTeamId)!
   const consensus = new Map(players.map((p) => [p.espnId, p.consensus]))
   const valueCaptured = sim.sales.filter((x) => x.teamId === me.id).reduce((s, x) => s + (consensus.get(x.espnId) ?? 0) - x.price, 0)
-  const standings = input.projections ? scoreTeams(new Map(sim.teams.map((t) => [t.id, t.roster])), input.projections) : null
+  const standings = input.projections ? scoreTeams(new Map(sim.teams.map((t) => [t.id, t.roster])), input.projections, input.seed) : null
   const mine = standings?.find((t) => t.teamId === me.id) ?? null
   return {
     policy: input.policy,
@@ -47,9 +46,7 @@ export function runDraft(input: DraftInput): DraftResult {
     sales: sim.sales,
     moneyLeft: me.budget,
     valueCaptured,
-    myRank: mine?.rank ?? null,
-    myPoints: mine?.total ?? null,
-    myCategoryPoints: mine?.points ?? null,
+    mine,
     missingProjections: mine?.missingProjections ?? 0,
     standings,
   }
@@ -58,12 +55,14 @@ export function runDraft(input: DraftInput): DraftResult {
 export interface Summary {
   label: string
   drafts: number
-  avgRank: number | null
+  /** my average title odds over the drafts */
+  titlePct: number | null
   /** half-width of the 95% interval: 1.96 x sample sd / sqrt(n) */
-  rankCi: number | null
-  avgPoints: number | null
-  /** share of drafts I finished first (ties included) */
-  firstPct: number | null
+  titleCi: number | null
+  playoffPct: number | null
+  avgSeed: number | null
+  /** expected share of weekly categories won */
+  winPct: number | null
   avgValueCaptured: number
   valueCi: number
   avgMoneyLeft: number
@@ -79,17 +78,17 @@ function ci95(xs: number[]): number {
 }
 
 export function summarize(label: string, results: DraftResult[]): Summary {
-  const ranks = results.flatMap((r) => (r.myRank === null ? [] : [r.myRank]))
-  const points = results.flatMap((r) => (r.myPoints === null ? [] : [r.myPoints]))
+  const seasons = results.flatMap((r) => (r.mine === null ? [] : [r.mine]))
   const values = results.map((r) => r.valueCaptured)
-  const scored = ranks.length > 0
+  const avg = (f: (t: TeamScore) => number) => (seasons.length > 0 ? mean(seasons.map(f)) : null)
   return {
     label,
     drafts: results.length,
-    avgRank: scored ? mean(ranks) : null,
-    rankCi: scored ? ci95(ranks) : null,
-    avgPoints: scored ? mean(points) : null,
-    firstPct: scored ? ranks.filter((r) => r === 1).length / ranks.length : null,
+    titlePct: avg((t) => t.titlePct),
+    titleCi: seasons.length > 0 ? ci95(seasons.map((t) => t.titlePct)) : null,
+    playoffPct: avg((t) => t.playoffPct),
+    avgSeed: avg((t) => t.avgSeed),
+    winPct: avg((t) => t.winPct),
     avgValueCaptured: mean(values),
     valueCi: ci95(values),
     avgMoneyLeft: mean(results.map((r) => r.moneyLeft)),
@@ -99,15 +98,17 @@ export function summarize(label: string, results: DraftResult[]): Summary {
 
 const NONE = '—'
 const withCi = (m: number | null, ci: number | null, digits: number) => (m === null ? NONE : `${m.toFixed(digits)} ±${(ci ?? 0).toFixed(digits)}`)
+const pct = (x: number | null) => (x === null ? NONE : `${(x * 100).toFixed(1)}%`)
 
 export function formatTable(rows: Summary[]): string {
-  const header = ['config · policy', 'drafts', 'avg rank', 'roto pts', '1st %', 'value captured', '$ left']
+  const header = ['config · policy', 'drafts', 'title %', 'playoffs %', 'avg seed', 'weekly cats %', 'value captured', '$ left']
   const body = rows.map((r) => [
     r.label,
     String(r.drafts),
-    withCi(r.avgRank, r.rankCi, 2),
-    r.avgPoints === null ? NONE : r.avgPoints.toFixed(1),
-    r.firstPct === null ? NONE : `${Math.round(r.firstPct * 100)}%`,
+    r.titlePct === null ? NONE : `${pct(r.titlePct)} ±${((r.titleCi ?? 0) * 100).toFixed(1)}`,
+    pct(r.playoffPct),
+    r.avgSeed === null ? NONE : r.avgSeed.toFixed(2),
+    pct(r.winPct),
     withCi(r.avgValueCaptured, r.valueCi, 1),
     r.avgMoneyLeft.toFixed(1),
   ])

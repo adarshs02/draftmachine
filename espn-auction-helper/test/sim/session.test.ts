@@ -95,7 +95,7 @@ describe('session', () => {
     expect(s.done).toBe(true)
   })
 
-  it('standings: null without projections; ten scored teams with them', async () => {
+  it('standings: null without projections; ten H2H-scored teams with them', async () => {
     const plain = await createSession(config({ autopilot: true }), DATA)
     plain.finish()
     expect(plain.standings()).toBeNull()
@@ -105,5 +105,7 @@ describe('session', () => {
     const st = scored.standings()!
     expect(st).toHaveLength(10)
     expect(st.every((t) => t.rank === 1 && t.missingProjections === 0)).toBe(true)
+    expect(st.reduce((s, t) => s + t.titlePct, 0)).toBeCloseTo(1, 9)
+    expect(scored.standings()).toBe(st)
   }, 120_000)
 })

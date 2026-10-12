@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks'
 import { teamSummary, valueOf } from '../../engine/metrics'
 import { html } from '../../ui/html'
 import { marketPrice } from '../bots'
-import { CATEGORIES, CATEGORY_LABELS } from '../score'
+import { CATEGORIES, CATEGORY_LABELS, H2H } from '../score'
 import type { Session } from '../session'
 
 const NOMINATE_RESULTS = 8
@@ -90,6 +90,7 @@ export function Room({ session }: { session: Session }) {
       .map((x) => html`<div class=${x.teamId === me ? 'mine' : ''}>${nameOf(x.playerKey)} → ${teamName(x.teamId)} $${x.price}</div>`)}
   </div>`
 
+  const pct = (x: number) => `${Math.round(x * 100)}%`
   const results = () => {
     const standings = session.standings()
     const r = session.myResult()
@@ -99,17 +100,21 @@ export function Room({ session }: { session: Session }) {
       <div>Value captured <b>$${Math.round(r.valueCaptured)}</b> (projected value − price) · <b>$${r.moneyLeft}</b> left unspent</div>
       ${standings
         ? html`<table class="standings">
-            <thead><tr><th>#</th><th>Team</th><th>Pts</th>${CATEGORIES.map((c) => html`<th>${CATEGORY_LABELS[c]}</th>`)}<th>No proj.</th></tr></thead>
+            <thead><tr><th>#</th><th>Team</th><th>Win %</th><th>Playoffs</th><th>Title</th>${CATEGORIES.map((c) => html`<th>${CATEGORY_LABELS[c]}</th>`)}<th>No proj.</th></tr></thead>
             <tbody>
               ${standings.map(
                 (t) => html`<tr class=${t.teamId === me ? 'mine' : ''}>
-                  <td>${t.rank}</td><td>${teamName(t.teamId)}</td><td>${t.total}</td>
-                  ${CATEGORIES.map((c) => html`<td>${t.points[c]}</td>`)}
+                  <td>${t.rank}</td><td>${teamName(t.teamId)}</td><td>${pct(t.winPct)}</td><td>${pct(t.playoffPct)}</td><td>${pct(t.titlePct)}</td>
+                  ${CATEGORIES.map((c) => html`<td>${pct(t.categoryWin[c])}</td>`)}
                   <td>${t.missingProjections}</td>
                 </tr>`,
               )}
             </tbody>
-          </table>`
+          </table>
+          <div class="muted">
+            H2H each category. Win %: expected share of weekly categories won. Playoffs and Title: share of ${H2H.seasons} simulated
+            seasons (${H2H.weeks} weeks, top ${H2H.playoffTeams} play ${H2H.playoffWeeks}-week rounds). Category columns: chance to win it in a week against an average opponent.
+          </div>`
         : html`<div class="muted">Projected standings unavailable: data/hashtag-projections.csv could not be read (see the console).</div>`}
       <h3>My roster</h3>
       ${mine.map((x) => html`<div>${nameOf(x.playerKey)} $${x.price}</div>`)}

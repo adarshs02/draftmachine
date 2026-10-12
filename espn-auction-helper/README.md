@@ -107,15 +107,18 @@ Flags:
 - `--json`
 
 Columns:
-- avg rank: average projected roto rank, 1 = best, with the 95% interval.
-- roto pts: projected roto points.
-- 1st %: share of drafts won.
+- title %: average chance my team wins the title, with the 95% interval.
+- playoffs %: average chance of a top-4 finish.
+- avg seed: average regular-season finish, 1 = best.
+- weekly cats %: expected share of weekly categories won (the regular-season record).
 - value captured: projected value minus price, summed over your roster.
 - $ left: money left unspent.
 
 ### Projections
 
-Standings are projected 9-category roto from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. The page reloads when either file changes. Players without a projection add nothing and are counted in the "No proj." column. If the stats file is missing (batch) or can't be parsed (page), the simulator still runs and reports value captured and money left.
+Standings are projected for the league's format, H2H each category with 9 categories (TO included): 19 one-week matchups, then the top 4 play 2-week semifinals and a final. Season stats come from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster and spread over the NBA season's 23.4 weeks.
+
+Each week every category is a coin weighted by the gap between the two teams and how much that stat swings from week to week (points swing most, steals and turnovers least; 2–4 games a week). Each draft plays 400 seasons: a random schedule, top 4 by categories won, more categories wins a playoff round. Results show each team's win %, playoff and title odds, and its chance to win each category in a week against an average opponent. The swing sizes are assumptions in `src/sim/score.ts`, not fitted to real weeks. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. The page reloads when either file changes. Players without a projection add nothing and are counted in the "No proj." column. If the stats file is missing (batch) or can't be parsed (page), the simulator still runs and reports value captured and money left.
 
 ### Syncing the projections sheet
 

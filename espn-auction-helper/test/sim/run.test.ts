@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it } from 'vitest'
 import { resetTunables, setTunables } from '../../src/engine/constants'
 import { formatTable, runDraft, summarize, type DraftResult } from '../../src/sim/run'
-import type { ProjectionSource } from '../../src/sim/score'
+import type { ProjectionSource, TeamScore } from '../../src/sim/score'
 import type { PlayerValue } from '../../src/values/types'
 
 const VALUES = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
@@ -21,9 +21,9 @@ describe('runDraft', () => {
     const r = runDraft({ seed: 3, policy: 'autopilot', values: VALUES, projections: FAKE })
     expect(r.sales).toHaveLength(130)
     expect(r.standings).toHaveLength(10)
-    expect(r.myRank).toBeGreaterThanOrEqual(1)
-    expect(r.myRank).toBeLessThanOrEqual(10)
-    expect(r.myPoints).toBe(r.standings!.find((t) => t.teamId === 1)!.total)
+    expect(r.mine).toBe(r.standings!.find((t) => t.teamId === 1))
+    expect(r.mine!.titlePct).toBeGreaterThanOrEqual(0)
+    expect(r.mine!.titlePct).toBeLessThanOrEqual(1)
     expect(r.moneyLeft).toBeGreaterThanOrEqual(0)
     const mine = r.sales.filter((x) => x.teamId === 1)
     expect(r.valueCaptured).toBeCloseTo(mine.reduce((s, x) => s + (CONSENSUS.get(x.espnId) ?? 0) - x.price, 0), 6)
@@ -31,7 +31,7 @@ describe('runDraft', () => {
 
   it('missing projections: no standings, still money left and value captured', () => {
     const r = runDraft({ seed: 3, policy: 'market', values: VALUES, projections: null })
-    expect(r).toMatchObject({ standings: null, myRank: null, myPoints: null, myCategoryPoints: null, missingProjections: 0 })
+    expect(r).toMatchObject({ standings: null, mine: null, missingProjections: 0 })
     expect(Number.isFinite(r.valueCaptured)).toBe(true)
   })
 
@@ -51,23 +51,37 @@ describe('runDraft', () => {
 })
 
 describe('summarize', () => {
-  const result = (myRank: number | null, i: number): DraftResult => ({
-    policy: 'market', seed: i, sales: [], moneyLeft: 2 * i, valueCaptured: 10 * i, myRank,
-    myPoints: myRank === null ? null : 50 - myRank, myCategoryPoints: null, missingProjections: 0, standings: null,
+  const season = (title: number): TeamScore => ({
+    teamId: 1, categoryWin: {} as TeamScore['categoryWin'], winPct: 0.5 + title / 10, rank: 1, avgSeed: 3 - title, playoffPct: 0.5 + title / 2, titlePct: title, missingProjections: 0,
+  })
+  const result = (title: number | null, i: number): DraftResult => ({
+    policy: 'market', seed: i, sales: [], moneyLeft: 2 * i, valueCaptured: 10 * i, mine: title === null ? null : season(title), missingProjections: 0, standings: null,
   })
 
-  it('averages with a 95% interval and counts first places', () => {
-    const s = summarize('x', [1, 3, 2, 1].map(result))
-    expect(s).toMatchObject({ label: 'x', drafts: 4, avgRank: 1.75, firstPct: 0.5, avgPoints: 48.25, avgMoneyLeft: 3, avgValueCaptured: 15 })
-    // sample sd of 1, 3, 2, 1 = sqrt(2.75 / 3)
-    expect(s.rankCi).toBeCloseTo((1.96 * Math.sqrt(2.75 / 3)) / 2, 6)
+  it('averages title odds with a 95% interval, plus playoff odds, seed and weekly record', () => {
+    const s = summarize('x', [0.2, 0.6, 0.4, 0.2].map(result))
+    expect(s).toMatchObject({ label: 'x', drafts: 4, avgMoneyLeft: 3, avgValueCaptured: 15 })
+    expect(s.titlePct).toBeCloseTo(0.35, 9)
+    expect(s.playoffPct).toBeCloseTo(0.675, 9)
+    expect(s.avgSeed).toBeCloseTo(2.65, 9)
+    expect(s.winPct).toBeCloseTo(0.535, 9)
+    // sample sd of .2, .6, .4, .2 = sqrt(0.11 / 3)
+    expect(s.titleCi).toBeCloseTo((1.96 * Math.sqrt(0.11 / 3)) / 2, 6)
   })
 
-  it('reports no rank without projections, and the table shows a dash', () => {
+  it('reports no H2H numbers without projections, and the table shows a dash', () => {
     const s = summarize('y', [null, null].map(result))
-    expect(s).toMatchObject({ avgRank: null, rankCi: null, avgPoints: null, firstPct: null, avgValueCaptured: 5 })
+    expect(s).toMatchObject({ titlePct: null, titleCi: null, playoffPct: null, avgSeed: null, winPct: null, avgValueCaptured: 5 })
     const table = formatTable([s])
-    expect(table.split('\n')[0]).toContain('avg rank')
+    expect(table.split('\n')[0]).toContain('title %')
     expect(table.split('\n')[1]).toContain('—')
+  })
+
+  it('shows percentages in the table', () => {
+    const row = formatTable([summarize('x', [0.2, 0.6, 0.4, 0.2].map(result))]).split('\n')[1]
+    expect(row).toContain('35.0% ±')
+    expect(row).toContain('67.5%')
+    expect(row).toContain('2.65')
+    expect(row).toContain('53.5%')
   })
 })
