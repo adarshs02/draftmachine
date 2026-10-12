@@ -1,4 +1,4 @@
-import { BID_GAP_FRACTION, BID_GAP_MIN, BID_UP_MARGIN, ONE_PLAYER_SHARE, TWO_PLAYER_SHARE } from './constants'
+import { TUNABLES } from './constants'
 import { adjustedValue, inflation, myBudget, teamSummary, temperature, valueOf } from './metrics'
 import { needBoost } from './need'
 import type { DraftState } from './types'
@@ -33,9 +33,9 @@ export function concentrationWarnings(s: DraftState, winPrice: number): string[]
   const prices = s.sales.filter((x) => x.teamId === s.myTeamId).map((x) => x.price)
   const top = prices.length ? Math.max(...prices) : 0
   const out: string[] = []
-  if (winPrice > ONE_PLAYER_SHARE * budget) out.push(`One player at $${winPrice} is over ${ONE_PLAYER_SHARE * 100}% of your $${budget} budget`)
-  if (top > 0 && winPrice + top > TWO_PLAYER_SHARE * budget) {
-    out.push(`Two players ($${top} + $${winPrice}) would be over ${TWO_PLAYER_SHARE * 100}% of your budget: no margin for error`)
+  if (winPrice > TUNABLES.ONE_PLAYER_SHARE * budget) out.push(`One player at $${winPrice} is over ${TUNABLES.ONE_PLAYER_SHARE * 100}% of your $${budget} budget`)
+  if (top > 0 && winPrice + top > TUNABLES.TWO_PLAYER_SHARE * budget) {
+    out.push(`Two players ($${top} + $${winPrice}) would be over ${TUNABLES.TWO_PLAYER_SHARE * 100}% of your budget: no margin for error`)
   }
   return out
 }
@@ -67,8 +67,8 @@ export function verdict(s: DraftState): Verdict | null {
   if (live.leaderId === s.myTeamId) return { ...base, kind: 'LEADING', warnings: concentrationWarnings(s, live.price) }
   if (v.avoid) return live.price > a ? letThem() : { ...base, kind: 'PASS' }
   const isTarget = s.targets.includes(live.playerKey)
-  if (live.price < ceiling && (isTarget || a - live.price >= Math.max(BID_GAP_MIN, BID_GAP_FRACTION * a))) return { ...base, kind: 'BID' }
-  const pushTo = Math.min(ceiling, Math.floor(a - BID_UP_MARGIN))
+  if (live.price < ceiling && (isTarget || a - live.price >= Math.max(TUNABLES.BID_GAP_MIN, TUNABLES.BID_GAP_FRACTION * a))) return { ...base, kind: 'BID' }
+  const pushTo = Math.min(ceiling, Math.floor(a - TUNABLES.BID_UP_MARGIN))
   if (live.price < pushTo) return { ...base, kind: 'BID_UP', pushTo }
   if (live.price > a) return letThem()
   return { ...base, kind: 'PASS' }

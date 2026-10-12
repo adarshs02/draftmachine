@@ -1,8 +1,6 @@
 import { byValue } from '../values/tiers'
 import type { PlayerValue } from '../values/types'
-import {
-  BARGAIN_RATIO, COLD, HOT, INFLATION_MAX, INFLATION_MIN, STAR_TIER_MAX, TEMP_MIN_SALES, TEMP_MIN_VALUE, TEMP_WINDOW, WARM,
-} from './constants'
+import { TUNABLES } from './constants'
 import { placeholderValue } from './reducer'
 import type { DraftState, Sale } from './types'
 
@@ -52,7 +50,7 @@ export function inflation(s: DraftState): number {
   const open = sum(teams.map((t) => t.open))
   const surplus = sum(available(s).slice(0, open).map((v) => v.b - 1))
   if (surplus <= 0) return 1
-  return Math.min(INFLATION_MAX, Math.max(INFLATION_MIN, (money - open) / surplus))
+  return Math.min(TUNABLES.INFLATION_MAX, Math.max(TUNABLES.INFLATION_MIN, (money - open) / surplus))
 }
 
 export type TempLabel = 'Reading room' | 'Hot' | 'Warm' | 'Neutral' | 'Cold'
@@ -62,15 +60,15 @@ export interface Temperature {
 }
 
 export function temperature(s: DraftState): Temperature {
-  const window = s.sales.filter((x) => valueOf(s, x.playerKey).b >= TEMP_MIN_VALUE).slice(-TEMP_WINDOW)
-  if (window.length < TEMP_MIN_SALES) return { T: null, label: 'Reading room' }
+  const window = s.sales.filter((x) => valueOf(s, x.playerKey).b >= TUNABLES.TEMP_MIN_VALUE).slice(-TUNABLES.TEMP_WINDOW)
+  if (window.length < TUNABLES.TEMP_MIN_SALES) return { T: null, label: 'Reading room' }
   const T = sum(window.map((x) => x.price)) / sum(window.map((x) => valueOf(s, x.playerKey).b))
-  return { T, label: T > HOT ? 'Hot' : T > WARM ? 'Warm' : T >= COLD ? 'Neutral' : 'Cold' }
+  return { T, label: T > TUNABLES.HOT ? 'Hot' : T > TUNABLES.WARM ? 'Warm' : T >= TUNABLES.COLD ? 'Neutral' : 'Cold' }
 }
 
 export function adjustedValue(s: DraftState, key: string, I = inflation(s), label: TempLabel = temperature(s).label): number {
   const v = valueOf(s, key)
-  if (label === 'Hot' && v.tier <= STAR_TIER_MAX) return v.b
+  if (label === 'Hot' && v.tier <= TUNABLES.STAR_TIER_MAX) return v.b
   return 1 + (v.b - 1) * I
 }
 
@@ -106,7 +104,7 @@ export function saleFlags(s: DraftState): Map<number, { bargain: boolean }> {
   let before: DraftState = { ...s, sales: [], live: null }
   for (const sale of s.sales) {
     const a = adjustedValue(before, sale.playerKey)
-    out.set(sale.seq, { bargain: valueOf(s, sale.playerKey).tier <= STAR_TIER_MAX && sale.price <= BARGAIN_RATIO * a })
+    out.set(sale.seq, { bargain: valueOf(s, sale.playerKey).tier <= TUNABLES.STAR_TIER_MAX && sale.price <= TUNABLES.BARGAIN_RATIO * a })
     before = { ...before, sales: [...before.sales, sale] }
   }
   return out

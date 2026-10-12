@@ -1,5 +1,5 @@
 import { BENCH_SLOT, IR_SLOT } from '../espn/slots'
-import { NEED_BOOST, NEED_MIN_VALUE, THIN_FACTOR } from './constants'
+import { TUNABLES } from './constants'
 import { available, valueOf } from './metrics'
 import type { DraftState } from './types'
 
@@ -51,11 +51,11 @@ export function needBoost(s: DraftState, playerKey: string): number {
     if (i >= 0) filled.splice(i, 1)
   }
   const needed = [...new Set(filled)]
-  const supplyPool = available(s).filter((v) => v.key !== playerKey && v.b >= NEED_MIN_VALUE)
+  const supplyPool = available(s).filter((v) => v.key !== playerKey && v.b >= TUNABLES.NEED_MIN_VALUE)
   const demand = new Map<number, number>()
   for (const t of s.settings.teams) {
     for (const slot of maxMatching(rosterSlots(s, t.id), slots).unfilled) demand.set(slot, (demand.get(slot) ?? 0) + 1)
   }
-  const thin = needed.some((slot) => supplyPool.filter((v) => v.slots.includes(slot)).length < THIN_FACTOR * (demand.get(slot) ?? 0))
-  return thin ? NEED_BOOST : 1
+  const thin = needed.some((slot) => supplyPool.filter((v) => v.slots.includes(slot)).length < TUNABLES.THIN_FACTOR * (demand.get(slot) ?? 0))
+  return thin ? TUNABLES.NEED_BOOST : 1
 }

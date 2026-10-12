@@ -1,4 +1,4 @@
-import { TARGET_BAND, TARGET_LIMIT } from './constants'
+import { TUNABLES } from './constants'
 import { adjustedValue, available, inflation, myBudget, temperature } from './metrics'
 import { rivalsAbove } from './nominate'
 import type { DraftState } from './types'
@@ -15,15 +15,15 @@ export interface TargetRow {
   outbidBy: string[]
 }
 
-export function targetList(s: DraftState, limit = TARGET_LIMIT): TargetRow[] {
+export function targetList(s: DraftState, limit = TUNABLES.TARGET_LIMIT): TargetRow[] {
   const mb = myBudget(s)
   if (!mb) return []
   const temp = temperature(s)
   const I = inflation(s)
   const T = temp.T ?? 1
   const perSlot = mb.core > 0 ? mb.perSlot : mb.safeMax
-  const lo = perSlot * (1 - TARGET_BAND)
-  const hi = perSlot * (1 + TARGET_BAND)
+  const lo = perSlot * (1 - TUNABLES.TARGET_BAND)
+  const hi = perSlot * (1 + TUNABLES.TARGET_BAND)
   return available(s)
     .filter((v) => !v.avoid)
     .map((v) => ({ v, expected: v.b * T, pinned: s.targets.includes(v.key) }))

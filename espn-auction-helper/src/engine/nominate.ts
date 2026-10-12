@@ -1,4 +1,4 @@
-import { DECOY_MARKET_RATIO, DOLLAR_MONEY, EARLY_MONEY } from './constants'
+import { TUNABLES } from './constants'
 import { allTeams, available, type TeamSummary } from './metrics'
 import type { DraftState } from './types'
 import { ceilingFor } from './verdict'
@@ -12,8 +12,8 @@ export function nominationPhase(s: DraftState): Phase {
   const money = allTeams(s).reduce((sum, t) => sum + t.budgetLeft, 0)
   const ratio = money / (s.settings.teams.length * s.settings.budget)
   const r = rivals(s)
-  if (ratio < DOLLAR_MONEY || (r.length > 0 && r.every((t) => t.maxBid <= 2))) return 'dollar'
-  return ratio > EARLY_MONEY ? 'early' : 'mid'
+  if (ratio < TUNABLES.DOLLAR_MONEY || (r.length > 0 && r.every((t) => t.maxBid <= 2))) return 'dollar'
+  return ratio > TUNABLES.EARLY_MONEY ? 'early' : 'mid'
 }
 
 export interface Nomination {
@@ -32,7 +32,7 @@ export function suggestNomination(s: DraftState): Nomination | null {
   const targets = avail.filter((v) => s.targets.includes(v.key))
 
   const decoy = (): Nomination => {
-    const overpaid = notMine.find((v) => v.market > DECOY_MARKET_RATIO * v.b)
+    const overpaid = notMine.find((v) => v.market > TUNABLES.DECOY_MARKET_RATIO * v.b)
     if (overpaid) {
       return { phase, playerKey: overpaid.key, name: overpaid.name, reason: `Room pays ~$${Math.round(overpaid.market)}, you value $${Math.round(overpaid.b)}: get money off the board` }
     }
