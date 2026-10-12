@@ -9,7 +9,7 @@
    10,
    11
   ],
-  "b": 73.7,
+  "b": 73.5,
   "consensus": 74.8,
   "market": 85.3,
   "josh": 73.5,
@@ -27,7 +27,7 @@
    10,
    11
   ],
-  "b": 68.3,
+  "b": 68,
   "consensus": 67.3,
   "market": 81.9,
   "josh": 70,
@@ -45,7 +45,7 @@
    8,
    11
   ],
-  "b": 63,
+  "b": 62.8,
   "consensus": 66.6,
   "market": 73.7,
   "josh": 60,
@@ -63,7 +63,7 @@
    8,
    11
   ],
-  "b": 59.1,
+  "b": 58.9,
   "consensus": 55,
   "market": 74.6,
   "josh": 64,
@@ -84,7 +84,7 @@
    10,
    11
   ],
-  "b": 53.9,
+  "b": 53.7,
   "consensus": 49.4,
   "market": 65.2,
   "josh": 59,
@@ -102,7 +102,7 @@
    8,
    11
   ],
-  "b": 41.2,
+  "b": 41.1,
   "consensus": 38,
   "market": 58.2,
   "josh": 45,
@@ -124,7 +124,7 @@
    10,
    11
   ],
-  "b": 39.8,
+  "b": 39.6,
   "consensus": 37.5,
   "market": 56.3,
   "josh": 42.5,
@@ -146,7 +146,7 @@
    10,
    11
   ],
-  "b": 39.6,
+  "b": 39.5,
   "consensus": 37.2,
   "market": 60.2,
   "josh": 42.5,
@@ -166,12 +166,12 @@
    8,
    11
   ],
-  "b": 38.3,
-  "consensus": 37,
+  "b": 36.2,
+  "consensus": 33.1,
   "market": 48.7,
   "josh": 40,
   "avoid": false,
-  "rank": 9,
+  "rank": 12,
   "tier": 1
  },
  {
@@ -188,12 +188,12 @@
    10,
    11
   ],
-  "b": 35.6,
+  "b": 35.4,
   "consensus": 31.6,
   "market": 47.5,
   "josh": 40,
   "avoid": false,
-  "rank": 17,
+  "rank": 16,
   "tier": 1
  },
  {
@@ -210,12 +210,12 @@
    10,
    11
   ],
-  "b": 35.1,
+  "b": 34.9,
   "consensus": 35.5,
   "market": 34.1,
   "josh": 35,
   "avoid": false,
-  "rank": 11,
+  "rank": 9,
   "tier": 1
  },
  {
@@ -230,12 +230,12 @@
    8,
    11
   ],
-  "b": 33.2,
+  "b": 33.1,
   "consensus": 30.9,
   "market": 22.1,
   "josh": 36,
   "avoid": false,
-  "rank": 19,
+  "rank": 18,
   "tier": 1
  },
  {
@@ -250,12 +250,12 @@
    8,
    11
   ],
-  "b": 33,
+  "b": 32.8,
   "consensus": 31.3,
   "market": 40.3,
   "josh": 35,
   "avoid": false,
-  "rank": 18,
+  "rank": 17,
   "tier": 2
  },
  {
@@ -270,12 +270,12 @@
    10,
    11
   ],
-  "b": 32.7,
+  "b": 32.5,
   "consensus": 31.7,
   "market": 54.9,
   "josh": 34,
   "avoid": false,
-  "rank": 15,
+  "rank": 14,
   "tier": 2
  },
  {
@@ -288,12 +288,12 @@
    10,
    11
   ],
-  "b": 32.3,
+  "b": 32.2,
   "consensus": 33.4,
   "market": 35.7,
   "josh": 31.5,
   "avoid": false,
-  "rank": 13,
+  "rank": 11,
   "tier": 2
  },
  {
@@ -306,12 +306,12 @@
    8,
    11
   ],
-  "b": 32,
+  "b": 31.9,
   "consensus": 32.3,
   "market": 25.1,
   "josh": 32,
   "avoid": false,
-  "rank": 14,
+  "rank": 13,
   "tier": 2
  },
  {
@@ -328,7 +328,7 @@
    10,
    11
   ],
-  "b": 32,
+  "b": 31.8,
   "consensus": 24.4,
   "market": 37.2,
   "josh": 40,
@@ -348,12 +348,12 @@
    8,
    11
   ],
-  "b": 31.7,
+  "b": 31.6,
   "consensus": 33.7,
   "market": 49.9,
   "josh": 30,
   "avoid": false,
-  "rank": 12,
+  "rank": 10,
   "tier": 2
  },
  {
@@ -370,30 +370,12 @@
    10,
    11
   ],
-  "b": 30.9,
+  "b": 30.8,
   "consensus": 29.7,
   "market": 44.3,
   "josh": 32.5,
   "avoid": false,
-  "rank": 22,
-  "tier": 2
- },
- {
-  "key": "stephen curry",
-  "espnId": 3975,
-  "name": "Stephen Curry",
-  "slots": [
-   0,
-   5,
-   8,
-   11
-  ],
-  "b": 30.7,
-  "consensus": 36.6,
-  "market": 25.3,
-  "josh": 25,
-  "avoid": false,
-  "rank": 10,
+  "rank": 21,
   "tier": 2
  },
  {
@@ -410,12 +392,12 @@
    10,
    11
   ],
-  "b": 27.7,
+  "b": 27.6,
   "consensus": 31.6,
   "market": 26.1,
   "josh": 24,
   "avoid": false,
-  "rank": 16,
+  "rank": 15,
   "tier": 2
  },
  {
@@ -428,12 +410,12 @@
    8,
    11
   ],
-  "b": 27.6,
+  "b": 27.5,
   "consensus": 30.5,
   "market": 32.9,
   "josh": 25,
   "avoid": false,
-  "rank": 20,
+  "rank": 19,
   "tier": 2
  },
  {
@@ -450,12 +432,12 @@
    10,
    11
   ],
-  "b": 27.3,
+  "b": 27.2,
   "consensus": 29.8,
   "market": 9.6,
   "josh": 25,
   "avoid": false,
-  "rank": 21,
+  "rank": 20,
   "tier": 2
  },
  {
@@ -468,7 +450,7 @@
    8,
    11
   ],
-  "b": 27,
+  "b": 26.8,
   "consensus": 19.8,
   "market": 33.9,
   "josh": 34.5,
@@ -489,12 +471,30 @@
    10,
    11
   ],
-  "b": 26.5,
+  "b": 26.4,
   "consensus": 25.3,
   "market": 27,
   "josh": 28,
   "avoid": false,
   "rank": 26,
+  "tier": 2
+ },
+ {
+  "key": "stephen curry",
+  "espnId": 3975,
+  "name": "Stephen Curry",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "b": 25.6,
+  "consensus": 26.6,
+  "market": 25.3,
+  "josh": 25,
+  "avoid": false,
+  "rank": 24,
   "tier": 2
  },
  {
@@ -509,12 +509,12 @@
    8,
    11
   ],
-  "b": 25.6,
+  "b": 25.5,
   "consensus": 28.9,
   "market": 27.3,
   "josh": 22.5,
   "avoid": false,
-  "rank": 24,
+  "rank": 23,
   "tier": 2
  },
  {
@@ -530,7 +530,7 @@
    10,
    11
   ],
-  "b": 25.6,
+  "b": 25.5,
   "consensus": 26.5,
   "market": 21.8,
   "josh": 25,
@@ -556,7 +556,7 @@
   "market": 11.8,
   "josh": 21.5,
   "avoid": false,
-  "rank": 23,
+  "rank": 22,
   "tier": 2
  },
  {
@@ -569,30 +569,12 @@
    8,
    11
   ],
-  "b": 24.9,
+  "b": 24.8,
   "consensus": 25,
   "market": 11.1,
   "josh": 25,
   "avoid": false,
   "rank": 27,
-  "tier": 2
- },
- {
-  "key": "darius garland",
-  "espnId": 4396907,
-  "name": "Darius Garland",
-  "slots": [
-   0,
-   5,
-   8,
-   11
-  ],
-  "b": 24.8,
-  "consensus": 22.4,
-  "market": 13.8,
-  "josh": 27.5,
-  "avoid": false,
-  "rank": 37,
   "tier": 2
  },
  {
@@ -608,11 +590,29 @@
    11
   ],
   "b": 24.7,
-  "consensus": 22.7,
+  "consensus": 22.8,
   "market": 34.4,
   "josh": 27,
   "avoid": false,
   "rank": 33,
+  "tier": 2
+ },
+ {
+  "key": "darius garland",
+  "espnId": 4396907,
+  "name": "Darius Garland",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "b": 24.7,
+  "consensus": 22.4,
+  "market": 13.8,
+  "josh": 27.5,
+  "avoid": false,
+  "rank": 37,
   "tier": 2
  },
  {
@@ -625,8 +625,8 @@
    10,
    11
   ],
-  "b": 24.4,
-  "consensus": 19.1,
+  "b": 24.3,
+  "consensus": 19.2,
   "market": 33.5,
   "josh": 30,
   "avoid": false,
@@ -646,7 +646,7 @@
    10,
    11
   ],
-  "b": 23.2,
+  "b": 23.1,
   "consensus": 21.6,
   "market": 38.1,
   "josh": 25,
@@ -668,7 +668,7 @@
    10,
    11
   ],
-  "b": 23.2,
+  "b": 23.1,
   "consensus": 21.6,
   "market": 16.5,
   "josh": 25,
@@ -688,7 +688,7 @@
    8,
    11
   ],
-  "b": 23,
+  "b": 22.9,
   "consensus": 21.2,
   "market": 20.2,
   "josh": 25,
@@ -708,7 +708,7 @@
    8,
    11
   ],
-  "b": 22.8,
+  "b": 22.7,
   "consensus": 20.8,
   "market": 11.5,
   "josh": 25,
@@ -729,7 +729,7 @@
    11
   ],
   "b": 22.5,
-  "consensus": 23.7,
+  "consensus": 23.8,
   "market": 32.3,
   "josh": 21.5,
   "avoid": false,
@@ -771,7 +771,7 @@
    10,
    11
   ],
-  "b": 21.6,
+  "b": 21.5,
   "consensus": 18.5,
   "market": 27.6,
   "josh": 25,
@@ -793,7 +793,7 @@
    10,
    11
   ],
-  "b": 21.5,
+  "b": 21.4,
   "consensus": 23.2,
   "market": 12.9,
   "josh": 20,
@@ -815,7 +815,7 @@
    10,
    11
   ],
-  "b": 21.5,
+  "b": 21.4,
   "consensus": 18.3,
   "market": 8.5,
   "josh": 25,
@@ -918,7 +918,7 @@
    10,
    11
   ],
-  "b": 19.7,
+  "b": 19.6,
   "consensus": 22,
   "market": 19.3,
   "josh": 17.5,
@@ -936,7 +936,7 @@
    8,
    11
   ],
-  "b": 19.7,
+  "b": 19.6,
   "consensus": 21.1,
   "market": 42,
   "josh": 18.5,
@@ -956,7 +956,7 @@
    8,
    11
   ],
-  "b": 19.5,
+  "b": 19.4,
   "consensus": 15.2,
   "market": 11.2,
   "josh": 24,
@@ -997,7 +997,7 @@
    11
   ],
   "b": 18.4,
-  "consensus": 17.1,
+  "consensus": 17.2,
   "market": 5.1,
   "josh": 20,
   "avoid": false,
@@ -1014,7 +1014,7 @@
    8,
    11
   ],
-  "b": 18.4,
+  "b": 18.3,
   "consensus": 17,
   "market": 6.4,
   "josh": 20,
@@ -1032,7 +1032,7 @@
    10,
    11
   ],
-  "b": 18.3,
+  "b": 18.2,
   "consensus": 19.2,
   "market": 8.2,
   "josh": null,
@@ -1054,7 +1054,7 @@
    10,
    11
   ],
-  "b": 18.3,
+  "b": 18.2,
   "consensus": 14.3,
   "market": 20.4,
   "josh": 22.5,
@@ -1072,7 +1072,7 @@
    10,
    11
   ],
-  "b": 17.9,
+  "b": 17.8,
   "consensus": 18.8,
   "market": 4.6,
   "josh": null,
@@ -1094,7 +1094,7 @@
    10,
    11
   ],
-  "b": 17.9,
+  "b": 17.8,
   "consensus": 18.5,
   "market": 3.7,
   "josh": 17.5,
@@ -1139,31 +1139,11 @@
    11
   ],
   "b": 16.7,
-  "consensus": 20.5,
+  "consensus": 20.6,
   "market": 8.6,
   "josh": 13,
   "avoid": false,
   "rank": 45,
-  "tier": 3
- },
- {
-  "key": "tyler herro",
-  "espnId": 4395725,
-  "name": "Tyler Herro",
-  "slots": [
-   0,
-   1,
-   5,
-   7,
-   8,
-   11
-  ],
-  "b": 16.7,
-  "consensus": 20.5,
-  "market": 8.2,
-  "josh": 13,
-  "avoid": false,
-  "rank": 46,
   "tier": 3
  },
  {
@@ -1185,6 +1165,26 @@
   "tier": 3
  },
  {
+  "key": "tyler herro",
+  "espnId": 4395725,
+  "name": "Tyler Herro",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "b": 16.6,
+  "consensus": 20.5,
+  "market": 8.2,
+  "josh": 13,
+  "avoid": false,
+  "rank": 46,
+  "tier": 3
+ },
+ {
   "key": "keyonte george",
   "espnId": 4433627,
   "name": "Keyonte George",
@@ -1196,48 +1196,12 @@
    8,
    11
   ],
-  "b": 16.1,
+  "b": 16,
   "consensus": 12.4,
   "market": 6.8,
   "josh": 20,
   "avoid": false,
   "rank": 83,
-  "tier": 3
- },
- {
-  "key": "donovan clingan",
-  "espnId": 5105565,
-  "name": "Donovan Clingan",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 15.6,
-  "consensus": 16.4,
-  "market": 7.2,
-  "josh": null,
-  "avoid": true,
-  "rank": 59,
-  "tier": 3
- },
- {
-  "key": "onyeka okongwu",
-  "espnId": 4431680,
-  "name": "Onyeka Okongwu",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 15.6,
-  "consensus": 15.8,
-  "market": 6.6,
-  "josh": 15.5,
-  "avoid": false,
-  "rank": 62,
   "tier": 3
  },
  {
@@ -1263,6 +1227,42 @@
   "tier": 3
  },
  {
+  "key": "donovan clingan",
+  "espnId": 5105565,
+  "name": "Donovan Clingan",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 15.5,
+  "consensus": 16.4,
+  "market": 7.2,
+  "josh": null,
+  "avoid": true,
+  "rank": 59,
+  "tier": 3
+ },
+ {
+  "key": "onyeka okongwu",
+  "espnId": 4431680,
+  "name": "Onyeka Okongwu",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 15.5,
+  "consensus": 15.8,
+  "market": 6.6,
+  "josh": 15.5,
+  "avoid": false,
+  "rank": 62,
+  "tier": 3
+ },
+ {
   "key": "ty jerome",
   "espnId": 4065733,
   "name": "Ty Jerome",
@@ -1274,7 +1274,7 @@
    8,
    11
   ],
-  "b": 15.1,
+  "b": 15,
   "consensus": 15.9,
   "market": 5.1,
   "josh": null,
@@ -1294,7 +1294,7 @@
    8,
    11
   ],
-  "b": 14.5,
+  "b": 14.4,
   "consensus": 15.2,
   "market": 2.3,
   "josh": null,
@@ -1354,52 +1354,12 @@
    10,
    11
   ],
-  "b": 13.8,
-  "consensus": 15.2,
+  "b": 13.7,
+  "consensus": 15.1,
   "market": 24.4,
   "josh": 12.5,
   "avoid": false,
   "rank": 66,
-  "tier": 3
- },
- {
-  "key": "zach lavine",
-  "espnId": 3064440,
-  "name": "Zach LaVine",
-  "slots": [
-   1,
-   2,
-   5,
-   6,
-   7,
-   8,
-   10,
-   11
-  ],
-  "b": 13.8,
-  "consensus": 14.5,
-  "market": 1.4,
-  "josh": null,
-  "avoid": false,
-  "rank": 69,
-  "tier": 3
- },
- {
-  "key": "neemias queta",
-  "espnId": 4397424,
-  "name": "Neemias Queta",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 13.8,
-  "consensus": 9.8,
-  "market": 0.8,
-  "josh": 18,
-  "avoid": false,
-  "rank": 99,
   "tier": 3
  },
  {
@@ -1421,6 +1381,46 @@
   "tier": 3
  },
  {
+  "key": "zach lavine",
+  "espnId": 3064440,
+  "name": "Zach LaVine",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "b": 13.7,
+  "consensus": 14.5,
+  "market": 1.4,
+  "josh": null,
+  "avoid": false,
+  "rank": 69,
+  "tier": 3
+ },
+ {
+  "key": "neemias queta",
+  "espnId": 4397424,
+  "name": "Neemias Queta",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 13.7,
+  "consensus": 9.7,
+  "market": 0.8,
+  "josh": 18,
+  "avoid": false,
+  "rank": 99,
+  "tier": 3
+ },
+ {
   "key": "paolo banchero",
   "espnId": 4432573,
   "name": "Paolo Banchero",
@@ -1434,7 +1434,7 @@
    10,
    11
   ],
-  "b": 13.5,
+  "b": 13.4,
   "consensus": 9.7,
   "market": 15.5,
   "josh": 17.5,
@@ -1499,7 +1499,7 @@
    10,
    11
   ],
-  "b": 13.3,
+  "b": 13.2,
   "consensus": 14.2,
   "market": 10.8,
   "josh": 12.5,
@@ -1521,7 +1521,7 @@
    10,
    11
   ],
-  "b": 12.4,
+  "b": 12.3,
   "consensus": 16.8,
   "market": 15.3,
   "josh": 8,
@@ -1675,7 +1675,7 @@
    10,
    11
   ],
-  "b": 9.6,
+  "b": 9.5,
   "consensus": 13.2,
   "market": 7,
   "josh": 6,
@@ -1737,7 +1737,7 @@
    10,
    11
   ],
-  "b": 9.2,
+  "b": 9.1,
   "consensus": 14.1,
   "market": 0.5,
   "josh": null,
@@ -1818,7 +1818,7 @@
    10,
    11
   ],
-  "b": 8.4,
+  "b": 8.3,
   "consensus": 10.3,
   "market": 4.7,
   "josh": 6.5,
@@ -1880,8 +1880,8 @@
    8,
    11
   ],
-  "b": 7.6,
-  "consensus": 11.3,
+  "b": 7.7,
+  "consensus": 11.4,
   "market": 2.6,
   "josh": 4,
   "avoid": false,
@@ -1902,7 +1902,7 @@
    10,
    11
   ],
-  "b": 7.5,
+  "b": 7.4,
   "consensus": 11.5,
   "market": 1.6,
   "josh": null,
@@ -1922,7 +1922,7 @@
    8,
    11
   ],
-  "b": 7.4,
+  "b": 7.3,
   "consensus": 11.4,
   "market": 0.3,
   "josh": null,
@@ -1958,7 +1958,7 @@
    10,
    11
   ],
-  "b": 7.1,
+  "b": 7,
   "consensus": 10.9,
   "market": 1,
   "josh": null,
@@ -2109,7 +2109,7 @@
    10,
    11
   ],
-  "b": 6.5,
+  "b": 6.4,
   "consensus": 4.8,
   "market": 0.4,
   "josh": null,
@@ -2139,27 +2139,6 @@
   "tier": 4
  },
  {
-  "key": "alex sarr",
-  "espnId": 5160992,
-  "name": "Alex Sarr",
-  "slots": [
-   3,
-   4,
-   6,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 6.1,
-  "consensus": 7.2,
-  "market": 4.3,
-  "josh": 5,
-  "avoid": false,
-  "rank": 112,
-  "tier": 4
- },
- {
   "key": "cedric coward",
   "espnId": 4903027,
   "name": "Cedric Coward",
@@ -2182,6 +2161,27 @@
   "tier": 4
  },
  {
+  "key": "alex sarr",
+  "espnId": 5160992,
+  "name": "Alex Sarr",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 6,
+  "consensus": 7.1,
+  "market": 4.3,
+  "josh": 5,
+  "avoid": false,
+  "rank": 112,
+  "tier": 4
+ },
+ {
   "key": "toumani camara",
   "espnId": 4431736,
   "name": "Toumani Camara",
@@ -2195,7 +2195,7 @@
    10,
    11
   ],
-  "b": 6.1,
+  "b": 6,
   "consensus": 4.5,
   "market": 0.5,
   "josh": null,
@@ -2321,45 +2321,6 @@
   "tier": 4
  },
  {
-  "key": "khaman maluach",
-  "espnId": 5203685,
-  "name": "Khaman Maluach",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 5.5,
-  "consensus": 8.4,
-  "market": 0.3,
-  "josh": null,
-  "avoid": false,
-  "rank": 104,
-  "tier": 4
- },
- {
-  "key": "sandro mamukelashvili",
-  "espnId": 4278580,
-  "name": "Sandro Mamukelashvili",
-  "slots": [
-   3,
-   4,
-   6,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 5.5,
-  "consensus": 8.4,
-  "market": 0.1,
-  "josh": null,
-  "avoid": false,
-  "rank": 105,
-  "tier": 4
- },
- {
   "key": "devin vassell",
   "espnId": 4395630,
   "name": "Devin Vassell",
@@ -2421,6 +2382,45 @@
   "josh": 2,
   "avoid": false,
   "rank": 103,
+  "tier": 4
+ },
+ {
+  "key": "khaman maluach",
+  "espnId": 5203685,
+  "name": "Khaman Maluach",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 5.4,
+  "consensus": 8.4,
+  "market": 0.3,
+  "josh": null,
+  "avoid": false,
+  "rank": 104,
+  "tier": 4
+ },
+ {
+  "key": "sandro mamukelashvili",
+  "espnId": 4278580,
+  "name": "Sandro Mamukelashvili",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 5.4,
+  "consensus": 8.4,
+  "market": 0.1,
+  "josh": null,
+  "avoid": false,
+  "rank": 105,
   "tier": 4
  },
  {
@@ -2506,26 +2506,6 @@
   "tier": 5
  },
  {
-  "key": "fred vanvleet",
-  "espnId": 2991230,
-  "name": "Fred VanVleet",
-  "slots": [
-   0,
-   1,
-   5,
-   7,
-   8,
-   11
-  ],
-  "b": 4.9,
-  "consensus": 3.6,
-  "market": 2.5,
-  "josh": null,
-  "avoid": false,
-  "rank": 133,
-  "tier": 5
- },
- {
   "key": "jabari smith",
   "espnId": 4432639,
   "name": "Jabari Smith Jr.",
@@ -2539,11 +2519,31 @@
    11
   ],
   "b": 4.8,
-  "consensus": 6.7,
+  "consensus": 6.6,
   "market": 1.3,
   "josh": 3,
   "avoid": false,
   "rank": 114,
+  "tier": 5
+ },
+ {
+  "key": "fred vanvleet",
+  "espnId": 2991230,
+  "name": "Fred VanVleet",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "b": 4.8,
+  "consensus": 3.6,
+  "market": 2.5,
+  "josh": null,
+  "avoid": false,
+  "rank": 133,
   "tier": 5
  },
  {
@@ -2587,6 +2587,28 @@
   "tier": 5
  },
  {
+  "key": "aaron nesmith",
+  "espnId": 4396909,
+  "name": "Aaron Nesmith",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "b": 4.6,
+  "consensus": 3.4,
+  "market": 0.1,
+  "josh": null,
+  "avoid": false,
+  "rank": 135,
+  "tier": 5
+ },
+ {
   "key": "deandre hunter",
   "espnId": 4065732,
   "name": "De'Andre Hunter",
@@ -2609,28 +2631,6 @@
   "tier": 5
  },
  {
-  "key": "aaron nesmith",
-  "espnId": 4396909,
-  "name": "Aaron Nesmith",
-  "slots": [
-   1,
-   2,
-   5,
-   6,
-   7,
-   8,
-   10,
-   11
-  ],
-  "b": 4.4,
-  "consensus": 3.3,
-  "market": 0.1,
-  "josh": null,
-  "avoid": false,
-  "rank": 135,
-  "tier": 5
- },
- {
   "key": "mitchell robinson",
   "espnId": 4351852,
   "name": "Mitchell Robinson",
@@ -2641,7 +2641,7 @@
    11
   ],
   "b": 4.2,
-  "consensus": 6.4,
+  "consensus": 6.5,
   "market": 0.4,
   "josh": null,
   "avoid": false,
@@ -3010,7 +3010,7 @@
    10,
    11
   ],
-  "b": 2.2,
+  "b": 2.1,
   "consensus": 1.6,
   "market": 0.1,
   "josh": null,
@@ -3030,7 +3030,7 @@
    8,
    11
   ],
-  "b": 2.2,
+  "b": 2.1,
   "consensus": 1.6,
   "market": 0.2,
   "josh": null,
@@ -3091,8 +3091,8 @@
    10,
    11
   ],
-  "b": 1.1,
-  "consensus": 0.8,
+  "b": 1.2,
+  "consensus": 0.9,
   "market": 0.1,
   "josh": null,
   "avoid": false,
