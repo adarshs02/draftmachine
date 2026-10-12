@@ -10,7 +10,8 @@
     "fetch-espn": "tsx scripts/fetch-espn.ts",
     "values": "tsx scripts/build-values.ts",
     "scrub": "tsx scripts/scrub-recording.ts",
-    "analyze": "tsx scripts/analyze-recording.ts"
+    "analyze": "tsx scripts/analyze-recording.ts",
+    "sim:batch": "tsx scripts/sim-batch.ts"
   },
   "devDependencies": {
     "@types/chrome": "0.3.4",
