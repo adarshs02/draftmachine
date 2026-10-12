@@ -5,8 +5,9 @@ Chrome extension for ESPN fantasy basketball **salary-cap (auction)** drafts. It
 - **Call on every bid**: BID up to $X, BID UP to $X (drain a rival, happy if you win), LET THEM (rival overpaying), PASS, or You lead.
 - **Save the slot**: while more than 6 of your spots are open, PASS on anyone worth under half your money per open slot; spend those slots on better players.
 - **Room temperature** (Hot / Warm / Neutral / Cold) from recent sale prices vs. value, plus inflation from money left vs. value left.
-- **Your budget**: money per open slot after holding 2 × $1 streaming slots, and a safe max that keeps your roster fillable.
-- **Rivals**: everyone's money, open slots and max bid, and who can outbid you on each target.
+- **Your budget**: money left, open spots, money per open slot after holding 2 × $1 streaming slots, and a safe max that keeps your roster fillable.
+- **The call card** shows the player's value, ESPN's average price and your max, with a bar placing the current price against them. The last 8 sales show green under value, red over.
+- **Rivals**: everyone's money, open slots and max bid, highest first; max bids in amber can outbid your max on the player on the block.
 - **Nominate next**: early, players the room overpays for; later, your target once rivals can't outbid you; at the end, $1 steals.
 - **Warnings**: two stars eating 70% of your budget leaves no margin for error.
 
@@ -40,7 +41,7 @@ Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `e
    - In **live mode**, the panel updates automatically as events happen in the room.
    - In **manual mode** nothing new arrives: the panel has no manual entry, so if the light stays hollow during a live draft, the decoder isn't reading ESPN's messages (record the draft and report it).
 5. If a refresh or reconnect breaks the live connection mid-sale, an alert says "Missed the end of …". Check **Budgets** on ESPN to see if the player sold. Teams are labelled `#id name`. To fix a wrong sale, press ✎ and type the price and team number (`14 3`) or the start of the team name (`14 bub`). **Undo last sale** removes the most recent sale. The **–** button in the header collapses the panel.
-6. Above **Nominate:**, a line shows whose turn it is to nominate: **Your turn to nominate**, **Nominating now: #id name · you nominate in N turns**, or, while a player is on the block, **Up next: …**. In live mode it comes from ESPN; in manual mode it is inferred from the draft order, skipping teams with full rosters.
+6. Above **Nominate**, a line shows whose turn it is to nominate: **Your turn to nominate**, **Nominating now: #id name · you nominate in N turns**, or, while a player is on the block, **Up next: …**. In live mode it comes from ESPN; in manual mode it is inferred from the draft order, skipping teams with full rosters.
 7. Watch the footer's unknown-verb counter. If that count grows during your draft, it's worth recording and reporting.
 8. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **New draft** (after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
 

@@ -37,6 +37,43 @@ describe('Panel', () => {
     expect(text).toContain('worth $6 vs your $18/slot')
   })
 
+  it('tints the call card by the call', () => {
+    expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.querySelector('section.now.BID')).not.toBeNull()
+    expect(show(build(S, V, [nominated('Alpha', 2, 40)])).el.querySelector('section.now.LET_THEM')).not.toBeNull()
+  })
+
+  it('labels value, ESPN avg and my max on the call card, with a price bar', () => {
+    const state = build(S, [pv('Alpha', 30, { market: 41.6 }), pv('Beta', 18)], [nominated('Alpha', 2, 20)])
+    const now = show(state).el.querySelector('.now')!
+    const stats = [...now.querySelectorAll('.stat')].map((x) => x.textContent)
+    expect(stats).toEqual(['value $36', 'ESPN avg $42', 'your max $35'])
+    expect(now.querySelector('.bar')!.getAttribute('aria-label')).toBe('price $20, your max $35, value $36')
+  })
+
+  it('shows my budget as four labelled numbers', () => {
+    const stats = [...show(build(S, V, [sold('Beta', 1, 20)])).el.querySelectorAll('.budget .stat')].map((x) => x.textContent)
+    expect(stats).toEqual(['$180 left', '12 spots', '$18 per slot', '$169 safe max'])
+  })
+
+  it('sorts rivals by max bid and highlights those who can outbid my max on the block', () => {
+    const state = build(S, V, [sold('Beta', 2, 190), nominated('Alpha', 3, 1)])
+    const rows = [...show(state).el.querySelectorAll('.rivals tr')]
+    expect(rows.map((r) => r.querySelector('td')!.textContent)).toEqual(['#3 T3', '#4 T4', '#2 T2'])
+    expect(rows.map((r) => r.classList.contains('over'))).toEqual([true, true, false])
+  })
+
+  it('colors each sale by its price against the player value, newest first, at most 8', () => {
+    const sales = [sold('Alpha', 2, 25), sold('Beta', 3, 25), ...Array.from({ length: 8 }, (_, i) => sold(`F${i}`, 4, 1))]
+    const rows = [...show(build(S, V, sales)).el.querySelectorAll('.sales .sale')]
+    expect(rows).toHaveLength(8)
+    const alpha = show(build(S, V, [sold('Alpha', 2, 25), sold('Beta', 3, 25)])).el.querySelectorAll('.sales .sale')
+    const cells = (r: Element) => ['.name', '.team', '.price', '.val'].map((c) => r.querySelector(c)!.textContent)
+    expect([...alpha].map((r) => [r.querySelector('.price')!.className, ...cells(r)])).toEqual([
+      ['price over', 'Beta', 'T3', '$25', 'val $18'],
+      ['price under', 'Alpha', 'T2', '$25', 'val $30'],
+    ])
+  })
+
   describe('nomination turn line', () => {
     const line = (state: DraftState) => show(state).el.querySelector('.turn')?.textContent ?? null
 

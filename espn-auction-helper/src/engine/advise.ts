@@ -4,7 +4,7 @@ import { nominationTurn, type NominationTurn } from './turn'
 import type { DraftState } from './types'
 import { verdict, type Verdict } from './verdict'
 
-export const FEED_LIMIT = 15
+export const FEED_LIMIT = 8
 
 export interface FeedRow {
   seq: number
@@ -12,6 +12,8 @@ export interface FeedRow {
   teamId: number
   teamName: string
   price: number
+  /** the player's value, to show the price against */
+  value: number
   bargain: boolean
 }
 
@@ -45,6 +47,7 @@ export function advise(s: DraftState): Advice {
         teamId: x.teamId,
         teamName: teamSummary(s, x.teamId).name,
         price: x.price,
+        value: valueOf(s, x.playerKey).b,
         bargain: flags.get(x.seq)?.bargain ?? false,
       })),
   }
