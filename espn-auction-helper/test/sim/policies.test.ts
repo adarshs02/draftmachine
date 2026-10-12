@@ -70,7 +70,7 @@ const runDraftAtDefaults = () => {
 
 describe('inertForAutopilot', () => {
   it('names the tunables that only change what the panel shows', () => {
-    expect(inertForAutopilot(DEFAULT_TUNABLES)).toEqual(['BARGAIN_RATIO', 'BID_GAP_MIN', 'BID_GAP_FRACTION', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE', 'TARGET_BAND', 'TARGET_LIMIT'])
+    expect(inertForAutopilot(DEFAULT_TUNABLES)).toEqual(['BARGAIN_RATIO', 'BID_GAP_MIN', 'BID_GAP_FRACTION', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE'])
     // A gap below BID_UP_MARGIN + 1 makes BID bid past BID UP's limit.
     expect(inertForAutopilot({ ...DEFAULT_TUNABLES, BID_GAP_MIN: 2 })).not.toContain('BID_GAP_FRACTION')
     setTunables({ BID_GAP_MIN: 1 })

@@ -26,6 +26,5 @@ td { padding: 1px 4px; }
 button { font: inherit; background: #374151; color: inherit; border: 0; border-radius: 4px; padding: 2px 6px; cursor: pointer; }
 input, select { font: inherit; background: #1f2937; color: inherit; border: 1px solid #4b5563; border-radius: 4px; padding: 2px 4px; margin: 2px 0; width: 100%; box-sizing: border-box; }
 .row { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
-.pin { background: none; color: #fbbf24; padding: 0; }
 .fix { background: none; color: #9ca3af; padding: 0 2px; }
 `

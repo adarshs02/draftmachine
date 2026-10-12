@@ -33,7 +33,6 @@ function teamFromText(teams: Team[], text: string): number | null {
   return byName.length === 1 ? byName[0].id : null
 }
 
-const outbidText = (names: string[]) => (names.length > 2 ? `outbid by ${names.length} teams` : names.length ? `outbid: ${names.join(', ')}` : '')
 
 export function Panel(p: PanelProps) {
   const { advice, state } = p
@@ -107,20 +106,6 @@ export function Panel(p: PanelProps) {
           <b>Nominate:</b> ${advice.nomination.name} <span class="muted">(${advice.nomination.phase})</span>
           <div class="muted">${advice.nomination.reason}</div>
         </section>`}
-        <section>
-          <h4>Targets</h4>
-          <table>
-            ${advice.targets.map(
-              (t) => html`<tr>
-                <td><button class="pin" title="pin target" onClick=${() => p.onEvent({ type: 'toggleTarget', playerKey: t.playerKey })}>${t.pinned ? '★' : '☆'}</button></td>
-                <td>${t.name}</td>
-                <td>${money(t.adjusted)}</td>
-                <td>≤${money(t.ceiling)}</td>
-                <td class="muted" title=${t.outbidBy.join(', ')}>${outbidText(t.outbidBy)}</td>
-              </tr>`,
-            )}
-          </table>
-        </section>
         <section>
           <h4>Rivals</h4>
           <table>

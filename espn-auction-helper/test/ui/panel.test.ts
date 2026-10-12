@@ -104,30 +104,10 @@ describe('Panel', () => {
     expect(show(state).el.querySelector('.now')!.textContent).toContain('ESPN #4396993 has no value')
   })
 
-  it('shortens a long outbid list to a count, keeping the names in the tooltip', () => {
-    const state = build(S, V, [])
-    const advice = advise(state)
-    const cell = (names: string[]) => {
-      const el = document.createElement('div')
-      const targets = advice.targets.map((t, i) => (i === 0 ? { ...t, outbidBy: names } : t))
-      render(
-        html`<${Panel} advice=${{ ...advice, targets }} state=${state} health="manual" banner=${null} alert=${null} unknownVerbs=${{}} frameCount=${0} onEvent=${() => {}} onDownloadRecording=${() => {}} onReset=${() => {}} onDismissAlert=${() => {}} />`,
-        el,
-      )
-      return el.querySelector('td.muted:last-child') as HTMLElement
-    }
-    const many = cell(['T2', 'T3', 'T4'])
-    expect(many.textContent).toBe('outbid by 3 teams')
-    expect(many.title).toBe('T2, T3, T4')
-    expect(cell(['T2']).textContent).toBe('outbid: T2')
-    expect(cell(['T2', 'T3']).textContent).toBe('outbid: T2, T3')
-    expect(cell([]).textContent).toBe('')
-  })
-
-  it('pins a target', () => {
-    const { el, onEvent } = show(build(S, V, []))
-    ;(el.querySelector('button.pin') as HTMLButtonElement).click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'toggleTarget', playerKey: 'beta' })
+  it('has no Targets list', () => {
+    const { el } = show(build(S, V, []))
+    expect(el.textContent).not.toContain('Targets')
+    expect(el.querySelector('button.pin')).toBeNull()
   })
 
   it('fixes a sale through a prompt ("price team")', () => {

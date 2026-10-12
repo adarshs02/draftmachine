@@ -32,8 +32,8 @@ export function autopilotCap(s: DraftState, key: string): number {
   return Math.max(0, bidTo, pushTo)
 }
 
-/** Tunables that only change what the panel shows (warnings, alerts, the target list). */
-const DISPLAY_ONLY: readonly TunableName[] = ['BARGAIN_RATIO', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE', 'TARGET_BAND', 'TARGET_LIMIT']
+/** Tunables that only change what the panel shows (warnings and alerts). */
+const DISPLAY_ONLY: readonly TunableName[] = ['BARGAIN_RATIO', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE']
 
 /**
  * Tunables that can't change autopilot's bids under `t`, in DEFAULT_TUNABLES order. BID_GAP_* only

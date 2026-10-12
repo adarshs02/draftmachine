@@ -21,8 +21,6 @@ export const DEFAULT_TUNABLES = Object.freeze({
   EARLY_MONEY: 0.6,
   DOLLAR_MONEY: 0.15,
   DECOY_MARKET_RATIO: 1.1,
-  TARGET_BAND: 0.5,
-  TARGET_LIMIT: 10,
 })
 
 export type Tunables = { -readonly [K in keyof typeof DEFAULT_TUNABLES]: number }
