@@ -1,4 +1,4 @@
-import { TUNABLES } from '../engine/constants'
+import { DEFAULT_TUNABLES, TUNABLES, type TunableName, type Tunables } from '../engine/constants'
 import { adjustedValue, inflation, temperature, valueOf } from '../engine/metrics'
 import { suggestNomination } from '../engine/nominate'
 import type { DraftState } from '../engine/types'
@@ -30,6 +30,20 @@ export function autopilotCap(s: DraftState, key: string): number {
   const bidTo = Math.min(ceiling, Math.floor(a - gap) + 1)
   const pushTo = Math.min(ceiling, Math.floor(a - TUNABLES.BID_UP_MARGIN))
   return Math.max(0, bidTo, pushTo)
+}
+
+/** Tunables that only change what the panel shows (warnings, alerts, the target list). */
+const DISPLAY_ONLY: readonly TunableName[] = ['BARGAIN_RATIO', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE', 'TARGET_BAND', 'TARGET_LIMIT']
+
+/**
+ * Tunables that can't change autopilot's bids under `t`, in DEFAULT_TUNABLES order. BID_GAP_* only
+ * pick the label (BID vs BID UP) while the gap is at least BID_UP_MARGIN + 1: BID UP then bids further.
+ */
+export function inertForAutopilot(t: Readonly<Tunables>): TunableName[] {
+  const gapInert = t.BID_GAP_MIN >= t.BID_UP_MARGIN + 1
+  return (Object.keys(DEFAULT_TUNABLES) as TunableName[]).filter(
+    (k) => DISPLAY_ONLY.includes(k) || (gapInert && (k === 'BID_GAP_MIN' || k === 'BID_GAP_FRACTION')),
+  )
 }
 
 export function createAgent(name: PolicyName, source: StateSource, players: readonly SimPlayer[]): MyAgent {

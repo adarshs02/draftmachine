@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { DEFAULT_TUNABLES, TUNABLES } from '../../src/engine/constants'
 import { runBatch } from '../../src/sim/batch'
-import { parseBatchArgs } from '../../src/sim/batchArgs'
+import { inertNote, parseBatchArgs } from '../../src/sim/batchArgs'
 import type { ProjectionSource } from '../../src/sim/score'
 import type { PlayerValue } from '../../src/values/types'
 
@@ -36,9 +36,17 @@ describe('parseBatchArgs', () => {
   })
 })
 
+describe('inertNote', () => {
+  it('warns when a --set tunable cannot change autopilot', () => {
+    expect(inertNote({ BID_UP_MARGIN: 4 })).toBeNull()
+    expect(inertNote({ BID_GAP_FRACTION: 0.1, HOT: 1.1 })).toBe('Note: BID_GAP_FRACTION only changes what the panel shows, not what autopilot bids.')
+    expect(inertNote({ BID_GAP_MIN: 1, BID_GAP_FRACTION: 0.1 })).toBeNull()
+  })
+})
+
 describe('runBatch', () => {
   it('runs every policy per config, is deterministic, and never leaks tunables', () => {
-    const args = parseBatchArgs(['--drafts', '2', '--seed', '4', '--set', 'BID_GAP_FRACTION=0.1', '--compare'])
+    const args = parseBatchArgs(['--drafts', '2', '--seed', '4', '--set', 'BID_UP_MARGIN=4', '--compare'])
     const a = runBatch({ args, values: VALUES, projections: FLAT })
     expect(a.map((s) => s.label)).toEqual([
       'defaults · autopilot', 'defaults · market', 'defaults · consensus',
@@ -47,7 +55,9 @@ describe('runBatch', () => {
     expect(a.every((s) => s.drafts === 2)).toBe(true)
     expect(TUNABLES).toEqual(DEFAULT_TUNABLES)
     expect(runBatch({ args, values: VALUES, projections: FLAT })).toEqual(a)
-    // Baselines ignore tunables, so they match across configs.
+    // The override reaches autopilot (a dropped --set would make these equal)...
+    expect(a[3]).not.toEqual({ ...a[0], label: 'overrides · autopilot' })
+    // ...while baselines ignore tunables, so they match across configs.
     expect(a[4]).toEqual({ ...a[1], label: 'overrides · market' })
     // A later defaults-only run is unaffected by the overrides that ran last.
     const plain = runBatch({ args: parseBatchArgs(['--drafts', '2', '--seed', '4', '--policies', 'autopilot']), values: VALUES, projections: FLAT })

@@ -1,11 +1,13 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
+import { DEFAULT_TUNABLES, resetTunables, setTunables } from '../../src/engine/constants'
 import { reduce } from '../../src/engine/reducer'
 import { verdict } from '../../src/engine/verdict'
 import { toSettings } from '../../src/espn/league'
 import { AuctionSim, runToEnd } from '../../src/sim/auction'
 import { marketPrice } from '../../src/sim/bots'
-import { autopilotCap, createAgent } from '../../src/sim/policies'
+import { autopilotCap, createAgent, inertForAutopilot } from '../../src/sim/policies'
+import { runDraft } from '../../src/sim/run'
 import { defaultOptions, simLeague, simPlayers, simTeams } from '../../src/sim/setup'
 import { createTracker } from '../../src/sim/tracker'
 import type { PlayerValue } from '../../src/values/types'
@@ -59,4 +61,36 @@ describe('agents', () => {
     expect(me.budget).toBeGreaterThanOrEqual(0)
     expect(sim.sales.filter((x) => x.teamId === 1).length).toBe(13)
   })
+})
+
+const runDraftAtDefaults = () => {
+  resetTunables()
+  return runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales
+}
+
+describe('inertForAutopilot', () => {
+  it('names the tunables that only change what the panel shows', () => {
+    expect(inertForAutopilot(DEFAULT_TUNABLES)).toEqual(['BARGAIN_RATIO', 'BID_GAP_MIN', 'BID_GAP_FRACTION', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE', 'TARGET_BAND', 'TARGET_LIMIT'])
+    // A gap below BID_UP_MARGIN + 1 makes BID bid past BID UP's limit.
+    expect(inertForAutopilot({ ...DEFAULT_TUNABLES, BID_GAP_MIN: 2 })).not.toContain('BID_GAP_FRACTION')
+    setTunables({ BID_GAP_MIN: 1 })
+    try {
+      expect(runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales).not.toEqual(runDraftAtDefaults())
+    } finally {
+      resetTunables()
+    }
+  })
+
+  it('changing an inert tunable leaves an autopilot draft unchanged', () => {
+    const base = runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales
+    try {
+      for (const name of inertForAutopilot(DEFAULT_TUNABLES)) {
+        setTunables({ [name]: DEFAULT_TUNABLES[name] * 1.5 }) // up keeps BID_GAP_MIN >= BID_UP_MARGIN + 1
+        expect([name, runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales]).toEqual([name, base])
+        resetTunables()
+      }
+    } finally {
+      resetTunables()
+    }
+  }, 60_000)
 })

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs'
 import { runBatch } from '../src/sim/batch'
-import { BATCH_USAGE, parseBatchArgs, type BatchArgs } from '../src/sim/batchArgs'
+import { BATCH_USAGE, inertNote, parseBatchArgs, type BatchArgs } from '../src/sim/batchArgs'
 import { formatTable } from '../src/sim/run'
 import { PLAYTIME_PATH, projectionsFromCsv, STATS_PATH } from '../src/sim/seasonStats'
 import type { PlayerValue } from '../src/values/types'
@@ -16,6 +16,8 @@ function argsOrExit(): BatchArgs {
 }
 
 const args = argsOrExit()
+const note = inertNote(args.set)
+if (note) console.warn(note)
 const values = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
 const read = (path: string) => (existsSync(path) ? readFileSync(path, 'utf8') : null)
 const projections = projectionsFromCsv(read(STATS_PATH), read(PLAYTIME_PATH), values)

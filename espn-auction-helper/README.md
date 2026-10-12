@@ -98,7 +98,7 @@ Runs seeded drafts with your team on autopilot and two baselines on the same see
 
 ```
 npm run sim:batch -- --drafts 200
-npm run sim:batch -- --drafts 100 --room hot --set BID_GAP_FRACTION=0.2 --compare
+npm run sim:batch -- --drafts 100 --room hot --set BID_UP_MARGIN=4 --compare
 npm run sim:batch -- --drafts 50 --json > results.json
 ```
 
@@ -107,7 +107,7 @@ Flags:
 - `--seed N` (default 1; drafts use seeds N, N+1, …)
 - `--room cold|neutral|hot|<number>`
 - `--policies autopilot,market,consensus`
-- `--set NAME=value` (repeatable)
+- `--set NAME=value` (repeatable). Autopilot's bid limit comes from the adjusted value, the ceiling and `BID_UP_MARGIN`; tunables that only change the panel's display (`BID_GAP_*` at their defaults, `*_SHARE`, `BARGAIN_RATIO`, `TARGET_*`) leave autopilot's results unchanged, and the batch prints a note when you set one.
 - `--compare`: defaults vs your `--set` values on the same seeds
 - `--json`
 

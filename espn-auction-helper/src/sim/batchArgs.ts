@@ -1,6 +1,6 @@
 import { DEFAULT_TUNABLES, type Tunables } from '../engine/constants'
 import { ROOMS } from './bots'
-import { POLICIES, type PolicyName } from './policies'
+import { inertForAutopilot, POLICIES, type PolicyName } from './policies'
 
 export interface BatchArgs {
   drafts: number
@@ -16,6 +16,13 @@ export interface BatchArgs {
 
 export const BATCH_USAGE = `Usage: npm run sim:batch -- [--drafts 100] [--seed 1] [--room cold|neutral|hot|<number>]
   [--policies autopilot,market,consensus] [--set NAME=value ...] [--compare] [--json]`
+
+/** A warning when some --set tunables can't change autopilot's bids (defaults and overrides would match), else null. */
+export function inertNote(set: Partial<Tunables>): string | null {
+  const inert = inertForAutopilot({ ...DEFAULT_TUNABLES, ...set }).filter((name) => Object.hasOwn(set, name))
+  if (!inert.length) return null
+  return `Note: ${inert.join(', ')} only change${inert.length === 1 ? 's' : ''} what the panel shows, not what autopilot bids.`
+}
 
 function parseSet(text: string): [keyof Tunables, number] {
   const eq = text.indexOf('=')
