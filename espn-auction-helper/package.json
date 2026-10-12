@@ -11,6 +11,7 @@
     "values": "tsx scripts/build-values.ts",
     "scrub": "tsx scripts/scrub-recording.ts",
     "analyze": "tsx scripts/analyze-recording.ts",
+    "sim": "node sim.mjs",
     "sim:batch": "tsx scripts/sim-batch.ts"
   },
   "devDependencies": {

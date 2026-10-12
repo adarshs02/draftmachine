@@ -66,3 +66,62 @@ Before your real auction, run through a mock or test league with these checks:
 ## Tuning
 
 All thresholds live in `src/engine/constants.ts`. `test/replay.test.ts` replays Josh's 156-sale mock: run `npm test` after any change to make sure the engine still makes his calls.
+
+## Simulator
+
+Run drafts locally against bot teams, no ESPN needed.
+
+### Interactive: `npm run sim`
+
+Serves the simulator at http://127.0.0.1:5173 (`npm run sim -- --open` also opens it). Saving any source file rebuilds and reloads the page.
+
+- **Room (left):**
+  - Teams in draft order, with $ left and open slots. Amber marks the team nominating.
+  - The block, with its clock and your buttons: +$1, +$5, amount, Pass.
+  - A player search when it is your turn to nominate.
+  - Recent sales.
+  - At the end of the draft: projected standings, your value captured and money left.
+- **Panel (right):** the real helper panel, fed the same socket lines ESPN sends. Manual entry still works.
+- **Controls:**
+  - Speed: 1×, 5×, 20× or Instant.
+  - Pause, Step to next sale, Run to end.
+  - Autopilot: your team follows the panel's calls.
+  - Mode: simulate, replay the recorded ESPN draft, or replay Josh Lloyd's mock.
+  - Seed, room (cold, neutral, hot), bot mix, Restart.
+- **Tunables:** edit any engine constant and the panel updates immediately. Reset restores the defaults; Copy as flags gives the matching `--set` flags for the batch runner.
+
+### Batch: `npm run sim:batch`
+
+Runs seeded drafts with your team on autopilot and two baselines on the same seeds and bots:
+- `market` bids up to the average price paid.
+- `consensus` bids up to the projected value.
+
+```
+npm run sim:batch -- --drafts 200
+npm run sim:batch -- --drafts 100 --room hot --set BID_GAP_FRACTION=0.2 --compare
+npm run sim:batch -- --drafts 50 --json > results.json
+```
+
+Flags:
+- `--drafts N` (default 100)
+- `--seed N` (default 1; drafts use seeds N, N+1, …)
+- `--room cold|neutral|hot|<number>`
+- `--policies autopilot,market,consensus`
+- `--set NAME=value` (repeatable)
+- `--compare`: defaults vs your `--set` values on the same seeds
+- `--json`
+
+Columns:
+- avg rank: average projected roto rank, 1 = best, with the 95% interval.
+- roto pts: projected roto points.
+- 1st %: share of drafts won.
+- value captured: projected value minus price, summed over your roster.
+- $ left: money left unspent.
+
+### Projections
+
+Standings are projected 9-category roto from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. Restart `npm run sim` after changing either file. Players without a projection add nothing and are counted in the "No proj." column. Without the stats file the simulator still runs and reports value captured and money left.
+
+### Bots
+
+The 9 bots are 3 stars-and-scrubs, 4 balanced and 2 value hunters. For each player, every bot draws a private value: market price × lognormal noise × room × personality. Bots keep ESPN's budget rule (keep $1 for every other open slot) and don't spend more than 60% of their budget while 4 or more slots are open. They nominate the top player 80% of the time and otherwise a cheap player that real drafters buy (one with an ESPN average price).
