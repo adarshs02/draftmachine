@@ -1,0 +1,62 @@
+import { readFileSync } from 'node:fs'
+import { describe, expect, it } from 'vitest'
+import { reduce } from '../../src/engine/reducer'
+import { verdict } from '../../src/engine/verdict'
+import { toSettings } from '../../src/espn/league'
+import { AuctionSim, runToEnd } from '../../src/sim/auction'
+import { marketPrice } from '../../src/sim/bots'
+import { autopilotCap, createAgent } from '../../src/sim/policies'
+import { defaultOptions, simLeague, simPlayers, simTeams } from '../../src/sim/setup'
+import { createTracker } from '../../src/sim/tracker'
+import type { PlayerValue } from '../../src/values/types'
+
+const VALUES = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
+const PLAYERS = simPlayers(VALUES)
+const O = defaultOptions(1)
+const SETTINGS = toSettings(simLeague(O, simTeams(O)))
+
+/** A tracker after `sales` sales of a market-baseline draft, to test on mid-draft states too. */
+function trackerAfter(sales: number) {
+  const tracker = createTracker(VALUES, SETTINGS, O.myTeamId)
+  const sim = new AuctionSim(O, PLAYERS, { onLine: (line) => tracker.push(line) }, createAgent('market', tracker, PLAYERS))
+  while (!sim.done && sim.sales.length < sales) sim.advanceTo(sim.nextEventAt()!)
+  return { tracker, sim }
+}
+
+describe('autopilotCap', () => {
+  it.each([0, 40, 90])('matches the panel exactly: BID or BID UP <=> price + 1 <= cap (after %i sales)', (sales) => {
+    const { tracker, sim } = trackerAfter(sales)
+    const base = { ...tracker.state, live: null }
+    for (const p of sim.available.slice(0, 25)) {
+      const key = tracker.keyOf(p.espnId)
+      const at = (price: number) => reduce(base, { type: 'nominated', playerKey: key, teamId: 7, amount: price })
+      // The agent computes the cap once, when the player opens at $1.
+      const cap = autopilotCap(at(1), key)
+      for (let price = 1; price <= 60; price++) {
+        const kind = verdict(at(price))!.kind
+        expect([price, kind, price + 1 <= cap]).toEqual([price, kind, kind === 'BID' || kind === 'BID_UP'])
+      }
+    }
+  })
+})
+
+describe('agents', () => {
+  it('market bids to the market price; consensus to the consensus value', () => {
+    const { tracker, sim } = trackerAfter(0)
+    while (!sim.block) sim.advanceTo(sim.nextEventAt()!)
+    const p = PLAYERS.find((x) => x.espnId === sim.block!.espnId)!
+    expect(createAgent('market', tracker, PLAYERS).bidCap(sim)).toBe(Math.round(marketPrice(p)))
+    expect(createAgent('consensus', tracker, PLAYERS).bidCap(sim)).toBe(Math.round(p.consensus))
+  })
+
+  it('autopilot nominates an available player and plays a whole draft within ESPN rules', () => {
+    const tracker = createTracker(VALUES, SETTINGS, O.myTeamId)
+    const agent = createAgent('autopilot', tracker, PLAYERS)
+    const sim = new AuctionSim(O, PLAYERS, { onLine: (line) => tracker.push(line) }, agent)
+    runToEnd(sim)
+    const me = sim.teams.find((t) => t.id === 1)!
+    expect(me.roster).toHaveLength(13)
+    expect(me.budget).toBeGreaterThanOrEqual(0)
+    expect(sim.sales.filter((x) => x.teamId === 1).length).toBe(13)
+  })
+})
