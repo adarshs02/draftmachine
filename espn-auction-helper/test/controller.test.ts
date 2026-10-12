@@ -91,6 +91,27 @@ describe('createController', () => {
     expect(views[0].state.settings.teams).toHaveLength(10)
     expect(views[0].state.myTeamId).toBeNull()
   })
+
+  it('quiet frames apply without rendering; refresh renders the current state', async () => {
+    const { c, views } = await make()
+    c.onFrame({ dir: 'in', data: lineFor(GRAMMAR.bid, { team: 2, player: 4242, amount: 5 }), t: 1, url: 'wss://x' }, { quiet: true })
+    expect(views).toHaveLength(1)
+    expect(c.getState().live).toMatchObject({ playerKey: 'espn:4242', price: 5, leaderId: 2 })
+    c.refresh()
+    expect(views).toHaveLength(2)
+    expect(views[1].state.live).toMatchObject({ playerKey: 'espn:4242', price: 5 })
+    expect(views[1].frameCount).toBe(1)
+  })
+
+  it('persist: false keeps the event log out of storage', async () => {
+    const storage = memoryStore()
+    const backup = memoryStore()
+    const { c } = await make({ persist: false, storage, backup })
+    expect(c.dispatch(sold('Alpha', 2, 30))).toBe(true)
+    expect(c.getState().sales).toHaveLength(1)
+    expect(storage.data).toEqual({})
+    expect(backup.data).toEqual({})
+  })
 })
 
 describe('saved draft', () => {

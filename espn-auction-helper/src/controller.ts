@@ -36,6 +36,8 @@ export interface ControllerDeps {
   render: (view: View) => void
   /** clock for the health window (tests); default Date.now */
   now?: () => number
+  /** false: keep the event log in memory only (the simulator); default true */
+  persist?: boolean
 }
 
 export interface Controller {
@@ -43,10 +45,13 @@ export interface Controller {
   dispatch(ev: DraftEvent): boolean
   dismissAlert(): void
   getState(): DraftState
-  onFrame(frame: Frame): void
+  /** Decodes a socket frame; `quiet` applies it without rendering (the simulator renders once per tick with refresh). */
+  onFrame(frame: Frame, options?: { quiet?: boolean }): void
   recordingJson(): string
   /** Re-renders only if health changed since the last render (decoding went quiet, or came back). */
   tick(): void
+  /** Renders the current state now: after quiet frames, or when tunables changed the advice. */
+  refresh(): void
   /** New draft: forget every recorded event, keep league settings, values and the detected team. */
   reset(): void
 }
@@ -115,7 +120,7 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     if (next === state) return false
     state = next
     log.push(ev)
-    for (const store of stores) saveEvents(store, deps.leagueId, log)
+    if (deps.persist !== false) for (const store of stores) saveEvents(store, deps.leagueId, log)
     return true
   }
   const playerName = (key: string) => valueOf(state, key).name
@@ -176,15 +181,16 @@ export async function createController(deps: ControllerDeps): Promise<Controller
       publish()
     },
     getState: () => state,
-    onFrame(frame) {
+    onFrame(frame, options) {
       frames.push(frame)
       if (frame.dir === 'in') for (const line of splitLines(frame.data)) onLine(line)
-      publish()
+      if (!options?.quiet) publish()
     },
     recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),
     tick() {
       if (health() !== shownHealth) publish()
     },
+    refresh: publish,
     reset() {
       log = []
       clearLog()
