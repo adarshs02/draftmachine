@@ -50,4 +50,10 @@ describe('bots', () => {
     expect(botNominate(() => 0.99, available)).toBe(available[0])
     expect(botNominate(() => 0, available)).toBe(available[2]) // cheap list [P3, P4], pick index 0
   })
+
+  it('throwaways are players real drafters buy (ESPN market > 0), never undrafted names', () => {
+    const available = [P(1, 60), P(2, 30), P(3, 2), P(4, 1), P(5, 0, 3), P(6, 0, 0)]
+    const draws = [0, 0.99] // throwaway, then the last cheap player
+    expect(botNominate(() => draws.shift()!, available)).toBe(available[3])
+  })
 })

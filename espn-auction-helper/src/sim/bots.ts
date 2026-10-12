@@ -49,10 +49,13 @@ export function botRaise(r: Rng, price: number, cap: number, value: number): num
   return Math.min(next, cap)
 }
 
-/** `available` must be sorted by market price, highest first. */
+/**
+ * `available` must be sorted by market price, highest first. Throwaways are cheap players real
+ * drafters buy (ESPN market > 0): the nominator usually keeps them at $1.
+ */
 export function botNominate(r: Rng, available: readonly SimPlayer[]): SimPlayer {
   if (r() < THROWAWAY_CHANCE) {
-    const cheap = available.filter((p) => marketPrice(p) < CHEAP_MARKET)
+    const cheap = available.filter((p) => p.market > 0 && marketPrice(p) < CHEAP_MARKET)
     if (cheap.length) return pick(r, cheap)
   }
   return available[0]
