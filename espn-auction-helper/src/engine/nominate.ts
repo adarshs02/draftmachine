@@ -25,7 +25,7 @@ export interface Nomination {
 
 export function suggestNomination(s: DraftState): Nomination | null {
   if (s.myTeamId === null) return null
-  const avail = available(s)
+  const avail = available(s).filter((v) => v.key !== s.live?.playerKey)
   if (!avail.length) return null
   const phase = nominationPhase(s)
   const notMine = avail.filter((v) => !s.targets.includes(v.key))

@@ -3,6 +3,7 @@
 Chrome extension for ESPN fantasy basketball **salary-cap (auction)** drafts. It runs Josh Lloyd's auction approach (Locked On Fantasy Basketball, auction mock of 2026-10-05) live in the draft room:
 
 - **Call on every bid**: BID up to $X, BID UP to $X (drain a rival, happy if you win), LET THEM (rival overpaying), PASS, or You lead.
+- **Save the slot**: while more than 6 of your spots are open, PASS on anyone worth under half your money per open slot; spend those slots on better players.
 - **Room temperature** (Hot / Warm / Neutral / Cold) from recent sale prices vs. value, plus inflation from money left vs. value left.
 - **Your budget**: money per open slot after holding 2 × $1 streaming slots, and a safe max that keeps your roster fillable.
 - **Rivals**: everyone's money, open slots and max bid, and who can outbid you on each target.
@@ -101,7 +102,7 @@ Flags:
 - `--seed N` (default 1; drafts use seeds N, N+1, …)
 - `--room cold|neutral|hot|<number>`
 - `--policies autopilot,market,consensus`
-- `--set NAME=value` (repeatable). Autopilot's bid limit comes from the adjusted value, the ceiling and `BID_UP_MARGIN`; tunables that only change the panel's display (`BID_GAP_*` at their defaults, `*_SHARE`, `BARGAIN_RATIO`) leave autopilot's results unchanged, and the batch prints a note when you set one.
+- `--set NAME=value` (repeatable). Autopilot's bid limit comes from the adjusted value, the ceiling, `BID_UP_MARGIN` and the save-the-slot rule (`SLOT_FLOOR`, `SLOT_FLOOR_OPEN`); tunables that only change the panel's display (`BID_GAP_*` at their defaults, `*_SHARE`, `BARGAIN_RATIO`) leave autopilot's results unchanged, and the batch prints a note when you set one.
 - `--compare`: defaults vs your `--set` values on the same seeds
 - `--json`
 

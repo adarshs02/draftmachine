@@ -2,7 +2,7 @@ import { DEFAULT_TUNABLES, TUNABLES, type TunableName, type Tunables } from '../
 import { adjustedValue, inflation, temperature, valueOf } from '../engine/metrics'
 import { suggestNomination } from '../engine/nominate'
 import type { DraftState } from '../engine/types'
-import { ceilingFor } from '../engine/verdict'
+import { ceilingFor, saveSlotFor } from '../engine/verdict'
 import type { AuctionView, MyAgent } from './auction'
 import { marketPrice } from './bots'
 import type { SimPlayer } from './types'
@@ -18,7 +18,7 @@ export interface StateSource {
 
 /**
  * Highest price the panel's verdict would keep bidding to for `key` with a rival leading:
- * BID while price < ceiling and (target or a - price >= gap); BID UP while price < pushTo.
+ * BID while price < ceiling and (target or a - price >= gap); BID UP while price < pushTo; never when saving the slot.
  * Depends only on sales, values and tunables, so it is computed once per block.
  */
 export function autopilotCap(s: DraftState, key: string): number {
@@ -26,6 +26,7 @@ export function autopilotCap(s: DraftState, key: string): number {
   const a = adjustedValue(s, key, inflation(s), temperature(s).label)
   const ceiling = ceilingFor(s, key, a)
   if (s.targets.includes(key)) return ceiling
+  if (saveSlotFor(s, a) !== null) return 0
   const gap = Math.max(TUNABLES.BID_GAP_MIN, TUNABLES.BID_GAP_FRACTION * a)
   const bidTo = Math.min(ceiling, Math.floor(a - gap) + 1)
   const pushTo = Math.min(ceiling, Math.floor(a - TUNABLES.BID_UP_MARGIN))

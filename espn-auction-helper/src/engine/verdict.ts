@@ -18,6 +18,8 @@ export interface Verdict {
   rivalPerSlotAfter: number | null
   warnings: string[]
   unvalued: boolean
+  /** my money per slot, when the call is PASS to keep the slot for a better player */
+  saveSlot: number | null
 }
 
 /** Most I should pay: adjusted value (with positional need), capped by what keeps my roster fillable. */
@@ -25,6 +27,15 @@ export function ceilingFor(s: DraftState, key: string, a = adjustedValue(s, key)
   const mb = myBudget(s)
   if (!mb) return 0
   return Math.max(0, Math.floor(Math.min(a * needBoost(s, key), mb.safeMax)))
+}
+
+/**
+ * My money per slot when a player worth `a` is too cheap to spend a slot on: worth under
+ * SLOT_FLOOR x my money per slot while more than SLOT_FLOOR_OPEN slots are open. Otherwise null.
+ */
+export function saveSlotFor(s: DraftState, a: number): number | null {
+  const mb = myBudget(s)
+  return mb && mb.open > TUNABLES.SLOT_FLOOR_OPEN && a < TUNABLES.SLOT_FLOOR * mb.perSlot ? mb.perSlot : null
 }
 
 export function concentrationWarnings(s: DraftState, winPrice: number): string[] {
@@ -58,6 +69,7 @@ export function verdict(s: DraftState): Verdict | null {
     rivalPerSlotAfter: null,
     warnings: concentrationWarnings(s, live.price + 1),
     unvalued: !(live.playerKey in s.values),
+    saveSlot: null,
   }
   const letThem = (): Verdict => {
     const r = teamSummary(s, live.leaderId)
@@ -67,6 +79,8 @@ export function verdict(s: DraftState): Verdict | null {
   if (live.leaderId === s.myTeamId) return { ...base, kind: 'LEADING', warnings: concentrationWarnings(s, live.price) }
   if (v.avoid) return live.price > a ? letThem() : { ...base, kind: 'PASS' }
   const isTarget = s.targets.includes(live.playerKey)
+  const saveSlot = isTarget ? null : saveSlotFor(s, a)
+  if (saveSlot !== null) return live.price > a ? letThem() : { ...base, kind: 'PASS', saveSlot }
   if (live.price < ceiling && (isTarget || a - live.price >= Math.max(TUNABLES.BID_GAP_MIN, TUNABLES.BID_GAP_FRACTION * a))) return { ...base, kind: 'BID' }
   const pushTo = Math.min(ceiling, Math.floor(a - TUNABLES.BID_UP_MARGIN))
   if (live.price < pushTo) return { ...base, kind: 'BID_UP', pushTo }

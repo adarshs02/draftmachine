@@ -31,6 +31,12 @@ describe('Panel', () => {
     expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.textContent).toContain('BID up to $35')
   })
 
+  it('explains a save-the-slot PASS', () => {
+    const text = show(build(S, [...V, pv('Cheap', 5)], [nominated('Cheap', 2, 1)])).el.textContent
+    expect(text).toContain('PASS: save the slot')
+    expect(text).toContain('worth $6 vs your $18/slot')
+  })
+
   describe('nomination turn line', () => {
     const line = (state: DraftState) => show(state).el.querySelector('.turn')?.textContent ?? null
 

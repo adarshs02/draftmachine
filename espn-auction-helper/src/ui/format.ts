@@ -15,7 +15,7 @@ export function verdictText(v: Verdict): string {
     case 'LET_THEM':
       return `LET THEM (${money(v.price)} > value ${money(v.adjusted)})`
     case 'PASS':
-      return 'PASS'
+      return v.saveSlot !== null ? 'PASS: save the slot' : 'PASS'
     case 'LEADING':
       return `You lead at ${money(v.price)} (ceiling ${money(v.ceiling)})`
   }

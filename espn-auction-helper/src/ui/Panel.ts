@@ -91,6 +91,7 @@ export function Panel(p: PanelProps) {
                 <div class=${`call ${v.kind}`}>${verdictText(v)}</div>
                 <div>${v.name} · ${money(v.price)} by ${teamName(v.leaderId)}</div>
                 <div class="muted">value ${money(v.adjusted)}${market > 0 ? ` · ESPN avg ${money(market)}` : ''} · ceiling ${money(v.ceiling)}${v.boost > 1 ? ' · positional need +10%' : ''}</div>
+                ${v.saveSlot !== null && html`<div class="muted">worth ${money(v.adjusted)} vs your ${money(v.saveSlot)}/slot</div>`}
                 ${v.unvalued && html`<div class="warn">${v.name} has no value</div>`}
                 ${v.rivalPerSlotAfter !== null && html`<div class="muted">${teamName(v.leaderId)} left with ${money(v.rivalPerSlotAfter)}/slot after this</div>`}
                 ${v.warnings.map((w) => html`<div class="warn">${w}</div>`)}

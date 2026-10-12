@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { nominationPhase, suggestNomination } from '../../src/engine/nominate'
 import type { DraftEvent } from '../../src/engine/types'
-import { build, pv, settings, sold } from '../helpers'
+import { build, nominated, pv, settings, sold } from '../helpers'
 
 const S2 = settings(2, { budget: 100, rosterSize: 3, lineupSlotCounts: { 12: 3 } })
 const S3 = settings(3, { budget: 100, rosterSize: 3, lineupSlotCounts: { 12: 3 } })
@@ -41,6 +41,10 @@ describe('suggestNomination', () => {
 
   it('dollar: my target when no rival can bid over $1', () => {
     expect(suggestNomination(build(S2, V, [pin, sold('F1', 2, 99)]))).toMatchObject({ phase: 'dollar', name: 'Target', reason: expect.stringContaining('$1') })
+  })
+
+  it('never suggests the player already on the block', () => {
+    expect(suggestNomination(build(S2, V, [nominated('Decoy', 2, 1)]))!.name).not.toBe('Decoy')
   })
 
   it('is null without my team', () => {

@@ -6,7 +6,7 @@ import { build, nominated, pv, settings, sold } from '../helpers'
 // All-bench lineup: no starting slots, so need boost is always 1.
 // 4 teams x $200 chasing 3 valued players keeps inflation pinned at 1.2: Alpha a = 1 + 29 * 1.2 = 35.8.
 const S = settings(4, { lineupSlotCounts: { 12: 13 } })
-const V = [pv('Alpha', 30), pv('Bravo', 30, { avoid: true }), pv('Star', 70, { tier: 1 })]
+const V = [pv('Alpha', 30), pv('Bravo', 30, { avoid: true }), pv('Star', 70, { tier: 1 }), pv('Cheap', 5)]
 const at = (events: DraftEvent[], me: number | null = 1) => build(S, V, events, me)
 const bid = (teamId: number, amount: number): DraftEvent => ({ type: 'bid', teamId, amount })
 
@@ -39,6 +39,17 @@ describe('verdict', () => {
 
   it('a pinned target gets BID even when the gap is small', () => {
     expect(verdict(at([{ type: 'toggleTarget', playerKey: 'alpha' }, nominated('Alpha', 2, 1), bid(3, 30)]))!.kind).toBe('BID')
+  })
+
+  it('PASS on a cheap player while more than 6 slots are open: save the slot', () => {
+    // My $198 over 11 core slots = $18/slot; Cheap a = 1 + 4 * 1.2 = 5.8, under half of that.
+    expect(verdict(at([nominated('Cheap', 2, 1)]))).toMatchObject({ kind: 'PASS', saveSlot: 18 })
+    expect(verdict(at([nominated('Cheap', 2, 1), bid(3, 7)]))!.kind).toBe('LET_THEM')
+  })
+
+  it('bids on the same cheap player once 6 or fewer slots are open', () => {
+    const fillers = Array.from({ length: 7 }, (_, i) => sold(`F${i}`, 1, 1))
+    expect(verdict(at([...fillers, nominated('Cheap', 2, 1)]))).toMatchObject({ kind: 'BID', saveSlot: null })
   })
 
   it('LEADING when I am the high bidder', () => {

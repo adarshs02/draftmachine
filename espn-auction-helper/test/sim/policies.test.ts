@@ -11,6 +11,7 @@ import { runDraft } from '../../src/sim/run'
 import { defaultOptions, simLeague, simPlayers, simTeams } from '../../src/sim/setup'
 import { createTracker } from '../../src/sim/tracker'
 import type { PlayerValue } from '../../src/values/types'
+import { build, nominated, pv, settings } from '../helpers'
 
 const VALUES = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
 const PLAYERS = simPlayers(VALUES)
@@ -26,6 +27,11 @@ function trackerAfter(sales: number) {
 }
 
 describe('autopilotCap', () => {
+  it('is 0 for a player the panel says to save the slot on', () => {
+    const s = build(settings(4, { lineupSlotCounts: { 12: 13 } }), [pv('Alpha', 30), pv('Cheap', 5)], [nominated('Cheap', 2, 1)])
+    expect(autopilotCap(s, 'cheap')).toBe(0)
+  })
+
   it.each([0, 40, 90])('matches the panel exactly: BID or BID UP <=> price + 1 <= cap (after %i sales)', (sales) => {
     const { tracker, sim } = trackerAfter(sales)
     const base = { ...tracker.state, live: null }
