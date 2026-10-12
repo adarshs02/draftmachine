@@ -1,4 +1,4 @@
-import { botCap, botNominate, botRaise, drawBotValues, marketPrice, maxBid } from './bots'
+import { botCap, botInflation, botNominate, botRaise, drawBotValues, marketPrice, maxBid, roomInflation } from './bots'
 import { mulberry32, uniform, type Rng } from './rng'
 import { ROSTER_SIZE, simTeams, type SimOptions } from './setup'
 import type { SimPlayer, SimSale, SimTeam } from './types'
@@ -73,6 +73,10 @@ export class AuctionSim implements AuctionView {
 
   private readonly rng: Rng
   private readonly botValues = new Map<number, Map<number, number>>()
+  /** the room's money vs the market, set when a player opens; scales every bot's value for that player */
+  private inflation = 1
+  /** the room's money above $1 per open slot, set when a player opens */
+  private sparePerSlot = 0
   private queue: Scheduled[] = []
   private seq = 0
   private lastNominator: number | null = null
@@ -199,6 +203,11 @@ export class AuctionSim implements AuctionView {
     this.available = this.available.filter((p) => p.espnId !== player.espnId)
     this.onClock = null
     this.lastNominator = teamId
+    const bidders = this.teams.filter((t) => this.open(t) > 0)
+    const open = bidders.reduce((s, t) => s + this.open(t), 0)
+    const money = bidders.reduce((s, t) => s + t.budget, 0)
+    this.inflation = roomInflation(money, open, [player, ...this.available.slice(0, open - 1)].map(marketPrice))
+    this.sparePerSlot = open > 0 ? (money - open) / open : 0
     this.block = { espnId: player.espnId, price: amount, leaderId: teamId, endsAt: this.time + START_MS }
     this.emit(`BID ${teamId} ${player.espnId} ${amount} ${START_MS} ${START_MS}`)
     this.replan()
@@ -213,8 +222,13 @@ export class AuctionSim implements AuctionView {
     this.replan()
   }
 
+  private botValueFor(t: SimTeam): number {
+    const inflation = botInflation(this.inflation, t.budget, this.open(t), this.sparePerSlot)
+    return (this.botValues.get(t.id)!.get(this.block!.espnId) ?? 0) * inflation
+  }
+
   private botCapFor(t: SimTeam): number {
-    return botCap(this.botValues.get(t.id)!.get(this.block!.espnId) ?? 0, t.budget, this.open(t))
+    return botCap(this.botValueFor(t), t.budget, this.open(t))
   }
 
   private myCap(): number {
@@ -261,7 +275,7 @@ export class AuctionSim implements AuctionView {
       case 'botBid': {
         const t = this.team(a.teamId)
         const b = this.block!
-        const next = botRaise(this.rng, b.price, this.botCapFor(t), this.botValues.get(t.id)!.get(b.espnId) ?? 0)
+        const next = botRaise(this.rng, b.price, this.botCapFor(t), this.botValueFor(t))
         if (next !== null) this.placeBid(t.id, next)
         return
       }

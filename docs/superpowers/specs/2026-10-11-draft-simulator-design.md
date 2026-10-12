@@ -61,14 +61,16 @@ Data flow (batch): auction core → events → `reduce` (no DOM, no controller) 
 ## 4. Bots and rooms
 
 - **Market price** per player: ESPN `market` (average paid) if > 0, else `max(1, consensus)` (projected value).
-- **Private value** per bot per player (drawn once per draft): `market × lognormal(σ = 0.15) × room × personality`.
+- **Private value** per bot per player (drawn once per draft): `market × 0.85 × lognormal(σ = 0.15, mean 1) × room × personality`. The 0.85 centres values so the room's second-highest value (the price) lands near ESPN's average price, which is itself a realized price. *(Updated 2026-10-11 after the final review: uncentred values sold stars at ~110% of market and gave mid-tier players away.)*
+- **Bot inflation** (applied when a player opens): the room's inflation = (money above $1 per open slot) ÷ (market above $1 of the top available players, one per open slot), clamped 0.5–2; times the bot's spare money per open slot ÷ the room's, clamped 0.5–2.5 overall. Rich bots pay up for what's left, bots that spent early drop out, and the room spends its money.
+- **Calibration** (tested): with a bidder paying ESPN market in the room, average price ÷ market stays within 0.85–1.15 for market ranks 1–10, 11–30, 31–60 and 61–100, and bots leave under $8 each.
 - **Room temperature** knob (`--room cold|neutral|hot` or a number): cold ×0.92, neutral ×1.0, hot ×1.10.
 - **Personalities** (default mix for 9 bots: 3 stars-and-scrubs, 4 balanced, 2 value hunters; configurable):
   - stars-and-scrubs: ×1.15 on market top-15, ×0.85 otherwise;
   - balanced: ×1.0;
   - value hunter: ×0.90.
 - **Budget rules (ESPN)**: a team may bid at most `budgetLeft − (open − 1)`; teams with full rosters never bid and are skipped for nominations. Bots also cap at `budgetLeft − (open − 1)` and pace: they won't bid more than `budgetLeft × 0.6` while ≥ 4 slots remain open (prevents absurd early all-ins; configurable).
-- **Nominations**: nominating team (pickOrder rotation, skipping full rosters) — bots nominate the highest-market available player 80% of the time, otherwise a random cheap player (market < $5) at $1; opening bid $1.
+- **Nominations**: nominating team (pickOrder rotation, skipping full rosters) — bots nominate the highest-market available player 80% of the time, otherwise a random pick among the 10 most-bought cheap players (ESPN market > 0 and < $5: one the nominator is happy to keep at $1); opening bid $1.
 - **Bidding**: after any price change, every eligible non-leading bot whose value > price draws a reaction delay U(0.3 s, 3.0 s); the earliest acts: raises by $1, or a jump of $2–$5 when price < 60% of its value (probability 0.3). Ties broken by the seeded RNG.
 
 ## 5. My team (policies) and scoring

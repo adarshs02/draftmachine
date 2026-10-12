@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { AuctionSim, MANUAL_AGENT, MIN_AFTER_BID_MS, NOMINATE_TIMEOUT_MS, runToEnd, START_MS, type MyAgent } from '../../src/sim/auction'
-import { maxBid } from '../../src/sim/bots'
+import { marketPrice, maxBid } from '../../src/sim/bots'
 import { defaultOptions, ROSTER_SIZE, simPlayers, type SimOptions } from '../../src/sim/setup'
 import type { PlayerValue } from '../../src/values/types'
 
@@ -122,4 +122,34 @@ describe('AuctionSim', () => {
     const { sim } = runAll(defaultOptions(8), greedy)
     expect(sim.sales.filter((x) => x.teamId === 1).every((x) => x.price <= 3)).toBe(true)
   })
+})
+
+describe('bot room realism', () => {
+  // A neutral bidder: opens the top player at $1 and bids up to ESPN's average price.
+  const marketAgent: MyAgent = {
+    reactionMs: 1000,
+    nominate: (view) => ({ espnId: view.available[0].espnId, amount: 1 }),
+    bidCap: (view) => (view.block ? marketPrice(PLAYERS.find((p) => p.espnId === view.block!.espnId)!) : null),
+  }
+  const rank = new Map(PLAYERS.map((p, i) => [p.espnId, i]))
+  const BUCKETS = [[0, 10], [10, 30], [30, 60], [60, 100]] as const
+
+  it('prices track ESPN average prices in every tier, and bots spend their money', () => {
+    const sums = BUCKETS.map(() => ({ price: 0, market: 0 }))
+    let botMoneyLeft = 0
+    const SEEDS = 20
+    for (let seed = 1; seed <= SEEDS; seed++) {
+      const { sim } = runAll(defaultOptions(seed), marketAgent)
+      for (const x of sim.sales) {
+        const b = BUCKETS.findIndex(([lo, hi]) => rank.get(x.espnId)! >= lo && rank.get(x.espnId)! < hi)
+        if (b < 0) continue
+        sums[b].price += x.price
+        sums[b].market += marketPrice(PLAYERS.find((p) => p.espnId === x.espnId)!)
+      }
+      botMoneyLeft += sim.teams.filter((t) => t.bot).reduce((s, t) => s + t.budget, 0) / 9
+    }
+    const ratios = sums.map((s) => Math.round((s.price / s.market) * 100) / 100)
+    expect(ratios.every((r) => r >= 0.85 && r <= 1.15), `price / market by tier: ${ratios.join(', ')}`).toBe(true)
+    expect(botMoneyLeft / SEEDS).toBeLessThan(8)
+  }, 60_000)
 })
