@@ -25,11 +25,6 @@ function show(state: DraftState, extra: Record<string, unknown> = {}) {
   return { el, onEvent, onReset, onDismissAlert }
 }
 const button = (el: HTMLElement, text: string) => [...el.querySelectorAll('button')].find((b) => b.textContent === text)!
-const fill = (el: HTMLElement, player: string, team: string, amount: string) => {
-  ;(el.querySelector('input[name=player]') as HTMLInputElement).value = player
-  ;(el.querySelector('select[name=team]') as HTMLSelectElement).value = team
-  ;(el.querySelector('input[name=amount]') as HTMLInputElement).value = amount
-}
 
 describe('Panel', () => {
   it('shows the call for the player on the block', () => {
@@ -104,6 +99,17 @@ describe('Panel', () => {
     expect(show(state).el.querySelector('.now')!.textContent).toContain('ESPN #4396993 has no value')
   })
 
+  it('has no manual entry', () => {
+    const { el } = show(build(S, V, [nominated('Alpha', 2, 1)]))
+    expect(el.textContent).not.toMatch(/manual entry|Set value|Clear block/i)
+    expect(el.querySelector('input[name=player]')).toBeNull()
+  })
+
+  it("shows ESPN's average price for the player on the block", () => {
+    const state = build(S, [pv('Alpha', 30, { market: 41.6 }), pv('Beta', 18)], [nominated('Alpha', 2, 1)])
+    expect(show(state).el.querySelector('.now')!.textContent).toContain('ESPN avg $42')
+  })
+
   it('has no Targets list', () => {
     const { el } = show(build(S, V, []))
     expect(el.textContent).not.toContain('Targets')
@@ -134,11 +140,10 @@ describe('Panel', () => {
     expect(onEvent).not.toHaveBeenCalled()
   })
 
-  it('labels teams with their id in the team pickers and the rivals table', () => {
+  it('labels teams with their id in the team picker and the rivals table', () => {
     const { el } = show(build(S, V, []))
     const options = (sel: string) => [...el.querySelectorAll(`${sel} option`)].map((o) => o.textContent)
     expect(options('.picker select')).toContain('#3 T3')
-    expect(options('select[name=team]')).toContain('#2 T2')
     expect([...el.querySelectorAll('section')].find((x) => x.textContent!.includes('Rivals'))!.textContent).toContain('#4 T4')
   })
 
@@ -189,110 +194,6 @@ describe('Panel', () => {
     confirm.mockReturnValue(true)
     button(el, 'New draft').click()
     expect(onReset).toHaveBeenCalledTimes(1)
-  })
-})
-
-describe('ManualEntry', () => {
-  it('Nominated dispatches a nomination', () => {
-    const { el, onEvent } = show(build(S, V, []))
-    fill(el, 'Alpha', '2', '5')
-    button(el, 'Nominated').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'nominated', playerKey: 'alpha', teamId: 2, amount: 5 })
-  })
-
-  it('Nominated resolves a partial name to the real player', () => {
-    const { el, onEvent } = show(build(S, V, []))
-    fill(el, 'alp', '2', '5')
-    button(el, 'Nominated').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'nominated', playerKey: 'alpha', teamId: 2, amount: 5 })
-  })
-
-  it('Nominated shows an error and sends nothing for an unknown name', async () => {
-    const { el, onEvent } = show(build(S, V, []))
-    fill(el, 'zzz', '2', '5')
-    await act(() => button(el, 'Nominated').click())
-    expect(onEvent).not.toHaveBeenCalled()
-    expect(el.querySelector('form.manual')!.textContent).toContain('No player matches "zzz"')
-  })
-
-  it('suggests every player value, with no cap', () => {
-    const many = Array.from({ length: 305 }, (_, i) => pv(`Player ${i}`, 1 + (i % 50)))
-    const { el } = show(build(S, many, [sold('Player 0', 2, 3)]))
-    expect(el.querySelectorAll('datalist option')).toHaveLength(305)
-  })
-
-  it('Bid dispatches a bid', () => {
-    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 2, 1)]))
-    fill(el, '', '3', '9')
-    button(el, 'Bid').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'bid', teamId: 3, amount: 9 })
-  })
-
-  it('Sold with no amount typed closes the live auction at its price and leader', () => {
-    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
-    button(el, 'Sold').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'sold', playerKey: 'alpha', teamId: 3, price: 7 })
-  })
-
-  it('Sold with an amount typed sells the live player to the typed team at that amount', () => {
-    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
-    fill(el, '', '2', '25')
-    button(el, 'Sold').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'sold', playerKey: 'alpha', teamId: 2, price: 25 })
-  })
-
-  it('clears the amount input after an action dispatches an event', () => {
-    const { el } = show(build(S, V, [nominated('Alpha', 3, 7)]))
-    fill(el, '', '2', '25')
-    button(el, 'Sold').click()
-    expect((el.querySelector('input[name=amount]') as HTMLInputElement).value).toBe('')
-    expect((el.querySelector('select[name=team]') as HTMLSelectElement).value).toBe('2')
-  })
-
-  it('keeps the amount and says so when the event changed nothing', async () => {
-    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
-    onEvent.mockReturnValue(false)
-    fill(el, '', '2', '5')
-    await act(() => button(el, 'Bid').click())
-    expect(onEvent).toHaveBeenCalledWith({ type: 'bid', teamId: 2, amount: 5 })
-    expect((el.querySelector('input[name=amount]') as HTMLInputElement).value).toBe('5')
-    expect(el.querySelector('form.manual .warn')!.textContent).toBe('Not applied — nothing changed (e.g. a bid must beat the current price).')
-  })
-
-  it('clears the amount and shows no message when a bid applies', async () => {
-    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
-    fill(el, '', '2', '9')
-    await act(() => button(el, 'Bid').click())
-    expect(onEvent).toHaveBeenCalledWith({ type: 'bid', teamId: 2, amount: 9 })
-    expect((el.querySelector('input[name=amount]') as HTMLInputElement).value).toBe('')
-    expect(el.querySelector('form.manual .warn')).toBeNull()
-  })
-
-  it('Clear block takes the player off the block', () => {
-    const { el, onEvent } = show(build(S, V, [nominated('Alpha', 3, 7)]))
-    button(el, 'Clear block').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'clearLive' })
-  })
-
-  it('Set value dispatches a value edit', () => {
-    const { el, onEvent } = show(build(S, V, []))
-    fill(el, 'Ghost', '1', '4')
-    button(el, 'Set value').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'setValue', playerKey: 'ghost', b: 4 })
-  })
-
-  it('Set value with no player typed sets the value of the player on the block', () => {
-    const { el, onEvent } = show(build(S, V, [{ type: 'nominated', playerKey: 'espn:4396993', teamId: 2, amount: 1 }]))
-    fill(el, '', '1', '12')
-    button(el, 'Set value').click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'setValue', playerKey: 'espn:4396993', b: 12 })
-  })
-
-  it('Set value with no player typed and nothing on the block sends nothing', () => {
-    const { el, onEvent } = show(build(S, V, []))
-    fill(el, '', '1', '12')
-    button(el, 'Set value').click()
-    expect(onEvent).not.toHaveBeenCalled()
   })
 })
 

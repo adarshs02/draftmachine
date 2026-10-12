@@ -63,7 +63,7 @@ export interface Session {
   setAutopilot(on: boolean): void
   myBid(amount: number): string | null
   myNominate(espnId: number, amount: number): string | null
-  /** the Panel's manual entry */
+  /** events from the Panel (undo, fix a sale, pick my team) */
   dispatch(ev: DraftEvent): boolean
   dismissAlert(): void
   refresh(): void

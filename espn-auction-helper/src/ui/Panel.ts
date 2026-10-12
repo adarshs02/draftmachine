@@ -1,10 +1,9 @@
 import { useState } from 'preact/hooks'
 import type { Advice, FeedRow } from '../engine/advise'
-import { teamSummary } from '../engine/metrics'
+import { teamSummary, valueOf } from '../engine/metrics'
 import type { DraftEvent, DraftState, Team } from '../engine/types'
 import { money, teamLabel, verdictText } from './format'
 import { html } from './html'
-import { ManualEntry } from './ManualEntry'
 
 export type Health = 'live' | 'manual'
 
@@ -40,6 +39,8 @@ export function Panel(p: PanelProps) {
   const v = advice.verdict
   const teamName = (id: number) => teamSummary(state, id).name
   const temp = advice.temperature
+  /** ESPN's average price paid for the player on the block (0 when unknown) */
+  const market = state.live ? valueOf(state, state.live.playerKey).market : 0
   const fixSale = (f: FeedRow) => {
     const answer = window.prompt(`Fix ${f.name}: price and team # (e.g. "14 3")`, `${f.price} ${f.teamId}`)
     const [priceText = '', ...team] = (answer ?? '').trim().split(/\s+/)
@@ -89,8 +90,8 @@ export function Panel(p: PanelProps) {
             ? html`
                 <div class=${`call ${v.kind}`}>${verdictText(v)}</div>
                 <div>${v.name} · ${money(v.price)} by ${teamName(v.leaderId)}</div>
-                <div class="muted">value ${money(v.adjusted)} · ceiling ${money(v.ceiling)}${v.boost > 1 ? ' · positional need +10%' : ''}</div>
-                ${v.unvalued && html`<div class="warn">${v.name} has no value: set one below</div>`}
+                <div class="muted">value ${money(v.adjusted)}${market > 0 ? ` · ESPN avg ${money(market)}` : ''} · ceiling ${money(v.ceiling)}${v.boost > 1 ? ' · positional need +10%' : ''}</div>
+                ${v.unvalued && html`<div class="warn">${v.name} has no value</div>`}
                 ${v.rivalPerSlotAfter !== null && html`<div class="muted">${teamName(v.leaderId)} left with ${money(v.rivalPerSlotAfter)}/slot after this</div>`}
                 ${v.warnings.map((w) => html`<div class="warn">${w}</div>`)}
               `
@@ -123,7 +124,6 @@ export function Panel(p: PanelProps) {
             </div>`,
           )}
         </section>
-        <${ManualEntry} state=${state} onEvent=${p.onEvent} />
         <footer class="row">
           <button onClick=${() => p.onEvent({ type: 'undo' })}>Undo last sale</button>
           <button onClick=${p.onDownloadRecording}>Download recording (${p.frameCount} frames)</button>

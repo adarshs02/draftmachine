@@ -37,14 +37,8 @@ Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `e
 3. Check **My team** at the top of the panel. It is detected from your ESPN login. If it's wrong or blank, pick your team there. You can change it at any time.
 4. Watch the panel's status light. **● live** (filled circle) means ESPN draft-room messages are arriving and filling in nominations, bids and sales automatically. If no messages arrive for about 20 seconds, the light becomes **○ manual** (hollow circle). It re-checks every 5 seconds.
    - In **live mode**, the panel updates automatically as events happen in the room.
-   - In **manual mode**, type events into *Manual entry*:
-     - **Nominated**, **Bid**: player, team and $.
-     - **Sold**: with no $ typed, sells the player on the block at the last price to the leading team. With a $ typed, sells to the team and amount you entered.
-     - **Clear block**: takes a mistaken nomination off the block.
-     - **Set value**: sets a player's value. A name that matches no one is added as a new player, for a late call-up missing from the values.
-
-     Partial names work when they match exactly one player (`jok`, or a last name like `Jokic`). Otherwise the panel says what matched and records nothing. Every card still works in manual mode.
-5. If a refresh or reconnect breaks the live connection mid-sale, an alert says "Missed the end of …". Check **Budgets** on ESPN to see if the player sold, and enter that sale with **Sold** if needed. If ESPN's sale differs from one you typed, ESPN wins, and the panel tells you what it corrected. Teams are labelled `#id name`. Pin targets with ☆. To fix a wrong sale, press ✎ and type the price and team number (`14 3`) or the start of the team name (`14 bub`). **Undo last sale** removes the most recent sale. The **–** button in the header collapses the panel.
+   - In **manual mode** nothing new arrives: the panel has no manual entry, so if the light stays hollow during a live draft, the decoder isn't reading ESPN's messages (record the draft and report it).
+5. If a refresh or reconnect breaks the live connection mid-sale, an alert says "Missed the end of …". Check **Budgets** on ESPN to see if the player sold. Teams are labelled `#id name`. To fix a wrong sale, press ✎ and type the price and team number (`14 3`) or the start of the team name (`14 bub`). **Undo last sale** removes the most recent sale. The **–** button in the header collapses the panel.
 6. Above **Nominate:**, a line shows whose turn it is to nominate: **Your turn to nominate**, **Nominating now: #id name · you nominate in N turns**, or, while a player is on the block, **Up next: …**. In live mode it comes from ESPN; in manual mode it is inferred from the draft order, skipping teams with full rosters.
 7. Watch the footer's unknown-verb counter. If that count grows during your draft, it's worth recording and reporting.
 8. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **New draft** (after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
@@ -81,7 +75,7 @@ Serves the simulator at http://127.0.0.1:5173 (`npm run sim -- --open` also open
   - A player search when it is your turn to nominate.
   - Recent sales.
   - At the end of the draft: projected standings, your value captured and money left.
-- **Panel (right):** the real helper panel, fed the same socket lines ESPN sends. Manual entry still works.
+- **Panel (right):** the real helper panel, fed the same socket lines ESPN sends.
 - **Controls:**
   - Speed: 1×, 5×, 20× or Instant.
   - Pause, Step to next sale, Run to end.
