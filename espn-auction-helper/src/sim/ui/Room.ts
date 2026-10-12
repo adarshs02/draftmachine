@@ -110,7 +110,7 @@ export function Room({ session }: { session: Session }) {
               )}
             </tbody>
           </table>`
-        : html`<div class="muted">Projected standings need data/hashtag-projections.csv; restart npm run sim once it exists.</div>`}
+        : html`<div class="muted">Projected standings unavailable: data/hashtag-projections.csv could not be read (see the console).</div>`}
       <h3>My roster</h3>
       ${mine.map((x) => html`<div>${nameOf(x.playerKey)} $${x.price}</div>`)}
     </div>`

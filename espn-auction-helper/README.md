@@ -120,7 +120,11 @@ Columns:
 
 ### Projections
 
-Standings are projected 9-category roto from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. Restart `npm run sim` after changing either file. Players without a projection add nothing and are counted in the "No proj." column. Without the stats file the simulator still runs and reports value captured and money left.
+Standings are projected 9-category roto from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. The page reloads when either file changes. Players without a projection add nothing and are counted in the "No proj." column. If the stats file is missing (batch) or can't be parsed (page), the simulator still runs and reports value captured and money left.
+
+### Syncing the projections sheet
+
+In the projections sheet, click **Export CSV**, then run `npm run sync-sheet`. It takes the newest `~/Downloads/auction-values*.csv` (or a path: `npm run sync-sheet -- path/to/file.csv`), checks it, writes `data/auction-values.csv` and rebuilds `data/values.json`. A running simulator reloads with the new values; run `npm run build` to update the extension.
 
 ### Bots
 

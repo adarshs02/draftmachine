@@ -1,4 +1,6 @@
 import { render } from 'preact'
+import playtimeCsv from '../../data/auction-values.csv'
+import statsCsv from '../../data/hashtag-projections.csv'
 import valuesJson from '../../data/values.json'
 import recordingJson from '../../test/fixtures/espn-auction-recording.json'
 import joshJson from '../../test/fixtures/josh-mock-sales.json'
@@ -19,19 +21,10 @@ import { SIM_CSS } from './ui/styles'
 /** A background tab or a breakpoint must not fast-forward the draft. */
 const MAX_FRAME_MS = 250
 
-async function fetchText(path: string): Promise<string | null> {
+/** The projection CSVs are bundled as text, so editing them (or syncing the sheet) rebuilds and reloads the page. */
+function loadProjections(values: PlayerValue[]): ProjectionSource | null {
   try {
-    const res = await fetch(path)
-    return res.ok ? await res.text() : null
-  } catch {
-    return null
-  }
-}
-
-/** sim.mjs copies the projection CSVs into dist/ when it starts. */
-async function loadProjections(values: PlayerValue[]): Promise<ProjectionSource | null> {
-  try {
-    return projectionsFromCsv(await fetchText('dist/hashtag-projections.csv'), await fetchText('dist/auction-values.csv'), values)
+    return projectionsFromCsv(statsCsv, playtimeCsv, values)
   } catch (e) {
     console.warn('Projections unavailable:', e)
     return null
@@ -47,7 +40,7 @@ async function main(): Promise<void> {
   const values = valuesJson as unknown as PlayerValue[]
   const data: SessionData = {
     values,
-    projections: await loadProjections(values),
+    projections: loadProjections(values),
     recording: recordingJson as unknown as Recording,
     josh: joshJson as unknown as JoshFixture,
   }
