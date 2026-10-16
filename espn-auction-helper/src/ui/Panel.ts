@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks'
 import type { Advice, FeedRow } from '../engine/advise'
 import { teamSummary, valueOf } from '../engine/metrics'
 import type { DraftEvent, DraftState, Team } from '../engine/types'
-import { money, teamLabel, verdictText } from './format'
+import { FIT_NOTE_MIN, fitText, money, teamLabel, verdictText } from './format'
 import { html } from './html'
 
 export type Health = 'live' | 'manual'
@@ -103,6 +103,7 @@ export function Panel(p: PanelProps) {
                 </div>
                 <${PriceBar} price=${v.price} max=${v.ceiling} value=${v.adjusted} avg=${market} />
                 ${v.saveSlot !== null && html`<div class="note">worth ${money(v.adjusted)} vs your ${money(v.saveSlot)}/slot</div>`}
+                ${v.fit && Math.abs(v.fit.mult - 1) >= FIT_NOTE_MIN && html`<div class="note">${fitText(v.fit)}</div>`}
                 ${v.boost > 1 && html`<div class="note">positional need +10%</div>`}
                 ${v.unvalued && html`<div class="note warn">${v.name} has no value</div>`}
                 ${v.rivalPerSlotAfter !== null && html`<div class="note">${teamName(v.leaderId)} left with ${money(v.rivalPerSlotAfter)}/slot after this</div>`}

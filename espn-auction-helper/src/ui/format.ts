@@ -1,3 +1,5 @@
+import type { Fit } from '../engine/fit'
+import { CATEGORY_LABELS } from '../engine/h2h'
 import type { Team } from '../engine/types'
 import type { Verdict } from '../engine/verdict'
 
@@ -19,4 +21,14 @@ export function verdictText(v: Verdict): string {
     case 'LEADING':
       return `You lead at ${money(v.price)} (ceiling ${money(v.ceiling)})`
   }
+}
+
+/** The panel names the fit only when it moves the value this much. */
+export const FIT_NOTE_MIN = 0.02
+
+export function fitText(f: Fit): string {
+  const names = f.cats.map((c) => CATEGORY_LABELS[c]).join(', ')
+  const head = `fits your team ×${f.mult.toFixed(2)}`
+  if (!names) return head
+  return f.mult > 1 ? `${head}: ${names}` : `${head}: less useful in ${names}`
 }

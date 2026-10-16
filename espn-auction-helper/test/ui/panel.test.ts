@@ -7,6 +7,7 @@ import type { DraftEvent, DraftState } from '../../src/engine/types'
 import { html } from '../../src/ui/html'
 import { mountPanel } from '../../src/ui/mount'
 import { Panel } from '../../src/ui/Panel'
+import { FIT_S, FIT_V } from '../engine/fitFixture'
 import { build, nominated, pv, settings, sold } from '../helpers'
 
 const S = settings(4, { lineupSlotCounts: { 12: 13 } })
@@ -35,6 +36,12 @@ describe('Panel', () => {
     const text = show(build(S, [...V, pv('Cheap', 5)], [nominated('Cheap', 2, 1)])).el.textContent
     expect(text).toContain('PASS: save the slot')
     expect(text).toContain('worth $6 vs your $18/slot')
+  })
+
+  it('shows how the player fits my roster when it moves his value', () => {
+    const bricks = [sold('Brick1', 1, 20), sold('Brick2', 1, 20), sold('Brick3', 1, 20)]
+    expect(show(build(FIT_S, FIT_V, [...bricks, nominated('Shooter', 2, 1)])).el.textContent).toMatch(/fits your team ×0\.\d\d: less useful in FT%/)
+    expect(show(build(FIT_S, FIT_V, [nominated('Shooter', 2, 1)])).el.textContent).not.toContain('fits your team')
   })
 
   it('tints the call card by the call', () => {
