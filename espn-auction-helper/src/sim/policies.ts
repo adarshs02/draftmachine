@@ -43,8 +43,9 @@ const DISPLAY_ONLY: readonly TunableName[] = ['BARGAIN_RATIO', 'ONE_PLAYER_SHARE
  */
 export function inertForAutopilot(t: Readonly<Tunables>): TunableName[] {
   const gapInert = t.BID_GAP_MIN >= t.BID_UP_MARGIN + 1
+  const fitOff = t.FIT_WEIGHT === 0
   return (Object.keys(DEFAULT_TUNABLES) as TunableName[]).filter(
-    (k) => DISPLAY_ONLY.includes(k) || (gapInert && (k === 'BID_GAP_MIN' || k === 'BID_GAP_FRACTION')),
+    (k) => DISPLAY_ONLY.includes(k) || (gapInert && (k === 'BID_GAP_MIN' || k === 'BID_GAP_FRACTION')) || (fitOff && (k === 'FIT_MIN' || k === 'FIT_MAX')),
   )
 }
 

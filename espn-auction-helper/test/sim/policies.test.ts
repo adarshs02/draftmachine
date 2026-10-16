@@ -89,6 +89,11 @@ describe('inertForAutopilot', () => {
     }
   })
 
+  it('names FIT_MIN and FIT_MAX when category fit is off', () => {
+    expect(inertForAutopilot(DEFAULT_TUNABLES)).not.toContain('FIT_MIN')
+    expect(inertForAutopilot({ ...DEFAULT_TUNABLES, FIT_WEIGHT: 0 })).toEqual(expect.arrayContaining(['FIT_MIN', 'FIT_MAX']))
+  })
+
   it('changing an inert tunable leaves an autopilot draft unchanged', () => {
     const base = runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales
     try {

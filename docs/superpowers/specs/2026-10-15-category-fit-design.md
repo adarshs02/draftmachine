@@ -20,7 +20,7 @@ The simulator scores teams with the same projections the engine would now read. 
 1. With projections loaded, the panel shows the fit multiplier and the categories behind it whenever fit moves a player's value by 2% or more, and the shown value, max, BID / BID UP calls and save-the-slot rule all use it.
 2. `FIT_WEIGHT=0` reproduces today's calls exactly (the whole existing suite, the Josh replay included, stays green with fit off, and with fit on where no player has stats).
 3. Batch: 300 drafts, same seeds, fit on vs off, scored on true stats. Fit ships on by default only if the paired difference in my title % has a 95% interval above 0. Otherwise the code stays with `FIT_WEIGHT` defaulting to 0 and the result is reported.
-4. A verdict with fit stays fast enough for live bids: under 5 ms on a full 10-team state.
+4. A verdict with fit stays fast enough for live bids on a 10-team state: each bid under 5 ms; the first verdict after a sale, which rebuilds the cached context, under 50 ms (measured 2026-10-15: 0.7 ms per bid, 9.4 ms worst first verdict).
 
 ### Out of scope
 Nomination suggestions, bots, `infl`, the temperature label, the sale-row bargain stars (`saleFlags`), weekly schedules (games per week by NBA team), punting as an explicit mode.
@@ -50,15 +50,15 @@ New `src/engine/fit.ts`.
 **Expected categories won.** For a team week `T`: the average over the rival teams `R` of Σ over the 9 categories of `categoryWinChance(T, R, c)`. Rivals are the other teams as they stand, each filled the same way.
 
 **Gains** for the player on the block, `p` (with a line):
-- `mine` = expected categories won by my team with one filler replaced by `p`, minus my team as it stands.
-- `generic` = the same for a team made only of fillers (roster size), against the same rivals. This is what a value that ignores my roster assumes.
+- `mine` = expected categories won by my team with `p` in one open slot, minus the same team with the replacement player there.
+- `generic` = the same for the generic team (my roster with my picks swapped for the average rostered player), against the same rivals. This is what a value that ignores my roster's shape assumes.
 - Per-category parts of both are kept for the panel.
 
-**Typical ratio.** The same gains for every player in the filler pool: `typical = Σ mine ÷ Σ generic` over the pool. Computed once per sale (cached on the sales list), so a bid only costs the gains for the player on the block.
+**Typical ratio.** The same gains for the best lined players left (at least 20, or the open slots if more), counting only players above replacement for the generic team: `typical = Σ mine ÷ Σ generic`. Computed once per sale (cached on the sales list), so a bid only costs the gains for the player on the block.
 
 **Multiplier.**
 - `raw = (mine / generic) / typical`, clamped to `[FIT_MIN, FIT_MAX]`. `mine ≤ 0` ⇒ `FIT_MIN`.
-- Why `typical`: the all-filler team sits at 50% in every category, where any stat helps most, so `mine / generic` is below 1 for nearly every player once my roster has a shape. Unnormalized, fit would cut every value and leave money unspent. Dividing by `typical` makes fit move value between players (the remaining pool averages ×1) and leaves overall spending to `infl`. (Ruling while planning, 2026-10-15.)
+- Why `typical`: a team of average players sits at 50% in every category, where any stat helps most, so `mine / generic` is below 1 for nearly every player once my roster has a shape. Unnormalized, fit would cut every value and leave money unspent. Dividing by `typical` makes fit move value between players (the remaining pool averages ×1) and leaves overall spending to `infl`. (Ruling while planning, 2026-10-15.)
 - `fit = raw ^ FIT_WEIGHT`.
 - `fit = 1` (no fit) when: `FIT_WEIGHT` is 0, no projections (filler missing), `p` has no line, base value `b < NEED_MIN_VALUE` ($5), `generic` or the pool's totals ≤ 0.001, my team unknown or full, no rivals.
 
@@ -101,7 +101,7 @@ These sizes are assumptions, constants in `score.ts`. `runDraft` (batch) and the
 - Values build: lines present, rounded, null without a stats row; missing stats file doesn't fail.
 - `truthFrom`: deterministic per (seed, id); independent of call order; error sizes within tolerance over many players; percentages in [0, 1].
 - Panel: fit line text both directions, hidden near 1 and when null.
-- Timing: verdict on a full 10-team state under 5 ms.
+- Timing: on a 10-team state, each bid's verdict under 5 ms; the first after a sale under 50 ms.
 
 ## 9. Files
 

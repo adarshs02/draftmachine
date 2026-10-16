@@ -22,7 +22,7 @@ const TYPICAL_MIN = 20
 
 interface FitContext {
   rivals: WeeklyLine[]
-  /** my roster's lines, a filler in every open slot but the last, which holds the player being rated */
+  /** my roster's lines, a filler in every open slot but the last, which holds a replacement player (`gain` swaps the rated player in) */
   myLines: SeasonLine[]
   myBase: number[]
   /** my roster with my picks swapped for average rostered players: what a value that ignores my roster's shape assumes */

@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import { resetTunables, setTunables } from '../../src/engine/constants'
 import { fitFor, myValue } from '../../src/engine/fit'
 import { adjustedValue } from '../../src/engine/metrics'
+import { reduce } from '../../src/engine/reducer'
 import type { DraftEvent } from '../../src/engine/types'
 import { verdict } from '../../src/engine/verdict'
 import type { PlayerValue } from '../../src/values/types'
@@ -73,6 +74,18 @@ describe('fitFor', () => {
       return sold(`P${i + 1}`, team, 1)
     })
     expect(fitFor(at([...walls, ...deal]), 'passer')).not.toBeNull()
+  })
+
+  it('a cached state never leaks into the next one: undo, a fixed sale, a new value or my team', () => {
+    const s = at(walls)
+    fitFor(s, 'passer')
+    const events: DraftEvent[] = [
+      { type: 'undo' },
+      { type: 'editSale', seq: 1, teamId: 2, price: 20 },
+      { type: 'setValue', playerKey: 'passer', b: 25 },
+      { type: 'setMyTeam', teamId: 2 },
+    ]
+    for (const ev of events) expect(fitFor(reduce(s, ev), 'passer')).toEqual(fitFor(at([...walls, ev]), 'passer'))
   })
 
   it('follows undo: the fit after undoing a sale equals the fit before it', () => {
