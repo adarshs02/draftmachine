@@ -4,6 +4,7 @@ Chrome extension for ESPN fantasy basketball **salary-cap (auction)** drafts. It
 
 - **Call on every bid**: BID up to $X, BID UP to $X (drain a rival, happy if you win), LET THEM (rival overpaying), PASS, or You lead.
 - **Save the slot**: while more than 6 of your spots are open, PASS on anyone worth under half your money per open slot; spend those slots on better players.
+- **Category fit**: a player's value moves with what he adds to your roster in H2H 9-cat, from ×0.75 to ×1.25. A player who helps where your weekly odds are close is worth more; one whose stats you already win, or have fallen too far behind in to catch up, is worth less. The call card says why: "fits your team ×1.15: AST, 3PM". Off for players under $5 or without projected stats.
 - **Room temperature** (Hot / Warm / Neutral / Cold) from recent sale prices vs. value, plus inflation from money left vs. value left.
 - **Your budget**: money left, open spots, money per open slot after holding 2 × $1 streaming slots, and a safe max that keeps your roster fillable.
 - **The call card** shows the player's value, ESPN's average price and your max, with a bar placing the current price against them. The last 8 sales show green under value, red over.
@@ -22,11 +23,11 @@ Needs Node 20 or newer.
 cd espn-auction-helper
 npm install
 npm run fetch-espn   # today's ESPN 2026-27 player pool: ids, positions, ESPN average price
-npm run values       # blend data/auction-values.csv with Josh Lloyd's decoded values -> data/values.json
+npm run values       # blend data/auction-values.csv with Josh Lloyd's decoded values, add stat lines -> data/values.json
 npm run build
 ```
 
-Values come from `data/auction-values.csv`, a projections export in Hashtag Basketball's auction-values layout (`R#, PLAYER, POS, TEAM, GP, MPG, TOTAL, VALUED AT, …`), blended with Josh's numbers. Players tied on value, mostly the $1 crowd, are ordered by the CSV's rank. To use edited projections, export the CSV from the projections sheet and save it over `data/auction-values.csv`. ESPN's own values and ranks are not used; ESPN supplies only player ids, positions and its average price, which the helper uses as the room's market price.
+Values come from `data/auction-values.csv`, a projections export in Hashtag Basketball's auction-values layout (`R#, PLAYER, POS, TEAM, GP, MPG, TOTAL, VALUED AT, …`), blended with Josh's numbers. Players tied on value, mostly the $1 crowd, are ordered by the CSV's rank. To use edited projections, export the CSV from the projections sheet and save it over `data/auction-values.csv`. `npm run values` also stores each player's projected season stats (from `data/hashtag-projections.csv`, with the sheet's games and minutes) in `values.json`; category fit reads them. ESPN's own values and ranks are not used; ESPN supplies only player ids, positions and its average price, which the helper uses as the room's market price.
 
 `npm run fetch-espn` overwrites the committed `data/espn-players-2027.json`. Always run `npm run values` after it, and after replacing `data/auction-values.csv`. Tests that read the real data, such as the value blend, may shift after a fetch.
 
@@ -103,7 +104,7 @@ Flags:
 - `--seed N` (default 1; drafts use seeds N, N+1, …)
 - `--room cold|neutral|hot|<number>`
 - `--policies autopilot,market,consensus`
-- `--set NAME=value` (repeatable). Autopilot's bid limit comes from the adjusted value, the ceiling, `BID_UP_MARGIN` and the save-the-slot rule (`SLOT_FLOOR`, `SLOT_FLOOR_OPEN`); tunables that only change the panel's display (`BID_GAP_*` at their defaults, `*_SHARE`, `BARGAIN_RATIO`) leave autopilot's results unchanged, and the batch prints a note when you set one.
+- `--set NAME=value` (repeatable). Autopilot's bid limit comes from the adjusted value, the ceiling, `BID_UP_MARGIN` and the save-the-slot rule (`SLOT_FLOOR`, `SLOT_FLOOR_OPEN`) and category fit (`FIT_WEIGHT`, 0 turns it off; `FIT_MIN`, `FIT_MAX`); tunables that only change the panel's display (`BID_GAP_*` at their defaults, `*_SHARE`, `BARGAIN_RATIO`) leave autopilot's results unchanged, and the batch prints a note when you set one.
 - `--compare`: defaults vs your `--set` values on the same seeds
 - `--json`
 
@@ -119,7 +120,7 @@ Columns:
 
 Standings are projected for the league's format, H2H each category with 9 categories (TO included): 19 one-week matchups, then the top 4 play 2-week semifinals and a final. Season stats come from `data/hashtag-projections.csv` (the Hashtag Basketball export with per-game stats): per-game × games played, summed over each roster and spread over the NBA season's 23.4 weeks.
 
-Each week every category is a coin weighted by the gap between the two teams and how much that stat swings from week to week (points swing most, steals and turnovers least; 2–4 games a week). Each draft plays 400 seasons: a random schedule, top 4 by categories won, more categories wins a playoff round. Results show each team's win %, playoff and title odds, and its chance to win each category in a week against an average opponent. The swing sizes are assumptions in `src/sim/score.ts`, not fitted to real weeks. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. The page reloads when either file changes. Players without a projection add nothing and are counted in the "No proj." column. If the stats file is missing (batch) or can't be parsed (page), the simulator still runs and reports value captured and money left.
+Each week every category is a coin weighted by the gap between the two teams and how much that stat swings from week to week (points swing most, steals and turnovers least; 2–4 games a week). Each draft plays 400 seasons: a random schedule, top 4 by categories won, more categories wins a playoff round. Results show each team's win %, playoff and title odds, and its chance to win each category in a week against an average opponent. The swing sizes are assumptions in `src/sim/score.ts`, not fitted to real weeks. Seasons are scored on the projections plus error drawn from the draft's seed (games ±15%, each stat ±10%, FG% ±1.5 and FT% ±3 points), so a bidder that reads the projections, like category fit, can't know how the season turns out. When `data/auction-values.csv` (the projections sheet's export) has a player, its GP and MPG win, so sheet edits count. The page reloads when either file changes. Players without a projection add nothing and are counted in the "No proj." column. If the stats file is missing (batch) or can't be parsed (page), the simulator still runs and reports value captured and money left.
 
 ### Syncing the projections sheet
 

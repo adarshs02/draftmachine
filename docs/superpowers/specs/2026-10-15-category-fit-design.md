@@ -1,7 +1,7 @@
 # Category Fit — Design Spec
 
 Date: 2026-10-15
-Status: Design approved in chat 2026-10-15; written spec awaiting review
+Status: Implemented 2026-10-15 (results §10)
 Builds on: `2026-10-05-espn-auction-helper-design.md` (the helper) and `2026-10-11-draft-simulator-design.md` (the simulator, scored as H2H each category since 2026-10-12).
 
 ## 1. Goal
@@ -42,6 +42,8 @@ Move from `src/sim/score.ts` to a new `src/engine/h2h.ts`, unchanged in behavior
 New `src/engine/fit.ts`.
 
 **Filler.** The average `line` of the best remaining players: available players by value, the top N where N = open slots across all teams, counting only players with a line. It stands in for every open slot and for every rostered player without a line. No filler (no available player has a line) ⇒ fit 1.
+
+**Replacement and generic team (rulings during implementation, 2026-10-15).** Gains are measured with `p` in one of my open slots against a **replacement** player there: the average line of the 10 lined players just below the filler pool (against the pool's own average, gains sum to about 0 over the pool and the typical ratio is undefined). The **generic** team is my roster with my picks swapped for the average rostered player (the top teams × roster size by value), keeping the same fillers and replacement slot; with no picks it equals my team, so fit is exactly ×1. The typical ratio averages over at least the 20 best lined players left, counting only those above replacement for the generic team.
 
 **Team week.** `weeklyFromLines` over a team's rostered lines plus one filler per open slot.
 
@@ -117,3 +119,17 @@ These sizes are assumptions, constants in `score.ts`. `runDraft` (batch) and the
 | `src/sim/policies.ts` | `autopilotCap` uses `myValue` |
 | `src/ui/Panel.ts`, `src/ui/styles.ts` | fit line |
 | `README.md` | fit, tunables, simulator truth |
+
+## 10. Results
+
+Paired seeds, autopilot, seasons scored on projections plus error (§6), 2026-10-15:
+
+| | Title % | Playoffs % | Avg seed | Weekly cats % | $ left |
+|---|---|---|---|---|---|
+| Fit off (`FIT_WEIGHT=0`), 1000 drafts | 38.8 | 87.6 | 2.32 | 58.8 | 46.1 |
+| Fit on, ×0.75–1.25, 1000 drafts | 41.8 | 89.1 | 2.23 | 59.2 | 38.1 |
+| Fit on, ×0.6–1.4, 1000 drafts | 41.6 | 88.7 | 2.25 | 59.2 | 38.0 |
+
+Paired difference vs off: ×0.75–1.25 title +3.0 ±1.4, playoffs +1.4 ±1.2; ×0.6–1.4 title +2.8 ±1.4. Over the first 300 seeds the difference was +1.4 ±2.7 (inconclusive), so the run was extended to 1000. Decision: ship on, defaults ×0.75–1.25.
+
+Caveat: with fit on, autopilot also spends about $8 more. Part of the gain may come from spending rather than roster shape; both versions leave $38–46 of $200 unspent, a separate leak.
