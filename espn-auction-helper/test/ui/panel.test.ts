@@ -44,6 +44,26 @@ describe('Panel', () => {
     expect(show(build(FIT_S, FIT_V, [nominated('Shooter', 2, 1)])).el.textContent).not.toContain('fits your team')
   })
 
+  it('says where the value of the player on the block comes from, and flags a value play', () => {
+    const v = FIT_V.map((x) => (x.key === 'passer' ? { ...x, market: 10 } : x))
+    const text = show(build(FIT_S, v, [nominated('Passer', 2, 1)])).el.textContent
+    expect(text).toMatch(/Value from: AST/)
+    expect(text).toContain('⭐ value play: room usually pays $10')
+  })
+
+  it('lists players to look for, value plays starred, with where my team stands', () => {
+    const v = FIT_V.map((x) => (x.key === 'passer' ? { ...x, market: 10 } : x))
+    const walls = [sold('Wall1', 1, 20), sold('Wall2', 1, 20), sold('Wall3', 1, 20)]
+    const { el } = show(build(FIT_S, v, walls))
+    const section = el.querySelector('.lookfor')!
+    const rows = [...section.querySelectorAll('.look')]
+    expect(rows.length).toBeGreaterThan(0)
+    expect(rows.length).toBeLessThanOrEqual(6)
+    expect(rows[0].textContent).toContain('⭐ Passer')
+    expect(rows[0].querySelector('.tags')!.textContent).toContain('+AST')
+    expect(section.textContent).toContain('Your team: strong BLK')
+  })
+
   it('tints the call card by the call', () => {
     expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.querySelector('section.now.BID')).not.toBeNull()
     expect(show(build(S, V, [nominated('Alpha', 2, 40)])).el.querySelector('section.now.LET_THEM')).not.toBeNull()

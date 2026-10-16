@@ -20,4 +20,11 @@ describe('advise', () => {
   it('includes the verdict when a player is on the block', () => {
     expect(advise(build(settings(), [pv('Alpha', 30)], [nominated('Alpha', 2, 1)])).verdict?.kind).toBe('BID')
   })
+
+  it('lists players to look for once my team is known', () => {
+    // Plenty of money for 2 players pins inflation at 1.2: Alpha is worth $35.8 vs $20 (value play), Bravo $23.8 vs $24.
+    const a = advise(build(settings(), [pv('Alpha', 30, { market: 20 }), pv('Bravo', 20, { market: 24 })], []))
+    expect(a.lookFor!.rows.map((r) => [r.name, r.flag])).toEqual([['Alpha', 'value'], ['Bravo', null]])
+    expect(advise(build(settings(), [pv('Alpha', 30)], [], null)).lookFor).toBeNull()
+  })
 })

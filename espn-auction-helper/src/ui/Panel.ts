@@ -2,7 +2,9 @@ import { useState } from 'preact/hooks'
 import type { Advice, FeedRow } from '../engine/advise'
 import { teamSummary, valueOf } from '../engine/metrics'
 import type { DraftEvent, DraftState, Team } from '../engine/types'
-import { FIT_NOTE_MIN, fitText, money, teamLabel, verdictText } from './format'
+import { CATEGORY_LABELS } from '../engine/h2h'
+import { valueFlag } from '../engine/profile'
+import { FIT_NOTE_MIN, fitText, flagText, money, profileText, standingText, teamLabel, verdictText } from './format'
 import { html } from './html'
 
 export type Health = 'live' | 'manual'
@@ -49,6 +51,7 @@ export function Panel(p: PanelProps) {
     if (price > 0 && teamId !== null) p.onEvent({ type: 'editSale', seq: f.seq, teamId, price })
   }
   const turn = advice.turn
+  const look = advice.lookFor
   const turns = (n: number | null, next: boolean) =>
     n === null ? '' : n === 0 ? (next ? ' · you nominate next' : '') : ` · you nominate in ${n} ${n === 1 ? 'turn' : 'turns'}`
   const teamTag = (id: number) => teamLabel(state.settings.teams.find((t) => t.id === id) ?? { id, name: teamName(id) })
@@ -103,6 +106,8 @@ export function Panel(p: PanelProps) {
                 </div>
                 <${PriceBar} price=${v.price} max=${v.ceiling} value=${v.adjusted} avg=${market} />
                 ${v.saveSlot !== null && html`<div class="note">worth ${money(v.adjusted)} vs your ${money(v.saveSlot)}/slot</div>`}
+                ${v.profile && profileText(v.profile) && html`<div class="note profile">${profileText(v.profile)}</div>`}
+                ${flagText(valueFlag(v.adjusted, market), market) && html`<div class=${`note flag ${valueFlag(v.adjusted, market)}`}>${flagText(valueFlag(v.adjusted, market), market)}</div>`}
                 ${v.fit && Math.abs(v.fit.mult - 1) >= FIT_NOTE_MIN && html`<div class="note">${fitText(v.fit)}</div>`}
                 ${v.boost > 1 && html`<div class="note">positional need +10%</div>`}
                 ${v.unvalued && html`<div class="note warn">${v.name} has no value</div>`}
@@ -125,6 +130,18 @@ export function Panel(p: PanelProps) {
         html`<section class="nominate">
           <span class="label">Nominate</span><b>${advice.nomination.name}</b><span class="pill">${advice.nomination.phase}</span>
           <div class="why">${advice.nomination.reason}</div>
+        </section>`}
+        ${look &&
+        html`<section class="lookfor">
+          <h4><span>Look for</span><span class="cols">yours · ESPN</span></h4>
+          ${look.rows.length
+            ? look.rows.map(
+                (r) => html`<div class=${r.flag === 'value' ? 'look value' : 'look'}>
+                  <span class="name">${r.flag === 'value' ? '⭐ ' : ''}${r.name}</span><span class="tags">${r.cats.map((c) => `+${CATEGORY_LABELS[c]}`).join(' ')}</span><span class="price">${money(r.value)}</span><span class="val">${r.market > 0 ? money(r.market) : '—'}</span>
+                </div>`,
+              )
+            : html`<div class="empty">Nobody left you can afford at $5+</div>`}
+          ${standingText(look.strong, look.weak) && html`<div class="why">${standingText(look.strong, look.weak)}</div>`}
         </section>`}
         <section class="rivals">
           <h4><span>Rivals</span><span class="cols">$ left · open · max${v ? html` · <span class="over-key">can outbid you</span>` : ''}</span></h4>

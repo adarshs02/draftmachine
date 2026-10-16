@@ -9,6 +9,8 @@ export interface Fit {
   mult: number
   /** categories behind it: where he helps me most (mult > 1) or least (mult < 1) */
   cats: Category[]
+  /** up to 2 categories where he raises my weekly odds most */
+  helps: Category[]
 }
 
 /** Gains (expected weekly categories won) this small are noise. */
@@ -22,6 +24,8 @@ const TYPICAL_MIN = 20
 
 interface FitContext {
   rivals: WeeklyLine[]
+  /** my roster as it stands (fillers in open slots): chance to win each category in a week */
+  myNow: number[]
   /** my roster's lines, a filler in every open slot but the last, which holds a replacement player (`gain` swaps the rated player in) */
   myLines: SeasonLine[]
   myBase: number[]
@@ -88,7 +92,7 @@ function buildContext(s: DraftState, me: number): FitContext | null {
     mine += total(gain(myLines, myBase, v.line!, rivals))
   }
   if (mine < MIN_GAIN || generic < MIN_GAIN) return null
-  return { rivals, myLines, myBase, genericLines, genericBase, typical: mine / generic }
+  return { rivals, myNow: perCategory(weeklyFromLines(mineNow), rivals), myLines, myBase, genericLines, genericBase, typical: mine / generic }
 }
 
 // One context per sales list: bids don't change it; a sale, undo or fix makes a new list.
@@ -123,7 +127,20 @@ export function fitFor(s: DraftState, key: string): Fit | null {
   const parts = CATEGORIES.map((c, i) => ({ c, d: mine[i] / ctx.typical - generic[i] }))
   const named =
     mult > 1 ? parts.filter((p) => p.d > MIN_PART).sort((a, b) => b.d - a.d) : mult < 1 ? parts.filter((p) => p.d < -MIN_PART).sort((a, b) => a.d - b.d) : []
-  return { mult, cats: named.slice(0, 2).map((p) => p.c) }
+  const helps = CATEGORIES.map((c, i) => ({ c, d: mine[i] }))
+    .filter((p) => p.d > MIN_PART)
+    .sort((a, b) => b.d - a.d)
+    .slice(0, 2)
+    .map((p) => p.c)
+  return { mult, cats: named.slice(0, 2).map((p) => p.c), helps }
+}
+
+/** My chance to win each category in a week as my roster stands (open slots filled with the average player left); null before my first pick. */
+export function teamStanding(s: DraftState): Record<Category, number> | null {
+  const me = s.myTeamId
+  if (me === null || teamSummary(s, me).roster.length === 0) return null
+  const ctx = context(s, me)
+  return ctx ? (Object.fromEntries(CATEGORIES.map((c, i) => [c, ctx.myNow[i]])) as Record<Category, number>) : null
 }
 
 /** The player's value for my roster: adjusted value (inflation, hot-room stars) x category fit. */

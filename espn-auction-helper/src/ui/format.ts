@@ -1,5 +1,6 @@
 import type { Fit } from '../engine/fit'
-import { CATEGORY_LABELS } from '../engine/h2h'
+import { CATEGORY_LABELS, type Category } from '../engine/h2h'
+import type { CategoryProfile } from '../engine/profile'
 import type { Team } from '../engine/types'
 import type { Verdict } from '../engine/verdict'
 
@@ -31,4 +32,25 @@ export function fitText(f: Fit): string {
   const head = `fits your team ×${f.mult.toFixed(2)}`
   if (!names) return head
   return f.mult > 1 ? `${head}: ${names}` : `${head}: less useful in ${names}`
+}
+
+const labels = (cats: readonly Category[]) => cats.map((c) => CATEGORY_LABELS[c]).join(', ')
+
+/** "Value from: BLK, REB · costs you: FT%"; null for a player with no standout categories. */
+export function profileText(p: CategoryProfile): string | null {
+  if (p.strengths.length && p.costs.length) return `Value from: ${labels(p.strengths)} · costs you: ${labels(p.costs)}`
+  if (p.strengths.length) return `Value from: ${labels(p.strengths)}`
+  if (p.costs.length) return `Costs you: ${labels(p.costs)}`
+  return null
+}
+
+export function flagText(flag: 'value' | 'overpay' | null, market: number): string | null {
+  if (flag === 'value') return `⭐ value play: room usually pays ${money(market)}`
+  if (flag === 'overpay') return `room usually overpays: ~${money(market)}`
+  return null
+}
+
+export function standingText(strong: readonly Category[], weak: readonly Category[]): string | null {
+  const parts = [strong.length ? `strong ${labels(strong)}` : '', weak.length ? `weak ${labels(weak)}` : ''].filter(Boolean)
+  return parts.length ? `Your team: ${parts.join(' · ')}` : null
 }

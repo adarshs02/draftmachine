@@ -93,6 +93,15 @@ tr.over td:last-child { font-weight: 650; }
 .sale:hover .fix, .fix:focus-visible { opacity: 1; }
 .empty { color: var(--muted); }
 
+.look { display: grid; grid-template-columns: minmax(0, 1fr) auto 34px 34px; gap: 8px; align-items: baseline; padding: 1px 0; }
+.look .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.look.value .name { color: var(--bid); }
+.look .tags { font-size: 10.5px; color: var(--muted); white-space: nowrap; }
+.look .price { color: var(--text); }
+.note.flag.value { color: var(--bid); }
+.note.flag.overpay { color: var(--warn); }
+.note.profile { color: var(--text); }
+
 footer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
 footer button { padding: 0; background: none; color: var(--muted); font-size: 11px; }
 footer button:hover { color: var(--text); text-decoration: underline; }

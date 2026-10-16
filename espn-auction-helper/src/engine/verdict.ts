@@ -2,6 +2,7 @@ import { TUNABLES } from './constants'
 import { fitFor, type Fit } from './fit'
 import { adjustedValue, inflation, myBudget, teamSummary, temperature, valueOf } from './metrics'
 import { needBoost } from './need'
+import { categoryProfile, type CategoryProfile } from './profile'
 import type { DraftState } from './types'
 
 export type VerdictKind = 'BID' | 'BID_UP' | 'LET_THEM' | 'PASS' | 'LEADING'
@@ -23,6 +24,8 @@ export interface Verdict {
   saveSlot: number | null
   /** how my roster changes the player's value; null when fit doesn't apply */
   fit: Fit | null
+  /** where his value comes from; null without a stat line */
+  profile: CategoryProfile | null
 }
 
 /** Most I should pay: adjusted value (with positional need), capped by what keeps my roster fillable. */
@@ -75,6 +78,7 @@ export function verdict(s: DraftState): Verdict | null {
     unvalued: !(live.playerKey in s.values),
     saveSlot: null,
     fit,
+    profile: categoryProfile(s, live.playerKey),
   }
   const letThem = (): Verdict => {
     const r = teamSummary(s, live.leaderId)

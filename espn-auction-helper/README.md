@@ -8,6 +8,8 @@ Chrome extension for ESPN fantasy basketball **salary-cap (auction)** drafts. It
 - **Room temperature** (Hot / Warm / Neutral / Cold) from recent sale prices vs. value, plus inflation from money left vs. value left.
 - **Your budget**: money left, open spots, money per open slot after holding 2 × $1 streaming slots, and a safe max that keeps your roster fillable.
 - **The call card** shows the player's value, ESPN's average price and your max, with a bar placing the current price against them. The last 8 sales show green under value, red over.
+- **Where the value comes from**: the call card names the player's strongest categories against the draftable pool and the ones he costs you ("Value from: BLK, REB, FG% · costs you: FT%, TO"), and flags **⭐ value play** when your value beats ESPN's average price by $3 and 15% (or **room usually overpays** the other way).
+- **Look for**: the 6 best players left for your roster, by your value over ESPN's average price, affordable and worth $5+, each tagged with the categories where he'd help your team. Under the list, your team's standing: categories you'd usually win or lose in a week. ESPN rooms pay top dollar for stars and little for the middle tier, so early on most of the list is value plays.
 - **Rivals**: everyone's money, open slots and max bid, highest first; max bids in amber can outbid your max on the player on the block.
 - **Nominate next**: early, players the room overpays for; later, your target once rivals can't outbid you; at the end, $1 steals.
 - **Warnings**: two stars eating 70% of your budget leaves no margin for error.
