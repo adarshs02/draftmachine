@@ -58,11 +58,11 @@ export function standingText(strong: readonly Category[], weak: readonly Categor
 
 const gamesText = (games: readonly (number | null)[]) => games.map((g) => (g === null ? '–' : String(g))).join('/')
 
-/** "Injury prone: 76/51/20 games, last 3 seasons" or "Coming off injury: 16 games last season" */
+/** "Injury prone: 76/51/20 games, last 3 seasons" or "Returning from major injury: 16 games last season" */
 export function injuryText(i: Injury): string {
   if (i.label === 'prone') return `Injury prone: ${gamesText(i.games)} games, last ${i.games.length} seasons`
-  return `Coming off injury: ${i.games[i.games.length - 1] ?? 0} games last season`
+  return `Returning from major injury: ${i.games[i.games.length - 1] ?? 0} games last season`
 }
 
-/** Short tag for lists: INJ (injury prone) or RET (coming off injury). */
+/** Short tag for lists: INJ (injury prone) or RET (returning from major injury). */
 export const injuryTag = (i: Injury) => (i.label === 'prone' ? 'INJ' : 'RET')

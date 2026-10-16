@@ -8,7 +8,7 @@ export const PRONE_MAX_GP = 57
 export const PRONE_SEASONS = 2
 /** Or missed 45+ games in one of the seasons before last (Kawhi 68/37/65, Ingram 64/18/77): injury prone. */
 export const BIG_MISS_MAX_GP = 37
-/** Missed 37+ games last season (and not injury prone): coming off injury. */
+/** Missed 37+ games last season (and not injury prone): returning from major injury. */
 export const RECENT_MAX_GP = 45
 
 export function injuryFor(seasons: Record<string, SeasonGames> | undefined, years: readonly number[] = HISTORY_SEASONS): Injury | null {

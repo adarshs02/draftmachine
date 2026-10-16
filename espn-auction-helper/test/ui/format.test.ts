@@ -54,7 +54,7 @@ describe('injury', () => {
   it('spells out the games behind the label', () => {
     expect(injuryText({ label: 'prone', games: [76, 51, 20] })).toBe('Injury prone: 76/51/20 games, last 3 seasons')
     expect(injuryText({ label: 'prone', games: [null, 36, 11] })).toBe('Injury prone: –/36/11 games, last 3 seasons')
-    expect(injuryText({ label: 'recent', games: [74, 72, 16] })).toBe('Coming off injury: 16 games last season')
+    expect(injuryText({ label: 'recent', games: [74, 72, 16] })).toBe('Returning from major injury: 16 games last season')
   })
 
   it('tags lists INJ or RET', () => {

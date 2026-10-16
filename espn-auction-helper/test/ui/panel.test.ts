@@ -64,13 +64,13 @@ describe('Panel', () => {
     expect(section.textContent).toContain('Your team: strong BLK')
   })
 
-  it('warns when the player on the block is injury prone or coming off injury', () => {
+  it('warns when the player on the block is injury prone or returning from major injury', () => {
     const prone = { label: 'prone' as const, games: [76, 51, 20] }
     const text = show(build(S, [pv('Alpha', 30, { injury: prone }), pv('Beta', 18)], [nominated('Alpha', 2, 1)])).el.querySelector('.now')!.textContent
     expect(text).toContain('Injury prone: 76/51/20 games, last 3 seasons')
     const recent = { label: 'recent' as const, games: [74, 72, 16] }
     const now = show(build(S, [pv('Alpha', 30, { injury: recent }), pv('Beta', 18)], [nominated('Alpha', 2, 1)])).el.querySelector('.now')!
-    expect(now.querySelector('.note.injury.recent')!.textContent).toContain('Coming off injury: 16 games last season')
+    expect(now.querySelector('.note.injury.recent')!.textContent).toContain('Returning from major injury: 16 games last season')
     expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.querySelector('.now .injury')).toBeNull()
   })
 
