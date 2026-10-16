@@ -1,5 +1,6 @@
 import { DEFAULT_TUNABLES, TUNABLES, type TunableName, type Tunables } from '../engine/constants'
-import { adjustedValue, inflation, temperature, valueOf } from '../engine/metrics'
+import { myValue } from '../engine/fit'
+import { inflation, temperature, valueOf } from '../engine/metrics'
 import { suggestNomination } from '../engine/nominate'
 import type { DraftState } from '../engine/types'
 import { ceilingFor, saveSlotFor } from '../engine/verdict'
@@ -23,7 +24,7 @@ export interface StateSource {
  */
 export function autopilotCap(s: DraftState, key: string): number {
   if (valueOf(s, key).avoid) return 0
-  const a = adjustedValue(s, key, inflation(s), temperature(s).label)
+  const a = myValue(s, key, inflation(s), temperature(s).label)
   const ceiling = ceilingFor(s, key, a)
   if (s.targets.includes(key)) return ceiling
   if (saveSlotFor(s, a) !== null) return 0

@@ -1,4 +1,5 @@
 import { TUNABLES } from './constants'
+import { fitFor, type Fit } from './fit'
 import { adjustedValue, inflation, myBudget, teamSummary, temperature, valueOf } from './metrics'
 import { needBoost } from './need'
 import type { DraftState } from './types'
@@ -20,6 +21,8 @@ export interface Verdict {
   unvalued: boolean
   /** my money per slot, when the call is PASS to keep the slot for a better player */
   saveSlot: number | null
+  /** how my roster changes the player's value; null when fit doesn't apply */
+  fit: Fit | null
 }
 
 /** Most I should pay: adjusted value (with positional need), capped by what keeps my roster fillable. */
@@ -55,7 +58,8 @@ export function verdict(s: DraftState): Verdict | null {
   const live = s.live
   if (!live || !myBudget(s)) return null
   const v = valueOf(s, live.playerKey)
-  const a = adjustedValue(s, live.playerKey, inflation(s), temperature(s).label)
+  const fit = fitFor(s, live.playerKey)
+  const a = adjustedValue(s, live.playerKey, inflation(s), temperature(s).label) * (fit?.mult ?? 1)
   const ceiling = ceilingFor(s, live.playerKey, a)
   const base = {
     playerKey: live.playerKey,
@@ -70,6 +74,7 @@ export function verdict(s: DraftState): Verdict | null {
     warnings: concentrationWarnings(s, live.price + 1),
     unvalued: !(live.playerKey in s.values),
     saveSlot: null,
+    fit,
   }
   const letThem = (): Verdict => {
     const r = teamSummary(s, live.leaderId)

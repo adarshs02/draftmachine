@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { DEFAULT_TUNABLES, resetTunables, setTunables } from '../../src/engine/constants'
+import { fitFor } from '../../src/engine/fit'
 import { reduce } from '../../src/engine/reducer'
 import { verdict } from '../../src/engine/verdict'
 import { toSettings } from '../../src/espn/league'
@@ -11,7 +12,8 @@ import { runDraft } from '../../src/sim/run'
 import { defaultOptions, simLeague, simPlayers, simTeams } from '../../src/sim/setup'
 import { createTracker } from '../../src/sim/tracker'
 import type { PlayerValue } from '../../src/values/types'
-import { build, nominated, pv, settings } from '../helpers'
+import { build, nominated, pv, settings, sold } from '../helpers'
+import { FIT_S, FIT_V } from '../engine/fitFixture'
 
 const VALUES = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
 const PLAYERS = simPlayers(VALUES)
@@ -99,4 +101,17 @@ describe('inertForAutopilot', () => {
       resetTunables()
     }
   }, 60_000)
+})
+
+describe('autopilotCap with category fit', () => {
+  it('bids less for a player my roster gets little from, and FIT_WEIGHT 0 restores the old cap', () => {
+    // Far behind in FT%: a good FT shooter helps me less than the typical player left.
+    const s = build(FIT_S, FIT_V, [sold('Brick1', 1, 20), sold('Brick2', 1, 20), sold('Brick3', 1, 20), nominated('Shooter', 2, 1)])
+    expect(fitFor(s, 'shooter')!.mult).toBeLessThan(0.9)
+    const withFit = autopilotCap(s, 'shooter')
+    setTunables({ FIT_WEIGHT: 0 })
+    const without = autopilotCap(s, 'shooter')
+    resetTunables()
+    expect(withFit).toBeLessThan(without)
+  })
 })

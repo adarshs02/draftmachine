@@ -1,7 +1,11 @@
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
+import { resetTunables, setTunables } from '../../src/engine/constants'
+import { fitFor } from '../../src/engine/fit'
+import { adjustedValue } from '../../src/engine/metrics'
 import type { DraftEvent } from '../../src/engine/types'
 import { ceilingFor, verdict } from '../../src/engine/verdict'
 import { build, nominated, pv, settings, sold } from '../helpers'
+import { FIT_S, FIT_V } from './fitFixture'
 
 // All-bench lineup: no starting slots, so need boost is always 1.
 // 4 teams x $200 chasing 3 valued players keeps inflation pinned at 1.2: Alpha a = 1 + 29 * 1.2 = 35.8.
@@ -81,5 +85,25 @@ describe('verdict', () => {
     expect(two.warnings.some((w) => w.startsWith('Two players'))).toBe(true)
     const one = verdict(at([nominated('Alpha', 2, 70)]))!
     expect(one.warnings.some((w) => w.startsWith('One player'))).toBe(true)
+  })
+})
+
+describe('verdict with category fit', () => {
+  afterEach(() => resetTunables())
+  const s = build(FIT_S, FIT_V, [sold('Wall1', 1, 20), sold('Wall2', 1, 20), sold('Wall3', 1, 20), nominated('Blocker', 2, 1)])
+
+  it('values the player for my roster and says why', () => {
+    const v = verdict(s)!
+    const f = fitFor(s, 'blocker')!
+    expect(v.fit).toEqual(f)
+    expect(v.adjusted).toBeCloseTo(adjustedValue(s, 'blocker') * f.mult, 9)
+    expect(v.ceiling).toBe(ceilingFor(s, 'blocker', v.adjusted))
+  })
+
+  it("FIT_WEIGHT 0 gives today's call", () => {
+    setTunables({ FIT_WEIGHT: 0 })
+    const v = verdict(s)!
+    expect(v.fit).toBeNull()
+    expect(v.adjusted).toBe(adjustedValue(s, 'blocker'))
   })
 })

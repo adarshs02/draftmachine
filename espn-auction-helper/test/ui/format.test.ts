@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import type { Verdict } from '../../src/engine/verdict'
 import { money, verdictText } from '../../src/ui/format'
 
-const base: Verdict = { kind: 'BID', playerKey: 'a', name: 'A', price: 30, leaderId: 2, adjusted: 35.8, ceiling: 35, boost: 1, pushTo: null, rivalPerSlotAfter: null, warnings: [], unvalued: false, saveSlot: null }
+const base: Verdict = { kind: 'BID', playerKey: 'a', name: 'A', price: 30, leaderId: 2, adjusted: 35.8, ceiling: 35, boost: 1, pushTo: null, rivalPerSlotAfter: null, warnings: [], unvalued: false, saveSlot: null, fit: null }
 
 describe('format', () => {
   it('rounds money', () => {
