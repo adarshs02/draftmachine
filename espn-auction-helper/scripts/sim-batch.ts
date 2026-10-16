@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { runBatch } from '../src/sim/batch'
 import { BATCH_USAGE, inertNote, parseBatchArgs, type BatchArgs } from '../src/sim/batchArgs'
 import { formatTable } from '../src/sim/run'
-import { PLAYTIME_PATH, projectionsFromCsv, STATS_PATH } from '../src/sim/seasonStats'
+import { PLAYTIME_PATH, projectionsFromCsv, STATS_PATH } from '../src/values/seasonStats'
 import type { PlayerValue } from '../src/values/types'
 
 function argsOrExit(): BatchArgs {

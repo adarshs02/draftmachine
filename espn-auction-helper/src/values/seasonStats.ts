@@ -1,6 +1,6 @@
-import { normalizeName } from '../values/names'
-import type { PlayerValue } from '../values/types'
-import { LINE_FIELDS, projectionsFrom, type ProjectionSource, type SeasonLine } from './score'
+import { LINE_FIELDS, projectionsFrom, type ProjectionSource, type SeasonLine } from '../engine/h2h'
+import { normalizeName } from './names'
+import type { PlayerValue } from './types'
 
 /** The user's Hashtag Basketball projections export: per-game stats (committed with the simulator). */
 export const STATS_PATH = 'data/hashtag-projections.csv'
@@ -121,12 +121,30 @@ export function seasonProjections(stats: readonly PerGameRow[], playtime: Readon
   for (const v of values) {
     if (v.espnId === null) continue
     const r = byKey.get(v.key)
-    if (!r) continue
-    const edit = playtime.get(r.key)
-    const scale = (edit?.gp ?? r.gp) * (edit && r.mpg > 0 ? edit.mpg / r.mpg : 1)
-    rows.set(v.espnId, Object.fromEntries(LINE_FIELDS.map((f) => [f, r.perGame[f] * scale])) as unknown as SeasonLine)
+    if (r) rows.set(v.espnId, seasonLine(r, playtime.get(r.key)))
   }
   return projectionsFrom(rows)
+}
+
+/** Season totals for one stats row: per-game x games; the sheet's games and minutes win, per-game stats scale with the minutes. */
+export function seasonLine(r: PerGameRow, edit: Playtime | undefined): SeasonLine {
+  const scale = (edit?.gp ?? r.gp) * (edit && r.mpg > 0 ? edit.mpg / r.mpg : 1)
+  return Object.fromEntries(LINE_FIELDS.map((f) => [f, r.perGame[f] * scale])) as unknown as SeasonLine
+}
+
+const round1 = (x: number) => Math.round(x * 10) / 10
+
+/** Each value with its projected season line (rounded to 0.1); null without a stats row, and for everyone without the stats file. */
+export function withLines(values: readonly PlayerValue[], statsCsv: string | null, playtimeCsv: string | null): PlayerValue[] {
+  if (statsCsv === null) return values.map((v) => ({ ...v, line: null }))
+  const byKey = new Map(parseHashtagStats(statsCsv).map((r) => [r.key, r]))
+  const playtime = playtimeCsv === null ? new Map<string, Playtime>() : parsePlaytime(playtimeCsv)
+  return values.map((v) => {
+    const r = byKey.get(v.key)
+    if (!r) return { ...v, line: null }
+    const l = seasonLine(r, playtime.get(r.key))
+    return { ...v, line: Object.fromEntries(LINE_FIELDS.map((f) => [f, round1(l[f])])) as unknown as SeasonLine }
+  })
 }
 
 /** From the two files' text (the sheet's is optional); null without the stats file. */

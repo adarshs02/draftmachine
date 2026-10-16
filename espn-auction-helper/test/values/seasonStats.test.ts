@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { parseCsvRecords, parseHashtagStats, parsePlaytime, PLAYTIME_PATH, projectionsFromCsv, seasonProjections, STATS_PATH } from '../../src/sim/seasonStats'
+import { parseCsvRecords, parseHashtagStats, parsePlaytime, PLAYTIME_PATH, projectionsFromCsv, seasonProjections, STATS_PATH, withLines } from '../../src/values/seasonStats'
 import type { PlayerValue } from '../../src/values/types'
 import { pv } from '../helpers'
 
@@ -62,5 +62,29 @@ describe('season projections', () => {
     const proj = projectionsFromCsv(readFileSync(STATS_PATH, 'utf8'), playtime, values)!
     const covered = values.filter((v) => v.espnId !== null && proj(v.espnId) !== null)
     expect(covered.length).toBeGreaterThanOrEqual(190)
+  })
+})
+
+describe('withLines', () => {
+  it("adds each player's season line, rounded to 0.1, keyed by name; null without a stats row", () => {
+    const out = withLines(VALUES, CSV, null)
+    expect(out[0].line).toMatchObject({ pts: Math.round(28.4 * 72 * 10) / 10, fga: Math.round(18.3 * 72 * 10) / 10 })
+    expect(out[1].line!.stl).toBeCloseTo(3.0 * 70, 6)
+    expect(out[2].line).toBeNull()
+    expect(out.map((v) => v.b)).toEqual(VALUES.map((v) => v.b))
+  })
+
+  it('takes games and minutes from the sheet like the simulator does', () => {
+    const sheet = '"PLAYER","GP","MPG"\n"Nikola Jokic","60","35.1"'
+    expect(withLines(VALUES, CSV, sheet)[0].line!.pts).toBeCloseTo(Math.round(28.4 * 60 * 10) / 10, 6)
+  })
+
+  it('gives every player a null line without the stats file', () => {
+    expect(withLines(VALUES, null, null).every((v) => v.line === null)).toBe(true)
+  })
+
+  it('matches seasonProjections for players with an ESPN id', () => {
+    const proj = seasonProjections(parseHashtagStats(CSV), new Map(), VALUES)
+    expect(withLines(VALUES, CSV, null)[0].line!.reb).toBeCloseTo(proj(3112335)!.reb, 1)
   })
 })

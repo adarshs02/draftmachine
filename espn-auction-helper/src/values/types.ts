@@ -1,3 +1,5 @@
+import type { SeasonLine } from '../engine/h2h'
+
 export interface PlayerValue {
   /** normalizeName(name): join key across ESPN, Josh's CSV, live events and manual entry */
   key: string
@@ -18,4 +20,6 @@ export interface PlayerValue {
   rank: number | null
   /** 1 = top 12 by b, 2 = 13-36, 3 = 37-72, 4 = 73-120, 5 = rest */
   tier: number
+  /** projected season totals (data/hashtag-projections.csv x games), null without a stats row */
+  line: SeasonLine | null
 }

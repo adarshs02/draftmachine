@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { rescaleToLeague } from '../../src/values/rescale'
 import type { PlayerValue } from '../../src/values/types'
 
-const v = (key: string, b: number): PlayerValue => ({ key, espnId: null, name: key, slots: [11], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 0 })
+const v = (key: string, b: number): PlayerValue => ({ key, espnId: null, name: key, slots: [11], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 0, line: null })
 const sumTop = (xs: PlayerValue[], k: number) => xs.slice(0, k).reduce((s, x) => s + x.b, 0)
 
 describe('rescaleToLeague', () => {
