@@ -41,7 +41,7 @@ Move from `src/sim/score.ts` to a new `src/engine/h2h.ts`, unchanged in behavior
 
 New `src/engine/fit.ts`.
 
-**Filler.** The average `line` of the best remaining players: available players by value, excluding the player on the block, the top N where N = open slots across all teams, counting only players with a line. It stands in for every open slot and for every rostered player without a line. No filler (no available player has a line) ⇒ fit 1.
+**Filler.** The average `line` of the best remaining players: available players by value, the top N where N = open slots across all teams, counting only players with a line. It stands in for every open slot and for every rostered player without a line. No filler (no available player has a line) ⇒ fit 1.
 
 **Team week.** `weeklyFromLines` over a team's rostered lines plus one filler per open slot.
 
@@ -52,16 +52,19 @@ New `src/engine/fit.ts`.
 - `generic` = the same for a team made only of fillers (roster size), against the same rivals. This is what a value that ignores my roster assumes.
 - Per-category parts of both are kept for the panel.
 
+**Typical ratio.** The same gains for every player in the filler pool: `typical = Σ mine ÷ Σ generic` over the pool. Computed once per sale (cached on the sales list), so a bid only costs the gains for the player on the block.
+
 **Multiplier.**
-- `raw = mine / generic`, clamped to `[FIT_MIN, FIT_MAX]`. `mine ≤ 0` ⇒ `FIT_MIN`.
+- `raw = (mine / generic) / typical`, clamped to `[FIT_MIN, FIT_MAX]`. `mine ≤ 0` ⇒ `FIT_MIN`.
+- Why `typical`: the all-filler team sits at 50% in every category, where any stat helps most, so `mine / generic` is below 1 for nearly every player once my roster has a shape. Unnormalized, fit would cut every value and leave money unspent. Dividing by `typical` makes fit move value between players (the remaining pool averages ×1) and leaves overall spending to `infl`. (Ruling while planning, 2026-10-15.)
 - `fit = raw ^ FIT_WEIGHT`.
-- `fit = 1` when: no projections (filler missing), `p` has no line, base value `b < NEED_MIN_VALUE` ($5), `generic ≤ 0.001`, my team unknown or full.
+- `fit = 1` (no fit) when: `FIT_WEIGHT` is 0, no projections (filler missing), `p` has no line, base value `b < NEED_MIN_VALUE` ($5), `generic` or the pool's totals ≤ 0.001, my team unknown or full, no rivals.
 
 **Where it applies.** New `myValue(s, key) = adjustedValue(s, key) × fit`. `verdict` (value shown, ceiling, BID / BID UP, save the slot) and `autopilotCap` use `myValue`. `adjustedValue` itself is unchanged, so `saleFlags` and nomination keep today's behavior. The hot-room star rule happens inside `adjustedValue`, before fit.
 
 **Tunables** (in `DEFAULT_TUNABLES`, settable by `--set` and the simulator drawer): `FIT_WEIGHT: 1`, `FIT_MIN: 0.75`, `FIT_MAX: 1.25`.
 
-**Verdict.** Gains `fit: { mult: number; cats: Category[] } | null` (null when fit is 1 for one of the reasons above). `cats` = up to 2 categories with the largest `mine − generic` part when `mult > 1`, the 2 most negative when `mult < 1`, only parts beyond 0.005.
+**Verdict.** Gains `fit: { mult: number; cats: Category[] } | null` (null when fit is 1 for one of the reasons above). `cats` = up to 2 categories with the largest `mine / typical − generic` part when `mult > 1`, the 2 most negative when `mult < 1`, only parts beyond 0.005.
 
 ## 5. Panel
 
