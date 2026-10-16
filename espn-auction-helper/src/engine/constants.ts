@@ -23,6 +23,9 @@ export const DEFAULT_TUNABLES = Object.freeze({
   DECOY_MARKET_RATIO: 1.1,
   SLOT_FLOOR: 0.5,
   SLOT_FLOOR_OPEN: 6,
+  FIT_WEIGHT: 1,
+  FIT_MIN: 0.75,
+  FIT_MAX: 1.25,
 })
 
 export type Tunables = { -readonly [K in keyof typeof DEFAULT_TUNABLES]: number }
