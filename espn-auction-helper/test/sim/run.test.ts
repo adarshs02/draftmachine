@@ -2,7 +2,8 @@ import { readFileSync } from 'node:fs'
 import { afterEach, describe, expect, it } from 'vitest'
 import { resetTunables, setTunables } from '../../src/engine/constants'
 import { formatTable, runDraft, summarize, type DraftResult } from '../../src/sim/run'
-import type { ProjectionSource, TeamScore } from '../../src/sim/score'
+import { defaultOptions } from '../../src/sim/setup'
+import { scoreTeams, truthFrom, type ProjectionSource, type TeamScore } from '../../src/sim/score'
 import type { PlayerValue } from '../../src/values/types'
 
 const VALUES = JSON.parse(readFileSync('data/values.json', 'utf8')) as PlayerValue[]
@@ -27,6 +28,13 @@ describe('runDraft', () => {
     expect(r.moneyLeft).toBeGreaterThanOrEqual(0)
     const mine = r.sales.filter((x) => x.teamId === 1)
     expect(r.valueCaptured).toBeCloseTo(mine.reduce((s, x) => s + (CONSENSUS.get(x.espnId) ?? 0) - x.price, 0), 6)
+  })
+
+  it('scores seasons on projections plus error drawn from the draft seed', () => {
+    const r = runDraft({ seed: 4, policy: 'market', values: VALUES, projections: FAKE })
+    // Same team order as runDraft (the draft order), rosters in purchase order.
+    const rosters = new Map(defaultOptions(4).pickOrder.map((id) => [id, r.sales.filter((x) => x.teamId === id).map((x) => x.espnId)] as const))
+    expect(r.standings).toEqual(scoreTeams(rosters, truthFrom(FAKE, 4), 4))
   })
 
   it('missing projections: no standings, still money left and value captured', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CATEGORIES, categoryWinChance, GAME_DISPERSION, GAMES_CV2, H2H, NBA_WEEKS, projectionsFrom, scoreTeams, weeklyLine, type SeasonLine } from '../../src/sim/score'
+import { CATEGORIES, categoryWinChance, GAME_DISPERSION, GAMES_CV2, H2H, NBA_WEEKS, PROJECTION_ERROR, projectionsFrom, scoreTeams, truthFrom, weeklyLine, type SeasonLine } from '../../src/sim/score'
 
 const line = (pts: number, reb: number, ast: number, stl: number, blk: number, tpm: number, to: number, fgm: number, fga: number, ftm: number, fta: number): SeasonLine => ({
   pts, reb, ast, stl, blk, tpm, to, fgm, fga, ftm, fta,
@@ -77,5 +77,38 @@ describe('scoreTeams', () => {
     const flat = projectionsFrom(new Map([[1, BASE]]))
     const s = scoreTeams(new Map(Array.from({ length: 4 }, (_, i) => [i + 1, team(1)])), flat)
     expect(s.every((t) => t.rank === 1 && Math.abs(t.winPct - 0.5) < 1e-9)).toBe(true)
+  })
+})
+
+describe('truthFrom', () => {
+  const ids = Array.from({ length: 3000 }, (_, i) => i + 1)
+  const proj = projectionsFrom(new Map(ids.map((id) => [id, BASE])))
+  const sd = (xs: number[]) => {
+    const m = xs.reduce((s, x) => s + x, 0) / xs.length
+    return Math.sqrt(xs.reduce((s, x) => s + (x - m) ** 2, 0) / (xs.length - 1))
+  }
+
+  it('is the same for a (seed, player) whatever order players are asked for, and differs by seed', () => {
+    const a = truthFrom(proj, 5)
+    const b = truthFrom(proj, 5)
+    const first = a(7)
+    b(9)
+    b(3)
+    expect(b(7)).toEqual(first)
+    expect(truthFrom(proj, 6)(7)).not.toEqual(first)
+    expect(truthFrom(proj, 5)(99999)).toBeNull()
+  })
+
+  it('draws errors of the configured size around the projection', () => {
+    const t = truthFrom(proj, 1)
+    const lines = ids.map((id) => t(id)!)
+    const pts = lines.map((l) => l.pts / BASE.pts)
+    expect(pts.reduce((s, x) => s + x, 0) / pts.length).toBeCloseTo(1, 1)
+    const expected = Math.hypot(PROJECTION_ERROR.games, PROJECTION_ERROR.stat)
+    expect(sd(pts)).toBeGreaterThan(expected * 0.85)
+    expect(sd(pts)).toBeLessThan(expected * 1.15)
+    const fg = lines.map((l) => l.fgm / l.fga - BASE.fgm / BASE.fga)
+    expect(sd(fg)).toBeCloseTo(PROJECTION_ERROR.fgPct, 2)
+    expect(lines.every((l) => l.ftm <= l.fta && l.fgm <= l.fga && l.ftm >= 0)).toBe(true)
   })
 })

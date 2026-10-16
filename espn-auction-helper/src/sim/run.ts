@@ -2,7 +2,7 @@ import { toSettings } from '../espn/league'
 import type { PlayerValue } from '../values/types'
 import { AuctionSim, runToEnd } from './auction'
 import { createAgent, type PolicyName } from './policies'
-import { scoreTeams, type ProjectionSource, type TeamScore } from './score'
+import { scoreTeams, truthFrom, type ProjectionSource, type TeamScore } from './score'
 import { defaultOptions, simLeague, simPlayers, simTeams, type SimOptions } from './setup'
 import { createTracker } from './tracker'
 import type { SimSale } from './types'
@@ -38,7 +38,7 @@ export function runDraft(input: DraftInput): DraftResult {
   const me = sim.teams.find((t) => t.id === o.myTeamId)!
   const consensus = new Map(players.map((p) => [p.espnId, p.consensus]))
   const valueCaptured = sim.sales.filter((x) => x.teamId === me.id).reduce((s, x) => s + (consensus.get(x.espnId) ?? 0) - x.price, 0)
-  const standings = input.projections ? scoreTeams(new Map(sim.teams.map((t) => [t.id, t.roster])), input.projections, input.seed) : null
+  const standings = input.projections ? scoreTeams(new Map(sim.teams.map((t) => [t.id, t.roster])), truthFrom(input.projections, input.seed), input.seed) : null
   const mine = standings?.find((t) => t.teamId === me.id) ?? null
   return {
     policy: input.policy,

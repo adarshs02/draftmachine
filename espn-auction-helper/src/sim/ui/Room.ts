@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks'
 import { teamSummary, valueOf } from '../../engine/metrics'
 import { html } from '../../ui/html'
 import { marketPrice } from '../bots'
-import { CATEGORIES, CATEGORY_LABELS, H2H } from '../score'
+import { CATEGORIES, CATEGORY_LABELS, H2H, PROJECTION_ERROR } from '../score'
 import type { Session } from '../session'
 
 const NOMINATE_RESULTS = 8
@@ -114,6 +114,8 @@ export function Room({ session }: { session: Session }) {
           <div class="muted">
             H2H each category. Win %: expected share of weekly categories won. Playoffs and Title: share of ${H2H.seasons} simulated
             seasons (${H2H.weeks} weeks, top ${H2H.playoffTeams} play ${H2H.playoffWeeks}-week rounds). Category columns: chance to win it in a week against an average opponent.
+            Seasons use the projections plus random error drawn from the seed: games ±${PROJECTION_ERROR.games * 100}%, each stat ±${PROJECTION_ERROR.stat * 100}%,
+            FG% ±${PROJECTION_ERROR.fgPct * 100} and FT% ±${PROJECTION_ERROR.ftPct * 100} points.
           </div>`
         : html`<div class="muted">Projected standings unavailable: data/hashtag-projections.csv could not be read (see the console).</div>`}
       <h3>My roster</h3>

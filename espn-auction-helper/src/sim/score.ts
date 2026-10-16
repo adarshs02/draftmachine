@@ -1,5 +1,5 @@
-import { CATEGORIES, categoryWinChance, weeklyLine, type Category, type ProjectionSource } from '../engine/h2h'
-import { mulberry32, type Rng } from './rng'
+import { CATEGORIES, categoryWinChance, weeklyLine, type Category, type ProjectionSource, type SeasonLine } from '../engine/h2h'
+import { mulberry32, normal, type Rng } from './rng'
 
 export {
   CATEGORIES, CATEGORY_LABELS, categoryWinChance, GAME_DISPERSION, GAMES_CV2, LINE_FIELDS, NBA_WEEKS, projectionsFrom, weeklyFromLines, weeklyLine,
@@ -121,4 +121,50 @@ export function scoreTeams(rosters: ReadonlyMap<number, readonly number[]>, proj
     missingProjections: lines[i].missing,
   }))
   return scored.sort((a, b) => a.rank - b.rank || b.titlePct - a.titlePct || a.teamId - b.teamId)
+}
+
+/** How far a season lands from its projection (assumptions, not fitted). */
+export const PROJECTION_ERROR = Object.freeze({ games: 0.15, gamesMin: 0.3, gamesMax: 1.3, stat: 0.1, fgPct: 0.015, ftPct: 0.03 })
+
+const clamp = (x: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, x))
+
+/** One player's draw seed: the same (seed, id) gives the same season whatever order players are asked for. */
+function playerSeed(seed: number, espnId: number): number {
+  let h = Math.imul(seed ^ 0x9e3779b9, 0x85ebca6b) ^ espnId
+  h = Math.imul(h ^ (h >>> 16), 0x7feb352d)
+  h = Math.imul(h ^ (h >>> 15), 0x846ca68b)
+  return (h ^ (h >>> 16)) >>> 0
+}
+
+/**
+ * Seasons as they turn out: each player's projection with error drawn once per (seed, player). Games
+ * scale every counting stat and attempt total; each stat then varies on its own; FG% and FT% shift.
+ */
+export function truthFrom(proj: ProjectionSource, seed: number): ProjectionSource {
+  const E = PROJECTION_ERROR
+  const drawn = new Map<number, SeasonLine | null>()
+  return (id) => {
+    const hit = drawn.get(id)
+    if (hit !== undefined) return hit
+    const p = proj(id)
+    let out: SeasonLine | null = null
+    if (p) {
+      const r = mulberry32(playerSeed(seed, id))
+      const g = clamp(1 + E.games * normal(r), E.gamesMin, E.gamesMax)
+      const vary = (x: number) => x * g * Math.exp(E.stat * normal(r) - (E.stat * E.stat) / 2)
+      const made = (m: number, a: number, sd: number, att: number) => (a > 0 ? clamp(m / a + sd * normal(r), 0, 1) * att : 0)
+      const pts = vary(p.pts)
+      const reb = vary(p.reb)
+      const ast = vary(p.ast)
+      const stl = vary(p.stl)
+      const blk = vary(p.blk)
+      const tpm = vary(p.tpm)
+      const to = vary(p.to)
+      const fga = vary(p.fga)
+      const fta = vary(p.fta)
+      out = { pts, reb, ast, stl, blk, tpm, to, fga, fgm: made(p.fgm, p.fga, E.fgPct, fga), fta, ftm: made(p.ftm, p.fta, E.ftPct, fta) }
+    }
+    drawn.set(id, out)
+    return out
+  }
 }

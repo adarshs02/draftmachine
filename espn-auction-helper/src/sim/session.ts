@@ -7,7 +7,7 @@ import type { PlayerValue } from '../values/types'
 import { AuctionSim, MANUAL_AGENT, type Block } from './auction'
 import { createAgent } from './policies'
 import { espnRecordingReplay, joshReplay, type JoshFixture, type ReplayLine } from './replay'
-import { scoreTeams, type ProjectionSource, type TeamScore } from './score'
+import { scoreTeams, truthFrom, type ProjectionSource, type TeamScore } from './score'
 import { defaultOptions, SIM_SWID, simLeague, simPlayers, simTeams, type SimOptions } from './setup'
 import type { SimPlayer } from './types'
 
@@ -109,6 +109,8 @@ export async function createSession(config: SessionConfig, data: SessionData): P
   const replay = config.mode === 'replay-espn' ? espnRecordingReplay(data.recording) : config.mode === 'replay-josh' ? joshReplay(data.josh, data.values) : null
   const values = replay?.values ?? data.values
   const options: SimOptions = { ...config.options, emitClock: true }
+  /** seasons are scored on the projections plus error drawn from this draft's seed */
+  const truth = data.projections ? truthFrom(data.projections, options.seed) : null
   const league = replay?.league ?? simLeague(options, simTeams(options))
   let time = 0
   let view: View | null = null
@@ -276,13 +278,13 @@ export async function createSession(config: SessionConfig, data: SessionData): P
       }
     },
     standings() {
-      if (!data.projections) return null
+      if (!truth) return null
       const state = controller.getState()
       const rosters = new Map(state.settings.teams.map((t) => [t.id, [] as number[]]))
       // -1: a player with no ESPN id counts as missing a projection.
       if (scored?.sales === state.sales) return scored.standings
       for (const x of state.sales) rosters.get(x.teamId)?.push(keyToEspn.get(x.playerKey) ?? -1)
-      scored = { sales: state.sales, standings: scoreTeams(rosters, data.projections, options.seed) }
+      scored = { sales: state.sales, standings: scoreTeams(rosters, truth, options.seed) }
       return scored.standings
     },
     myResult() {

@@ -104,7 +104,9 @@ describe('session', () => {
     scored.finish()
     const st = scored.standings()!
     expect(st).toHaveLength(10)
-    expect(st.every((t) => t.rank === 1 && t.missingProjections === 0)).toBe(true)
+    expect(st.every((t) => t.missingProjections === 0)).toBe(true)
+    // Equal projections, but each season's stats carry their own error: teams differ.
+    expect(new Set(st.map((t) => t.winPct)).size).toBeGreaterThan(1)
     expect(st.reduce((s, t) => s + t.titlePct, 0)).toBeCloseTo(1, 9)
     expect(scored.standings()).toBe(st)
   }, 120_000)

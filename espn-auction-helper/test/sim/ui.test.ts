@@ -74,8 +74,10 @@ describe('simulator page', () => {
     expect(heads).toEqual(['#', 'Team', 'Win %', 'Playoffs', 'Title', 'PTS', 'REB', 'AST', 'STL', 'BLK', '3PM', 'FG%', 'FT%', 'TO', 'No proj.'])
     const rows = [...root.querySelectorAll('.standings tbody tr')]
     expect(rows).toHaveLength(10)
-    // Identical projections: every team wins half its weekly categories.
-    expect(rows.every((r) => r.children[2].textContent === '50%' && r.children[5].textContent === '50%')).toBe(true)
+    // Cells come from the session's standings (identical projections, but seasons carry error).
+    const st = session.standings()!
+    expect(rows.map((r) => r.children[2].textContent)).toEqual(st.map((t) => `${Math.round(t.winPct * 100)}%`))
+    expect(root.textContent).toContain('Seasons use the projections plus random error')
   }, 120_000)
 
   it('restart form: valid config, or a message', () => {
