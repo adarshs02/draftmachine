@@ -17,6 +17,12 @@ describe('injuryFor', () => {
     expect(injuryFor(seasons([58, 30], [80, 30], [58, 30]), YEARS)).toBeNull()
   })
 
+  it('also calls one big miss (45+ games) before last season injury prone', () => {
+    expect(injuryFor(seasons([68, 33], [37, 32], [65, 32]), YEARS)).toEqual({ label: 'prone', games: [68, 37, 65] })
+    expect(injuryFor(seasons([64, 34], [18, 33], [77, 34]), YEARS)?.label).toBe('prone')
+    expect(injuryFor(seasons([68, 33], [38, 32], [65, 32]), YEARS)).toBeNull()
+  })
+
   it('ignores seasons where he was not a regular: few games there is usually role, not injury', () => {
     expect(injuryFor(seasons([13, 9], [56, 19.9], [74, 28]), YEARS)).toBeNull()
   })
@@ -49,9 +55,10 @@ describe('withInjuries', () => {
     expect(withInjuries(values, null).every((v) => v.injury === null)).toBe(true)
   })
 
-  it.runIf(existsSync(HISTORY_PATH))('on real data: Embiid prone, Tatum coming off injury, Jokic clean', () => {
+  it.runIf(existsSync(HISTORY_PATH))('on real data: Embiid, Kawhi and Ingram prone, Tatum coming off injury, Jokic clean', () => {
     const real = JSON.parse(readFileSync(HISTORY_PATH, 'utf8')) as GamesHistory
-    const out = withInjuries([pv('Joel Embiid', 1, { espnId: 3059318 }), pv('Jayson Tatum', 1, { espnId: 4065648 }), pv('Nikola Jokic', 1, { espnId: 3112335 })], real)
-    expect(out.map((v) => v.injury?.label ?? null)).toEqual(['prone', 'recent', null])
+    const ids = { 'Joel Embiid': 3059318, 'Kawhi Leonard': 6450, 'Brandon Ingram': 3913176, 'Jayson Tatum': 4065648, 'Nikola Jokic': 3112335 }
+    const out = withInjuries(Object.entries(ids).map(([name, espnId]) => pv(name, 1, { espnId })), real)
+    expect(out.map((v) => v.injury?.label ?? null)).toEqual(['prone', 'prone', 'prone', 'recent', null])
   })
 })

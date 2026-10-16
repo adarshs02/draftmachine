@@ -6,6 +6,8 @@ export const REGULAR_MPG = 20
 /** Missed 25+ of 82 games, in this many of the last three seasons: injury prone. */
 export const PRONE_MAX_GP = 57
 export const PRONE_SEASONS = 2
+/** Or missed 45+ games in one of the seasons before last (Kawhi 68/37/65, Ingram 64/18/77): injury prone. */
+export const BIG_MISS_MAX_GP = 37
 /** Missed 37+ games last season (and not injury prone): coming off injury. */
 export const RECENT_MAX_GP = 45
 
@@ -16,7 +18,9 @@ export function injuryFor(seasons: Record<string, SeasonGames> | undefined, year
     const s = seasons[y]
     return !!s && s.mpg >= REGULAR_MPG && s.gp <= maxGp
   }
-  if (years.filter((y) => missed(y, PRONE_MAX_GP)).length >= PRONE_SEASONS) return { label: 'prone', games }
+  const repeated = years.filter((y) => missed(y, PRONE_MAX_GP)).length >= PRONE_SEASONS
+  const bigMissEarlier = years.slice(0, -1).some((y) => missed(y, BIG_MISS_MAX_GP))
+  if (repeated || bigMissEarlier) return { label: 'prone', games }
   if (missed(years[years.length - 1], RECENT_MAX_GP)) return { label: 'recent', games }
   return null
 }

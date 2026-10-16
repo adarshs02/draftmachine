@@ -699,7 +699,14 @@
    "ftm": 255.2,
    "fta": 290
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    68,
+    37,
+    65
+   ]
+  }
  },
  {
   "key": "trae young",
@@ -1005,7 +1012,14 @@
    "ftm": 238,
    "fta": 308
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    82,
+    32,
+    69
+   ]
+  }
  },
  {
   "key": "kyrie irving",
@@ -1472,7 +1486,14 @@
    "ftm": 200.1,
    "fta": 227.7
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    74,
+    27,
+    65
+   ]
+  }
  },
  {
   "key": "jalen duren",
@@ -3018,7 +3039,14 @@
    "ftm": 318,
    "fta": 462
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    70,
+    30,
+    62
+   ]
+  }
  },
  {
   "key": "collin murray boyles",
@@ -3086,7 +3114,14 @@
    "ftm": 203,
    "fta": 238
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    68,
+    33,
+    70
+   ]
+  }
  },
  {
   "key": "jimmy butler",
@@ -3302,7 +3337,14 @@
    "ftm": 147,
    "fta": 180.6
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    64,
+    18,
+    77
+   ]
+  }
  },
  {
   "key": "caleb wilson",
@@ -4711,7 +4753,14 @@
    "ftm": 58.5,
    "fta": 123.5
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    31,
+    17,
+    60
+   ]
+  }
  },
  {
   "key": "kevin porter",
@@ -6868,7 +6917,14 @@
    "ftm": 115.2,
    "fta": 129.6
   },
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    23,
+    67
+   ]
+  }
  },
  {
   "key": "alex caruso",
@@ -7324,7 +7380,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    35,
+    66,
+    82
+   ]
+  }
  },
  {
   "key": "kyle filipowski",
@@ -8819,7 +8882,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    65,
+    15,
+    30
+   ]
+  }
  },
  {
   "key": "rob dillingham",
@@ -9312,7 +9382,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    76,
+    16,
+    36
+   ]
+  }
  },
  {
   "key": "trey lyles",
@@ -9604,7 +9681,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    29,
+    36,
+    65
+   ]
+  }
  },
  {
   "key": "kenrich williams",
@@ -11051,7 +11135,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    77,
+    30,
+    37
+   ]
+  }
  },
  {
   "key": "xavier tillman",
@@ -11203,7 +11294,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    13,
+    8,
+    null
+   ]
+  }
  },
  {
   "key": "bruce brown",
@@ -13099,7 +13197,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    58,
+    20,
+    null
+   ]
+  }
  },
  {
   "key": "will cherry",
@@ -14002,7 +14107,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    29,
+    48
+   ]
+  }
  },
  {
   "key": "deonte burton",
@@ -14430,7 +14542,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    23,
+    null,
+    36
+   ]
+  }
  },
  {
   "key": "eric atkins",
@@ -14513,7 +14632,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    9,
+    27
+   ]
+  }
  },
  {
   "key": "deandre daniels",
@@ -15108,7 +15234,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    55,
+    6,
+    null
+   ]
+  }
  },
  {
   "key": "olivier sarr",
@@ -15192,7 +15325,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    47,
+    9,
+    null
+   ]
+  }
  },
  {
   "key": "meleek thomas",
@@ -15513,7 +15653,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    14,
+    null
+   ]
+  }
  },
  {
   "key": "donta hall",
@@ -15986,7 +16133,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    15,
+    null
+   ]
+  }
  },
  {
   "key": "nathan knight",
@@ -16986,7 +17140,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    36,
+    20
+   ]
+  }
  },
  {
   "key": "david duke",
@@ -20529,7 +20690,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    25,
+    38,
+    13
+   ]
+  }
  },
  {
   "key": "cam reddish",
@@ -24084,7 +24252,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    7,
+    null,
+    null
+   ]
+  }
  },
  {
   "key": "jon teske",
@@ -24971,7 +25146,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    null,
+    24,
+    null
+   ]
+  }
  },
  {
   "key": "justin robinson",
@@ -25924,7 +26106,14 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": {
+   "label": "prone",
+   "games": [
+    9,
+    68,
+    82
+   ]
+  }
  },
  {
   "key": "rakeem christmas",

@@ -1,7 +1,7 @@
 import type { SeasonLine } from '../engine/h2h'
 
 export interface Injury {
-  /** prone: missed 25+ games in 2 of the last 3 seasons as a regular; recent: missed 37+ last season only */
+  /** prone: as a regular, missed 25+ games in 2 of the last 3 seasons or 45+ in one before last; recent: missed 37+ last season only */
   label: 'prone' | 'recent'
   /** games played in each of the last 3 seasons, oldest first; null when he played none */
   games: (number | null)[]
