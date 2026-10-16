@@ -8,6 +8,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "fetch-espn": "tsx scripts/fetch-espn.ts",
+    "fetch-history": "tsx scripts/fetch-history.ts",
     "values": "tsx scripts/build-values.ts",
     "scrub": "tsx scripts/scrub-recording.ts",
     "analyze": "tsx scripts/analyze-recording.ts",

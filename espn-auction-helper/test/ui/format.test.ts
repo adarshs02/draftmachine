@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Verdict } from '../../src/engine/verdict'
-import { fitText, flagText, money, profileText, standingText, verdictText } from '../../src/ui/format'
+import { fitText, flagText, injuryTag, injuryText, money, profileText, standingText, verdictText } from '../../src/ui/format'
 
 const base: Verdict = { kind: 'BID', playerKey: 'a', name: 'A', price: 30, leaderId: 2, adjusted: 35.8, ceiling: 35, boost: 1, pushTo: null, rivalPerSlotAfter: null, warnings: [], unvalued: false, saveSlot: null, fit: null, profile: null }
 
@@ -47,5 +47,18 @@ describe('profile, flag and standing text', () => {
     expect(standingText(['reb', 'blk'], ['ast', 'ftPct'])).toBe('Your team: strong REB, BLK · weak AST, FT%')
     expect(standingText(['blk'], [])).toBe('Your team: strong BLK')
     expect(standingText([], [])).toBeNull()
+  })
+})
+
+describe('injury', () => {
+  it('spells out the games behind the label', () => {
+    expect(injuryText({ label: 'prone', games: [76, 51, 20] })).toBe('Injury prone: 76/51/20 games, last 3 seasons')
+    expect(injuryText({ label: 'prone', games: [null, 36, 11] })).toBe('Injury prone: –/36/11 games, last 3 seasons')
+    expect(injuryText({ label: 'recent', games: [74, 72, 16] })).toBe('Coming off injury: 16 games last season')
+  })
+
+  it('tags lists INJ or RET', () => {
+    expect(injuryTag({ label: 'prone', games: [] })).toBe('INJ')
+    expect(injuryTag({ label: 'recent', games: [] })).toBe('RET')
   })
 })

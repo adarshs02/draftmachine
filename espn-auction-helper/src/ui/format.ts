@@ -3,6 +3,7 @@ import { CATEGORY_LABELS, type Category } from '../engine/h2h'
 import type { CategoryProfile } from '../engine/profile'
 import type { Team } from '../engine/types'
 import type { Verdict } from '../engine/verdict'
+import type { Injury } from '../values/types'
 
 export const money = (n: number) => `$${Math.round(n)}`
 
@@ -54,3 +55,14 @@ export function standingText(strong: readonly Category[], weak: readonly Categor
   const parts = [strong.length ? `strong ${labels(strong)}` : '', weak.length ? `weak ${labels(weak)}` : ''].filter(Boolean)
   return parts.length ? `Your team: ${parts.join(' · ')}` : null
 }
+
+const gamesText = (games: readonly (number | null)[]) => games.map((g) => (g === null ? '–' : String(g))).join('/')
+
+/** "Injury prone: 76/51/20 games, last 3 seasons" or "Coming off injury: 16 games last season" */
+export function injuryText(i: Injury): string {
+  if (i.label === 'prone') return `Injury prone: ${gamesText(i.games)} games, last ${i.games.length} seasons`
+  return `Coming off injury: ${i.games[i.games.length - 1] ?? 0} games last season`
+}
+
+/** Short tag for lists: INJ (injury prone) or RET (coming off injury). */
+export const injuryTag = (i: Injury) => (i.label === 'prone' ? 'INJ' : 'RET')

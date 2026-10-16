@@ -6,7 +6,7 @@ import type { DraftEvent, DraftState, Settings } from './types'
 export function placeholderValue(key: string, b = 1): PlayerValue {
   const espnId = /^espn:(\d+)$/.exec(key)?.[1]
   const name = espnId ? `ESPN #${espnId}` : key
-  return { key, espnId: null, name, slots: [UTIL_SLOT], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 5, line: null }
+  return { key, espnId: null, name, slots: [UTIL_SLOT], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 5, line: null, injury: null }
 }
 
 export function initialState(settings: Settings, values: PlayerValue[], myTeamId: number | null = null): DraftState {

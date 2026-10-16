@@ -64,6 +64,28 @@ describe('Panel', () => {
     expect(section.textContent).toContain('Your team: strong BLK')
   })
 
+  it('warns when the player on the block is injury prone or coming off injury', () => {
+    const prone = { label: 'prone' as const, games: [76, 51, 20] }
+    const text = show(build(S, [pv('Alpha', 30, { injury: prone }), pv('Beta', 18)], [nominated('Alpha', 2, 1)])).el.querySelector('.now')!.textContent
+    expect(text).toContain('Injury prone: 76/51/20 games, last 3 seasons')
+    const recent = { label: 'recent' as const, games: [74, 72, 16] }
+    const now = show(build(S, [pv('Alpha', 30, { injury: recent }), pv('Beta', 18)], [nominated('Alpha', 2, 1)])).el.querySelector('.now')!
+    expect(now.querySelector('.note.injury.recent')!.textContent).toContain('Coming off injury: 16 games last season')
+    expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.querySelector('.now .injury')).toBeNull()
+  })
+
+  it('tags injury prone players in Look for and Nominate', () => {
+    const prone = { label: 'prone' as const, games: [39, 19, 38] }
+    const v = FIT_V.map((x) => (x.key === 'passer' ? { ...x, market: 10, injury: prone } : x))
+    const walls = [sold('Wall1', 1, 20), sold('Wall2', 1, 20), sold('Wall3', 1, 20)]
+    const tag = show(build(FIT_S, v, walls)).el.querySelector('.lookfor .look .inj.prone')!
+    expect(tag.textContent).toBe('INJ')
+    expect(tag.getAttribute('title')).toBe('Injury prone: 39/19/38 games, last 3 seasons')
+    const nominate = show(build(S, [pv('Alpha', 30, { injury: prone }), pv('Beta', 18)], [])).el.querySelector('.nominate')!
+    expect(nominate.querySelector('b')!.textContent).toBe('Alpha')
+    expect(nominate.querySelector('.inj')!.textContent).toBe('INJ')
+  })
+
   it('tints the call card by the call', () => {
     expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.querySelector('section.now.BID')).not.toBeNull()
     expect(show(build(S, V, [nominated('Alpha', 2, 40)])).el.querySelector('section.now.LET_THEM')).not.toBeNull()

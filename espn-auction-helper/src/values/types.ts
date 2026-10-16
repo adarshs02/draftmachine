@@ -1,5 +1,12 @@
 import type { SeasonLine } from '../engine/h2h'
 
+export interface Injury {
+  /** prone: missed 25+ games in 2 of the last 3 seasons as a regular; recent: missed 37+ last season only */
+  label: 'prone' | 'recent'
+  /** games played in each of the last 3 seasons, oldest first; null when he played none */
+  games: (number | null)[]
+}
+
 export interface PlayerValue {
   /** normalizeName(name): join key across ESPN, Josh's CSV, live events and manual entry */
   key: string
@@ -22,4 +29,6 @@ export interface PlayerValue {
   tier: number
   /** projected season totals (data/hashtag-projections.csv x games), null without a stats row */
   line: SeasonLine | null
+  /** injury history from data/espn-games-history.json, null when clean or unknown */
+  injury: Injury | null
 }

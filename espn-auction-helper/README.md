@@ -25,11 +25,14 @@ Needs Node 20 or newer.
 cd espn-auction-helper
 npm install
 npm run fetch-espn   # today's ESPN 2026-27 player pool: ids, positions, ESPN average price
+npm run fetch-history # games played in the last 3 seasons, for injury labels (once; past seasons don't change)
 npm run values       # blend data/auction-values.csv with Josh Lloyd's decoded values, add stat lines -> data/values.json
 npm run build
 ```
 
 Values come from `data/auction-values.csv`, a projections export in Hashtag Basketball's auction-values layout (`R#, PLAYER, POS, TEAM, GP, MPG, TOTAL, VALUED AT, …`), blended with Josh's numbers. Players tied on value, mostly the $1 crowd, are ordered by the CSV's rank. To use edited projections, export the CSV from the projections sheet and save it over `data/auction-values.csv`. `npm run values` also stores each player's projected season stats (from `data/hashtag-projections.csv`, with the sheet's games and minutes) in `values.json`; category fit reads them. ESPN's own values and ranks are not used; ESPN supplies only player ids, positions and its average price, which the helper uses as the room's market price.
+
+Injury labels come from ESPN's actual games played in the last three seasons (`data/espn-games-history.json`), counting only seasons where the player averaged 20+ minutes. **INJ** (injury prone): missed 25+ games in 2 of those 3 seasons. **RET** (coming off injury): missed 37+ games last season only. The panel shows them on the player being bid on, in Look for and on the nomination suggestion; they don't change values.
 
 `npm run fetch-espn` overwrites the committed `data/espn-players-2027.json`. Always run `npm run values` after it, and after replacing `data/auction-values.csv`. Tests that read the real data, such as the value blend, may shift after a fetch.
 

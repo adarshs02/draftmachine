@@ -4,7 +4,7 @@ import { teamSummary, valueOf } from '../engine/metrics'
 import type { DraftEvent, DraftState, Team } from '../engine/types'
 import { CATEGORY_LABELS } from '../engine/h2h'
 import { valueFlag } from '../engine/profile'
-import { FIT_NOTE_MIN, fitText, flagText, money, profileText, standingText, teamLabel, verdictText } from './format'
+import { FIT_NOTE_MIN, fitText, flagText, injuryTag, injuryText, money, profileText, standingText, teamLabel, verdictText } from './format'
 import { html } from './html'
 
 export type Health = 'live' | 'manual'
@@ -43,6 +43,11 @@ export function Panel(p: PanelProps) {
   const temp = advice.temperature
   /** ESPN's average price paid for the player on the block (0 when unknown) */
   const market = state.live ? valueOf(state, state.live.playerKey).market : 0
+  const injury = state.live ? valueOf(state, state.live.playerKey).injury : null
+  const injuryBadge = (key: string) => {
+    const i = state.values[key]?.injury
+    return i && html`<span class=${`inj ${i.label}`} title=${injuryText(i)}>${injuryTag(i)}</span>`
+  }
   const fixSale = (f: FeedRow) => {
     const answer = window.prompt(`Fix ${f.name}: price and team # (e.g. "14 3")`, `${f.price} ${f.teamId}`)
     const [priceText = '', ...team] = (answer ?? '').trim().split(/\s+/)
@@ -108,6 +113,7 @@ export function Panel(p: PanelProps) {
                 ${v.saveSlot !== null && html`<div class="note">worth ${money(v.adjusted)} vs your ${money(v.saveSlot)}/slot</div>`}
                 ${v.profile && profileText(v.profile) && html`<div class="note profile">${profileText(v.profile)}</div>`}
                 ${flagText(valueFlag(v.adjusted, market), market) && html`<div class=${`note flag ${valueFlag(v.adjusted, market)}`}>${flagText(valueFlag(v.adjusted, market), market)}</div>`}
+                ${injury && html`<div class=${`note injury ${injury.label}`}>⚠ ${injuryText(injury)}</div>`}
                 ${v.fit && Math.abs(v.fit.mult - 1) >= FIT_NOTE_MIN && html`<div class="note">${fitText(v.fit)}</div>`}
                 ${v.boost > 1 && html`<div class="note">positional need +10%</div>`}
                 ${v.unvalued && html`<div class="note warn">${v.name} has no value</div>`}
@@ -128,7 +134,7 @@ export function Panel(p: PanelProps) {
         ${turnLine && html`<section class="turn">${turnLine}</section>`}
         ${advice.nomination &&
         html`<section class="nominate">
-          <span class="label">Nominate</span><b>${advice.nomination.name}</b><span class="pill">${advice.nomination.phase}</span>
+          <span class="label">Nominate</span><b>${advice.nomination.name}</b>${injuryBadge(advice.nomination.playerKey)}<span class="pill">${advice.nomination.phase}</span>
           <div class="why">${advice.nomination.reason}</div>
         </section>`}
         ${look &&
@@ -137,7 +143,7 @@ export function Panel(p: PanelProps) {
           ${look.rows.length
             ? look.rows.map(
                 (r) => html`<div class=${r.flag === 'value' ? 'look value' : 'look'}>
-                  <span class="name">${r.flag === 'value' ? '⭐ ' : ''}${r.name}</span><span class="tags">${r.cats.map((c) => `+${CATEGORY_LABELS[c]}`).join(' ')}</span><span class="price">${money(r.value)}</span><span class="val">${r.market > 0 ? money(r.market) : '—'}</span>
+                  <span class="name">${r.flag === 'value' ? '⭐ ' : ''}${r.name}${injuryBadge(r.key)}</span><span class="tags">${r.cats.map((c) => `+${CATEGORY_LABELS[c]}`).join(' ')}</span><span class="price">${money(r.value)}</span><span class="val">${r.market > 0 ? money(r.market) : '—'}</span>
                 </div>`,
               )
             : html`<div class="empty">Nobody left you can afford at $5+</div>`}

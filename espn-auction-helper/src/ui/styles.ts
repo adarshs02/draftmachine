@@ -101,6 +101,11 @@ tr.over td:last-child { font-weight: 650; }
 .note.flag.value { color: var(--bid); }
 .note.flag.overpay { color: var(--warn); }
 .note.profile { color: var(--text); }
+.note.injury.prone { color: var(--let); }
+.note.injury.recent { color: var(--warn); }
+.inj { margin-left: 5px; padding: 0 4px; border-radius: 3px; font-size: 9.5px; font-weight: 700; letter-spacing: .3px; vertical-align: 1px; }
+.inj.prone { color: var(--let); background: color-mix(in srgb, var(--let) 16%, transparent); }
+.inj.recent { color: var(--warn); background: color-mix(in srgb, var(--warn) 16%, transparent); }
 
 footer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
 footer button { padding: 0; background: none; color: var(--muted); font-size: 11px; }
