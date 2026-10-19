@@ -20,12 +20,11 @@ function show(state: DraftState, extra: Record<string, unknown> = {}) {
   const onReset = vi.fn()
   const onDismissAlert = vi.fn()
   render(
-    html`<${Panel} advice=${advise(state)} state=${state} health="manual" banner=${null} alert=${null} unknownVerbs=${{}} frameCount=${0} onEvent=${onEvent} onDownloadRecording=${() => {}} onReset=${onReset} onDismissAlert=${onDismissAlert} ...${extra} />`,
+    html`<${Panel} advice=${advise(state)} state=${state} health="waiting" banner=${null} alert=${null} onEvent=${onEvent} onReset=${onReset} onDismissAlert=${onDismissAlert} ...${extra} />`,
     el,
   )
   return { el, onEvent, onReset, onDismissAlert }
 }
-const button = (el: HTMLElement, text: string) => [...el.querySelectorAll('button')].find((b) => b.textContent === text)!
 
 describe('Panel', () => {
   it('shows the call for the player on the block', () => {
@@ -84,6 +83,55 @@ describe('Panel', () => {
     const nominate = show(build(S, [pv('Alpha', 30, { injury: prone }), pv('Beta', 18)], [])).el.querySelector('.nominate')!
     expect(nominate.querySelector('b')!.textContent).toBe('Alpha')
     expect(nominate.querySelector('.inj')!.textContent).toBe('INJ')
+  })
+
+  it("shows my sheet note on the player on the block, and as a 📝 on listed players", () => {
+    const text = show(build(S, [pv('Alpha', 30, { note: 'Money Grabber' }), pv('Beta', 18)], [nominated('Alpha', 2, 1)])).el.querySelector('.now')!
+    expect(text.querySelector('.note.mine')!.textContent).toBe('📝 Money Grabber')
+    expect(show(build(S, V, [nominated('Alpha', 2, 1)])).el.querySelector('.now .note.mine')).toBeNull()
+    const v = FIT_V.map((x) => (x.key === 'passer' ? { ...x, market: 10, note: 'Money Grabber' } : x))
+    const mark = show(build(FIT_S, v, [])).el.querySelector('.lookfor .look .memo')!
+    expect(mark.textContent).toBe('📝')
+    expect(mark.getAttribute('title')).toBe('Money Grabber')
+  })
+
+  describe('Look for | Similar tabs', () => {
+    const tabs = (el: HTMLElement) => [...el.querySelectorAll('.lookfor .tabs button')] as HTMLButtonElement[]
+    const selected = (el: HTMLElement) => tabs(el).find((b) => b.getAttribute('aria-selected') === 'true')!.textContent
+    const names = (el: HTMLElement) => [...el.querySelectorAll('.lookfor .look .name')].map((x) => x.textContent)
+
+    it('shows Look for with nobody on the block; Similar is off', () => {
+      const el = show(build(FIT_S, FIT_V, [])).el
+      expect(tabs(el).map((b) => b.textContent)).toEqual(['Look for', 'Similar'])
+      expect(selected(el)).toBe('Look for')
+      expect(tabs(el)[1].disabled).toBe(true)
+    })
+
+    it('opens Similar when a player is nominated: players like him, with the categories they share', () => {
+      const el = show(build(FIT_S, FIT_V, [nominated('Wall1', 2, 1)])).el
+      expect(selected(el)).toBe('Similar to Wall1')
+      expect(names(el).slice(0, 2)).toEqual(['Wall2', 'Wall3'])
+      expect(el.querySelector('.lookfor .look .tags')!.textContent).toBe('+BLK')
+    })
+
+    it('a click holds my tab until the next nomination; a sale goes back to Look for', async () => {
+      const el = document.createElement('div')
+      const draw = (events: DraftEvent[]) => {
+        const state = build(FIT_S, FIT_V, events)
+        render(html`<${Panel} advice=${advise(state)} state=${state} health="live" banner=${null} alert=${null} onEvent=${() => true} onReset=${() => {}} onDismissAlert=${() => {}} />`, el)
+      }
+      const wall1 = [nominated('Wall1', 2, 1)]
+      await act(() => draw(wall1))
+      await act(() => tabs(el)[0].click())
+      expect(selected(el)).toBe('Look for')
+      await act(() => draw([...wall1, { type: 'bid', teamId: 3, amount: 2 }]))
+      expect(selected(el)).toBe('Look for')
+      const passer = [...wall1, sold('Wall1', 2, 2), nominated('Passer', 3, 1)]
+      await act(() => draw(passer))
+      expect(selected(el)).toBe('Similar to Passer')
+      await act(() => draw([...passer, sold('Passer', 3, 1)]))
+      expect(selected(el)).toBe('Look for')
+    })
   })
 
   it('tints the call card by the call', () => {
@@ -191,10 +239,17 @@ describe('Panel', () => {
     expect(show(state).el.querySelector('.now')!.textContent).toContain('ESPN #4396993 has no value')
   })
 
-  it('has no manual entry', () => {
-    const { el } = show(build(S, V, [nominated('Alpha', 2, 1)]))
-    expect(el.textContent).not.toMatch(/manual entry|Set value|Clear block/i)
+  it('has no manual entry: no undo, no fixing sales, no recording, no footer', () => {
+    const { el } = show(build(S, V, [sold('Beta', 3, 12), nominated('Alpha', 2, 1)]))
+    expect(el.textContent).not.toMatch(/manual entry|Set value|Clear block|Undo|recording|unknown/i)
     expect(el.querySelector('input[name=player]')).toBeNull()
+    expect(el.querySelector('button.fix')).toBeNull()
+    expect(el.querySelector('footer')).toBeNull()
+  })
+
+  it("says 'waiting' until ESPN's feed is decoded", () => {
+    expect(show(build(S, V, [])).el.querySelector('.health')!.textContent).toBe('○ waiting')
+    expect(show(build(S, V, []), { health: 'live' }).el.querySelector('.health')!.textContent).toBe('● live')
   })
 
   it("shows ESPN's average price for the player on the block", () => {
@@ -206,30 +261,6 @@ describe('Panel', () => {
     const { el } = show(build(S, V, []))
     expect(el.textContent).not.toContain('Targets')
     expect(el.querySelector('button.pin')).toBeNull()
-  })
-
-  it('fixes a sale through a prompt ("price team")', () => {
-    const { el, onEvent } = show(build(S, V, [sold('Alpha', 2, 12)]))
-    vi.spyOn(window, 'prompt').mockReturnValue('14 3')
-    ;(el.querySelector('button.fix') as HTMLButtonElement).click()
-    expect(onEvent).toHaveBeenCalledWith({ type: 'editSale', seq: 1, teamId: 3, price: 14 })
-  })
-
-  it('asks for the team number in the fix prompt and accepts a unique team-name prefix', () => {
-    const { el, onEvent } = show(build(S, V, [sold('Alpha', 2, 12)]))
-    const prompt = vi.spyOn(window, 'prompt').mockReturnValue('14 t3')
-    ;(el.querySelector('button.fix') as HTMLButtonElement).click()
-    expect(prompt).toHaveBeenCalledWith('Fix Alpha: price and team # (e.g. "14 3")', '12 2')
-    expect(onEvent).toHaveBeenCalledWith({ type: 'editSale', seq: 1, teamId: 3, price: 14 })
-  })
-
-  it('ignores a fix whose team is neither an id nor a unique name prefix', () => {
-    const { el, onEvent } = show(build(S, V, [sold('Alpha', 2, 12)]))
-    for (const answer of ['14 t', '14 zz', '14 9']) {
-      vi.spyOn(window, 'prompt').mockReturnValue(answer)
-      ;(el.querySelector('button.fix') as HTMLButtonElement).click()
-    }
-    expect(onEvent).not.toHaveBeenCalled()
   })
 
   it('labels teams with their id in the team picker and the rivals table', () => {
@@ -258,7 +289,7 @@ describe('Panel', () => {
   })
 
   it('shows an alert with a × that dismisses it', () => {
-    const { el, onDismissAlert } = show(build(S, V, []), { alert: "Missed the end of Alpha's auction (last seen $25 by T3). If it sold, enter it with Sold." })
+    const { el, onDismissAlert } = show(build(S, V, []), { alert: "Missed the end of Alpha's auction (last seen $25 by T3)." })
     const box = el.querySelector('.alert') as HTMLElement
     expect(box.textContent).toContain("Missed the end of Alpha's auction")
     const close = box.querySelector('button') as HTMLButtonElement
@@ -267,24 +298,20 @@ describe('Panel', () => {
     expect(onDismissAlert).toHaveBeenCalledTimes(1)
   })
 
-  it('shows unknown socket verbs with their counts next to the frame count', () => {
-    const footer = (unknownVerbs: Record<string, number>) => show(build(S, V, []), { unknownVerbs, frameCount: 7 }).el.querySelector('footer')!.textContent!
-    expect(footer({ ZZZ_NEW: 2, QQQ: 1 })).toContain('Download recording (7 frames)unknown: ZZZ_NEW×2, QQQ×1')
-    expect(footer({})).not.toContain('unknown')
-  })
-
   it('shows no alert box without an alert', () => {
     expect(show(build(S, V, [])).el.querySelector('.alert')).toBeNull()
   })
 
-  it('New draft resets only after confirming', () => {
+  it('New draft (↺ in the header) resets only after confirming', () => {
     const { el, onReset } = show(build(S, V, [sold('Alpha', 2, 12)]))
+    const reset = el.querySelector('header button[title="New draft"]') as HTMLButtonElement
+    expect(reset.textContent).toBe('↺')
     const confirm = vi.spyOn(window, 'confirm').mockReturnValue(false)
-    button(el, 'New draft').click()
+    reset.click()
     expect(confirm).toHaveBeenCalledWith('Start a new draft? This clears all recorded sales.')
     expect(onReset).not.toHaveBeenCalled()
     confirm.mockReturnValue(true)
-    button(el, 'New draft').click()
+    reset.click()
     expect(onReset).toHaveBeenCalledTimes(1)
   })
 })

@@ -71,9 +71,9 @@ describe('agents', () => {
   })
 })
 
-const runDraftAtDefaults = () => {
+const runDraftAtDefaults = (seed: number) => {
   resetTunables()
-  return runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales
+  return runDraft({ seed, policy: 'autopilot', values: VALUES, projections: null }).sales
 }
 
 describe('inertForAutopilot', () => {
@@ -81,9 +81,14 @@ describe('inertForAutopilot', () => {
     expect(inertForAutopilot(DEFAULT_TUNABLES)).toEqual(['BARGAIN_RATIO', 'BID_GAP_MIN', 'BID_GAP_FRACTION', 'ONE_PLAYER_SHARE', 'TWO_PLAYER_SHARE'])
     // A gap below BID_UP_MARGIN + 1 makes BID bid past BID UP's limit.
     expect(inertForAutopilot({ ...DEFAULT_TUNABLES, BID_GAP_MIN: 2 })).not.toContain('BID_GAP_FRACTION')
-    setTunables({ BID_GAP_MIN: 1 })
+    // Whether a given draft shows it depends on the values (a sheet sync can change that), so try a few seeds.
+    const changes = (seed: number) => {
+      const atDefaults = JSON.stringify(runDraftAtDefaults(seed))
+      setTunables({ BID_GAP_MIN: 1 })
+      return JSON.stringify(runDraft({ seed, policy: 'autopilot', values: VALUES, projections: null }).sales) !== atDefaults
+    }
     try {
-      expect(runDraft({ seed: 2, policy: 'autopilot', values: VALUES, projections: null }).sales).not.toEqual(runDraftAtDefaults())
+      expect([1, 2, 3, 4, 5, 6].some(changes)).toBe(true)
     } finally {
       resetTunables()
     }

@@ -11,15 +11,17 @@ header { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; align-it
 header strong { font-size: 13px; }
 .health { font-size: 11px; }
 .health.live { color: var(--bid); }
-.health.manual { color: var(--muted); }
+.health.waiting { color: var(--muted); }
 .badges { margin-left: auto; display: flex; gap: 4px; }
 .badge { font-size: 10.5px; padding: 1px 7px; border-radius: 999px; background: var(--raised); color: var(--muted); border: 1px solid var(--line); white-space: nowrap; }
 .badge.Hot { color: var(--hot); }
 .badge.Warm { color: var(--warn); }
 .badge.Neutral { color: var(--text); }
 .badge.Cold { color: var(--lead); }
-.collapse { width: 22px; height: 22px; padding: 0; line-height: 22px; text-align: center; }
-section, .picker, .banner, .alert, footer { display: block; padding: 8px 12px; border-top: 1px solid var(--line); }
+.collapse, .reset { width: 22px; height: 22px; padding: 0; line-height: 22px; text-align: center; }
+.reset { background: none; color: var(--muted); }
+.reset:hover { color: var(--let); }
+section, .picker, .banner, .alert { display: block; padding: 8px 12px; border-top: 1px solid var(--line); }
 header + * { border-top: 0; }
 .banner { background: #7c2d12; }
 .alert { display: flex; gap: 6px; align-items: flex-start; background: #78350f; color: #fde68a; }
@@ -81,7 +83,7 @@ td.num:last-child { color: var(--text); padding-right: 0; }
 tr.over td:last-child, .over-key { color: var(--warn); }
 tr.over td:last-child { font-weight: 650; }
 
-.sale { display: grid; grid-template-columns: minmax(0, 1fr) auto 34px 50px 14px; gap: 8px; align-items: center; padding: 1px 0; }
+.sale { display: grid; grid-template-columns: minmax(0, 1fr) auto 34px 50px; gap: 8px; align-items: center; padding: 1px 0; }
 .sale .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sale.bargain .name::before { content: '⭐ '; }
 .sale .team { max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11.5px; color: var(--muted); }
@@ -89,8 +91,6 @@ tr.over td:last-child { font-weight: 650; }
 .price.under { color: var(--bid); }
 .price.over { color: var(--let); }
 .val { text-align: right; font-size: 11px; color: var(--muted); }
-.fix { padding: 0; background: none; color: var(--muted); opacity: 0; }
-.sale:hover .fix, .fix:focus-visible { opacity: 1; }
 .empty { color: var(--muted); }
 
 .look { display: grid; grid-template-columns: minmax(0, 1fr) auto 34px 34px; gap: 8px; align-items: baseline; padding: 1px 0; }
@@ -106,13 +106,13 @@ tr.over td:last-child { font-weight: 650; }
 .inj { margin-left: 5px; padding: 0 4px; border-radius: 3px; font-size: 9.5px; font-weight: 700; letter-spacing: .3px; vertical-align: 1px; }
 .inj.prone { color: var(--let); background: color-mix(in srgb, var(--let) 16%, transparent); }
 .inj.recent { color: var(--warn); background: color-mix(in srgb, var(--warn) 16%, transparent); }
+.memo { margin-left: 4px; font-size: 10px; cursor: help; }
+.note.mine { color: var(--text); }
+.tabs { display: flex; gap: 2px; min-width: 0; }
+.tabs button { padding: 1px 7px; border-radius: 999px; background: none; color: var(--muted); font: inherit; text-transform: inherit; letter-spacing: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tabs button[aria-selected="true"] { background: var(--raised); color: var(--text); }
+.tabs button:disabled { opacity: .45; cursor: default; }
 
-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
-footer button { padding: 0; background: none; color: var(--muted); font-size: 11px; }
-footer button:hover { color: var(--text); text-decoration: underline; }
-footer button.danger:hover { color: var(--let); }
-footer .muted { font-size: 11px; }
-.muted { color: var(--muted); }
 button { font: inherit; background: var(--raised); color: inherit; border: 0; border-radius: 5px; padding: 2px 6px; cursor: pointer; }
 input, select { font: inherit; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px; margin: 2px 0; width: 100%; box-sizing: border-box; }
 `

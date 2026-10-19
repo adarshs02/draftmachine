@@ -75,6 +75,14 @@ describe('blendValues', () => {
     expect(r.values[6]).toMatchObject({ consensus: 0, market: 0 })
   })
 
+  it("carries the sheet's note, null without one", () => {
+    const noted = projections.map((p) => (p.name === 'Mid Two' ? { ...p, note: 'Money Grabber' } : p))
+    const r = blendValues(espn, josh, noted)
+    expect(r.values.find((v) => v.name === 'Mid Two')!.note).toBe('Money Grabber')
+    expect(r.values.find((v) => v.name === 'Star One')!.note).toBeNull()
+    expect(r.values.find((v) => v.name === 'Ghost Four')!.note).toBeNull()
+  })
+
   it('carries the avoid flag', () => {
     const r = blendValues(espn, [row('Mid Two', null, null, 'avoid')], projections)
     expect(r.values.find((v) => v.name === 'Mid Two')).toMatchObject({ avoid: true, josh: null })

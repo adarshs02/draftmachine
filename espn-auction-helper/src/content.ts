@@ -2,7 +2,6 @@ import { render } from 'preact'
 import valuesJson from '../data/values.json'
 import { startContentSide, windowBus } from './capture/bridge'
 import type { Frame } from './capture/frames'
-import { downloadText } from './capture/recording'
 import { createController, type Controller } from './controller'
 import type { DraftEvent } from './engine/types'
 import { fetchLeague } from './espn/league'
@@ -28,10 +27,6 @@ function whenReady(fn: () => void): void {
   else fn()
 }
 
-const download = () => {
-  if (controller) downloadText(document, `espn-draft-${leagueId}-${Date.now()}.json`, controller.recordingJson())
-}
-
 async function start(container: HTMLElement): Promise<void> {
   const ready = await createController({
     leagueId,
@@ -45,7 +40,6 @@ async function start(container: HTMLElement): Promise<void> {
         html`<${Panel}
           ...${view}
           onEvent=${(ev: DraftEvent) => controller?.dispatch(ev)}
-          onDownloadRecording=${download}
           onReset=${() => controller?.reset()}
           onDismissAlert=${() => controller?.dismissAlert()}
         />`,

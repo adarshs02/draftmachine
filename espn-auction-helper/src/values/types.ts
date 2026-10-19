@@ -31,4 +31,6 @@ export interface PlayerValue {
   line: SeasonLine | null
   /** injury history from data/espn-games-history.json, null when clean or unknown */
   injury: Injury | null
+  /** the user's note from the projections sheet, null without one */
+  note: string | null
 }

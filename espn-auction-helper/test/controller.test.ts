@@ -30,7 +30,7 @@ describe('createController', () => {
     expect(views).toHaveLength(1)
     expect(views[0].state.settings.teams).toHaveLength(10)
     expect(views[0].state.myTeamId).toBe(1)
-    expect(views[0]).toMatchObject({ health: 'manual', banner: null, alert: null, unknownVerbs: {}, frameCount: 0 })
+    expect(views[0]).toMatchObject({ health: 'waiting', banner: null, alert: null })
   })
 
   it('falls back to a default league with a banner when ESPN fails', async () => {
@@ -100,7 +100,6 @@ describe('createController', () => {
     c.refresh()
     expect(views).toHaveLength(2)
     expect(views[1].state.live).toMatchObject({ playerKey: 'espn:4242', price: 5 })
-    expect(views[1].frameCount).toBe(1)
   })
 
   it('persist: false keeps the event log out of storage', async () => {
@@ -157,11 +156,12 @@ describe('saved draft', () => {
 })
 
 describe('socket frames', () => {
-  it('records frames and offers them as a recording', async () => {
+  it('keeps no recording of them, and no unknown-verb counts', async () => {
     const { c, views } = await make()
     c.onFrame({ dir: 'in', data: 'CLOCK 6 85495 1', t: 1, url: 'wss://fantasydraft.espn.com/x' })
-    expect(views.at(-1)!.frameCount).toBe(1)
-    expect(JSON.parse(c.recordingJson())).toMatchObject({ leagueId: 7, frames: [{ data: 'CLOCK 6 85495 1' }] })
+    c.onFrame({ dir: 'in', data: 'ZZZ_NEW 1 2', t: 2, url: 'wss://fantasydraft.espn.com/x' })
+    expect(Object.keys(views.at(-1)!).sort()).toEqual(['advice', 'alert', 'banner', 'health', 'state'])
+    expect('recordingJson' in c).toBe(false)
   })
 })
 
@@ -175,12 +175,11 @@ describe('live decoding', () => {
     expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 1, leaderId: 2 })
   })
 
-  it('records outgoing frames without decoding them', async () => {
+  it('does not decode outgoing frames', async () => {
     const { c, views } = await make({ values: [pv('Alpha', 30, { espnId: 3112335 })] })
     c.onFrame(bid('out'))
-    expect(views.at(-1)!.health).toBe('manual')
+    expect(views.at(-1)!.health).toBe('waiting')
     expect(c.getState().live).toBeNull()
-    expect(views.at(-1)!.frameCount).toBe(1)
   })
 
   it('live events persist to the same log', async () => {
@@ -275,7 +274,7 @@ describe('missed end of an auction', () => {
   const frame = (data: string) => ({ dir: 'in' as const, data, t: 1, url: 'wss://fantasydraft.espn.com/x' })
   /** A reload whose saved log ends with Alpha still on the block at $25 by T3. */
   const reloaded = () => make({ values: values(), storage: memoryStore({ [KEY]: JSON.stringify([nominated('Alpha', 2, 1), { type: 'bid', teamId: 3, amount: 25 }]) }) })
-  const MISSED_ALPHA = "Missed the end of Alpha's auction (last seen $25 by T3). If it sold, enter it with Sold."
+  const MISSED_ALPHA = "Missed the end of Alpha's auction (last seen $25 by T3)."
 
   it('a NOMINATION turn while a player is still on the block clears the block and raises an alert', async () => {
     const { c, views, deps } = await reloaded()
@@ -340,7 +339,7 @@ describe('health', () => {
     return { box, now: () => box.t }
   }
 
-  it('is live while recognized lines arrive and drops to manual once none came for 20 s', async () => {
+  it('is live while recognized lines arrive and drops to waiting once none came for 20 s', async () => {
     const { box, now } = clock()
     const { c, views } = await make({ now })
     c.onFrame(frame('CLOCK 6 85495 1'))
@@ -352,7 +351,7 @@ describe('health', () => {
     box.t += 1
     c.tick()
     expect(views).toHaveLength(shown + 1)
-    expect(views.at(-1)!.health).toBe('manual')
+    expect(views.at(-1)!.health).toBe('waiting')
     c.tick()
     expect(views).toHaveLength(shown + 1)
   })
@@ -373,21 +372,14 @@ describe('health', () => {
     const { c, views } = await make({ now })
     c.onFrame(frame('CLOCK 6 85495 1', 'out'))
     c.onFrame(frame('ZZZ_NEW 1 2'))
-    expect(views.at(-1)!.health).toBe('manual')
-  })
-
-  it('counts unknown verbs per verb', async () => {
-    const { c, views } = await make()
-    c.onFrame(frame('ZZZ_NEW 1 2\nCLOCK 6 1 2\nZZZ_NEW 3'))
-    c.onFrame(frame('QQQ'))
-    expect(views.at(-1)!.unknownVerbs).toEqual({ ZZZ_NEW: 2, QQQ: 1 })
+    expect(views.at(-1)!.health).toBe('waiting')
   })
 
   it('after a reload a CLOCK-only stream counts as live and keeps the restored block', async () => {
     const first = await make()
     first.c.dispatch(nominated('Alpha', 2, 20))
     const { c, views } = await make({ storage: first.deps.storage, now: clock().now })
-    expect(views.at(-1)!.health).toBe('manual')
+    expect(views.at(-1)!.health).toBe('waiting')
     c.onFrame(frame('CLOCK 6 85495 1'))
     expect(views.at(-1)!.health).toBe('live')
     expect(c.getState().live).toEqual({ playerKey: 'alpha', price: 20, leaderId: 2 })

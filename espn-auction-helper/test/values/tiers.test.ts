@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { assignTiers, byValue, tierForRank } from '../../src/values/tiers'
 import type { PlayerValue } from '../../src/values/types'
 
-const v = (key: string, b: number): PlayerValue => ({ key, espnId: null, name: key, slots: [11], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 0, line: null, injury: null })
+const v = (key: string, b: number): PlayerValue => ({ key, espnId: null, name: key, slots: [11], b, consensus: 0, market: 0, josh: null, avoid: false, rank: null, tier: 0, line: null, injury: null, note: null })
 
 describe('tiers', () => {
   it.each([[1, 1], [12, 1], [13, 2], [36, 2], [37, 3], [72, 3], [73, 4], [120, 4], [121, 5], [400, 5]])('rank %i -> tier %i', (rank, tier) => {

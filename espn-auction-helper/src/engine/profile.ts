@@ -10,7 +10,7 @@ export interface CategoryProfile {
 }
 
 /** z-score against the draftable pool that counts as a strength, and as a cost. */
-const STRENGTH_Z = 0.75
+export const STRENGTH_Z = 0.75
 const COST_Z = -0.5
 const MAX_STRENGTHS = 3
 const MAX_COSTS = 2
@@ -65,12 +65,19 @@ function poolStats(s: DraftState): PoolStats | null {
   return stats
 }
 
-/** Up to 3 strengths and 2 costs against the draftable pool; null without a stat line. */
-export function categoryProfile(s: DraftState, key: string): CategoryProfile | null {
+/** His z-score in each category against the draftable pool; null without a stat line. */
+export function categoryZ(s: DraftState, key: string): Record<Category, number> | null {
   const line = valueOf(s, key).line
   const stats = line && poolStats(s)
   if (!line || !stats) return null
-  const z = CATEGORIES.map((c) => ({ c, z: stats.sd[c] > 0 ? (stats.score[c](line) - stats.mean[c]) / stats.sd[c] : 0 }))
+  return Object.fromEntries(CATEGORIES.map((c) => [c, stats.sd[c] > 0 ? (stats.score[c](line) - stats.mean[c]) / stats.sd[c] : 0])) as Record<Category, number>
+}
+
+/** Up to 3 strengths and 2 costs against the draftable pool; null without a stat line. */
+export function categoryProfile(s: DraftState, key: string): CategoryProfile | null {
+  const byCat = categoryZ(s, key)
+  if (!byCat) return null
+  const z = CATEGORIES.map((c) => ({ c, z: byCat[c] }))
   return {
     strengths: z.filter((x) => x.z >= STRENGTH_Z).sort((a, b) => b.z - a.z).slice(0, MAX_STRENGTHS).map((x) => x.c),
     costs: z.filter((x) => x.z <= COST_Z).sort((a, b) => a.z - b.z).slice(0, MAX_COSTS).map((x) => x.c),

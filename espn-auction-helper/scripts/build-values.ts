@@ -22,4 +22,5 @@ console.log(`projected players missing from ESPN: ${unmatchedProjections.length 
 console.log(stats === null ? `No ${STATS_PATH}: no stat lines, so category fit is off.` : `stat lines: ${values.filter((v) => v.line).length} of ${values.length} players`)
 const labelled = (label: string) => values.filter((v) => v.injury?.label === label).length
 console.log(history === null ? `No ${HISTORY_PATH}: no injury labels (npm run fetch-history).` : `injury labels: ${labelled('prone')} injury prone, ${labelled('recent')} returning from major injury`)
+console.log(`sheet notes: ${values.filter((v) => v.note).length}`)
 console.log(values.slice(0, 12).map((v) => `${v.name} $${v.b}`).join('\n'))

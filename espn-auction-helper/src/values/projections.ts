@@ -15,6 +15,8 @@ export interface ProjectionRow {
   z: number
   /** projected auction value ("VALUED AT"), 0 below replacement level */
   value: number
+  /** the user's note from the projections sheet (its NOTE column), when there is one */
+  note?: string
 }
 
 const HEADER = ['R#', 'PLAYER', 'POS', 'TEAM', 'GP', 'MPG', 'TOTAL', 'VALUED AT']
@@ -46,13 +48,15 @@ export function parseProjectionsCsv(text: string): ProjectionRow[] {
   const lines = text.split(/\r?\n/).filter((l) => l.trim() !== '')
   const header = splitCsvLine(lines[0] ?? '')
   if (HEADER.some((h, i) => header[i] !== h)) throw new Error(`unexpected projections CSV header: ${lines[0]}`)
+  const noteAt = header.indexOf('NOTE')
   const rows: ProjectionRow[] = []
   lines.slice(1).forEach((line, i) => {
     const f = splitCsvLine(line)
     if (f[0] === 'R#') return // the export repeats its header every few rows
     if (f.length < HEADER.length) throw new Error(`projections CSV row ${i + 2} has ${f.length} fields: ${line}`)
     const [rank, name, pos, team, gp, mpg, z, value] = f
-    rows.push({ rank: Number(rank), name, pos, team, gp: Number(gp), mpg: Number(mpg), z: Number(z), value: money(value) })
+    const note = noteAt >= 0 ? f[noteAt]?.trim() : ''
+    rows.push({ rank: Number(rank), name, pos, team, gp: Number(gp), mpg: Number(mpg), z: Number(z), value: money(value), ...(note ? { note } : {}) })
   })
   return rows
 }

@@ -4,7 +4,7 @@ import statsCsv from '../../data/hashtag-projections.csv'
 import valuesJson from '../../data/values.json'
 import recordingJson from '../../test/fixtures/espn-auction-recording.json'
 import joshJson from '../../test/fixtures/josh-mock-sales.json'
-import { downloadText, type Recording } from '../capture/recording'
+import type { Recording } from '../capture/recording'
 import type { View } from '../controller'
 import type { DraftEvent } from '../engine/types'
 import { html } from '../ui/html'
@@ -58,7 +58,6 @@ async function main(): Promise<void> {
       html`<${Panel}
         ...${session.view}
         onEvent=${(ev: DraftEvent) => session.dispatch(ev)}
-        onDownloadRecording=${() => downloadText(document, `sim-draft-${Date.now()}.json`, session.recordingJson())}
         onReset=${() => void restart({ ...session.config, speed: session.speed, autopilot: session.autopilot })}
         onDismissAlert=${() => session.dismissAlert()}
       />`,

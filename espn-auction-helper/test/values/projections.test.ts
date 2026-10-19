@@ -24,6 +24,15 @@ describe('parseProjectionsCsv', () => {
     expect(rows[0].name).toBe('Day"Ron Sharpe')
   })
 
+  it("reads the sheet's NOTE column when the export has one", () => {
+    const text = [
+      `${HEADER},"NOTE"`,
+      '"1","Nikola Jokic","C","DEN","72","35.1","15.89","$74.8","$80.1","$83.2","$81.7",""',
+      '"2","Amen Thompson","SF,PF","HOU","70","34.0","8.10","$39.8","$","$","$"," Money, ""grabber"" "',
+    ].join('\n')
+    expect(parseProjectionsCsv(text).map((r) => r.note)).toEqual([undefined, 'Money, "grabber"'])
+  })
+
   it('rejects an unexpected header or a short row', () => {
     expect(() => parseProjectionsCsv('player,value\nX,1')).toThrow(/header/)
     expect(() => parseProjectionsCsv(`${HEADER}\n"1","Short Row","C"`)).toThrow(/row 2/)

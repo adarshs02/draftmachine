@@ -63,11 +63,10 @@ export interface Session {
   setAutopilot(on: boolean): void
   myBid(amount: number): string | null
   myNominate(espnId: number, amount: number): string | null
-  /** events from the Panel (undo, fix a sale, pick my team) */
+  /** events from the Panel (pick my team) */
   dispatch(ev: DraftEvent): boolean
   dismissAlert(): void
   refresh(): void
-  recordingJson(): string
   subscribe(fn: () => void): () => void
   /** projected H2H each-category standings, or null without projections */
   standings(): TeamScore[] | null
@@ -270,7 +269,6 @@ export async function createSession(config: SessionConfig, data: SessionData): P
       controller.refresh()
       notify()
     },
-    recordingJson: () => controller.recordingJson(),
     subscribe(fn) {
       listeners.add(fn)
       return () => {

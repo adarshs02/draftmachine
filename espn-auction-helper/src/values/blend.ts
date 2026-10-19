@@ -59,6 +59,7 @@ export function blendValues(espn: EspnPlayer[], josh: JoshRow[], projections: Pr
   const projByKey = new Map(projections.map((r) => [normalizeName(r.name), r]))
   const consensusOf = (key: string) => projByKey.get(key)?.value ?? 0
   const rankOf = (key: string) => projByKey.get(key)?.rank ?? null
+  const noteOf = (key: string) => projByKey.get(key)?.note ?? null
   const rankOrLast = (key: string) => rankOf(key) ?? Number.MAX_SAFE_INTEGER
   const consTier = new Map(
     espn
@@ -91,7 +92,7 @@ export function blendValues(espn: EspnPlayer[], josh: JoshRow[], projections: Pr
     const mid = midFor(key)
     const consensus = consensusOf(key)
     const raw = mid !== null ? weight * mid * basis + (1 - weight) * consensus : consensus * ratios[consTier.get(key)!]
-    return { key, espnId: p.id, name: p.name, slots: p.slots, b: Math.max(1, round1(raw)), consensus, market: p.market, josh: mid, avoid: joshByKey.get(key)?.kind === 'avoid', rank: rankOf(key), tier: 0, line: null, injury: null }
+    return { key, espnId: p.id, name: p.name, slots: p.slots, b: Math.max(1, round1(raw)), consensus, market: p.market, josh: mid, avoid: joshByKey.get(key)?.kind === 'avoid', rank: rankOf(key), tier: 0, line: null, injury: null, note: noteOf(key) }
   })
 
   const espnKeys = new Set(espn.map((p) => normalizeName(p.name)))
@@ -101,7 +102,7 @@ export function blendValues(espn: EspnPlayer[], josh: JoshRow[], projections: Pr
     if (espnKeys.has(key)) continue
     unmatchedJosh.push(r.player)
     const mid = joshMid(r)
-    values.push({ key, espnId: null, name: r.player, slots: [], b: Math.max(1, round1((mid ?? 1) * basis)), consensus: 0, market: 0, josh: mid, avoid: r.kind === 'avoid', rank: rankOf(key), tier: 0, line: null, injury: null })
+    values.push({ key, espnId: null, name: r.player, slots: [], b: Math.max(1, round1((mid ?? 1) * basis)), consensus: 0, market: 0, josh: mid, avoid: r.kind === 'avoid', rank: rankOf(key), tier: 0, line: null, injury: null, note: noteOf(key) })
   }
   const unmatchedProjections = projections.filter((r) => r.value > 0 && !espnKeys.has(normalizeName(r.name))).map((r) => r.name)
 

@@ -9,7 +9,7 @@
    10,
    11
   ],
-  "b": 73.5,
+  "b": 73.6,
   "consensus": 74.8,
   "market": 85.3,
   "josh": 73.5,
@@ -29,7 +29,8 @@
    "ftm": 403.2,
    "fta": 489.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "victor wembanyama",
@@ -41,7 +42,7 @@
    10,
    11
   ],
-  "b": 68,
+  "b": 68.1,
   "consensus": 67.3,
   "market": 81.9,
   "josh": 70,
@@ -61,7 +62,8 @@
    "ftm": 336.6,
    "fta": 402.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shai gilgeous alexander",
@@ -93,7 +95,8 @@
    "ftm": 568,
    "fta": 631.9
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "luka doncic",
@@ -105,7 +108,7 @@
    8,
    11
   ],
-  "b": 58.9,
+  "b": 59,
   "consensus": 55,
   "market": 74.6,
   "josh": 64,
@@ -125,7 +128,8 @@
    "ftm": 510,
    "fta": 652.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "giannis antetokounmpo",
@@ -167,7 +171,8 @@
     67,
     36
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "cade cunningham",
@@ -199,7 +204,8 @@
    "ftm": 312.8,
    "fta": 380.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jayson tatum",
@@ -215,7 +221,7 @@
    10,
    11
   ],
-  "b": 39.6,
+  "b": 39.7,
   "consensus": 37.5,
   "market": 56.3,
   "josh": 42.5,
@@ -242,7 +248,8 @@
     72,
     16
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "anthony edwards",
@@ -278,7 +285,8 @@
    "ftm": 399.6,
    "fta": 488.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyrese maxey",
@@ -312,7 +320,8 @@
    "ftm": 303.3,
    "fta": 342.8
   },
-  "injury": null
+  "injury": null,
+  "note": "Less usage and fewer assists/PTS with more ball-dominant teammates"
  },
  {
   "key": "cooper flagg",
@@ -328,7 +337,7 @@
    10,
    11
   ],
-  "b": 35.4,
+  "b": 35.5,
   "consensus": 31.6,
   "market": 47.5,
   "josh": 40,
@@ -348,7 +357,8 @@
    "ftm": 316.8,
    "fta": 381.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevin durant",
@@ -364,7 +374,7 @@
    10,
    11
   ],
-  "b": 34.9,
+  "b": 35,
   "consensus": 35.5,
   "market": 34.1,
   "josh": 35,
@@ -384,7 +394,8 @@
    "ftm": 336,
    "fta": 392
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "austin reaves",
@@ -398,7 +409,7 @@
    8,
    11
   ],
-  "b": 33.1,
+  "b": 33.2,
   "consensus": 30.9,
   "market": 22.1,
   "josh": 36,
@@ -418,7 +429,8 @@
    "ftm": 434,
    "fta": 497
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyrese haliburton",
@@ -432,7 +444,7 @@
    8,
    11
   ],
-  "b": 32.8,
+  "b": 32.9,
   "consensus": 31.3,
   "market": 40.3,
   "josh": 35,
@@ -452,7 +464,8 @@
    "ftm": 144,
    "fta": 168
   },
-  "injury": null
+  "injury": null,
+  "note": "Money Grabber"
  },
  {
   "key": "jalen johnson",
@@ -466,7 +479,7 @@
    10,
    11
   ],
-  "b": 32.5,
+  "b": 32.6,
   "consensus": 31.7,
   "market": 54.9,
   "josh": 34,
@@ -493,7 +506,8 @@
     36,
     72
    ]
-  }
+  },
+  "note": "Money grabber"
  },
  {
   "key": "karl anthony towns",
@@ -525,7 +539,8 @@
    "ftm": 335.8,
    "fta": 394.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamal murray",
@@ -557,7 +572,8 @@
    "ftm": 284.7,
    "fta": 321.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "amen thompson",
@@ -573,7 +589,7 @@
    10,
    11
   ],
-  "b": 31.8,
+  "b": 31.9,
   "consensus": 24.4,
   "market": 37.2,
   "josh": 40,
@@ -593,7 +609,8 @@
    "ftm": 281.2,
    "fta": 372.4
   },
-  "injury": null
+  "injury": null,
+  "note": "Money Grabber"
  },
  {
   "key": "donovan mitchell",
@@ -627,7 +644,8 @@
    "ftm": 352.8,
    "fta": 417.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "scottie barnes",
@@ -663,7 +681,8 @@
    "ftm": 272,
    "fta": 344
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kawhi leonard",
@@ -706,7 +725,8 @@
     37,
     65
    ]
-  }
+  },
+  "note": "Injury Prone"
  },
  {
   "key": "trae young",
@@ -718,7 +738,7 @@
    8,
    11
   ],
-  "b": 27.5,
+  "b": 27.6,
   "consensus": 30.5,
   "market": 32.9,
   "josh": 25,
@@ -745,7 +765,8 @@
     76,
     15
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "trey murphy",
@@ -788,7 +809,8 @@
     53,
     66
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "lamelo ball",
@@ -800,7 +822,7 @@
    8,
    11
   ],
-  "b": 26.8,
+  "b": 26.9,
   "consensus": 19.8,
   "market": 33.9,
   "josh": 34.5,
@@ -827,7 +849,8 @@
     47,
     72
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "anthony davis",
@@ -869,7 +892,8 @@
     51,
     20
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "stephen curry",
@@ -908,7 +932,44 @@
     70,
     43
    ]
-  }
+  },
+  "note": "Trimmed about $10 for age and injury risk"
+ },
+ {
+  "key": "evan mobley",
+  "espnId": 4432158,
+  "name": "Evan Mobley",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 25.6,
+  "consensus": 26.5,
+  "market": 21.8,
+  "josh": 25,
+  "avoid": false,
+  "rank": 25,
+  "tier": 2,
+  "line": {
+   "pts": 1389.6,
+   "reb": 691.2,
+   "ast": 259.2,
+   "stl": 57.6,
+   "blk": 129.6,
+   "tpm": 79.2,
+   "to": 151.2,
+   "fgm": 540,
+   "fga": 986.4,
+   "ftm": 223.2,
+   "fta": 338.4
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "james harden",
@@ -942,42 +1003,8 @@
    "ftm": 403.2,
    "fta": 460.8
   },
-  "injury": null
- },
- {
-  "key": "evan mobley",
-  "espnId": 4432158,
-  "name": "Evan Mobley",
-  "slots": [
-   3,
-   4,
-   6,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 25.5,
-  "consensus": 26.5,
-  "market": 21.8,
-  "josh": 25,
-  "avoid": false,
-  "rank": 25,
-  "tier": 2,
-  "line": {
-   "pts": 1389.6,
-   "reb": 691.2,
-   "ast": 259.2,
-   "stl": 57.6,
-   "blk": 129.6,
-   "tpm": 79.2,
-   "to": 151.2,
-   "fgm": 540,
-   "fga": 986.4,
-   "ftm": 223.2,
-   "fta": 338.4
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chet holmgren",
@@ -1019,7 +1046,8 @@
     32,
     69
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "kyrie irving",
@@ -1051,7 +1079,8 @@
    "ftm": 181.5,
    "fta": 203.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh giddey",
@@ -1070,7 +1099,7 @@
   "market": 34.4,
   "josh": 27,
   "avoid": false,
-  "rank": 33,
+  "rank": 32,
   "tier": 2,
   "line": {
    "pts": 1141,
@@ -1085,7 +1114,8 @@
    "ftm": 203,
    "fta": 266
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "darius garland",
@@ -1102,7 +1132,7 @@
   "market": 13.8,
   "josh": 27.5,
   "avoid": false,
-  "rank": 37,
+  "rank": 36,
   "tier": 2,
   "line": {
    "pts": 1414.4,
@@ -1124,7 +1154,8 @@
     75,
     45
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "alperen sengun",
@@ -1136,7 +1167,7 @@
    10,
    11
   ],
-  "b": 24.3,
+  "b": 24.4,
   "consensus": 19.2,
   "market": 33.5,
   "josh": 30,
@@ -1156,7 +1187,8 @@
    "ftm": 280.8,
    "fta": 403.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "domantas sabonis",
@@ -1176,7 +1208,7 @@
   "market": 38.1,
   "josh": 25,
   "avoid": false,
-  "rank": 39,
+  "rank": 38,
   "tier": 2,
   "line": {
    "pts": 1190,
@@ -1198,7 +1230,8 @@
     70,
     19
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "lebron james",
@@ -1219,7 +1252,7 @@
   "market": 16.5,
   "josh": 25,
   "avoid": false,
-  "rank": 40,
+  "rank": 39,
   "tier": 2,
   "line": {
    "pts": 1096.2,
@@ -1234,7 +1267,8 @@
    "ftm": 183.6,
    "fta": 237.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "derrick white",
@@ -1253,7 +1287,7 @@
   "market": 20.2,
   "josh": 25,
   "avoid": false,
-  "rank": 41,
+  "rank": 40,
   "tier": 2,
   "line": {
    "pts": 1237.5,
@@ -1268,7 +1302,8 @@
    "ftm": 157.5,
    "fta": 180
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nickeil alexander walker",
@@ -1302,41 +1337,8 @@
    "ftm": 273.6,
    "fta": 311.6
   },
-  "injury": null
- },
- {
-  "key": "devin booker",
-  "espnId": 3136193,
-  "name": "Devin Booker",
-  "slots": [
-   0,
-   1,
-   5,
-   7,
-   8,
-   11
-  ],
-  "b": 22.5,
-  "consensus": 23.8,
-  "market": 32.3,
-  "josh": 21.5,
-  "avoid": false,
-  "rank": 30,
-  "tier": 3,
-  "line": {
-   "pts": 1672.8,
-   "reb": 258.4,
-   "ast": 428.4,
-   "stl": 54.4,
-   "blk": 13.6,
-   "tpm": 142.8,
-   "to": 197.2,
-   "fgm": 557.6,
-   "fga": 1217.2,
-   "ftm": 414.8,
-   "fta": 469.2
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lauri markkanen",
@@ -1357,7 +1359,7 @@
   "market": 13.5,
   "josh": 21.5,
   "avoid": false,
-  "rank": 31,
+  "rank": 30,
   "tier": 3,
   "line": {
    "pts": 1547,
@@ -1379,7 +1381,8 @@
     47,
     42
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "bam adebayo",
@@ -1394,12 +1397,12 @@
    10,
    11
   ],
-  "b": 21.5,
+  "b": 21.6,
   "consensus": 18.5,
   "market": 27.6,
   "josh": 25,
   "avoid": false,
-  "rank": 53,
+  "rank": 54,
   "tier": 3,
   "line": {
    "pts": 1428.2,
@@ -1414,43 +1417,8 @@
    "ftm": 288.6,
    "fta": 370
   },
-  "injury": null
- },
- {
-  "key": "desmond bane",
-  "espnId": 4066320,
-  "name": "Desmond Bane",
-  "slots": [
-   1,
-   2,
-   5,
-   6,
-   7,
-   8,
-   10,
-   11
-  ],
-  "b": 21.4,
-  "consensus": 23.2,
-  "market": 12.9,
-  "josh": 20,
-  "avoid": false,
-  "rank": 32,
-  "tier": 3,
-  "line": {
-   "pts": 1474.4,
-   "reb": 372.4,
-   "ast": 349.6,
-   "stl": 83.6,
-   "blk": 30.4,
-   "tpm": 167.2,
-   "to": 167.2,
-   "fgm": 532,
-   "fga": 1102,
-   "ftm": 243.2,
-   "fta": 266
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brandon miller",
@@ -1466,12 +1434,12 @@
    10,
    11
   ],
-  "b": 21.4,
+  "b": 21.5,
   "consensus": 18.3,
   "market": 8.5,
   "josh": 25,
   "avoid": false,
-  "rank": 55,
+  "rank": 56,
   "tier": 3,
   "line": {
    "pts": 1421.4,
@@ -1493,7 +1461,80 @@
     27,
     65
    ]
-  }
+  },
+  "note": null
+ },
+ {
+  "key": "desmond bane",
+  "espnId": 4066320,
+  "name": "Desmond Bane",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "b": 21.4,
+  "consensus": 23.2,
+  "market": 12.9,
+  "josh": 20,
+  "avoid": false,
+  "rank": 31,
+  "tier": 3,
+  "line": {
+   "pts": 1474.4,
+   "reb": 372.4,
+   "ast": 349.6,
+   "stl": 83.6,
+   "blk": 30.4,
+   "tpm": 167.2,
+   "to": 167.2,
+   "fgm": 532,
+   "fga": 1102,
+   "ftm": 243.2,
+   "fta": 266
+  },
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "dyson daniels",
+  "espnId": 4869342,
+  "name": "Dyson Daniels",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "b": 21.4,
+  "consensus": 19.2,
+  "market": 11.2,
+  "josh": 24,
+  "avoid": false,
+  "rank": 51,
+  "tier": 3,
+  "line": {
+   "pts": 885,
+   "reb": 457.5,
+   "ast": 352.5,
+   "stl": 165,
+   "blk": 45,
+   "tpm": 45,
+   "to": 127.5,
+   "fgm": 382.5,
+   "fga": 757.5,
+   "ftm": 75,
+   "fta": 120
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen duren",
@@ -1510,7 +1551,7 @@
   "market": 24.4,
   "josh": 20,
   "avoid": false,
-  "rank": 35,
+  "rank": 34,
   "tier": 3,
   "line": {
    "pts": 1203.6,
@@ -1525,7 +1566,43 @@
    "ftm": 265.2,
    "fta": 353.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "devin booker",
+  "espnId": 3136193,
+  "name": "Devin Booker",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "b": 21.1,
+  "consensus": 21.1,
+  "market": 32.3,
+  "josh": 21.5,
+  "avoid": false,
+  "rank": 43,
+  "tier": 3,
+  "line": {
+   "pts": 1672.8,
+   "reb": 258.4,
+   "ast": 428.4,
+   "stl": 54.4,
+   "blk": 13.6,
+   "tpm": 142.8,
+   "to": 197.2,
+   "fgm": 557.6,
+   "fga": 1217.2,
+   "ftm": 414.8,
+   "fta": 469.2
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "dejounte murray",
@@ -1544,7 +1621,7 @@
   "market": 8,
   "josh": 19,
   "avoid": false,
-  "rank": 42,
+  "rank": 41,
   "tier": 3,
   "line": {
    "pts": 1081.6,
@@ -1566,7 +1643,8 @@
     31,
     14
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "matas buzelis",
@@ -1602,7 +1680,8 @@
    "ftm": 180,
    "fta": 232.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaren jackson",
@@ -1637,7 +1716,41 @@
    "ftm": 268,
    "fta": 341.7
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "jalen brunson",
+  "espnId": 3934672,
+  "name": "Jalen Brunson",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "b": 19.7,
+  "consensus": 21.1,
+  "market": 42,
+  "josh": 18.5,
+  "avoid": false,
+  "rank": 42,
+  "tier": 3,
+  "line": {
+   "pts": 1836,
+   "reb": 223.2,
+   "ast": 496.8,
+   "stl": 57.6,
+   "blk": 7.2,
+   "tpm": 180,
+   "to": 172.8,
+   "fgm": 648,
+   "fga": 1360.8,
+   "ftm": 367.2,
+   "fta": 439.2
+  },
+  "injury": null,
+  "note": "Money Graber"
  },
  {
   "key": "jalen williams",
@@ -1658,7 +1771,7 @@
   "market": 19.3,
   "josh": 17.5,
   "avoid": false,
-  "rank": 38,
+  "rank": 37,
   "tier": 3,
   "line": {
    "pts": 1387.2,
@@ -1680,73 +1793,45 @@
     69,
     33
    ]
-  }
- },
- {
-  "key": "jalen brunson",
-  "espnId": 3934672,
-  "name": "Jalen Brunson",
-  "slots": [
-   0,
-   5,
-   8,
-   11
-  ],
-  "b": 19.6,
-  "consensus": 21.1,
-  "market": 42,
-  "josh": 18.5,
-  "avoid": false,
-  "rank": 43,
-  "tier": 3,
-  "line": {
-   "pts": 1836,
-   "reb": 223.2,
-   "ast": 496.8,
-   "stl": 57.6,
-   "blk": 7.2,
-   "tpm": 180,
-   "to": 172.8,
-   "fgm": 648,
-   "fga": 1360.8,
-   "ftm": 367.2,
-   "fta": 439.2
   },
-  "injury": null
+  "note": null
  },
  {
-  "key": "dyson daniels",
-  "espnId": 4869342,
-  "name": "Dyson Daniels",
+  "key": "deni avdija",
+  "espnId": 4683021,
+  "name": "Deni Avdija",
   "slots": [
-   0,
-   1,
-   5,
+   2,
+   3,
+   6,
    7,
    8,
+   9,
+   10,
    11
   ],
-  "b": 19.4,
-  "consensus": 15.2,
-  "market": 11.2,
-  "josh": 24,
+  "b": 19,
+  "consensus": 16.9,
+  "market": 21.3,
+  "josh": 21.5,
   "avoid": false,
-  "rank": 65,
+  "rank": 59,
   "tier": 3,
   "line": {
-   "pts": 885,
-   "reb": 457.5,
-   "ast": 352.5,
-   "stl": 165,
-   "blk": 45,
-   "tpm": 45,
-   "to": 127.5,
-   "fgm": 382.5,
-   "fga": 757.5,
-   "ftm": 75,
-   "fta": 120
+   "pts": 1332.8,
+   "reb": 462.4,
+   "ast": 340,
+   "stl": 61.2,
+   "blk": 34,
+   "tpm": 115.6,
+   "to": 210.8,
+   "fgm": 421.6,
+   "fga": 904.4,
+   "ftm": 367.2,
+   "fta": 462.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "walker kessler",
@@ -1763,7 +1848,7 @@
   "market": 9.4,
   "josh": 15,
   "avoid": false,
-  "rank": 34,
+  "rank": 33,
   "tier": 3,
   "line": {
    "pts": 802.4,
@@ -1785,75 +1870,8 @@
     58,
     5
    ]
-  }
- },
- {
-  "key": "og anunoby",
-  "espnId": 3934719,
-  "name": "OG Anunoby",
-  "slots": [
-   2,
-   3,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 18.4,
-  "consensus": 17.2,
-  "market": 5.1,
-  "josh": 20,
-  "avoid": false,
-  "rank": 56,
-  "tier": 3,
-  "line": {
-   "pts": 1135.6,
-   "reb": 326.4,
-   "ast": 142.8,
-   "stl": 102,
-   "blk": 54.4,
-   "tpm": 149.6,
-   "to": 102,
-   "fgm": 408,
-   "fga": 850,
-   "ftm": 170,
-   "fta": 204
   },
-  "injury": null
- },
- {
-  "key": "damian lillard",
-  "espnId": 6606,
-  "name": "Damian Lillard",
-  "slots": [
-   0,
-   5,
-   8,
-   11
-  ],
-  "b": 18.3,
-  "consensus": 17,
-  "market": 6.4,
-  "josh": 20,
-  "avoid": false,
-  "rank": 57,
-  "tier": 3,
-  "line": {
-   "pts": 955,
-   "reb": 175,
-   "ast": 250,
-   "stl": 45,
-   "blk": 5,
-   "tpm": 155,
-   "to": 105,
-   "fgm": 290,
-   "fga": 660,
-   "ftm": 220,
-   "fta": 250
-  },
-  "injury": null
+  "note": null
  },
  {
   "key": "joel embiid",
@@ -1865,7 +1883,7 @@
    10,
    11
   ],
-  "b": 18.2,
+  "b": 18.5,
   "consensus": 19.2,
   "market": 8.2,
   "josh": null,
@@ -1892,7 +1910,111 @@
     19,
     38
    ]
-  }
+  },
+  "note": null
+ },
+ {
+  "key": "og anunoby",
+  "espnId": 3934719,
+  "name": "OG Anunoby",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 18.4,
+  "consensus": 17.2,
+  "market": 5.1,
+  "josh": 20,
+  "avoid": false,
+  "rank": 57,
+  "tier": 3,
+  "line": {
+   "pts": 1135.6,
+   "reb": 326.4,
+   "ast": 142.8,
+   "stl": 102,
+   "blk": 54.4,
+   "tpm": 149.6,
+   "to": 102,
+   "fgm": 408,
+   "fga": 850,
+   "ftm": 170,
+   "fta": 204
+  },
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "damian lillard",
+  "espnId": 6606,
+  "name": "Damian Lillard",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "b": 18.3,
+  "consensus": 17,
+  "market": 6.4,
+  "josh": 20,
+  "avoid": false,
+  "rank": 58,
+  "tier": 3,
+  "line": {
+   "pts": 955,
+   "reb": 175,
+   "ast": 250,
+   "stl": 45,
+   "blk": 5,
+   "tpm": 155,
+   "to": 105,
+   "fgm": 290,
+   "fga": 660,
+   "ftm": 220,
+   "fta": 250
+  },
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "kelel ware",
+  "espnId": 5105623,
+  "name": "Kel'el Ware",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 18.2,
+  "consensus": 18.8,
+  "market": 4.6,
+  "josh": null,
+  "avoid": false,
+  "rank": 52,
+  "tier": 3,
+  "line": {
+   "pts": 962,
+   "reb": 777,
+   "ast": 81.4,
+   "stl": 66.6,
+   "blk": 103.6,
+   "tpm": 81.4,
+   "to": 81.4,
+   "fgm": 399.6,
+   "fga": 740,
+   "ftm": 81.4,
+   "fta": 111
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen brown",
@@ -1928,39 +2050,8 @@
    "ftm": 301,
    "fta": 392
   },
-  "injury": null
- },
- {
-  "key": "kelel ware",
-  "espnId": 5105623,
-  "name": "Kel'el Ware",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 17.8,
-  "consensus": 18.8,
-  "market": 4.6,
-  "josh": null,
-  "avoid": false,
-  "rank": 51,
-  "tier": 3,
-  "line": {
-   "pts": 962,
-   "reb": 777,
-   "ast": 81.4,
-   "stl": 66.6,
-   "blk": 103.6,
-   "tpm": 81.4,
-   "to": 81.4,
-   "fgm": 399.6,
-   "fga": 740,
-   "ftm": 81.4,
-   "fta": 111
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "paul george",
@@ -1976,12 +2067,12 @@
    10,
    11
   ],
-  "b": 17.8,
+  "b": 17.9,
   "consensus": 18.5,
   "market": 3.7,
   "josh": 17.5,
   "avoid": false,
-  "rank": 52,
+  "rank": 53,
   "tier": 3,
   "line": {
    "pts": 991.8,
@@ -2003,43 +2094,8 @@
     41,
     37
    ]
-  }
- },
- {
-  "key": "deni avdija",
-  "espnId": 4683021,
-  "name": "Deni Avdija",
-  "slots": [
-   2,
-   3,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 17.4,
-  "consensus": 13.6,
-  "market": 21.3,
-  "josh": 21.5,
-  "avoid": false,
-  "rank": 77,
-  "tier": 3,
-  "line": {
-   "pts": 1332.8,
-   "reb": 462.4,
-   "ast": 340,
-   "stl": 61.2,
-   "blk": 34,
-   "tpm": 115.6,
-   "to": 210.8,
-   "fgm": 421.6,
-   "fga": 904.4,
-   "ftm": 367.2,
-   "fta": 462.4
   },
-  "injury": null
+  "note": null
  },
  {
   "key": "franz wagner",
@@ -2082,7 +2138,8 @@
     60,
     34
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "zach edey",
@@ -2099,7 +2156,7 @@
   "market": 2.7,
   "josh": 11,
   "avoid": false,
-  "rank": 36,
+  "rank": 35,
   "tier": 3,
   "line": {
    "pts": 864.5,
@@ -2121,7 +2178,8 @@
     66,
     11
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "tyler herro",
@@ -2162,7 +2220,8 @@
     77,
     33
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "keyonte george",
@@ -2196,7 +2255,41 @@
    "ftm": 329,
    "fta": 385
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "donovan clingan",
+  "espnId": 5105565,
+  "name": "Donovan Clingan",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 15.8,
+  "consensus": 16.4,
+  "market": 7.2,
+  "josh": null,
+  "avoid": true,
+  "rank": 61,
+  "tier": 3,
+  "line": {
+   "pts": 843.6,
+   "reb": 843.6,
+   "ast": 140.6,
+   "stl": 44.4,
+   "blk": 133.2,
+   "tpm": 81.4,
+   "to": 96.2,
+   "fgm": 318.2,
+   "fga": 606.8,
+   "ftm": 118.4,
+   "fta": 177.6
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "ausar thompson",
@@ -2232,39 +2325,8 @@
    "ftm": 133.2,
    "fta": 214.6
   },
-  "injury": null
- },
- {
-  "key": "donovan clingan",
-  "espnId": 5105565,
-  "name": "Donovan Clingan",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 15.5,
-  "consensus": 16.4,
-  "market": 7.2,
-  "josh": null,
-  "avoid": true,
-  "rank": 59,
-  "tier": 3,
-  "line": {
-   "pts": 843.6,
-   "reb": 843.6,
-   "ast": 140.6,
-   "stl": 44.4,
-   "blk": 133.2,
-   "tpm": 81.4,
-   "to": 96.2,
-   "fgm": 318.2,
-   "fga": 606.8,
-   "ftm": 118.4,
-   "fta": 177.6
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "onyeka okongwu",
@@ -2281,7 +2343,7 @@
   "market": 6.6,
   "josh": 15.5,
   "avoid": false,
-  "rank": 62,
+  "rank": 64,
   "tier": 3,
   "line": {
    "pts": 1139.6,
@@ -2296,7 +2358,8 @@
    "ftm": 170.2,
    "fta": 222
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ty jerome",
@@ -2310,12 +2373,12 @@
    8,
    11
   ],
-  "b": 15,
+  "b": 15.4,
   "consensus": 15.9,
   "market": 5.1,
   "josh": null,
   "avoid": false,
-  "rank": 61,
+  "rank": 63,
   "tier": 3,
   "line": {
    "pts": 984,
@@ -2337,7 +2400,8 @@
     70,
     15
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "ryan rollins",
@@ -2351,12 +2415,12 @@
    8,
    11
   ],
-  "b": 14.4,
+  "b": 14.7,
   "consensus": 15.2,
   "market": 2.3,
   "josh": null,
   "avoid": false,
-  "rank": 64,
+  "rank": 66,
   "tier": 3,
   "line": {
    "pts": 1116,
@@ -2371,7 +2435,8 @@
    "ftm": 108,
    "fta": 136.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cameron boozer",
@@ -2390,7 +2455,7 @@
   "market": 6.7,
   "josh": 12.5,
   "avoid": false,
-  "rank": 60,
+  "rank": 62,
   "tier": 3,
   "line": {
    "pts": 1204,
@@ -2405,7 +2470,8 @@
    "ftm": 280,
    "fta": 357
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen suggs",
@@ -2424,7 +2490,7 @@
   "market": 0.7,
   "josh": 10,
   "avoid": false,
-  "rank": 54,
+  "rank": 55,
   "tier": 3,
   "line": {
    "pts": 906,
@@ -2446,7 +2512,8 @@
     35,
     57
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "pascal siakam",
@@ -2465,7 +2532,7 @@
   "market": 24.4,
   "josh": 12.5,
   "avoid": false,
-  "rank": 66,
+  "rank": 67,
   "tier": 3,
   "line": {
    "pts": 1670.4,
@@ -2480,7 +2547,8 @@
    "ftm": 266.4,
    "fta": 367.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ivica zubac",
@@ -2497,7 +2565,7 @@
   "market": 5.1,
   "josh": 12.5,
   "avoid": false,
-  "rank": 67,
+  "rank": 68,
   "tier": 3,
   "line": {
    "pts": 1094.4,
@@ -2512,50 +2580,8 @@
    "ftm": 136.8,
    "fta": 208.8
   },
-  "injury": null
- },
- {
-  "key": "zach lavine",
-  "espnId": 3064440,
-  "name": "Zach LaVine",
-  "slots": [
-   1,
-   2,
-   5,
-   6,
-   7,
-   8,
-   10,
-   11
-  ],
-  "b": 13.7,
-  "consensus": 14.5,
-  "market": 1.4,
-  "josh": null,
-  "avoid": false,
-  "rank": 69,
-  "tier": 3,
-  "line": {
-   "pts": 1434.8,
-   "reb": 244.8,
-   "ast": 231.2,
-   "stl": 47.6,
-   "blk": 13.6,
-   "tpm": 197.2,
-   "to": 163.2,
-   "fgm": 516.8,
-   "fga": 1026.8,
-   "ftm": 210.8,
-   "fta": 251.6
-  },
-  "injury": {
-   "label": "prone",
-   "games": [
-    25,
-    74,
-    39
-   ]
-  }
+  "injury": null,
+  "note": null
  },
  {
   "key": "neemias queta",
@@ -2587,7 +2613,8 @@
    "ftm": 120,
    "fta": 165
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "paolo banchero",
@@ -2603,7 +2630,7 @@
    10,
    11
   ],
-  "b": 13.4,
+  "b": 13.5,
   "consensus": 9.7,
   "market": 15.5,
   "josh": 17.5,
@@ -2623,7 +2650,8 @@
    "ftm": 467.2,
    "fta": 620.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "michael porter",
@@ -2644,8 +2672,8 @@
   "market": 10.8,
   "josh": 11,
   "avoid": false,
-  "rank": 63,
-  "tier": 4,
+  "rank": 65,
+  "tier": 3,
   "line": {
    "pts": 1206,
    "reb": 408,
@@ -2659,7 +2687,8 @@
    "ftm": 168,
    "fta": 198
   },
-  "injury": null
+  "injury": null,
+  "note": "Money Grabber"
  },
  {
   "key": "jaden mcdaniels",
@@ -2680,7 +2709,7 @@
   "market": 3.2,
   "josh": 12,
   "avoid": false,
-  "rank": 68,
+  "rank": 69,
   "tier": 4,
   "line": {
    "pts": 1132.2,
@@ -2695,7 +2724,8 @@
    "ftm": 133.2,
    "fta": 162.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "naz reid",
@@ -2710,7 +2740,7 @@
    10,
    11
   ],
-  "b": 13.2,
+  "b": 13.3,
   "consensus": 14.2,
   "market": 10.8,
   "josh": 12.5,
@@ -2730,7 +2760,8 @@
    "ftm": 111,
    "fta": 148
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kon knueppel",
@@ -2751,7 +2782,7 @@
   "market": 15.3,
   "josh": 8,
   "avoid": false,
-  "rank": 58,
+  "rank": 60,
   "tier": 4,
   "line": {
    "pts": 1140,
@@ -2766,7 +2797,8 @@
    "ftm": 150,
    "fta": 174
   },
-  "injury": null
+  "injury": null,
+  "note": "Money Grabber"
  },
  {
   "key": "deaaron fox",
@@ -2800,7 +2832,8 @@
    "ftm": 223.2,
    "fta": 280.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dayron sharpe",
@@ -2817,7 +2850,7 @@
   "market": 0.9,
   "josh": 9,
   "avoid": false,
-  "rank": 79,
+  "rank": 78,
   "tier": 4,
   "line": {
    "pts": 809.2,
@@ -2832,7 +2865,8 @@
    "ftm": 136,
    "fta": 197.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "coby white",
@@ -2866,7 +2900,8 @@
    "ftm": 241.8,
    "fta": 279
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jarrett allen",
@@ -2883,7 +2918,7 @@
   "market": 7.6,
   "josh": 9,
   "avoid": false,
-  "rank": 80,
+  "rank": 79,
   "tier": 4,
   "line": {
    "pts": 966,
@@ -2898,7 +2933,8 @@
    "ftm": 189,
    "fta": 266
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vj edgecombe",
@@ -2931,7 +2967,8 @@
    "ftm": 140.6,
    "fta": 177.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ja morant",
@@ -2948,7 +2985,7 @@
   "market": 4.4,
   "josh": 7.5,
   "avoid": false,
-  "rank": 81,
+  "rank": 80,
   "tier": 4,
   "line": {
    "pts": 1209,
@@ -2970,7 +3007,8 @@
     50,
     20
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "julius randle",
@@ -3004,7 +3042,8 @@
    "ftm": 345,
    "fta": 435
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zion williamson",
@@ -3019,12 +3058,12 @@
    10,
    11
   ],
-  "b": 9.5,
+  "b": 9.6,
   "consensus": 13.2,
   "market": 7,
   "josh": 6,
   "avoid": false,
-  "rank": 78,
+  "rank": 77,
   "tier": 4,
   "line": {
    "pts": 1326,
@@ -3046,7 +3085,8 @@
     30,
     62
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "collin murray boyles",
@@ -3080,91 +3120,8 @@
    "ftm": 108.8,
    "fta": 170
   },
-  "injury": null
- },
- {
-  "key": "immanuel quickley",
-  "espnId": 4395724,
-  "name": "Immanuel Quickley",
-  "slots": [
-   0,
-   1,
-   5,
-   7,
-   8,
-   11
-  ],
-  "b": 9.2,
-  "consensus": 14.2,
-  "market": 2.3,
-  "josh": null,
-  "avoid": false,
-  "rank": 73,
-  "tier": 4,
-  "line": {
-   "pts": 1232,
-   "reb": 287,
-   "ast": 434,
-   "stl": 84,
-   "blk": 7,
-   "tpm": 189,
-   "to": 112,
-   "fgm": 420,
-   "fga": 966,
-   "ftm": 203,
-   "fta": 238
-  },
-  "injury": {
-   "label": "prone",
-   "games": [
-    68,
-    33,
-    70
-   ]
-  }
- },
- {
-  "key": "jimmy butler",
-  "espnId": 6430,
-  "name": "Jimmy Butler III",
-  "slots": [
-   1,
-   2,
-   5,
-   6,
-   7,
-   8,
-   10,
-   11
-  ],
-  "b": 9.1,
-  "consensus": 14.1,
-  "market": 0.5,
-  "josh": null,
-  "avoid": false,
-  "rank": 75,
-  "tier": 4,
-  "line": {
-   "pts": 410,
-   "reb": 120,
-   "ast": 115,
-   "stl": 32.5,
-   "blk": 7.5,
-   "tpm": 15,
-   "to": 32.5,
-   "fgm": 127.5,
-   "fga": 252.5,
-   "ftm": 137.5,
-   "fta": 160
-  },
-  "injury": {
-   "label": "prone",
-   "games": [
-    60,
-    55,
-    38
-   ]
-  }
+  "injury": null,
+  "note": null
  },
  {
   "key": "dylan harper",
@@ -3198,7 +3155,94 @@
    "ftm": 122.4,
    "fta": 165.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "immanuel quickley",
+  "espnId": 4395724,
+  "name": "Immanuel Quickley",
+  "slots": [
+   0,
+   1,
+   5,
+   7,
+   8,
+   11
+  ],
+  "b": 8.8,
+  "consensus": 14.2,
+  "market": 2.3,
+  "josh": null,
+  "avoid": false,
+  "rank": 73,
+  "tier": 4,
+  "line": {
+   "pts": 1232,
+   "reb": 287,
+   "ast": 434,
+   "stl": 84,
+   "blk": 7,
+   "tpm": 189,
+   "to": 112,
+   "fgm": 420,
+   "fga": 966,
+   "ftm": 203,
+   "fta": 238
+  },
+  "injury": {
+   "label": "prone",
+   "games": [
+    68,
+    33,
+    70
+   ]
+  },
+  "note": null
+ },
+ {
+  "key": "jimmy butler",
+  "espnId": 6430,
+  "name": "Jimmy Butler III",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "b": 8.8,
+  "consensus": 14.1,
+  "market": 0.5,
+  "josh": null,
+  "avoid": false,
+  "rank": 75,
+  "tier": 4,
+  "line": {
+   "pts": 410,
+   "reb": 120,
+   "ast": 115,
+   "stl": 32.5,
+   "blk": 7.5,
+   "tpm": 15,
+   "to": 32.5,
+   "fgm": 127.5,
+   "fga": 252.5,
+   "ftm": 137.5,
+   "fta": 160
+  },
+  "injury": {
+   "label": "prone",
+   "games": [
+    60,
+    55,
+    38
+   ]
+  },
+  "note": null
  },
  {
   "key": "john collins",
@@ -3233,7 +3277,8 @@
    "ftm": 168,
    "fta": 210
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rudy gobert",
@@ -3265,7 +3310,8 @@
    "ftm": 170.2,
    "fta": 281.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "norman powell",
@@ -3301,50 +3347,8 @@
    "ftm": 253.5,
    "fta": 305.5
   },
-  "injury": null
- },
- {
-  "key": "brandon ingram",
-  "espnId": 3913176,
-  "name": "Brandon Ingram",
-  "slots": [
-   2,
-   3,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 8.1,
-  "consensus": 12.5,
-  "market": 3.3,
-  "josh": null,
-  "avoid": false,
-  "rank": 82,
-  "tier": 4,
-  "line": {
-   "pts": 898.8,
-   "reb": 231,
-   "ast": 163.8,
-   "stl": 33.6,
-   "blk": 29.4,
-   "tpm": 79.8,
-   "to": 113.4,
-   "fgm": 336,
-   "fga": 709.8,
-   "ftm": 147,
-   "fta": 180.6
-  },
-  "injury": {
-   "label": "prone",
-   "games": [
-    64,
-    18,
-    77
-   ]
-  }
+  "injury": null,
+  "note": null
  },
  {
   "key": "caleb wilson",
@@ -3378,7 +3382,96 @@
    "ftm": 280.8,
    "fta": 396
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "brandon ingram",
+  "espnId": 3913176,
+  "name": "Brandon Ingram",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 7.8,
+  "consensus": 12.5,
+  "market": 3.3,
+  "josh": null,
+  "avoid": false,
+  "rank": 81,
+  "tier": 4,
+  "line": {
+   "pts": 898.8,
+   "reb": 231,
+   "ast": 163.8,
+   "stl": 33.6,
+   "blk": 29.4,
+   "tpm": 79.8,
+   "to": 113.4,
+   "fgm": 336,
+   "fga": 709.8,
+   "ftm": 147,
+   "fta": 180.6
+  },
+  "injury": {
+   "label": "prone",
+   "games": [
+    64,
+    18,
+    77
+   ]
+  },
+  "note": null
+ },
+ {
+  "key": "zach lavine",
+  "espnId": 3064440,
+  "name": "Zach LaVine",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "b": 7.7,
+  "consensus": 12.4,
+  "market": 1.4,
+  "josh": null,
+  "avoid": false,
+  "rank": 82,
+  "tier": 4,
+  "line": {
+   "pts": 1434.8,
+   "reb": 244.8,
+   "ast": 231.2,
+   "stl": 47.6,
+   "blk": 13.6,
+   "tpm": 197.2,
+   "to": 163.2,
+   "fgm": 516.8,
+   "fga": 1026.8,
+   "ftm": 210.8,
+   "fta": 251.6
+  },
+  "injury": {
+   "label": "prone",
+   "games": [
+    25,
+    74,
+    39
+   ]
+  },
+  "note": null
  },
  {
   "key": "payton pritchard",
@@ -3412,7 +3505,8 @@
    "ftm": 100.1,
    "fta": 115.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "andrew wiggins",
@@ -3428,7 +3522,7 @@
    10,
    11
   ],
-  "b": 7.4,
+  "b": 7.1,
   "consensus": 11.5,
   "market": 1.6,
   "josh": null,
@@ -3448,7 +3542,8 @@
    "ftm": 176.8,
    "fta": 231.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ajay mitchell",
@@ -3462,7 +3557,7 @@
    8,
    11
   ],
-  "b": 7.3,
+  "b": 7.1,
   "consensus": 11.4,
   "market": 0.3,
   "josh": null,
@@ -3482,7 +3577,8 @@
    "ftm": 170,
    "fta": 197.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jakob poeltl",
@@ -3521,89 +3617,8 @@
     57,
     46
    ]
-  }
- },
- {
-  "key": "isaiah hartenstein",
-  "espnId": 4222252,
-  "name": "Isaiah Hartenstein",
-  "slots": [
-   4,
-   9,
-   10,
-   11
-  ],
-  "b": 7,
-  "consensus": 10.9,
-  "market": 1,
-  "josh": null,
-  "avoid": false,
-  "rank": 92,
-  "tier": 4,
-  "line": {
-   "pts": 714,
-   "reb": 700.4,
-   "ast": 258.4,
-   "stl": 61.2,
-   "blk": 68,
-   "tpm": 0,
-   "to": 115.6,
-   "fgm": 306,
-   "fga": 516.8,
-   "ftm": 95.2,
-   "fta": 149.6
   },
-  "injury": {
-   "label": "prone",
-   "games": [
-    75,
-    57,
-    47
-   ]
-  }
- },
- {
-  "key": "cameron johnson",
-  "espnId": 3138196,
-  "name": "Cameron Johnson",
-  "slots": [
-   2,
-   3,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 7,
-  "consensus": 10.8,
-  "market": 0.3,
-  "josh": null,
-  "avoid": false,
-  "rank": 93,
-  "tier": 4,
-  "line": {
-   "pts": 936,
-   "reb": 246,
-   "ast": 174,
-   "stl": 48,
-   "blk": 24,
-   "tpm": 144,
-   "to": 78,
-   "fgm": 318,
-   "fga": 660,
-   "ftm": 162,
-   "fta": 180
-  },
-  "injury": {
-   "label": "prone",
-   "games": [
-    58,
-    57,
-    54
-   ]
-  }
+  "note": null
  },
  {
   "key": "josh hart",
@@ -3639,7 +3654,48 @@
    "ftm": 108.8,
    "fta": 149.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "isaiah hartenstein",
+  "espnId": 4222252,
+  "name": "Isaiah Hartenstein",
+  "slots": [
+   4,
+   9,
+   10,
+   11
+  ],
+  "b": 6.8,
+  "consensus": 10.9,
+  "market": 1,
+  "josh": null,
+  "avoid": false,
+  "rank": 92,
+  "tier": 4,
+  "line": {
+   "pts": 714,
+   "reb": 700.4,
+   "ast": 258.4,
+   "stl": 61.2,
+   "blk": 68,
+   "tpm": 0,
+   "to": 115.6,
+   "fgm": 306,
+   "fga": 516.8,
+   "ftm": 95.2,
+   "fta": 149.6
+  },
+  "injury": {
+   "label": "prone",
+   "games": [
+    75,
+    57,
+    47
+   ]
+  },
+  "note": null
  },
  {
   "key": "keegan murray",
@@ -3682,7 +3738,52 @@
     76,
     23
    ]
-  }
+  },
+  "note": null
+ },
+ {
+  "key": "cameron johnson",
+  "espnId": 3138196,
+  "name": "Cameron Johnson",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 6.7,
+  "consensus": 10.8,
+  "market": 0.3,
+  "josh": null,
+  "avoid": false,
+  "rank": 93,
+  "tier": 4,
+  "line": {
+   "pts": 936,
+   "reb": 246,
+   "ast": 174,
+   "stl": 48,
+   "blk": 24,
+   "tpm": 144,
+   "to": 78,
+   "fgm": 318,
+   "fga": 660,
+   "ftm": 162,
+   "fta": 180
+  },
+  "injury": {
+   "label": "prone",
+   "games": [
+    58,
+    57,
+    54
+   ]
+  },
+  "note": null
  },
  {
   "key": "yaxel lendeborg",
@@ -3718,7 +3819,8 @@
    "ftm": 172.8,
    "fta": 208.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "quentin grimes",
@@ -3754,7 +3856,8 @@
    "ftm": 199.8,
    "fta": 244.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "stephon castle",
@@ -3788,7 +3891,8 @@
    "ftm": 280,
    "fta": 385
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "draymond green",
@@ -3823,42 +3927,8 @@
    "ftm": 81.6,
    "fta": 115.6
   },
-  "injury": null
- },
- {
-  "key": "derik queen",
-  "espnId": 4869780,
-  "name": "Derik Queen",
-  "slots": [
-   3,
-   4,
-   6,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 6.3,
-  "consensus": 9.7,
-  "market": 2.3,
-  "josh": null,
-  "avoid": false,
-  "rank": 100,
-  "tier": 4,
-  "line": {
-   "pts": 1024,
-   "reb": 616,
-   "ast": 320,
-   "stl": 88,
-   "blk": 80,
-   "tpm": 24,
-   "to": 208,
-   "fgm": 384,
-   "fga": 808,
-   "ftm": 232,
-   "fta": 296
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cedric coward",
@@ -3894,7 +3964,44 @@
    "ftm": 182,
    "fta": 210
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "derik queen",
+  "espnId": 4869780,
+  "name": "Derik Queen",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 6,
+  "consensus": 9.7,
+  "market": 2.3,
+  "josh": null,
+  "avoid": false,
+  "rank": 100,
+  "tier": 4,
+  "line": {
+   "pts": 1024,
+   "reb": 616,
+   "ast": 320,
+   "stl": 88,
+   "blk": 80,
+   "tpm": 24,
+   "to": 208,
+   "fgm": 384,
+   "fga": 808,
+   "ftm": 232,
+   "fta": 296
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex sarr",
@@ -3929,7 +4036,8 @@
    "ftm": 136,
    "fta": 197.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "toumani camara",
@@ -3965,7 +4073,8 @@
    "ftm": 96,
    "fta": 136
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "collin gillespie",
@@ -3997,7 +4106,8 @@
    "ftm": 67.5,
    "fta": 82.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brandin podziemski",
@@ -4031,7 +4141,8 @@
    "ftm": 156,
    "fta": 202.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cam spencer",
@@ -4065,7 +4176,8 @@
    "ftm": 117,
    "fta": 123.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jrue holiday",
@@ -4099,7 +4211,8 @@
    "ftm": 70.2,
    "fta": 81
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "myles turner",
@@ -4131,7 +4244,8 @@
    "ftm": 147,
    "fta": 196
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kristaps porzingis",
@@ -4173,7 +4287,8 @@
     42,
     32
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "devin vassell",
@@ -4209,7 +4324,8 @@
    "ftm": 102,
    "fta": 129.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cj mccollum",
@@ -4243,7 +4359,8 @@
    "ftm": 167.9,
    "fta": 219
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mikal bridges",
@@ -4279,7 +4396,8 @@
    "ftm": 80,
    "fta": 96
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "khaman maluach",
@@ -4291,7 +4409,7 @@
    10,
    11
   ],
-  "b": 5.4,
+  "b": 5.2,
   "consensus": 8.4,
   "market": 0.3,
   "josh": null,
@@ -4311,7 +4429,8 @@
    "ftm": 84,
    "fta": 120
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sandro mamukelashvili",
@@ -4326,7 +4445,7 @@
    10,
    11
   ],
-  "b": 5.4,
+  "b": 5.2,
   "consensus": 8.4,
   "market": 0.1,
   "josh": null,
@@ -4346,43 +4465,8 @@
    "ftm": 125.8,
    "fta": 170.2
   },
-  "injury": null
- },
- {
-  "key": "miles bridges",
-  "espnId": 4066383,
-  "name": "Miles Bridges",
-  "slots": [
-   2,
-   3,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 5.3,
-  "consensus": 8.2,
-  "market": 3.1,
-  "josh": null,
-  "avoid": false,
-  "rank": 107,
-  "tier": 5,
-  "line": {
-   "pts": 1296,
-   "reb": 460.8,
-   "ast": 244.8,
-   "stl": 43.2,
-   "blk": 36,
-   "tpm": 144,
-   "to": 122.4,
-   "fgm": 468,
-   "fga": 1058.4,
-   "ftm": 216,
-   "fta": 252
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jusuf nurkic",
@@ -4421,7 +4505,45 @@
     51,
     41
    ]
-  }
+  },
+  "note": null
+ },
+ {
+  "key": "miles bridges",
+  "espnId": 4066383,
+  "name": "Miles Bridges",
+  "slots": [
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 5.1,
+  "consensus": 8.2,
+  "market": 3.1,
+  "josh": null,
+  "avoid": false,
+  "rank": 107,
+  "tier": 5,
+  "line": {
+   "pts": 1296,
+   "reb": 460.8,
+   "ast": 244.8,
+   "stl": 43.2,
+   "blk": 36,
+   "tpm": 144,
+   "to": 122.4,
+   "fgm": 468,
+   "fga": 1058.4,
+   "ftm": 216,
+   "fta": 252
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "saddiq bey",
@@ -4457,7 +4579,8 @@
    "ftm": 237.6,
    "fta": 280.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cason wallace",
@@ -4491,7 +4614,8 @@
    "ftm": 54.6,
    "fta": 62.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jabari smith",
@@ -4526,7 +4650,8 @@
    "ftm": 157.5,
    "fta": 202.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "fred vanvleet",
@@ -4560,82 +4685,8 @@
    "ftm": 102,
    "fta": 120
   },
-  "injury": null
- },
- {
-  "key": "tre jones",
-  "espnId": 4395626,
-  "name": "Tre Jones",
-  "slots": [
-   0,
-   5,
-   8,
-   11
-  ],
-  "b": 4.7,
-  "consensus": 7.3,
-  "market": 0.1,
-  "josh": null,
-  "avoid": false,
-  "rank": 109,
-  "tier": 5,
-  "line": {
-   "pts": 836.4,
-   "reb": 217.6,
-   "ast": 360.4,
-   "stl": 74.8,
-   "blk": 13.6,
-   "tpm": 40.8,
-   "to": 88.4,
-   "fgm": 312.8,
-   "fga": 571.2,
-   "ftm": 163.2,
-   "fta": 197.2
-  },
-  "injury": null
- },
- {
-  "key": "christian braun",
-  "espnId": 4431767,
-  "name": "Christian Braun",
-  "slots": [
-   1,
-   2,
-   5,
-   6,
-   7,
-   8,
-   10,
-   11
-  ],
-  "b": 4.7,
-  "consensus": 7.3,
-  "market": 0.1,
-  "josh": null,
-  "avoid": false,
-  "rank": 110,
-  "tier": 5,
-  "line": {
-   "pts": 993.6,
-   "reb": 352.8,
-   "ast": 187.2,
-   "stl": 64.8,
-   "blk": 28.8,
-   "tpm": 72,
-   "to": 72,
-   "fgm": 381.6,
-   "fga": 684,
-   "ftm": 144,
-   "fta": 180
-  },
-  "injury": {
-   "label": "recent",
-   "games": [
-    82,
-    79,
-    44
-   ]
-  }
+  "injury": null,
+  "note": null
  },
  {
   "key": "aaron nesmith",
@@ -4678,7 +4729,85 @@
     45,
     45
    ]
-  }
+  },
+  "note": null
+ },
+ {
+  "key": "tre jones",
+  "espnId": 4395626,
+  "name": "Tre Jones",
+  "slots": [
+   0,
+   5,
+   8,
+   11
+  ],
+  "b": 4.5,
+  "consensus": 7.3,
+  "market": 0.1,
+  "josh": null,
+  "avoid": false,
+  "rank": 109,
+  "tier": 5,
+  "line": {
+   "pts": 836.4,
+   "reb": 217.6,
+   "ast": 360.4,
+   "stl": 74.8,
+   "blk": 13.6,
+   "tpm": 40.8,
+   "to": 88.4,
+   "fgm": 312.8,
+   "fga": 571.2,
+   "ftm": 163.2,
+   "fta": 197.2
+  },
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "christian braun",
+  "espnId": 4431767,
+  "name": "Christian Braun",
+  "slots": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11
+  ],
+  "b": 4.5,
+  "consensus": 7.3,
+  "market": 0.1,
+  "josh": null,
+  "avoid": false,
+  "rank": 110,
+  "tier": 5,
+  "line": {
+   "pts": 993.6,
+   "reb": 352.8,
+   "ast": 187.2,
+   "stl": 64.8,
+   "blk": 28.8,
+   "tpm": 72,
+   "to": 72,
+   "fgm": 381.6,
+   "fga": 684,
+   "ftm": 144,
+   "fta": 180
+  },
+  "injury": {
+   "label": "recent",
+   "games": [
+    82,
+    79,
+    44
+   ]
+  },
+  "note": null
  },
  {
   "key": "deandre hunter",
@@ -4694,7 +4823,7 @@
    10,
    11
   ],
-  "b": 4.5,
+  "b": 4.3,
   "consensus": 7,
   "market": 0.1,
   "josh": null,
@@ -4721,7 +4850,8 @@
     64,
     45
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "mitchell robinson",
@@ -4733,7 +4863,7 @@
    10,
    11
   ],
-  "b": 4.2,
+  "b": 4,
   "consensus": 6.5,
   "market": 0.4,
   "josh": null,
@@ -4760,7 +4890,8 @@
     17,
     60
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "kevin porter",
@@ -4801,7 +4932,8 @@
     75,
     38
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "andrew nembhard",
@@ -4835,7 +4967,8 @@
    "ftm": 160,
    "fta": 198.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "robert williams",
@@ -4867,42 +5000,8 @@
    "ftm": 36,
    "fta": 54
   },
-  "injury": null
- },
- {
-  "key": "paul reed",
-  "espnId": 4278562,
-  "name": "Paul Reed",
-  "slots": [
-   3,
-   4,
-   6,
-   8,
-   9,
-   10,
-   11
-  ],
-  "b": 3.5,
-  "consensus": 5.4,
-  "market": 0,
-  "josh": null,
-  "avoid": false,
-  "rank": 119,
-  "tier": 5,
-  "line": {
-   "pts": 641.7,
-   "reb": 386.4,
-   "ast": 117.3,
-   "stl": 89.7,
-   "blk": 82.8,
-   "tpm": 20.7,
-   "to": 75.9,
-   "fgm": 262.2,
-   "fga": 448.5,
-   "ftm": 96.6,
-   "fta": 144.9
-  },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nic claxton",
@@ -4934,7 +5033,8 @@
    "ftm": 113.9,
    "fta": 194.3
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "egor demin",
@@ -4968,7 +5068,44 @@
    "ftm": 89.7,
    "fta": 110.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
+ },
+ {
+  "key": "paul reed",
+  "espnId": 4278562,
+  "name": "Paul Reed",
+  "slots": [
+   3,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11
+  ],
+  "b": 3.4,
+  "consensus": 5.4,
+  "market": 0,
+  "josh": null,
+  "avoid": false,
+  "rank": 119,
+  "tier": 5,
+  "line": {
+   "pts": 641.7,
+   "reb": 386.4,
+   "ast": 117.3,
+   "stl": 89.7,
+   "blk": 82.8,
+   "tpm": 20.7,
+   "to": 75.9,
+   "fgm": 262.2,
+   "fga": 448.5,
+   "ftm": 96.6,
+   "fta": 144.9
+  },
+  "injury": null,
+  "note": null
  },
  {
   "key": "reed sheppard",
@@ -5002,7 +5139,8 @@
    "ftm": 59.2,
    "fta": 74
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gui santos",
@@ -5036,7 +5174,8 @@
    "ftm": 115.2,
    "fta": 165.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "peyton watson",
@@ -5072,7 +5211,8 @@
    "ftm": 154,
    "fta": 210
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen green",
@@ -5115,7 +5255,8 @@
     82,
     32
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "demar derozan",
@@ -5151,7 +5292,8 @@
    "ftm": 273.6,
    "fta": 316.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kyshawn george",
@@ -5187,7 +5329,8 @@
    "ftm": 108.8,
    "fta": 142.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "anthony black",
@@ -5221,7 +5364,8 @@
    "ftm": 176.8,
    "fta": 238
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pj washington",
@@ -5264,7 +5408,8 @@
     57,
     56
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "aaron gordon",
@@ -5305,7 +5450,8 @@
     51,
     36
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "ayo dosunmu",
@@ -5339,7 +5485,8 @@
    "ftm": 109.5,
    "fta": 131.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tari eason",
@@ -5382,7 +5529,8 @@
     57,
     60
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "bobby portis",
@@ -5417,7 +5565,8 @@
    "ftm": 68,
    "fta": 88.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malik monk",
@@ -5451,7 +5600,8 @@
    "ftm": 129.2,
    "fta": 149.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaime jaquez",
@@ -5487,7 +5637,8 @@
    "ftm": 165.6,
    "fta": 216
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah jackson",
@@ -5522,7 +5673,8 @@
    "ftm": 93.5,
    "fta": 148.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "wendell carter",
@@ -5554,7 +5706,8 @@
    "ftm": 168,
    "fta": 217
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rj barrett",
@@ -5590,7 +5743,8 @@
    "ftm": 203,
    "fta": 301.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tobias harris",
@@ -5626,7 +5780,8 @@
    "ftm": 117,
    "fta": 136.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dereck lively",
@@ -5665,7 +5820,8 @@
     36,
     7
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "darryn peterson",
@@ -5699,7 +5855,8 @@
    "ftm": 231.2,
    "fta": 278.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "grayson allen",
@@ -5733,7 +5890,8 @@
    "ftm": 128,
    "fta": 153.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "santi aldama",
@@ -5776,7 +5934,8 @@
     65,
     43
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "isaiah stewart",
@@ -5811,7 +5970,8 @@
    "ftm": 89.6,
    "fta": 121.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylin williams",
@@ -5846,7 +6006,8 @@
    "ftm": 74.8,
    "fta": 95.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joan beringer",
@@ -5878,7 +6039,8 @@
    "ftm": 103.5,
    "fta": 151.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah joe",
@@ -5911,7 +6073,8 @@
    "ftm": 91,
    "fta": 105
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "naji marshall",
@@ -5947,7 +6110,8 @@
    "ftm": 180,
    "fta": 230.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "julian champagnie",
@@ -5983,7 +6147,8 @@
    "ftm": 97.5,
    "fta": 112.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jerami grant",
@@ -6024,7 +6189,8 @@
     47,
     57
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "obi toppin",
@@ -6058,7 +6224,8 @@
    "ftm": 84,
    "fta": 102
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bradley beal",
@@ -6101,7 +6268,8 @@
     53,
     6
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "moussa diabate",
@@ -6136,7 +6304,8 @@
    "ftm": 108,
    "fta": 172.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "collin sexton",
@@ -6170,7 +6339,8 @@
    "ftm": 203,
    "fta": 231
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "herbert jones",
@@ -6213,7 +6383,8 @@
     20,
     56
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "yanic konan niederhauser",
@@ -6245,7 +6416,8 @@
    "ftm": 120,
    "fta": 160
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kelly oubre",
@@ -6281,7 +6453,8 @@
    "ftm": 128,
    "fta": 166.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen smith",
@@ -6316,7 +6489,8 @@
    "ftm": 86.8,
    "fta": 111.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "davion mitchell",
@@ -6348,7 +6522,8 @@
    "ftm": 58.4,
    "fta": 80.3
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "max christie",
@@ -6381,7 +6556,8 @@
    "ftm": 135,
    "fta": 157.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dillon brooks",
@@ -6417,7 +6593,8 @@
    "ftm": 176.4,
    "fta": 214.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ace bailey",
@@ -6453,7 +6630,8 @@
    "ftm": 64.8,
    "fta": 93.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "scotty pippen",
@@ -6494,7 +6672,8 @@
     79,
     10
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jay huff",
@@ -6526,7 +6705,8 @@
    "ftm": 66.6,
    "fta": 81.4
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "deanthony melton",
@@ -6567,7 +6747,8 @@
     6,
     49
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "nikola vucevic",
@@ -6599,7 +6780,8 @@
    "ftm": 64,
    "fta": 76.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daniel gafford",
@@ -6638,7 +6820,8 @@
     57,
     55
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "rui hachimura",
@@ -6674,7 +6857,8 @@
    "ftm": 77,
    "fta": 105
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daniss jenkins",
@@ -6706,7 +6890,8 @@
    "ftm": 172.8,
    "fta": 208.8
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "anfernee simons",
@@ -6747,7 +6932,8 @@
     70,
     55
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "royce oneale",
@@ -6783,7 +6969,8 @@
    "ftm": 21,
    "fta": 28
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "duncan robinson",
@@ -6819,7 +7006,8 @@
    "ftm": 76,
    "fta": 91.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ryan kalkbrenner",
@@ -6851,7 +7039,8 @@
    "ftm": 74.8,
    "fta": 102
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "luke kornet",
@@ -6883,7 +7072,8 @@
    "ftm": 81.6,
    "fta": 102
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jared mccain",
@@ -6924,7 +7114,8 @@
     23,
     67
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "alex caruso",
@@ -6958,7 +7149,8 @@
    "ftm": 46.4,
    "fta": 58
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kris dunn",
@@ -6992,7 +7184,8 @@
    "ftm": 36,
    "fta": 43.2
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mark williams",
@@ -7031,7 +7224,8 @@
     44,
     60
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "max strus",
@@ -7072,7 +7266,8 @@
     50,
     12
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "sam merrill",
@@ -7105,7 +7300,8 @@
    "ftm": 52,
    "fta": 58.5
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mikel brown",
@@ -7137,7 +7333,8 @@
    "ftm": 255.3,
    "fta": 296.7
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "darius acuff",
@@ -7169,7 +7366,8 @@
    "ftm": 216,
    "fta": 273.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "derrick jones",
@@ -7205,7 +7403,8 @@
    "ftm": 75.4,
    "fta": 98.6
   },
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "scoot henderson",
@@ -7246,7 +7445,8 @@
     66,
     30
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "aj dybantsa",
@@ -7268,7 +7468,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jeremiah fears",
@@ -7290,7 +7491,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "oso ighodaro",
@@ -7312,7 +7514,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brook lopez",
@@ -7332,7 +7535,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keldon johnson",
@@ -7356,7 +7560,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jake laravia",
@@ -7387,7 +7592,8 @@
     66,
     82
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "kyle filipowski",
@@ -7410,7 +7616,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jonathan kuminga",
@@ -7441,7 +7648,8 @@
     47,
     36
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "danny wolf",
@@ -7464,7 +7672,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "precious achiuwa",
@@ -7487,7 +7696,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tj mcconnell",
@@ -7507,7 +7717,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keaton wagler",
@@ -7529,7 +7740,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bennedict mathurin",
@@ -7553,7 +7765,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamal shead",
@@ -7573,7 +7786,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tim hardaway",
@@ -7597,7 +7811,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "morez johnson",
@@ -7620,7 +7835,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "walter clayton",
@@ -7642,7 +7858,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dennis schroder",
@@ -7662,7 +7879,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yves missi",
@@ -7682,7 +7900,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bub carrington",
@@ -7704,7 +7923,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah collier",
@@ -7724,7 +7944,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "deandre ayton",
@@ -7751,7 +7972,8 @@
     40,
     72
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "gg jackson",
@@ -7780,7 +8002,8 @@
     29,
     55
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jaylon tyson",
@@ -7804,7 +8027,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kyle kuzma",
@@ -7828,7 +8052,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kingston flemings",
@@ -7850,7 +8075,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brayden burries",
@@ -7871,7 +8097,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevin huerter",
@@ -7895,7 +8122,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bilal coulibaly",
@@ -7919,7 +8147,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sam hauser",
@@ -7943,7 +8172,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nolan traore",
@@ -7963,7 +8193,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "luguentz dort",
@@ -7987,7 +8218,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nique clifford",
@@ -8011,7 +8243,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vit krejci",
@@ -8038,7 +8271,8 @@
     57,
     65
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "brice sensabaugh",
@@ -8062,7 +8296,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tre johnson",
@@ -8083,7 +8318,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan poole",
@@ -8112,7 +8348,8 @@
     68,
     39
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "luke kennard",
@@ -8133,7 +8370,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "al horford",
@@ -8163,7 +8401,8 @@
     60,
     45
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "gradey dick",
@@ -8187,7 +8426,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aaron wiggins",
@@ -8211,7 +8451,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "baylor scheierman",
@@ -8232,7 +8473,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zaccharie risacher",
@@ -8254,7 +8496,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kasparas jakucionis",
@@ -8274,7 +8517,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen wells",
@@ -8298,7 +8542,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "klay thompson",
@@ -8322,7 +8567,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ryan dunn",
@@ -8346,7 +8592,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nikola jovic",
@@ -8368,7 +8615,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marvin bagley",
@@ -8391,7 +8639,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan walsh",
@@ -8413,7 +8662,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tristan da silva",
@@ -8437,7 +8687,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keon ellis",
@@ -8461,7 +8712,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aj green",
@@ -8482,7 +8734,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jose alvarado",
@@ -8502,7 +8755,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jeremy sochan",
@@ -8524,7 +8778,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "miles mcbride",
@@ -8553,7 +8808,8 @@
     64,
     41
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "ziaire williams",
@@ -8584,7 +8840,8 @@
     63,
     56
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "ronald holland",
@@ -8608,7 +8865,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus smart",
@@ -8637,7 +8895,8 @@
     34,
     62
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "harrison barnes",
@@ -8661,7 +8920,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "terance mann",
@@ -8685,7 +8945,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "andre drummond",
@@ -8705,7 +8966,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hannes steinbach",
@@ -8727,7 +8989,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jakobe walter",
@@ -8748,7 +9011,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "clint capela",
@@ -8768,7 +9032,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kentavious caldwell pope",
@@ -8792,7 +9057,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trayce jackson davis",
@@ -8814,7 +9080,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "caris levert",
@@ -8838,7 +9105,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hugo gonzalez",
@@ -8860,7 +9128,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matisse thybulle",
@@ -8889,7 +9158,8 @@
     15,
     30
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "rob dillingham",
@@ -8909,7 +9179,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "goga bitadze",
@@ -8929,7 +9200,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kyle anderson",
@@ -8953,7 +9225,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "khris middleton",
@@ -8984,7 +9257,8 @@
     37,
     63
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "simone fontecchio",
@@ -9006,7 +9280,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "corey kispert",
@@ -9030,7 +9305,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "olivier maxence prosper",
@@ -9052,7 +9328,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamal cain",
@@ -9074,7 +9351,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "noah clowney",
@@ -9096,7 +9374,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bogdan bogdanovic",
@@ -9120,7 +9399,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bones hyland",
@@ -9140,7 +9420,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "adem bona",
@@ -9160,7 +9441,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaxson hayes",
@@ -9180,7 +9462,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "larry nance",
@@ -9202,7 +9485,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "buddy hield",
@@ -9226,7 +9510,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jarace walker",
@@ -9250,7 +9535,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaac okoro",
@@ -9274,7 +9560,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cody williams",
@@ -9295,7 +9582,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "patrick williams",
@@ -9317,7 +9605,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "terrence shannon",
@@ -9338,7 +9627,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tristan vukcevic",
@@ -9360,7 +9650,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "grant williams",
@@ -9389,7 +9680,8 @@
     16,
     36
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "trey lyles",
@@ -9411,7 +9703,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevon looney",
@@ -9431,7 +9724,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "landry shamet",
@@ -9452,7 +9746,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mouhamed gueye",
@@ -9474,7 +9769,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan clarkson",
@@ -9505,7 +9801,8 @@
     37,
     72
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "kris murray",
@@ -9527,7 +9824,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gary trent",
@@ -9551,7 +9849,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyus jones",
@@ -9571,7 +9870,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dean wade",
@@ -9593,7 +9893,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nate ament",
@@ -9615,7 +9916,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "thomas bryant",
@@ -9635,7 +9937,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "liam mcneeley",
@@ -9657,7 +9960,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jarred vanderbilt",
@@ -9688,7 +9992,8 @@
     36,
     65
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "kenrich williams",
@@ -9710,7 +10015,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jericho sims",
@@ -9730,7 +10036,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zach collins",
@@ -9750,7 +10057,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "moritz wagner",
@@ -9770,7 +10078,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tre mann",
@@ -9799,7 +10108,8 @@
     13,
     53
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "julian strawther",
@@ -9821,7 +10131,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "asa newell",
@@ -9843,7 +10154,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "leonard miller",
@@ -9865,7 +10177,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dangelo russell",
@@ -9887,7 +10200,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "caleb martin",
@@ -9908,7 +10222,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mike conley",
@@ -9928,7 +10243,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ben sheppard",
@@ -9952,7 +10268,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ben simmons",
@@ -9979,7 +10296,8 @@
     51,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "taurean prince",
@@ -10008,7 +10326,8 @@
     80,
     26
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jonathan mogbo",
@@ -10030,7 +10349,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus sasser",
@@ -10050,7 +10370,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaden hardy",
@@ -10071,7 +10392,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "johnny furphy",
@@ -10092,7 +10414,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen wilson",
@@ -10114,7 +10437,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jevon carter",
@@ -10134,7 +10458,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dorian finney smith",
@@ -10156,7 +10481,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rayan rupert",
@@ -10177,7 +10503,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh green",
@@ -10198,7 +10525,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shaedon sharpe",
@@ -10229,7 +10557,8 @@
     72,
     50
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "steven adams",
@@ -10256,7 +10585,8 @@
     58,
     32
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "sidy cissoko",
@@ -10277,7 +10607,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan hawkins",
@@ -10298,7 +10629,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen clark",
@@ -10319,7 +10651,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jett howard",
@@ -10341,7 +10674,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan mclaughlin",
@@ -10361,7 +10695,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jonathan isaac",
@@ -10383,7 +10718,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dalton knecht",
@@ -10407,7 +10743,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yang hansen",
@@ -10427,7 +10764,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bronny james",
@@ -10449,7 +10787,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "koby brea",
@@ -10470,7 +10809,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "noa essengue",
@@ -10492,7 +10832,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pat connaughton",
@@ -10513,7 +10854,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mohamed diawara",
@@ -10535,7 +10877,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kobe brown",
@@ -10557,7 +10900,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaesean tate",
@@ -10579,7 +10923,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jase richardson",
@@ -10600,7 +10945,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gary harris",
@@ -10621,7 +10967,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen pickett",
@@ -10643,7 +10990,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "julian phillips",
@@ -10665,7 +11013,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pacome dadiet",
@@ -10687,7 +11036,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "moses moody",
@@ -10711,7 +11061,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "charles bassey",
@@ -10731,7 +11082,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "johni broome",
@@ -10753,7 +11105,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "donte divincenzo",
@@ -10775,7 +11128,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris boucher",
@@ -10798,7 +11152,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan miller",
@@ -10820,7 +11175,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gabe vincent",
@@ -10840,7 +11196,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kj martin",
@@ -10862,7 +11219,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dwight powell",
@@ -10882,7 +11240,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "spencer dinwiddie",
@@ -10904,7 +11263,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cam thomas",
@@ -10935,7 +11295,8 @@
     25,
     42
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "andre jackson",
@@ -10956,7 +11317,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cameron payne",
@@ -10976,7 +11338,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "delon wright",
@@ -10996,7 +11359,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dariq whitehead",
@@ -11025,7 +11389,8 @@
     20,
     6
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "georges niang",
@@ -11047,7 +11412,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cole anthony",
@@ -11069,7 +11435,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jeremiah robinson earl",
@@ -11091,7 +11458,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dalen terry",
@@ -11113,7 +11481,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaden ivey",
@@ -11142,7 +11511,8 @@
     30,
     37
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "xavier tillman",
@@ -11164,7 +11534,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "caleb houstan",
@@ -11186,7 +11557,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nick richards",
@@ -11206,7 +11578,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dario saric",
@@ -11228,7 +11601,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cam whitmore",
@@ -11252,7 +11626,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malaki branham",
@@ -11273,7 +11648,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen nowell",
@@ -11301,7 +11677,8 @@
     8,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "bruce brown",
@@ -11325,7 +11702,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malcolm brogdon",
@@ -11352,7 +11730,8 @@
     24,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "chris paul",
@@ -11372,7 +11751,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joe ingles",
@@ -11394,7 +11774,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "maxi kleber",
@@ -11416,7 +11797,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kyle lowry",
@@ -11436,7 +11818,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lonzo ball",
@@ -11465,7 +11848,8 @@
     35,
     35
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jeff green",
@@ -11487,7 +11871,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "richaun holmes",
@@ -11507,7 +11892,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nicolas batum",
@@ -11529,7 +11915,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "eric gordon",
@@ -11550,7 +11937,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevin love",
@@ -11572,7 +11960,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "guerschon yabusele",
@@ -11595,7 +11984,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nigel hayes davis",
@@ -11617,7 +12007,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "garrett temple",
@@ -11638,7 +12029,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hunter tyson",
@@ -11660,7 +12052,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "quenton jackson",
@@ -11682,7 +12075,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "killian hayes",
@@ -11709,7 +12103,8 @@
     6,
     23
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "gary payton",
@@ -11730,7 +12125,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "torrey craig",
@@ -11752,7 +12148,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "john konchar",
@@ -11773,7 +12170,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "garrison mathews",
@@ -11794,7 +12192,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vasilije micic",
@@ -11814,7 +12213,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dante exum",
@@ -11835,7 +12235,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kobe bufkin",
@@ -11855,7 +12256,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ochai agbaji",
@@ -11877,7 +12279,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nick smith",
@@ -11898,7 +12301,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bol bol",
@@ -11920,7 +12324,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vince williams",
@@ -11949,7 +12354,8 @@
     27,
     40
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "aaron holiday",
@@ -11969,7 +12375,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alec burks",
@@ -11990,7 +12397,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jonas valanciunas",
@@ -12010,7 +12418,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mason plumlee",
@@ -12030,7 +12439,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "drew eubanks",
@@ -12050,7 +12460,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dalano banton",
@@ -12070,7 +12481,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kelly olynyk",
@@ -12090,7 +12502,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "russell westbrook",
@@ -12110,7 +12523,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "terry rozier",
@@ -12130,7 +12544,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ryan conwell",
@@ -12151,7 +12566,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ian clark",
@@ -12172,7 +12588,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shake milton",
@@ -12193,7 +12610,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "michael cobbins",
@@ -12215,7 +12633,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "colby jones",
@@ -12236,7 +12655,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "eric mika",
@@ -12256,7 +12676,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen mcdaniels",
@@ -12278,7 +12699,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevin pangos",
@@ -12298,7 +12720,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keifer sykes",
@@ -12319,7 +12742,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "devin cannady",
@@ -12339,7 +12763,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "phil pressey",
@@ -12359,7 +12784,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "eli john ndiaye",
@@ -12381,7 +12807,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "juan nunez",
@@ -12401,7 +12828,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nikola durisic",
@@ -12423,7 +12851,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "terry taylor",
@@ -12445,7 +12874,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "james nnaji",
@@ -12465,7 +12895,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "david roddy",
@@ -12487,7 +12918,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daquan jeffries",
@@ -12515,7 +12947,8 @@
     47,
     3
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "orlando robinson",
@@ -12535,7 +12968,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "john tonje",
@@ -12557,7 +12991,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marko guduric",
@@ -12578,7 +13013,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vlatko cancar",
@@ -12600,7 +13036,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "taze moore",
@@ -12621,7 +13058,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "willie reed",
@@ -12641,7 +13079,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sergio de larrea",
@@ -12661,7 +13100,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dejon jarreau",
@@ -12688,7 +13128,8 @@
     null,
     11
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "anthony lamb",
@@ -12710,7 +13151,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jeff dowtin",
@@ -12730,7 +13172,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris johnson",
@@ -12752,7 +13195,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tim quarterman",
@@ -12773,7 +13217,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh magette",
@@ -12793,7 +13238,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dakota mathias",
@@ -12814,7 +13260,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sim bhullar",
@@ -12834,7 +13281,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jackson rowe",
@@ -12856,7 +13304,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trevon duval",
@@ -12876,7 +13325,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nate hinton",
@@ -12897,7 +13347,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "xavier rathan mayes",
@@ -12917,7 +13368,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brandon goodwin",
@@ -12937,7 +13389,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "feron hunt",
@@ -12959,7 +13412,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jahlil okafor",
@@ -12979,7 +13433,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mj walker",
@@ -13000,7 +13455,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cat barber",
@@ -13020,7 +13476,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "moses wright",
@@ -13042,7 +13499,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ben saraf",
@@ -13070,7 +13528,8 @@
     null,
     44
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "malik williams",
@@ -13090,7 +13549,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lorenzo brown",
@@ -13111,7 +13571,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brian bowen",
@@ -13132,7 +13593,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "freddie gillespie",
@@ -13154,7 +13616,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ben moore",
@@ -13176,7 +13639,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lonnie walker",
@@ -13204,7 +13668,8 @@
     20,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "will cherry",
@@ -13225,7 +13690,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus garrett",
@@ -13246,7 +13712,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaime echenique",
@@ -13266,7 +13733,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alfonzo mckinnie",
@@ -13288,7 +13756,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "javonte cooke",
@@ -13309,7 +13778,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "wayne selden",
@@ -13330,7 +13800,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matt thomas",
@@ -13351,7 +13822,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "monte morris",
@@ -13371,7 +13843,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ish wainright",
@@ -13393,7 +13866,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah taylor",
@@ -13413,7 +13887,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joel bolomboy",
@@ -13435,7 +13910,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "xavier munford",
@@ -13456,7 +13932,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cameron reynolds",
@@ -13477,7 +13954,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "london perrantes",
@@ -13497,7 +13975,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "izaiyah nelson",
@@ -13519,7 +13998,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cady lalanne",
@@ -13539,7 +14019,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler ennis",
@@ -13559,7 +14040,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "terence davis",
@@ -13580,7 +14062,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bj johnson",
@@ -13602,7 +14085,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chinanu onuaku",
@@ -13624,7 +14108,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamel artis",
@@ -13645,7 +14130,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "johnathan motley",
@@ -13667,7 +14153,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "maxime raynaud",
@@ -13687,7 +14174,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "semaj christon",
@@ -13707,7 +14195,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daniel theis",
@@ -13727,7 +14216,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "curtis jones",
@@ -13748,7 +14238,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "will riley",
@@ -13770,7 +14261,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jarnell stokes",
@@ -13792,7 +14284,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aj lawson",
@@ -13813,7 +14306,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "harrison ingram",
@@ -13835,7 +14329,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris livingston",
@@ -13857,7 +14352,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "emoni bates",
@@ -13879,7 +14375,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ognjen jaramaz",
@@ -13899,7 +14396,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ryan nembhard",
@@ -13921,7 +14419,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "wang zhelin",
@@ -13941,7 +14440,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "georgios papagiannis",
@@ -13961,7 +14461,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaia cordinier",
@@ -13982,7 +14483,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dru smith",
@@ -14002,7 +14504,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vince shamar hunter",
@@ -14024,7 +14527,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zhou qi",
@@ -14044,7 +14548,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nikola milutinov",
@@ -14064,7 +14569,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex toohey",
@@ -14086,7 +14592,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aj johnson",
@@ -14114,7 +14621,8 @@
     29,
     48
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "deonte burton",
@@ -14135,7 +14643,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "billy garrett",
@@ -14156,7 +14665,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bryce cotton",
@@ -14177,7 +14687,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nate darling",
@@ -14198,7 +14709,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mo bamba",
@@ -14218,7 +14730,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jakarr sampson",
@@ -14240,7 +14753,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "maliq brown",
@@ -14264,7 +14778,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shabazz muhammad",
@@ -14286,7 +14801,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevin mccullar",
@@ -14308,7 +14824,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan adams",
@@ -14329,7 +14846,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "javon small",
@@ -14356,7 +14874,8 @@
     null,
     41
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jaylen morris",
@@ -14377,7 +14896,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vander blue",
@@ -14398,7 +14918,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aday mara",
@@ -14418,7 +14939,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bruno fernando",
@@ -14438,7 +14960,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "russ smith",
@@ -14458,7 +14981,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zach lofton",
@@ -14479,7 +15003,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "david michineau",
@@ -14500,7 +15025,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "luka garza",
@@ -14520,7 +15046,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah livers",
@@ -14549,7 +15076,8 @@
     null,
     36
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "eric atkins",
@@ -14569,7 +15097,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daron holmes",
@@ -14591,7 +15120,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rade zagorac",
@@ -14612,7 +15142,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "drew timme",
@@ -14639,7 +15170,8 @@
     9,
     27
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "deandre daniels",
@@ -14661,7 +15193,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joel ayayi",
@@ -14681,7 +15214,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ulrich chomche",
@@ -14701,7 +15235,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kai jones",
@@ -14723,7 +15258,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "anton watson",
@@ -14745,7 +15281,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "melvin ajinca",
@@ -14766,7 +15303,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "khem birch",
@@ -14786,7 +15324,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "damien inglis",
@@ -14808,7 +15347,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "antonio blakeney",
@@ -14829,7 +15369,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "thanasis antetokounmpo",
@@ -14851,7 +15392,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brandon sampson",
@@ -14872,7 +15414,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "justin minaya",
@@ -14894,7 +15437,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yves pons",
@@ -14915,7 +15459,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh minott",
@@ -14937,7 +15482,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lester quinones",
@@ -14958,7 +15504,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tarik biberovic",
@@ -14980,7 +15527,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah wong",
@@ -15000,7 +15548,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keith appling",
@@ -15020,7 +15569,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tristan enaruna",
@@ -15042,7 +15592,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alpha kaba",
@@ -15064,7 +15615,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "paul zipser",
@@ -15086,7 +15638,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malik newman",
@@ -15107,7 +15660,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pierre deshawn jackson",
@@ -15127,7 +15681,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "adreian payne",
@@ -15149,7 +15704,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "arturas gudaitis",
@@ -15169,7 +15725,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trevelin queen",
@@ -15190,7 +15747,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "seth curry",
@@ -15212,7 +15770,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "oshae brissett",
@@ -15241,7 +15800,8 @@
     6,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "olivier sarr",
@@ -15261,7 +15821,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chaundee brown",
@@ -15282,7 +15843,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ron baker",
@@ -15303,7 +15865,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chuma okeke",
@@ -15332,7 +15895,8 @@
     9,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "meleek thomas",
@@ -15353,7 +15917,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "max shulga",
@@ -15373,7 +15938,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "koa peat",
@@ -15395,7 +15961,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cam christie",
@@ -15416,7 +15983,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "richie saunders",
@@ -15437,7 +16005,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ugonna onyenso",
@@ -15457,7 +16026,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "drake powell",
@@ -15478,7 +16048,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "darrun hilliard",
@@ -15500,7 +16071,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kevin knox",
@@ -15522,7 +16094,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trendon watford",
@@ -15546,7 +16119,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "scotty hopson",
@@ -15567,7 +16141,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler harvey",
@@ -15588,7 +16163,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "adama sanogo",
@@ -15608,7 +16184,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zeke nnaji",
@@ -15631,7 +16208,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keion brooks",
@@ -15660,7 +16238,8 @@
     14,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "donta hall",
@@ -15682,7 +16261,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chance comanche",
@@ -15702,7 +16282,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "allonzo trier",
@@ -15723,7 +16304,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler bilodeau",
@@ -15745,7 +16327,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dillon jones",
@@ -15767,7 +16350,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "taj gibson",
@@ -15789,7 +16373,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brodric thomas",
@@ -15810,7 +16395,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "devon dotson",
@@ -15830,7 +16416,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyrese proctor",
@@ -15851,7 +16438,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "edy tavares",
@@ -15871,7 +16459,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "james johnson",
@@ -15893,7 +16482,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "julian reese",
@@ -15922,7 +16512,8 @@
     null,
     13
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "amari bailey",
@@ -15943,7 +16534,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "patty mills",
@@ -15963,7 +16555,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyty washington",
@@ -15983,7 +16576,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "james nunnally",
@@ -16004,7 +16598,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "richard solomon",
@@ -16026,7 +16621,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brandon williams",
@@ -16048,7 +16644,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lucas nogueira",
@@ -16068,7 +16665,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "wesley matthews",
@@ -16090,7 +16688,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "erik mccree",
@@ -16112,7 +16711,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "damion baugh",
@@ -16140,7 +16740,8 @@
     15,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "nathan knight",
@@ -16160,7 +16761,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "james michael mcadoo",
@@ -16182,7 +16784,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pj hairston",
@@ -16203,7 +16806,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "myron gardner",
@@ -16225,7 +16829,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vincent poirier",
@@ -16245,7 +16850,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "christian koloko",
@@ -16265,7 +16871,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "henri veesaar",
@@ -16285,7 +16892,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "seth lundy",
@@ -16306,7 +16914,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex karaban",
@@ -16330,7 +16939,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "blake hinson",
@@ -16359,7 +16969,8 @@
     null,
     14
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "luis montero",
@@ -16380,7 +16991,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keshad johnson",
@@ -16402,7 +17014,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daniel diez",
@@ -16423,7 +17036,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bobi klintman",
@@ -16445,7 +17059,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamaree bouyea",
@@ -16465,7 +17080,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "norchad omier",
@@ -16487,7 +17103,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "talen horton tucker",
@@ -16508,7 +17125,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dereon seabron",
@@ -16529,7 +17147,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jesse edwards",
@@ -16549,7 +17168,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cole swider",
@@ -16571,7 +17191,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaac jones",
@@ -16593,7 +17214,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tosan evbuomwan",
@@ -16622,7 +17244,8 @@
     28,
     5
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "chris cenac",
@@ -16645,7 +17268,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sheldon mac",
@@ -16666,7 +17290,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jacob gilyard",
@@ -16686,7 +17311,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "christian anderson",
@@ -16706,7 +17332,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "skal labissiere",
@@ -16728,7 +17355,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mychal mulder",
@@ -16749,7 +17377,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah briscoe",
@@ -16769,7 +17398,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cameron carr",
@@ -16793,7 +17423,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "eric moreland",
@@ -16815,7 +17446,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "anthony brown",
@@ -16837,7 +17469,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyrese martin",
@@ -16859,7 +17492,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan goodwin",
@@ -16881,7 +17515,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen hood schifino",
@@ -16902,7 +17537,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kenneth lofton",
@@ -16924,7 +17560,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mitchell watt",
@@ -16946,7 +17583,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh huestis",
@@ -16968,7 +17606,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "adou thiero",
@@ -16990,7 +17629,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mac mcclung",
@@ -17011,7 +17651,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "riley minix",
@@ -17033,7 +17674,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamison battle",
@@ -17055,7 +17697,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jt thor",
@@ -17077,7 +17720,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tahjere mccall",
@@ -17098,7 +17742,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "louis king",
@@ -17120,7 +17765,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kj simpson",
@@ -17147,7 +17793,8 @@
     36,
     20
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "david duke",
@@ -17168,7 +17815,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jared rhoden",
@@ -17189,7 +17837,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "moses brown",
@@ -17209,7 +17858,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rayj dennis",
@@ -17229,7 +17879,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "greg whittington",
@@ -17251,7 +17902,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "udonis haslem",
@@ -17273,7 +17925,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen lecque",
@@ -17293,7 +17946,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zylan cheatham",
@@ -17315,7 +17969,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "maurice ndour",
@@ -17337,7 +17992,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rashad vaughn",
@@ -17359,7 +18015,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keenan evans",
@@ -17380,7 +18037,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kylor kelley",
@@ -17400,7 +18058,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mckinley wright",
@@ -17420,7 +18079,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ethan thompson",
@@ -17448,7 +18108,8 @@
     null,
     32
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "isaiah stevens",
@@ -17468,7 +18129,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "troy williams",
@@ -17490,7 +18152,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "omer yurtseven",
@@ -17510,7 +18173,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "miles kelly",
@@ -17530,7 +18194,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris youngblood",
@@ -17551,7 +18216,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "svi mykhailiuk",
@@ -17579,7 +18245,8 @@
     38,
     50
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jakobi gillespie",
@@ -17599,7 +18266,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cliff alexander",
@@ -17621,7 +18289,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gian clavell",
@@ -17642,7 +18311,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jemerrio jones",
@@ -17664,7 +18334,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kelan martin",
@@ -17685,7 +18356,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "juan toscano anderson",
@@ -17707,7 +18379,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kobe sanders",
@@ -17728,7 +18401,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ish smith",
@@ -17748,7 +18422,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cody demps",
@@ -17768,7 +18443,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "colin castleton",
@@ -17788,7 +18464,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tarris reed",
@@ -17808,7 +18485,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aaron henry",
@@ -17830,7 +18508,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nick martinelli",
@@ -17852,7 +18531,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "blake wesley",
@@ -17873,7 +18553,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "devin robinson",
@@ -17895,7 +18576,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jahmai mashack",
@@ -17923,7 +18605,8 @@
     null,
     31
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "tamar bates",
@@ -17944,7 +18627,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "robert covington",
@@ -17966,7 +18650,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris chiozza",
@@ -17986,7 +18671,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malik beasley",
@@ -18007,7 +18693,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sion james",
@@ -18029,7 +18716,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pete nance",
@@ -18051,7 +18739,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nicolo melli",
@@ -18073,7 +18762,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "duane washington",
@@ -18093,7 +18783,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "felix okpara",
@@ -18115,7 +18806,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jack kayil",
@@ -18137,7 +18829,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bruce thornton",
@@ -18157,7 +18850,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trentyn flowers",
@@ -18179,7 +18873,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jack mcveigh",
@@ -18201,7 +18896,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cameron oliver",
@@ -18223,7 +18919,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "quincy olivari",
@@ -18243,7 +18940,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh oduro",
@@ -18270,7 +18968,8 @@
     null,
     3
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "ron harper",
@@ -18291,7 +18990,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "narcisse ngoy",
@@ -18311,7 +19011,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "braden smith",
@@ -18331,7 +19032,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jabari brown",
@@ -18352,7 +19054,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "olivier hanlan",
@@ -18372,7 +19075,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "boban marjanovic",
@@ -18392,7 +19096,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bismack biyombo",
@@ -18412,7 +19117,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "donte grantham",
@@ -18434,7 +19140,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marshon brooks",
@@ -18455,7 +19162,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mojave king",
@@ -18476,7 +19184,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "reggie jackson",
@@ -18496,7 +19205,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tobi lawal",
@@ -18518,7 +19228,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cory joseph",
@@ -18538,7 +19249,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "markieff morris",
@@ -18560,7 +19272,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "emanuel sharp",
@@ -18581,7 +19294,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jameel warney",
@@ -18603,7 +19317,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "luka mitrovic",
@@ -18625,7 +19340,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cj huntley",
@@ -18647,7 +19363,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "elijah harkless",
@@ -18675,7 +19392,8 @@
     null,
     26
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "tristan thompson",
@@ -18695,7 +19413,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dimitrios agravanis",
@@ -18717,7 +19436,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lachlan olbrich",
@@ -18739,7 +19459,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tony bradley",
@@ -18759,7 +19480,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sean kilpatrick",
@@ -18780,7 +19502,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus georges hunt",
@@ -18801,7 +19524,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jayden quaintance",
@@ -18824,7 +19548,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lance thomas",
@@ -18846,7 +19571,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh okogie",
@@ -18868,7 +19594,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "paul watson",
@@ -18889,7 +19616,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ty shon alexander",
@@ -18910,7 +19638,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joffrey lauvergne",
@@ -18930,7 +19659,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trent forrest",
@@ -18951,7 +19681,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jack white",
@@ -18973,7 +19704,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brandon boston",
@@ -18994,7 +19726,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marques bolden",
@@ -19014,7 +19747,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "damion lee",
@@ -19036,7 +19770,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "javin delaurier",
@@ -19056,7 +19791,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamorko pickett",
@@ -19078,7 +19814,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaden springer",
@@ -19099,7 +19836,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sergey karasev",
@@ -19120,7 +19858,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "liam robbins",
@@ -19140,7 +19879,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dwight buycks",
@@ -19160,7 +19900,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh christopher",
@@ -19181,7 +19922,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brad wanamaker",
@@ -19201,7 +19943,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sharife cooper",
@@ -19221,7 +19964,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rasheer fleming",
@@ -19243,7 +19987,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ky bowman",
@@ -19263,7 +20008,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daishen nix",
@@ -19283,7 +20029,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hunter dickinson",
@@ -19303,7 +20050,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "xavier moon",
@@ -19323,7 +20071,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marjon beauchamp",
@@ -19344,7 +20093,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "micah peavy",
@@ -19366,7 +20116,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "amile jefferson",
@@ -19388,7 +20139,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nate mensah",
@@ -19408,7 +20160,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "reece beekman",
@@ -19428,7 +20181,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "charles cooke",
@@ -19449,7 +20203,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keon johnson",
@@ -19470,7 +20225,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aaron white",
@@ -19492,7 +20248,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bryn forbes",
@@ -19513,7 +20270,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dewayne dedmon",
@@ -19533,7 +20291,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brice johnson",
@@ -19555,7 +20314,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus paige",
@@ -19575,7 +20335,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "milton doyle",
@@ -19596,7 +20357,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen adams",
@@ -19616,7 +20378,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "antonius cleveland",
@@ -19637,7 +20400,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "johnny davis",
@@ -19658,7 +20422,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mike tobey",
@@ -19678,7 +20443,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rodney purvis",
@@ -19699,7 +20465,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jp tokoto",
@@ -19720,7 +20487,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lamar patterson",
@@ -19741,7 +20509,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "branden dawson",
@@ -19763,7 +20532,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jared terrell",
@@ -19784,7 +20554,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "will richard",
@@ -19808,7 +20579,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jae crowder",
@@ -19830,7 +20602,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chasson randle",
@@ -19850,7 +20623,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "carlik jones",
@@ -19870,7 +20644,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "treveon graham",
@@ -19892,7 +20667,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "maxwell lewis",
@@ -19914,7 +20690,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "briante weber",
@@ -19934,7 +20711,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "will magnay",
@@ -19956,7 +20734,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ismael kamagate",
@@ -19976,7 +20755,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "khalifa diop",
@@ -19996,7 +20776,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ousmane dieng",
@@ -20018,7 +20799,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rodney mcgruder",
@@ -20039,7 +20821,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "juwan morgan",
@@ -20061,7 +20844,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malcolm miller",
@@ -20083,7 +20867,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joshua jefferson",
@@ -20107,7 +20892,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "luke travers",
@@ -20128,7 +20914,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "karlo matkovic",
@@ -20150,7 +20937,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yannick nzosa",
@@ -20170,7 +20958,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dominick barlow",
@@ -20193,7 +20982,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matteo spagnolo",
@@ -20213,7 +21003,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hollis thompson",
@@ -20235,7 +21026,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kent bazemore",
@@ -20256,7 +21048,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "brooks barnhizer",
@@ -20278,7 +21071,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaac humphries",
@@ -20298,7 +21092,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "noah penda",
@@ -20320,7 +21115,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler cavanaugh",
@@ -20342,7 +21138,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "devontae cacok",
@@ -20362,7 +21159,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alijah martin",
@@ -20383,7 +21181,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keljin blevins",
@@ -20405,7 +21204,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "allen graves",
@@ -20427,7 +21227,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus derrickson",
@@ -20449,7 +21250,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "javon freeman liberty",
@@ -20469,7 +21271,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zuby ejiofor",
@@ -20491,7 +21294,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler davis",
@@ -20511,7 +21315,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "adam flagler",
@@ -20532,7 +21337,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alondes williams",
@@ -20560,7 +21366,8 @@
     1,
     4
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "mindaugas kuzminskas",
@@ -20582,7 +21389,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trevon brazile",
@@ -20606,7 +21414,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "justin holiday",
@@ -20627,7 +21436,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "naeqwan tomlin",
@@ -20649,7 +21459,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "otega oweh",
@@ -20670,7 +21481,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trey jemison",
@@ -20697,7 +21509,8 @@
     38,
     13
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "cam reddish",
@@ -20719,7 +21532,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jazian gortman",
@@ -20739,7 +21553,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "drew peterson",
@@ -20761,7 +21576,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dillon mitchell",
@@ -20783,7 +21599,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kessler edwards",
@@ -20805,7 +21622,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "leaky black",
@@ -20834,7 +21652,8 @@
     null,
     15
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "kevon harris",
@@ -20855,7 +21674,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "markus howard",
@@ -20875,7 +21695,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus eriksson",
@@ -20896,7 +21717,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kendrick nunn",
@@ -20917,7 +21739,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tim frazier",
@@ -20937,7 +21760,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bennett stirtz",
@@ -20957,7 +21781,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cristiano felicio",
@@ -20977,7 +21802,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cody martin",
@@ -21005,7 +21831,8 @@
     53,
     4
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "amari williams",
@@ -21025,7 +21852,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malique lewis",
@@ -21047,7 +21875,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "axel toupane",
@@ -21068,7 +21897,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "onuralp bitim",
@@ -21090,7 +21920,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joel berry",
@@ -21110,7 +21941,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gary clark",
@@ -21132,7 +21964,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "satnam singh bhamara",
@@ -21152,7 +21985,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "armel traore",
@@ -21174,7 +22008,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nikola radicevic",
@@ -21194,7 +22029,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "david jones garcia",
@@ -21216,7 +22052,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "quinn cook",
@@ -21236,7 +22073,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kj mcdaniels",
@@ -21258,7 +22096,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "christian wood",
@@ -21280,7 +22119,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "theo pinson",
@@ -21301,7 +22141,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jabari walker",
@@ -21323,7 +22164,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jahmyl telfort",
@@ -21345,7 +22187,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marshall plumlee",
@@ -21365,7 +22208,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "wendell moore",
@@ -21387,7 +22231,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "michael gbinije",
@@ -21408,7 +22253,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex antetokounmpo",
@@ -21430,7 +22276,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "louis labeyrie",
@@ -21452,7 +22299,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joe chealey",
@@ -21472,7 +22320,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yongxi cui",
@@ -21493,7 +22342,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "troy caupain",
@@ -21514,7 +22364,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yante maten",
@@ -21536,7 +22387,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rocco zikarsky",
@@ -21556,7 +22408,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shayne whittington",
@@ -21576,7 +22429,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "patric young",
@@ -21596,7 +22450,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "anthony gill",
@@ -21618,7 +22473,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan mickey",
@@ -21640,7 +22496,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shawn long",
@@ -21662,7 +22519,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dakari johnson",
@@ -21682,7 +22540,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nate wolters",
@@ -21702,7 +22561,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh richardson",
@@ -21723,7 +22583,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aaron harrison",
@@ -21744,7 +22605,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "amida brimah",
@@ -21764,7 +22626,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamil wilson",
@@ -21786,7 +22649,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "derrick walton",
@@ -21806,7 +22670,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bonzie colson",
@@ -21828,7 +22693,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nate williams",
@@ -21849,7 +22715,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "monta ellis",
@@ -21870,7 +22737,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mamadi diakite",
@@ -21892,7 +22760,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris manon",
@@ -21913,7 +22782,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler smith",
@@ -21935,7 +22805,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kennedy chandler",
@@ -21962,7 +22833,8 @@
     null,
     11
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "trevor keels",
@@ -21983,7 +22855,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vladislav goldin",
@@ -22003,7 +22876,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "karim mane",
@@ -22024,7 +22898,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "baba miller",
@@ -22046,7 +22921,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trey kaufman renn",
@@ -22068,7 +22944,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan loyd",
@@ -22088,7 +22965,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matt ryan",
@@ -22110,7 +22988,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen hoard",
@@ -22132,7 +23011,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jared butler",
@@ -22153,7 +23033,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "devaughn akoon purcell",
@@ -22174,7 +23055,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "johnathan williams",
@@ -22194,7 +23076,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah hicks",
@@ -22216,7 +23099,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mason jones",
@@ -22237,7 +23121,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chaz lanier",
@@ -22258,7 +23143,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malcolm delaney",
@@ -22278,7 +23164,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bryce hopkins",
@@ -22300,7 +23187,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keyontae johnson",
@@ -22322,7 +23210,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ashton hagans",
@@ -22342,7 +23231,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aj griffin",
@@ -22364,7 +23254,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jock landale",
@@ -22384,7 +23275,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "keaton wallace",
@@ -22404,7 +23296,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jacob toppin",
@@ -22426,7 +23319,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zoran dragic",
@@ -22447,7 +23341,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcelo huertas",
@@ -22467,7 +23362,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bryce mcgowens",
@@ -22495,7 +23391,8 @@
     13,
     42
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "myke henry",
@@ -22517,7 +23414,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jd davison",
@@ -22537,7 +23435,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaden bradley",
@@ -22557,7 +23456,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nicolas laprovittola",
@@ -22578,7 +23478,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamir watkins",
@@ -22599,7 +23500,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "facundo campazzo",
@@ -22619,7 +23521,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "justin edwards",
@@ -22641,7 +23544,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "labaron philon",
@@ -22663,7 +23567,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "naz mitrou long",
@@ -22684,7 +23589,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nfaly dante",
@@ -22704,7 +23610,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aron baynes",
@@ -22724,7 +23631,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris duarte",
@@ -22745,7 +23653,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chucky hepburn",
@@ -22765,7 +23674,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "james webb",
@@ -22787,7 +23697,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "bogoljub markovic",
@@ -22809,7 +23720,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "issuf sanon",
@@ -22829,7 +23741,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah cousins",
@@ -22850,7 +23763,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jacob wiley",
@@ -22872,7 +23786,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "salah mejri",
@@ -22892,7 +23807,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alan williams",
@@ -22914,7 +23830,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan schakel",
@@ -22936,7 +23853,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "andrew white",
@@ -22957,7 +23875,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jordan sibert",
@@ -22978,7 +23897,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lawson lovering",
@@ -23005,7 +23925,8 @@
     null,
     2
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "spencer jones",
@@ -23029,7 +23950,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tolu smith",
@@ -23051,7 +23973,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "branden carlson",
@@ -23071,7 +23994,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mike james",
@@ -23091,7 +24015,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jarrod uthoff",
@@ -23113,7 +24038,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yuki kawamura",
@@ -23133,7 +24059,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jared harper",
@@ -23153,7 +24080,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daryl macon",
@@ -23174,7 +24102,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah evans",
@@ -23195,7 +24124,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ariel hukporti",
@@ -23215,7 +24145,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ryan arcidiacono",
@@ -23235,7 +24166,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daniel ochefu",
@@ -23257,7 +24189,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gabriele procida",
@@ -23278,7 +24211,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ibou badji",
@@ -23298,7 +24232,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "thomas sorber",
@@ -23318,7 +24253,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mitch mcgary",
@@ -23340,7 +24276,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hassani gravett",
@@ -23360,7 +24297,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malcolm cazalon",
@@ -23381,7 +24319,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hugo besson",
@@ -23401,7 +24340,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "emanuel miller",
@@ -23423,7 +24363,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nikola topic",
@@ -23443,7 +24384,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jorge gutierrez",
@@ -23463,7 +24405,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyson etienne",
@@ -23483,7 +24426,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dailyn swain",
@@ -23505,7 +24449,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "yogi ferrell",
@@ -23526,7 +24471,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "grant jerrett",
@@ -23548,7 +24494,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "taylor hendricks",
@@ -23577,7 +24524,8 @@
     3,
     59
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "drew gordon",
@@ -23599,7 +24547,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "diamond stone",
@@ -23619,7 +24568,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaron pierre",
@@ -23640,7 +24590,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "xavier sneed",
@@ -23662,7 +24613,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pj tucker",
@@ -23684,7 +24636,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "larry drew",
@@ -23705,7 +24658,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "duje dukan",
@@ -23727,7 +24681,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "marcus thornton",
@@ -23748,7 +24703,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cj williams",
@@ -23770,7 +24726,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jonathon simmons",
@@ -23792,7 +24749,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "james wiseman",
@@ -23812,7 +24770,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "david nwaba",
@@ -23833,7 +24792,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jj barea",
@@ -23853,7 +24813,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ben bentil",
@@ -23875,7 +24836,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "johnny juzang",
@@ -23896,7 +24858,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah mobley",
@@ -23918,7 +24881,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ej liddell",
@@ -23940,7 +24904,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dj carton",
@@ -23960,7 +24925,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mangok mathiang",
@@ -23982,7 +24948,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "duop reath",
@@ -24002,7 +24969,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "wenyen gabriel",
@@ -24024,7 +24992,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "oscar tshiebwe",
@@ -24044,7 +25013,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jp macura",
@@ -24065,7 +25035,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "carter bryant",
@@ -24087,7 +25058,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trevon bluiett",
@@ -24108,7 +25080,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aaron craft",
@@ -24129,7 +25102,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "angel delgado",
@@ -24149,7 +25123,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh gray",
@@ -24169,7 +25144,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "damjan rudez",
@@ -24191,7 +25167,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler johnson",
@@ -24211,7 +25188,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dusty hannahs",
@@ -24232,7 +25210,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zavier simpson",
@@ -24259,7 +25238,8 @@
     null,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "jon teske",
@@ -24279,7 +25259,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex ducas",
@@ -24300,7 +25281,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "justin jackson",
@@ -24322,7 +25304,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "danuel house",
@@ -24344,7 +25327,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler cook",
@@ -24366,7 +25350,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "aj hammons",
@@ -24386,7 +25371,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "haywood highsmith",
@@ -24408,7 +25394,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kyle collinsworth",
@@ -24429,7 +25416,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris clemons",
@@ -24449,7 +25437,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kobi simmons",
@@ -24469,7 +25458,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jamychal green",
@@ -24491,7 +25481,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rawle alkins",
@@ -24512,7 +25503,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen jones",
@@ -24534,7 +25526,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen slawson",
@@ -24563,7 +25556,8 @@
     null,
     13
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "lindy waters",
@@ -24584,7 +25578,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "julian washburn",
@@ -24606,7 +25601,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "coty clarke",
@@ -24628,7 +25624,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cam mcgriff",
@@ -24650,7 +25647,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mitchell creek",
@@ -24672,7 +25670,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "justin champagnie",
@@ -24696,7 +25695,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alec peters",
@@ -24718,7 +25718,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "daeqwon plowden",
@@ -24746,7 +25747,8 @@
     6,
     32
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "moussa cisse",
@@ -24766,7 +25768,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaylen martin",
@@ -24788,7 +25791,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jj obrien",
@@ -24810,7 +25814,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kay felder",
@@ -24830,7 +25835,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "joe young",
@@ -24850,7 +25856,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tidjane salaun",
@@ -24872,7 +25879,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pj hall",
@@ -24894,7 +25902,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cleanthony early",
@@ -24916,7 +25925,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tacko fall",
@@ -24936,7 +25946,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dee bost",
@@ -24956,7 +25967,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ricky council",
@@ -24977,7 +25989,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "eugene omoruyi",
@@ -24999,7 +26012,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "craig porter",
@@ -25021,7 +26035,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dj steward",
@@ -25041,7 +26056,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lamar stevens",
@@ -25063,7 +26079,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jalen bridges",
@@ -25085,7 +26102,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "antonio reeves",
@@ -25106,7 +26124,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "micah potter",
@@ -25126,7 +26145,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "elfrid payton",
@@ -25153,7 +26173,8 @@
     24,
     null
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "justin robinson",
@@ -25173,7 +26194,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "cameron bairstow",
@@ -25195,7 +26217,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "amir coffey",
@@ -25216,7 +26239,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "enrique freeman",
@@ -25238,7 +26262,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pat spencer",
@@ -25260,7 +26285,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "boo buie",
@@ -25280,7 +26306,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex kirk",
@@ -25300,7 +26327,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ebuka okorie",
@@ -25322,7 +26350,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex poythress",
@@ -25344,7 +26373,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "deng adel",
@@ -25366,7 +26396,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "isaiah crawford",
@@ -25388,7 +26419,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "troy daniels",
@@ -25409,7 +26441,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "archie goodwin",
@@ -25430,7 +26463,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jaquori mclaughlin",
@@ -25450,7 +26484,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "lajae jones",
@@ -25471,7 +26506,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jarron cumberland",
@@ -25492,7 +26528,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matt williams",
@@ -25513,7 +26550,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "stanley umude",
@@ -25534,7 +26572,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "michael frazier",
@@ -25555,7 +26594,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "jahmir young",
@@ -25575,7 +26615,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "caleb love",
@@ -25596,7 +26637,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shaquille harrison",
@@ -25617,7 +26659,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "armoni brooks",
@@ -25637,7 +26680,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "josh hall",
@@ -25659,7 +26703,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "anthony tolliver",
@@ -25681,7 +26726,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matt costello",
@@ -25703,7 +26749,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "vsevolod ishchenko",
@@ -25724,7 +26771,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "matt mooney",
@@ -25745,7 +26793,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "gabriel deck",
@@ -25767,7 +26816,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "okaro white",
@@ -25789,7 +26839,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "nicolas brussino",
@@ -25810,7 +26861,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kam jones",
@@ -25830,7 +26882,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pelle larsson",
@@ -25854,7 +26907,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alec brown",
@@ -25874,7 +26928,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "rayjon tucker",
@@ -25896,7 +26951,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "dj stephens",
@@ -25917,7 +26973,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "taelon peter",
@@ -25938,7 +26995,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "david stockton",
@@ -25958,7 +27016,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "patrick baldwin",
@@ -25980,7 +27039,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris silva",
@@ -26002,7 +27062,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "shane larkin",
@@ -26022,7 +27083,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "kendall brown",
@@ -26044,7 +27106,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "walt lemon",
@@ -26064,7 +27127,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "pj dozier",
@@ -26084,7 +27148,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "javonte green",
@@ -26113,7 +27178,8 @@
     68,
     82
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "rakeem christmas",
@@ -26135,7 +27201,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "langston galloway",
@@ -26156,7 +27223,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "alex len",
@@ -26176,7 +27244,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "sean mcdermott",
@@ -26197,7 +27266,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trey alexander",
@@ -26218,7 +27288,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "quinten post",
@@ -26241,7 +27312,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "trey mckinney jones",
@@ -26262,7 +27334,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chris mccullough",
@@ -26284,7 +27357,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "hunter sallis",
@@ -26305,7 +27379,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "saliou niang",
@@ -26326,7 +27401,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "chaney johnson",
@@ -26355,7 +27431,8 @@
     null,
     17
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "dylan cardwell",
@@ -26382,7 +27459,8 @@
     null,
     44
    ]
-  }
+  },
+  "note": null
  },
  {
   "key": "matthew dellavedova",
@@ -26402,7 +27480,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "mark sears",
@@ -26422,7 +27501,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "devin carter",
@@ -26442,7 +27522,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "eric griffin",
@@ -26464,7 +27545,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "malachi flynn",
@@ -26484,7 +27566,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "deandre jordan",
@@ -26504,7 +27587,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "doug mcdermott",
@@ -26526,7 +27610,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "karim lopez",
@@ -26548,7 +27633,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "adam mokoka",
@@ -26569,7 +27655,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "killian tillie",
@@ -26589,7 +27676,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "zach norvell",
@@ -26610,7 +27698,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "ryan broekhoff",
@@ -26631,7 +27720,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "emanuel terry",
@@ -26653,7 +27743,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tristen newton",
@@ -26673,7 +27764,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler kolek",
@@ -26693,7 +27785,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "markelle fultz",
@@ -26713,7 +27806,8 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  },
  {
   "key": "tyler nickel",
@@ -26735,6 +27829,7 @@
   "rank": null,
   "tier": 5,
   "line": null,
-  "injury": null
+  "injury": null,
+  "note": null
  }
 ]

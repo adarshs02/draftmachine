@@ -1,7 +1,6 @@
 import { splitLines, type Frame } from './capture/frames'
 import { createAssembler } from './capture/assembler'
 import { decodeLine, NOISE_VERBS, type RawEvent } from './capture/decoder'
-import { buildRecording } from './capture/recording'
 import { advise, type Advice } from './engine/advise'
 import { teamSummary, valueOf } from './engine/metrics'
 import { initialState, reduce } from './engine/reducer'
@@ -19,16 +18,13 @@ export interface View {
   banner: string | null
   /** Something the user must check by hand; kept until dismissed or replaced. */
   alert: string | null
-  /** incoming socket verbs the decoder does not know, with how often each arrived */
-  unknownVerbs: Record<string, number>
-  frameCount: number
 }
 
 export interface ControllerDeps {
   leagueId: number
   /** sessionStorage: this tab's draft, survives a refresh */
   storage: KeyValueStore
-  /** localStorage: the same log, so a closed tab doesn't lose a manual draft */
+  /** localStorage: the same log, so a closed tab doesn't lose the draft */
   backup: KeyValueStore
   values: PlayerValue[]
   cookie: string
@@ -41,13 +37,12 @@ export interface ControllerDeps {
 }
 
 export interface Controller {
-  /** Applies a manual event; false when it changed nothing (e.g. a bid that does not beat the price). */
+  /** Applies an event from the panel; false when it changed nothing (e.g. a bid that does not beat the price). */
   dispatch(ev: DraftEvent): boolean
   dismissAlert(): void
   getState(): DraftState
   /** Decodes a socket frame; `quiet` applies it without rendering (the simulator renders once per tick with refresh). */
   onFrame(frame: Frame, options?: { quiet?: boolean }): void
-  recordingJson(): string
   /** Re-renders only if health changed since the last render (decoding went quiet, or came back). */
   tick(): void
   /** Renders the current state now: after quiet frames, or when tunables changed the advice. */
@@ -99,20 +94,17 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     restoreBanner = 'Saved draft could not be restored; starting fresh'
   }
 
-  const startedAt = new Date()
-  const frames: Frame[] = []
   const byEspnId = new Map(values.flatMap((v) => (v.espnId === null ? [] : [[v.espnId, v.key] as const])))
   const assembler = createAssembler((id) => byEspnId.get(id) ?? `espn:${id}`, () => state.live)
   const now = deps.now ?? Date.now
   let lastRecognizedAt: number | null = null
-  const unknownVerbs = new Map<string, number>()
-  const health = (): Health => (lastRecognizedAt !== null && now() - lastRecognizedAt < LIVE_WINDOW_MS ? 'live' : 'manual')
-  let shownHealth: Health = 'manual'
+  const health = (): Health => (lastRecognizedAt !== null && now() - lastRecognizedAt < LIVE_WINDOW_MS ? 'live' : 'waiting')
+  let shownHealth: Health = 'waiting'
   let alert: string | null = null
   const banner = () => [leagueBanner, restoreBanner].filter(Boolean).join(' · ') || null
   const publish = () => {
     shownHealth = health()
-    deps.render({ advice: advise(state), state, health: shownHealth, banner: banner(), alert, unknownVerbs: Object.fromEntries(unknownVerbs), frameCount: frames.length })
+    deps.render({ advice: advise(state), state, health: shownHealth, banner: banner(), alert })
   }
   /** Returns whether the event changed anything; no-ops (repeat bids, stale bids) stay out of the log. */
   const apply = (ev: DraftEvent): boolean => {
@@ -126,7 +118,7 @@ export async function createController(deps: ControllerDeps): Promise<Controller
   const playerName = (key: string) => valueOf(state, key).name
   const teamName = (id: number) => teamSummary(state, id).name
   const missedSale = (live: Live) =>
-    `Missed the end of ${playerName(live.playerKey)}'s auction (last seen $${live.price} by ${teamName(live.leaderId)}). If it sold, enter it with Sold.`
+    `Missed the end of ${playerName(live.playerKey)}'s auction (last seen $${live.price} by ${teamName(live.leaderId)}).`
   /** Judges a live event against the panel's state: raises an alert where they disagree; returns what to apply. */
   const reconcile = (ev: DraftEvent): DraftEvent => {
     const live = state.live
@@ -158,13 +150,10 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     }
     for (const ev of assembler.push(raw)) apply(reconcile(ev))
   }
-  /** A line counts toward health when it decodes, or is a verb we know to ignore; other verbs are counted for the panel. */
+  /** A line counts toward health when it decodes, or is a verb we know to ignore; unknown verbs don't. */
   const onLine = (line: string) => {
     const raw = decodeLine(line)
-    if (raw?.kind === 'unknown') {
-      unknownVerbs.set(raw.verb, (unknownVerbs.get(raw.verb) ?? 0) + 1)
-      return
-    }
+    if (raw?.kind === 'unknown') return
     if (raw || NOISE_VERBS.has(line.split(/\s+/)[0])) lastRecognizedAt = now()
     if (raw) onRaw(raw)
   }
@@ -182,11 +171,9 @@ export async function createController(deps: ControllerDeps): Promise<Controller
     },
     getState: () => state,
     onFrame(frame, options) {
-      frames.push(frame)
       if (frame.dir === 'in') for (const line of splitLines(frame.data)) onLine(line)
       if (!options?.quiet) publish()
     },
-    recordingJson: () => JSON.stringify(buildRecording(deps.leagueId, startedAt, frames)),
     tick() {
       if (health() !== shownHealth) publish()
     },

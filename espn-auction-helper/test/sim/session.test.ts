@@ -23,7 +23,6 @@ describe('session', () => {
     expect(s.view.state.sales.filter((x) => x.teamId === 1)).toHaveLength(13)
     expect(s.view.health).toBe('live')
     expect(s.view.alert).toBeNull()
-    expect(s.view.unknownVerbs).toEqual({})
     s.finish()
     expect(s.view.state.sales).toHaveLength(130)
   }, 60_000)

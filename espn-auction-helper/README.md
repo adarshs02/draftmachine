@@ -10,6 +10,8 @@ Chrome extension for ESPN fantasy basketball **salary-cap (auction)** drafts. It
 - **The call card** shows the player's value, ESPN's average price and your max, with a bar placing the current price against them. The last 8 sales show green under value, red over.
 - **Where the value comes from**: the call card names the player's strongest categories against the draftable pool and the ones he costs you ("Value from: BLK, REB, FG% · costs you: FT%, TO"), and flags **⭐ value play** when your value beats ESPN's average price by $3 and 15% (or **room usually overpays** the other way).
 - **Look for**: the 6 best players left for your roster, by your value over ESPN's average price, affordable and worth $5+, each tagged with the categories where he'd help your team. Under the list, your team's standing: categories you'd usually win or lose in a week. ESPN rooms pay top dollar for stars and little for the middle tier, so early on most of the list is value plays.
+- **Similar**: a tab next to Look for that opens when a player is nominated: the 5 players still available within half his value (at least $3) whose category profile is closest to his, tagged with the categories they share. If you lose him, that's who is left. Look for comes back after the sale; clicking a tab holds it until the next nomination.
+- **Your notes**: a note typed in the projections sheet shows on the call card ("📝 Money Grabber") and as a 📝 on listed players.
 - **Rivals**: everyone's money, open slots and max bid, highest first; max bids in amber can outbid your max on the player on the block.
 - **Nominate next**: early, players the room overpays for; later, your target once rivals can't outbid you; at the end, $1 steals.
 - **Warnings**: two stars eating 70% of your budget leaves no margin for error.
@@ -43,13 +45,10 @@ Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `e
 1. Run `npm run fetch-espn && npm run values && npm run build` the morning of the draft, then hit reload on the extension.
 2. Open your league's draft room (`https://fantasy.espn.com/basketball/draft?leagueId=...`) while logged in.
 3. Check **My team** at the top of the panel. It is detected from your ESPN login. If it's wrong or blank, pick your team there. You can change it at any time.
-4. Watch the panel's status light. **● live** (filled circle) means ESPN draft-room messages are arriving and filling in nominations, bids and sales automatically. If no messages arrive for about 20 seconds, the light becomes **○ manual** (hollow circle). It re-checks every 5 seconds.
-   - In **live mode**, the panel updates automatically as events happen in the room.
-   - In **manual mode** nothing new arrives: the panel has no manual entry, so if the light stays hollow during a live draft, the decoder isn't reading ESPN's messages (record the draft and report it).
-5. If a refresh or reconnect breaks the live connection mid-sale, an alert says "Missed the end of …". Check **Budgets** on ESPN to see if the player sold. Teams are labelled `#id name`. To fix a wrong sale, press ✎ and type the price and team number (`14 3`) or the start of the team name (`14 bub`). **Undo last sale** removes the most recent sale. The **–** button in the header collapses the panel.
+4. Watch the panel's status light. **● live** (filled circle) means ESPN draft-room messages are arriving and filling in nominations, bids and sales automatically. If no messages arrive for about 20 seconds, the light becomes **○ waiting** (hollow circle). It re-checks every 5 seconds. The panel has no manual entry: if the light stays hollow during a live draft, the decoder isn't reading ESPN's messages.
+5. If a refresh or reconnect breaks the live connection mid-sale, an alert says "Missed the end of …". Check **Budgets** on ESPN to see if the player sold. Teams are labelled `#id name`. When ESPN's SOLD disagrees with a sale the panel holds, ESPN's wins. The **–** button in the header collapses the panel.
 6. Above **Nominate**, a line shows whose turn it is to nominate: **Your turn to nominate**, **Nominating now: #id name · you nominate in N turns**, or, while a player is on the block, **Up next: …**. In live mode it comes from ESPN; in manual mode it is inferred from the draft order, skipping teams with full rosters.
-7. Watch the footer's unknown-verb counter. If that count grows during your draft, it's worth recording and reporting.
-8. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **New draft** (after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
+7. Your draft is saved on every change, in this tab and in this browser. A refresh keeps it. A new tab, or a restarted browser, restores it with a banner. **↺** in the header (New draft, after a confirm) clears the saved sales and starts over. Use it after a mock or a dry run.
 
 ## Dry run before your draft
 
@@ -59,11 +58,10 @@ Before your real auction, run through a mock or test league with these checks:
 2. Check that sales and team budgets match ESPN's **Budgets** tab.
 3. Refresh once mid-auction and check that the alert appears if a sale was missed, and that budgets still match.
 4. Leave the tab in the background for a few minutes and check it is still live.
-5. Watch the footer's unknown-verb counter throughout.
 
-## Recording a draft (for debugging the live decoder)
+## Old recordings (for debugging the live decoder)
 
-**Download recording** saves every socket frame. Raw recordings contain your ESPN SWID and draft join code: keep them in `recordings/` (git-ignored) and only commit the output of `npm run scrub -- recording <raw> <out> [names.txt]`. The optional `names.txt` file lists your league's team names and member names (one per line), and they are replaced with REDACTED in the scrubbed output.
+The panel no longer records drafts. Older raw recordings contain your ESPN SWID and draft join code: keep them in `recordings/` (git-ignored) and only commit the output of `npm run scrub -- recording <raw> <out> [names.txt]`. The optional `names.txt` file lists your league's team names and member names (one per line), and they are replaced with REDACTED in the scrubbed output.
 
 ## Tuning
 
