@@ -1,0 +1,804 @@
+{
+ "source": "Josh Lloyd auction mock, YouTube Q6YlQDvD-aY (2026-10-05). Order and prices reconstructed from auto-captions; UNK_* = caption-garbled names; a few prices approximated so team totals match Josh's recap.",
+ "settings": {
+  "teams": 12,
+  "budget": 200,
+  "rosterSize": 13
+ },
+ "teams": [
+  "Josh",
+  "Irish Turk",
+  "Kingy",
+  "Atto Magic",
+  "NY Strangers",
+  "Eric",
+  "Tony Alabayo",
+  "Squapper",
+  "Cayenne",
+  "Tom",
+  "Bdub",
+  "Hast Tatum"
+ ],
+ "sales": [
+  {
+   "player": "UNK Lenderborg",
+   "team": "Irish Turk",
+   "price": 3
+  },
+  {
+   "player": "Kawhi Leonard",
+   "team": "Atto Magic",
+   "price": 20
+  },
+  {
+   "player": "Luka Doncic",
+   "team": "Atto Magic",
+   "price": 61
+  },
+  {
+   "player": "Victor Wembanyama",
+   "team": "NY Strangers",
+   "price": 80
+  },
+  {
+   "player": "Nikola Jokic",
+   "team": "NY Strangers",
+   "price": 80
+  },
+  {
+   "player": "Austin Reaves",
+   "team": "Eric",
+   "price": 40
+  },
+  {
+   "player": "Shai Gilgeous-Alexander",
+   "team": "Irish Turk",
+   "price": 68
+  },
+  {
+   "player": "Josh Giddey",
+   "team": "Tony Alabayo",
+   "price": 29
+  },
+  {
+   "player": "Cade Cunningham",
+   "team": "Squapper",
+   "price": 48
+  },
+  {
+   "player": "Darius Garland",
+   "team": "Eric",
+   "price": 25
+  },
+  {
+   "player": "Khaman Maluach",
+   "team": "Bdub",
+   "price": 5
+  },
+  {
+   "player": "Jalen Williams",
+   "team": "Squapper",
+   "price": 29
+  },
+  {
+   "player": "Tyrese Haliburton",
+   "team": "Cayenne",
+   "price": 36
+  },
+  {
+   "player": "Jayson Tatum",
+   "team": "Tony Alabayo",
+   "price": 46
+  },
+  {
+   "player": "Joel Embiid",
+   "team": "Atto Magic",
+   "price": 16
+  },
+  {
+   "player": "Cooper Flagg",
+   "team": "Hast Tatum",
+   "price": 42
+  },
+  {
+   "player": "Giannis Antetokounmpo",
+   "team": "Irish Turk",
+   "price": 58
+  },
+  {
+   "player": "Matas Buzelis",
+   "team": "Atto Magic",
+   "price": 22
+  },
+  {
+   "player": "Anthony Edwards",
+   "team": "Irish Turk",
+   "price": 45
+  },
+  {
+   "player": "Anthony Davis",
+   "team": "Kingy",
+   "price": 26
+  },
+  {
+   "player": "Tyrese Maxey",
+   "team": "Atto Magic",
+   "price": 40
+  },
+  {
+   "player": "Jaden McDaniels",
+   "team": "Josh",
+   "price": 11
+  },
+  {
+   "player": "Ausar Thompson",
+   "team": "Kingy",
+   "price": 17
+  },
+  {
+   "player": "Karl-Anthony Towns",
+   "team": "Squapper",
+   "price": 36
+  },
+  {
+   "player": "Jalen Brunson",
+   "team": "Bdub",
+   "price": 20
+  },
+  {
+   "player": "Domantas Sabonis",
+   "team": "Squapper",
+   "price": 24
+  },
+  {
+   "player": "Amen Thompson",
+   "team": "Kingy",
+   "price": 35
+  },
+  {
+   "player": "Scottie Barnes",
+   "team": "Bdub",
+   "price": 35
+  },
+  {
+   "player": "Jalen Johnson",
+   "team": "Hast Tatum",
+   "price": 33
+  },
+  {
+   "player": "Alperen Sengun",
+   "team": "Tom",
+   "price": 29
+  },
+  {
+   "player": "Kevin Durant",
+   "team": "Eric",
+   "price": 40
+  },
+  {
+   "player": "Cameron Boozer",
+   "team": "Irish Turk",
+   "price": 15
+  },
+  {
+   "player": "Donovan Mitchell",
+   "team": "Tom",
+   "price": 31
+  },
+  {
+   "player": "Ivica Zubac",
+   "team": "Atto Magic",
+   "price": 16
+  },
+  {
+   "player": "Dyson Daniels",
+   "team": "Josh",
+   "price": 17
+  },
+  {
+   "player": "Lauri Markkanen",
+   "team": "Eric",
+   "price": 30
+  },
+  {
+   "player": "Chet Holmgren",
+   "team": "Cayenne",
+   "price": 27
+  },
+  {
+   "player": "LeBron James",
+   "team": "Bdub",
+   "price": 22
+  },
+  {
+   "player": "Walker Kessler",
+   "team": "Kingy",
+   "price": 26
+  },
+  {
+   "player": "Deni Avdija",
+   "team": "Josh",
+   "price": 23
+  },
+  {
+   "player": "Stephen Curry",
+   "team": "Cayenne",
+   "price": 26
+  },
+  {
+   "player": "Jamal Murray",
+   "team": "Eric",
+   "price": 37
+  },
+  {
+   "player": "LaMelo Ball",
+   "team": "Josh",
+   "price": 30
+  },
+  {
+   "player": "Jusuf Nurkic",
+   "team": "Hast Tatum",
+   "price": 9
+  },
+  {
+   "player": "Devin Booker",
+   "team": "Tony Alabayo",
+   "price": 22
+  },
+  {
+   "player": "Julius Randle",
+   "team": "Tom",
+   "price": 15
+  },
+  {
+   "player": "Cason Wallace",
+   "team": "Eric",
+   "price": 8
+  },
+  {
+   "player": "Naz Reid",
+   "team": "Cayenne",
+   "price": 14
+  },
+  {
+   "player": "Alex Sarr",
+   "team": "Squapper",
+   "price": 9
+  },
+  {
+   "player": "Trae Young",
+   "team": "Hast Tatum",
+   "price": 26
+  },
+  {
+   "player": "Donovan Clingan",
+   "team": "Cayenne",
+   "price": 16
+  },
+  {
+   "player": "Kon Knueppel",
+   "team": "Bdub",
+   "price": 13
+  },
+  {
+   "player": "Brandin Podziemski",
+   "team": "Hast Tatum",
+   "price": 5
+  },
+  {
+   "player": "Brandon Miller",
+   "team": "Josh",
+   "price": 26
+  },
+  {
+   "player": "Evan Mobley",
+   "team": "Hast Tatum",
+   "price": 27
+  },
+  {
+   "player": "Caleb Wilson",
+   "team": "Tom",
+   "price": 10
+  },
+  {
+   "player": "James Harden",
+   "team": "Cayenne",
+   "price": 24
+  },
+  {
+   "player": "Trey Murphy III",
+   "team": "Josh",
+   "price": 21
+  },
+  {
+   "player": "Stephon Castle",
+   "team": "Bdub",
+   "price": 14
+  },
+  {
+   "player": "Jalen Duren",
+   "team": "Tony Alabayo",
+   "price": 19
+  },
+  {
+   "player": "Dejounte Murray",
+   "team": "Tony Alabayo",
+   "price": 24
+  },
+  {
+   "player": "Jaylen Brown",
+   "team": "Tony Alabayo",
+   "price": 23
+  },
+  {
+   "player": "UNK Superman",
+   "team": "Eric",
+   "price": 8
+  },
+  {
+   "player": "Kyrie Irving",
+   "team": "Bdub",
+   "price": 20
+  },
+  {
+   "player": "Paolo Banchero",
+   "team": "Josh",
+   "price": 19
+  },
+  {
+   "player": "AJ Dybantsa",
+   "team": "Hast Tatum",
+   "price": 4
+  },
+  {
+   "player": "Bam Adebayo",
+   "team": "Hast Tatum",
+   "price": 24
+  },
+  {
+   "player": "Tyler Herro",
+   "team": "Tom",
+   "price": 13
+  },
+  {
+   "player": "Pascal Siakam",
+   "team": "Tom",
+   "price": 18
+  },
+  {
+   "player": "Derrick White",
+   "team": "Cayenne",
+   "price": 14
+  },
+  {
+   "player": "Norman Powell",
+   "team": "Squapper",
+   "price": 3
+  },
+  {
+   "player": "Onyeka Okongwu",
+   "team": "Josh",
+   "price": 16
+  },
+  {
+   "player": "Nickeil Alexander-Walker",
+   "team": "Josh",
+   "price": 14
+  },
+  {
+   "player": "Desmond Bane",
+   "team": "Bdub",
+   "price": 11
+  },
+  {
+   "player": "Reed Sheppard",
+   "team": "Squapper",
+   "price": 5
+  },
+  {
+   "player": "Keyonte George",
+   "team": "Bdub",
+   "price": 19
+  },
+  {
+   "player": "Franz Wagner",
+   "team": "Bdub",
+   "price": 15
+  },
+  {
+   "player": "Paul George",
+   "team": "Tom",
+   "price": 15
+  },
+  {
+   "player": "Jaren Jackson Jr.",
+   "team": "Tom",
+   "price": 17
+  },
+  {
+   "player": "Myles Turner",
+   "team": "NY Strangers",
+   "price": 6
+  },
+  {
+   "player": "Zion Williamson",
+   "team": "Bdub",
+   "price": 8
+  },
+  {
+   "player": "DeMar DeRozan",
+   "team": "Tony Alabayo",
+   "price": 3
+  },
+  {
+   "player": "Ja Morant",
+   "team": "Bdub",
+   "price": 11
+  },
+  {
+   "player": "Josh Hart",
+   "team": "Cayenne",
+   "price": 8
+  },
+  {
+   "player": "Day'Ron Sharpe",
+   "team": "Josh",
+   "price": 10
+  },
+  {
+   "player": "Damian Lillard",
+   "team": "NY Strangers",
+   "price": 14
+  },
+  {
+   "player": "Cedric Coward",
+   "team": "Tom",
+   "price": 6
+  },
+  {
+   "player": "Coby White",
+   "team": "Tom",
+   "price": 13
+  },
+  {
+   "player": "Mikal Bridges",
+   "team": "Cayenne",
+   "price": 10
+  },
+  {
+   "player": "OG Anunoby",
+   "team": "Tom",
+   "price": 16
+  },
+  {
+   "player": "Jarrett Allen",
+   "team": "Atto Magic",
+   "price": 8
+  },
+  {
+   "player": "Nic Claxton",
+   "team": "Kingy",
+   "price": 6
+  },
+  {
+   "player": "Payton Pritchard",
+   "team": "Tony Alabayo",
+   "price": 6
+  },
+  {
+   "player": "Jalen Suggs",
+   "team": "Kingy",
+   "price": 9
+  },
+  {
+   "player": "De'Aaron Fox",
+   "team": "Hast Tatum",
+   "price": 9
+  },
+  {
+   "player": "Collin Murray-Boyles",
+   "team": "Kingy",
+   "price": 9
+  },
+  {
+   "player": "VJ Edgecombe",
+   "team": "Kingy",
+   "price": 9
+  },
+  {
+   "player": "UNK Dumu",
+   "team": "Squapper",
+   "price": 6
+  },
+  {
+   "player": "Michael Porter Jr.",
+   "team": "Tom",
+   "price": 12
+  },
+  {
+   "player": "Zach Edey",
+   "team": "Kingy",
+   "price": 21
+  },
+  {
+   "player": "Dylan Harper",
+   "team": "Tony Alabayo",
+   "price": 11
+  },
+  {
+   "player": "CJ McCollum",
+   "team": "Josh",
+   "price": 8
+  },
+  {
+   "player": "Ryan Rollins",
+   "team": "Kingy",
+   "price": 12
+  },
+  {
+   "player": "Gui Santos",
+   "team": "NY Strangers",
+   "price": 2
+  },
+  {
+   "player": "UNK Vley",
+   "team": "Squapper",
+   "price": 5
+  },
+  {
+   "player": "Brandon Ingram",
+   "team": "Bdub",
+   "price": 6
+  },
+  {
+   "player": "Immanuel Quickley",
+   "team": "Hast Tatum",
+   "price": 9
+  },
+  {
+   "player": "Zach LaVine",
+   "team": "Tony Alabayo",
+   "price": 6
+  },
+  {
+   "player": "AJ Mitchell",
+   "team": "Squapper",
+   "price": 5
+  },
+  {
+   "player": "Rudy Gobert",
+   "team": "Kingy",
+   "price": 8
+  },
+  {
+   "player": "Ty Jerome",
+   "team": "Cayenne",
+   "price": 9
+  },
+  {
+   "player": "Jaime Jaquez Jr.",
+   "team": "Atto Magic",
+   "price": 4
+  },
+  {
+   "player": "Isaiah Hartenstein",
+   "team": "Tony Alabayo",
+   "price": 9
+  },
+  {
+   "player": "Paul Reed",
+   "team": "Kingy",
+   "price": 4
+  },
+  {
+   "player": "Derik Queen",
+   "team": "Squapper",
+   "price": 6
+  },
+  {
+   "player": "Peyton Watson",
+   "team": "Atto Magic",
+   "price": 6
+  },
+  {
+   "player": "Kevin Porter Jr.",
+   "team": "Josh",
+   "price": 2
+  },
+  {
+   "player": "Jabari Smith Jr.",
+   "team": "Tom",
+   "price": 4
+  },
+  {
+   "player": "UNK Gelman",
+   "team": "Squapper",
+   "price": 4
+  },
+  {
+   "player": "Neemias Queta",
+   "team": "Cayenne",
+   "price": 10
+  },
+  {
+   "player": "Miles Bridges",
+   "team": "Atto Magic",
+   "price": 4
+  },
+  {
+   "player": "Darryn Peterson",
+   "team": "Hast Tatum",
+   "price": 3
+  },
+  {
+   "player": "UNK Auff",
+   "team": "Eric",
+   "price": 2
+  },
+  {
+   "player": "Kristaps Porzingis",
+   "team": "Tony Alabayo",
+   "price": 1
+  },
+  {
+   "player": "Rui Hachimura",
+   "team": "Hast Tatum",
+   "price": 1
+  },
+  {
+   "player": "Davion Mitchell",
+   "team": "NY Strangers",
+   "price": 1
+  },
+  {
+   "player": "UNK Kamar",
+   "team": "Kingy",
+   "price": 9
+  },
+  {
+   "player": "Sandro Mamukelashvili",
+   "team": "Eric",
+   "price": 4
+  },
+  {
+   "player": "Kyshawn George",
+   "team": "Squapper",
+   "price": 3
+  },
+  {
+   "player": "Jeremiah Fears",
+   "team": "NY Strangers",
+   "price": 3
+  },
+  {
+   "player": "Cam Johnson",
+   "team": "Irish Turk",
+   "price": 2
+  },
+  {
+   "player": "John Collins",
+   "team": "Eric",
+   "price": 3
+  },
+  {
+   "player": "Yves Missi",
+   "team": "Tony Alabayo",
+   "price": 1
+  },
+  {
+   "player": "Jakob Poeltl",
+   "team": "NY Strangers",
+   "price": 4
+  },
+  {
+   "player": "Jrue Holiday",
+   "team": "NY Strangers",
+   "price": 1
+  },
+  {
+   "player": "Jalen Green",
+   "team": "NY Strangers",
+   "price": 3
+  },
+  {
+   "player": "Andrew Wiggins",
+   "team": "Cayenne",
+   "price": 4
+  },
+  {
+   "player": "RJ Barrett",
+   "team": "Irish Turk",
+   "price": 2
+  },
+  {
+   "player": "Moussa Diabate",
+   "team": "Irish Turk",
+   "price": 2
+  },
+  {
+   "player": "Keegan Murray",
+   "team": "Hast Tatum",
+   "price": 4
+  },
+  {
+   "player": "Isaiah Jackson",
+   "team": "Josh",
+   "price": 3
+  },
+  {
+   "player": "UNK MZ Johnson",
+   "team": "Cayenne",
+   "price": 2
+  },
+  {
+   "player": "Aaron Gordon",
+   "team": "NY Strangers",
+   "price": 1
+  },
+  {
+   "player": "Anthony Black",
+   "team": "NY Strangers",
+   "price": 2
+  },
+  {
+   "player": "UNK Vu",
+   "team": "Irish Turk",
+   "price": 1
+  },
+  {
+   "player": "Ace Bailey",
+   "team": "Irish Turk",
+   "price": 1
+  },
+  {
+   "player": "PJ Washington",
+   "team": "NY Strangers",
+   "price": 3
+  },
+  {
+   "player": "Draymond Green",
+   "team": "Atto Magic",
+   "price": 1
+  },
+  {
+   "player": "Quentin Grimes",
+   "team": "Eric",
+   "price": 1
+  },
+  {
+   "player": "Andrew Nembhard",
+   "team": "Irish Turk",
+   "price": 1
+  },
+  {
+   "player": "Collin Gillespie",
+   "team": "Atto Magic",
+   "price": 1
+  },
+  {
+   "player": "Tre Jones",
+   "team": "Eric",
+   "price": 1
+  },
+  {
+   "player": "Saddiq Bey",
+   "team": "Irish Turk",
+   "price": 1
+  },
+  {
+   "player": "Max Strus",
+   "team": "Atto Magic",
+   "price": 1
+  },
+  {
+   "player": "Scotty Pippen Jr.",
+   "team": "Eric",
+   "price": 1
+  },
+  {
+   "player": "Devin Vassell",
+   "team": "Irish Turk",
+   "price": 1
+  }
+ ]
+}
